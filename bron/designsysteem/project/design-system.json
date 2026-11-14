@@ -1,0 +1,41 @@
+{
+ "v": 3,
+ "layout": "files",
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-11-12T15:15:19Z"
+ },
+ "title": "Klop designsysteem",
+ "namespace": "Klop",
+ "libraries": [],
+ "sections": {},
+ "groups": [
+  "Logos",
+  "Icons"
+ ],
+ "assetGroups": {
+  "Logos": {
+   "name": "Logos",
+   "tile": "l",
+   "order": [],
+   "files": {}
+  },
+  "Icons": {
+   "name": "Icons",
+   "tile": "s",
+   "order": [],
+   "files": {}
+  }
+ },
+ "blobs": {},
+ "docs": {
+  "readme": "project/README.md",
+  "sections": []
+ },
+ "lastChange": {
+  "by": "Dick de Krijger",
+  "at": "2026-11-13T15:55:00Z",
+  "via": "Claude",
+  "note": "Je-vorm, voorraadbadge en geel accent in de header"
+ }
+}

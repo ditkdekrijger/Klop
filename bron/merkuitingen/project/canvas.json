@@ -1,0 +1,772 @@
+{
+  "v": 3,
+  "attachments": {},
+  "boards": {
+    "02-het-merk.dc.html": {
+      "h": 900,
+      "title": "02 Het merk in het kort",
+      "w": 1600,
+      "x": 1680,
+      "y": 0
+    },
+    "03-overzicht-1.dc.html": {
+      "h": 900,
+      "title": "03 Overzicht 1 van 2",
+      "w": 1600,
+      "x": 3360,
+      "y": 0
+    },
+    "04-overzicht-2.dc.html": {
+      "h": 900,
+      "title": "04 Overzicht 2 van 2",
+      "w": 1600,
+      "x": 5040,
+      "y": 0
+    },
+    "33-vervolg.dc.html": {
+      "h": 900,
+      "title": "33 Zo gaan we verder",
+      "w": 1600,
+      "x": 0,
+      "y": 19740
+    },
+    "Main.dc.html": {
+      "h": 900,
+      "title": "01 Cover",
+      "w": 1600,
+      "x": 0,
+      "y": 0
+    },
+    "m01-mijn-klop.dc.html": {
+      "h": 900,
+      "title": "M01 Mijn Klop",
+      "w": 1600,
+      "x": 0,
+      "y": 1340
+    },
+    "m02-service-updates.dc.html": {
+      "h": 900,
+      "title": "M02 Service-updates",
+      "w": 1600,
+      "x": 1680,
+      "y": 1340
+    },
+    "m03-serviceplaatje.dc.html": {
+      "h": 900,
+      "title": "M03 Serviceplaatje",
+      "w": 1600,
+      "x": 3360,
+      "y": 1340
+    },
+    "m04-vandaag-geregeld.dc.html": {
+      "h": 900,
+      "title": "M04 Vandaag geregeld",
+      "w": 1600,
+      "x": 5040,
+      "y": 1340
+    },
+    "m05-overdrachtsbox.dc.html": {
+      "h": 900,
+      "title": "M05 De overdrachtsbox",
+      "w": 1600,
+      "x": 0,
+      "y": 3640
+    },
+    "m06-servicepas.dc.html": {
+      "h": 900,
+      "title": "M06 De servicepas",
+      "w": 1600,
+      "x": 1680,
+      "y": 3640
+    },
+    "m07-logboek.dc.html": {
+      "h": 900,
+      "title": "M07 Het logboek",
+      "w": 1600,
+      "x": 3360,
+      "y": 3640
+    },
+    "m08-het-gele-label.dc.html": {
+      "h": 900,
+      "title": "M08 Het gele label",
+      "w": 1600,
+      "x": 5040,
+      "y": 3640
+    },
+    "m09-klop-onderhouden.dc.html": {
+      "h": 900,
+      "title": "M09 Klop-onderhouden",
+      "w": 1600,
+      "x": 6720,
+      "y": 3640
+    },
+    "m10-gevel-entree.dc.html": {
+      "h": 900,
+      "title": "M10 Gevel en entree",
+      "w": 1600,
+      "x": 0,
+      "y": 5940
+    },
+    "m11-servicebalie.dc.html": {
+      "h": 900,
+      "title": "M11 De servicebalie",
+      "w": 1600,
+      "x": 1680,
+      "y": 5940
+    },
+    "m12-showroombordje.dc.html": {
+      "h": 900,
+      "title": "M12 Showroombordje",
+      "w": 1600,
+      "x": 3360,
+      "y": 5940
+    },
+    "m13-servicehaven.dc.html": {
+      "h": 900,
+      "title": "M13 Servicehaven en steiger",
+      "w": 1600,
+      "x": 5040,
+      "y": 5940
+    },
+    "m14-stalling.dc.html": {
+      "h": 900,
+      "title": "M14 De stalling",
+      "w": 1600,
+      "x": 6720,
+      "y": 5940
+    },
+    "m15-beursstand.dc.html": {
+      "h": 900,
+      "title": "M15 Beursstand",
+      "w": 1600,
+      "x": 8400,
+      "y": 5940
+    },
+    "m16-oliegoed.dc.html": {
+      "h": 900,
+      "title": "M16 Het oliegoed",
+      "w": 1600,
+      "x": 0,
+      "y": 8240
+    },
+    "m17-naambadge.dc.html": {
+      "h": 900,
+      "title": "M17 Naambadge",
+      "w": 1600,
+      "x": 1680,
+      "y": 8240
+    },
+    "m18-overdracht.dc.html": {
+      "h": 900,
+      "title": "M18 De overdracht",
+      "w": 1600,
+      "x": 3360,
+      "y": 8240
+    },
+    "m19-zo-doen-wij-het.dc.html": {
+      "h": 900,
+      "title": "M19 Zo doen wij het",
+      "w": 1600,
+      "x": 5040,
+      "y": 8240
+    },
+    "m20-partnerhavens.dc.html": {
+      "h": 900,
+      "title": "M20 Partnerhavens",
+      "w": 1600,
+      "x": 0,
+      "y": 10540
+    },
+    "m21-botenmerken.dc.html": {
+      "h": 900,
+      "title": "M21 Naast de botenmerken",
+      "w": 1600,
+      "x": 1680,
+      "y": 10540
+    },
+    "m22-aanleggen-bij.dc.html": {
+      "h": 900,
+      "title": "M22 Aanleggen bij",
+      "w": 1600,
+      "x": 3360,
+      "y": 10540
+    },
+    "m23-website.dc.html": {
+      "h": 900,
+      "title": "M23 Website, voorpagina",
+      "w": 1600,
+      "x": 0,
+      "y": 12840
+    },
+    "m23b-productpagina.dc.html": {
+      "h": 900,
+      "title": "M23b Website, bootpagina",
+      "w": 1600,
+      "x": 1680,
+      "y": 12840
+    },
+    "m23c-configurator.dc.html": {
+      "h": 900,
+      "title": "M23c Configurator, boot en uitvoering",
+      "w": 1600,
+      "x": 3360,
+      "y": 12840
+    },
+    "m23d-configurator-service.dc.html": {
+      "h": 900,
+      "title": "M23d Configurator, service en overzicht",
+      "w": 1600,
+      "x": 5040,
+      "y": 12840
+    },
+    "m23e-servicepagina.dc.html": {
+      "h": 900,
+      "title": "M23e Website, servicepagina",
+      "w": 1600,
+      "x": 6720,
+      "y": 12840
+    },
+    "m24-offerte-afleverbrief.dc.html": {
+      "h": 900,
+      "title": "M24 Offerte en afleverbrief",
+      "w": 1600,
+      "x": 0,
+      "y": 17440
+    },
+    "m25-seizoenspost.dc.html": {
+      "h": 900,
+      "title": "M25 Seizoenspost",
+      "w": 1600,
+      "x": 1680,
+      "y": 17440
+    },
+    "m26-campagne.dc.html": {
+      "h": 900,
+      "title": "M26 Campagne, het concept",
+      "w": 1600,
+      "x": 0,
+      "y": 15140
+    },
+    "m26b-campagne-online.dc.html": {
+      "h": 900,
+      "title": "M26b Campagne, online",
+      "w": 1600,
+      "x": 1680,
+      "y": 15140
+    },
+    "m26c-campagne-buiten.dc.html": {
+      "h": 900,
+      "title": "M26c Campagne, buiten en print",
+      "w": 1600,
+      "x": 3360,
+      "y": 15140
+    },
+    "m26d-campagne-direct.dc.html": {
+      "h": 900,
+      "title": "M26d Campagne, mail en direct",
+      "w": 1600,
+      "x": 5040,
+      "y": 15140
+    },
+    "m26e-campagne-video.dc.html": {
+      "h": 900,
+      "title": "M26e Campagne, video",
+      "w": 1600,
+      "x": 6720,
+      "y": 15140
+    },
+    "m26f-campagne-planning.dc.html": {
+      "h": 900,
+      "title": "M26f Campagne, planning en kanalenmix",
+      "w": 1600,
+      "x": 8400,
+      "y": 15140
+    },
+    "m27-bedrijfswagen.dc.html": {
+      "h": 900,
+      "title": "M27 Bedrijfswagen en trailer",
+      "w": 1600,
+      "x": 3360,
+      "y": 17440
+    },
+    "m28-mailhandtekening.dc.html": {
+      "h": 900,
+      "title": "M28 Mailhandtekening",
+      "w": 1600,
+      "x": 5040,
+      "y": 17440
+    }
+  },
+  "createdOnFiles": {
+    "at": "2026-11-11T16:30:00Z",
+    "v": 1
+  },
+  "designSystems": [],
+  "launch": {
+    "view": "canvas"
+  },
+  "noteOrder": [
+    "t-merkuitingen",
+    "t-01",
+    "t-02",
+    "t-03",
+    "t-04",
+    "t-05",
+    "t-06",
+    "p-uitleg",
+    "p-m01",
+    "p-m02",
+    "p-m03",
+    "p-m04",
+    "p-m05",
+    "p-m06",
+    "p-m07",
+    "p-m08",
+    "p-m09",
+    "p-m10",
+    "p-m11",
+    "p-m12",
+    "p-m13",
+    "p-m14",
+    "p-m15",
+    "p-m16",
+    "p-m17",
+    "p-m18",
+    "p-m19",
+    "p-m20",
+    "p-m21",
+    "p-m22",
+    "p-m23",
+    "p-m24",
+    "p-m25",
+    "p-m26",
+    "p-m27",
+    "p-m28",
+    "t-06b",
+    "t-06c",
+    "p-m23b",
+    "p-m23c",
+    "p-m23d",
+    "p-m23e",
+    "p-m26b",
+    "p-m26c",
+    "p-m26d",
+    "p-m26e"
+  ],
+  "notes": {
+    "p-m01": {
+      "fill": "orange",
+      "size": 24,
+      "text": "GEMINI-PROMPT · M01 Mijn Klop\n\nPhotorealistic close-up of a hand holding a modern smartphone on a wooden jetty at a Dutch river marina in low morning light. On the screen a clean white app interface with a dark navy light sans-serif headline 'Uw boot ligt voor u klaar.' and one saffron-yellow status tag reading 'Geregeld'. A white sloop is softly blurred in the background. Calm, premium, shallow depth of field. No other readable text, no watermark. Aspect ratio 4:3.\n\nBijlage: de export van dit artboard als referentie voor het scherm.",
+      "w": 760,
+      "x": 0,
+      "y": 2300
+    },
+    "p-m02": {
+      "fill": "orange",
+      "size": 24,
+      "text": "GEMINI-PROMPT · M02 Service-updates\n\nPhotorealistic smartphone lying on the helm console of an open white sloop, soft morning light on the river behind. The screen shows a messaging app with one incoming message in Dutch: 'Goedemorgen. Uw boot is gepoetst en ligt klaar aan de steiger. Klopt. [voornaam]' and below it a small photo of the same sloop at a jetty. Calm, premium, shallow depth of field. No other readable text, no watermark. Aspect ratio 4:3.\n\nVervang [voornaam] door een echte voornaam.",
+      "w": 760,
+      "x": 1680,
+      "y": 2300
+    },
+    "p-m03": {
+      "fill": "orange",
+      "size": 24,
+      "text": "GEMINI-PROMPT · M03 Serviceplaatje\n\nMacro photograph of a small brushed stainless steel plate, about 70 by 40 mm, mounted next to the steering wheel on the white gelcoat console of a sloop. Engraved in dark navy: 'Thuishaven Klop' and smaller 'Klop Premium Service', with a small QR code on the right. Low warm sunlight, a teak detail in the corner, shallow depth of field, premium product photography. No other text, no watermark. Aspect ratio 4:3.\n\nBijlage: de export van dit artboard als referentie voor het plaatje.",
+      "w": 760,
+      "x": 3360,
+      "y": 2300
+    },
+    "p-m04": {
+      "fill": "orange",
+      "size": 24,
+      "text": "GEMINI-PROMPT · M04 Vandaag geregeld\n\nPhotorealistic interior of a bright, calm boat showroom with a service desk. On the wall a large matte display with a white background, a dark navy light sans-serif headline 'Vandaag geregeld' and five short list rows, each ending with a small saffron-yellow tag. A white sloop is partly visible in the background, polished concrete floor, soft daylight. Uncluttered, hotel lobby feeling. No other readable text, no watermark. Aspect ratio 4:3.\n\nBijlage: de export van dit artboard als referentie voor het scherm.",
+      "w": 760,
+      "x": 5040,
+      "y": 2300
+    },
+    "p-m05": {
+      "fill": "orange",
+      "size": 24,
+      "text": "GEMINI-PROMPT · M05 De overdrachtsbox\n\nPhotorealistic product photograph of an open rigid gift box in saffron yellow (#EFA91F) with a dark navy ribbon, standing on a teak boat deck in soft morning light. Inside, on a lining of wide saffron and white stripes: a navy hardcover booklet with the light sans-serif word 'Logboek', an off-white card with a saffron edge, a floating cork key fob and a small folded saffron pennant. Premium and minimal. No other text, no watermark. Aspect ratio 4:3.",
+      "w": 760,
+      "x": 0,
+      "y": 4600
+    },
+    "p-m06": {
+      "fill": "orange",
+      "size": 24,
+      "text": "GEMINI-PROMPT · M06 De servicepas\n\nClose-up photograph of a matte off-white membership card with a saffron-yellow bottom edge, held between two fingers above calm river water at sunrise. On the card in dark navy light sans-serif type: 'Klop Premium Service', below it a name line, and in the corner the small oval boat-dealer badge from the attached logo, unchanged. Shallow depth of field, premium. No other text, no watermark. Aspect ratio 4:3.\n\nBijlagen: het Klop-logo en de export van dit artboard.",
+      "w": 760,
+      "x": 1680,
+      "y": 4600
+    },
+    "p-m07": {
+      "fill": "orange",
+      "size": 24,
+      "text": "GEMINI-PROMPT · M07 Het logboek\n\nPhotograph of a dark navy linen hardcover book lying on the white seat cushion of a sloop, the cover stamped with the light sans-serif word 'Logboek' and a small line 'Klop Premium Service'. A saffron-yellow ribbon bookmark hangs out. A pen lies beside it. Low golden light, shallow depth of field, premium. No other text, no watermark. Aspect ratio 4:3.\n\nBijlage: de export van dit artboard als referentie voor de omslag.",
+      "w": 760,
+      "x": 3360,
+      "y": 4600
+    },
+    "p-m08": {
+      "fill": "orange",
+      "size": 24,
+      "text": "GEMINI-PROMPT · M08 Het gele label\n\nPhotorealistic close-up of a saffron-yellow luggage-style tag with two clipped corners and a metal eyelet, hanging from the stainless steel steering wheel of a white sloop moored at a jetty. Printed on the tag in dark navy light sans-serif: 'Klaar om te varen.' and below in italic 'Klopt.' followed by a handwritten first name. Early morning light, calm water in the background, shallow depth of field, premium. No other text, no watermark. Aspect ratio 4:3.\n\nBijlage: de export van dit artboard als referentie voor het label.",
+      "w": 760,
+      "x": 5040,
+      "y": 4600
+    },
+    "p-m09": {
+      "fill": "orange",
+      "size": 24,
+      "text": "GEMINI-PROMPT · M09 Klop-onderhouden\n\nPhotograph of a used but immaculate white sloop in a bright showroom. On a slim stand next to the boat a small matte white sign with dark navy light sans-serif text 'Klop-onderhouden' and a saffron-yellow tag reading 'Volledig logboek'. Polished floor, soft daylight, calm premium atmosphere. No other text, no watermark. Aspect ratio 4:3.\n\nBijlage: de export van dit artboard als referentie voor het bordje.",
+      "w": 760,
+      "x": 6720,
+      "y": 4600
+    },
+    "p-m10": {
+      "fill": "orange",
+      "size": 24,
+      "text": "GEMINI-PROMPT · M10 Gevel en entree\n\nPhotorealistic exterior of a modern boat showroom on a Dutch river dike in early morning light: a clean white facade with a large glass front. On the facade in dark navy raised light sans-serif letters: 'Klop Premium Service. Sinds 1966.' Next to the entrance the small oval chrome and blue badge from the attached logo, unchanged. One saffron-yellow doormat at the door. Calm sky, no banners, no flags with brands. No other text, no watermark. Wide shot, aspect ratio 4:3.\n\nBijlage: het Klop-logo.",
+      "w": 760,
+      "x": 0,
+      "y": 6900
+    },
+    "p-m11": {
+      "fill": "orange",
+      "size": 24,
+      "text": "GEMINI-PROMPT · M11 De servicebalie\n\nPhotorealistic interior: a calm service desk inside a bright boat showroom, the desk front in deep navy with a light oak top. A staff member in a navy polo with a small name badge smiles behind it. On the white wall behind in dark navy light sans-serif letters: 'Na de aankoop begint het pas.' A single saffron-yellow tag lies on the desk. Hotel reception atmosphere, soft daylight. No other text, no watermark. Aspect ratio 4:3.",
+      "w": 760,
+      "x": 1680,
+      "y": 6900
+    },
+    "p-m12": {
+      "fill": "orange",
+      "size": 24,
+      "text": "GEMINI-PROMPT · M12 Showroombordje\n\nPhotograph of a slim brushed steel floor stand with a matte white A5 sign in front of a new white sloop in a bright showroom. The sign reads in dark navy light sans-serif 'Klop Premium Service', with a small line above it 'Bij deze boot inbegrepen' and at the bottom a saffron-yellow tag 'Het eerste jaar zit erbij'. Soft daylight, shallow depth of field, premium. No other text, no watermark. Aspect ratio 4:3.\n\nBijlage: de export van dit artboard als referentie voor het bordje.",
+      "w": 760,
+      "x": 3360,
+      "y": 6900
+    },
+    "p-m13": {
+      "fill": "orange",
+      "size": 24,
+      "text": "GEMINI-PROMPT · M13 Servicehaven en steiger\n\nPhotorealistic view of a small private service harbour on a Dutch river at sunrise: a wooden jetty with numbered white berth signs in dark navy, a slim white sign reading 'Klop Premium Service' with a smaller line 'Halen en brengen', and a saffron-yellow pennant on a flagpole. Two white sloops are moored with saffron-yellow mooring lines. Calm water, light mist. No other text, no watermark. Aspect ratio 4:3.",
+      "w": 760,
+      "x": 5040,
+      "y": 6900
+    },
+    "p-m14": {
+      "fill": "orange",
+      "size": 24,
+      "text": "GEMINI-PROMPT · M14 De stalling\n\nPhotorealistic interior of a clean, well-lit winter storage hall with a neat row of white sloops on trailers under dark navy covers. From each bow hangs one saffron-yellow tag. Polished concrete floor, soft overhead light, strong perspective, orderly and calm, premium. No readable text, no watermark. Aspect ratio 4:3.",
+      "w": 760,
+      "x": 6720,
+      "y": 6900
+    },
+    "p-m15": {
+      "fill": "orange",
+      "size": 24,
+      "text": "GEMINI-PROMPT · M15 Beursstand\n\nPhotorealistic boat show stand in a large exhibition hall: a minimalist white stand with one white sloop, a deep navy back wall with large off-white light sans-serif text 'Wij regelen het gedoe. U vaart.' and a saffron-yellow counter in the centre. The surrounding stands are blurred, blue and busy. Calm, premium, spacious. No other readable text, no watermark. Aspect ratio 4:3.",
+      "w": 760,
+      "x": 8400,
+      "y": 6900
+    },
+    "p-m16": {
+      "fill": "orange",
+      "size": 24,
+      "text": "GEMINI-PROMPT · M16 Het oliegoed\n\nPhotorealistic portrait of a friendly Dutch boat mechanic in his forties standing on a wooden jetty at dusk, wearing a saffron-yellow waxed sailing jacket with a dark navy collar over a navy polo, with a small oval badge on the chest. White sloops and calm river water behind him, soft low light, shallow depth of field, honest and warm. No readable text, no watermark. Aspect ratio 4:3.\n\nBijlage: het Klop-logo, voor de badge op de borst.",
+      "w": 760,
+      "x": 0,
+      "y": 9200
+    },
+    "p-m17": {
+      "fill": "orange",
+      "size": 24,
+      "text": "GEMINI-PROMPT · M17 Naambadge\n\nMacro photograph of a small dark navy magnetic name badge on a navy polo shirt, the first name '[voornaam]' in off-white italic light sans-serif letters and a thin saffron-yellow stripe along the bottom edge. Soft daylight, shallow depth of field, premium. Only the first name is readable, no watermark. Aspect ratio 4:3.\n\nVervang [voornaam] door een echte voornaam.",
+      "w": 760,
+      "x": 1680,
+      "y": 9200
+    },
+    "p-m18": {
+      "fill": "orange",
+      "size": 24,
+      "text": "GEMINI-PROMPT · M18 De overdracht\n\nPhotorealistic scene on a wooden jetty at golden hour: a mechanic in a saffron-yellow jacket hands a key with a floating cork key fob to a smiling couple in their fifties standing next to a new white sloop. A saffron-yellow gift box rests on the seat of the boat. Warm low light, calm river, candid and joyful, premium. No readable text, no watermark. Aspect ratio 4:3.",
+      "w": 760,
+      "x": 3360,
+      "y": 9200
+    },
+    "p-m19": {
+      "fill": "orange",
+      "size": 24,
+      "text": "GEMINI-PROMPT · M19 Zo doen wij het\n\nPhotograph of a hand taking a small dark navy card from the chest pocket of a saffron-yellow work jacket. On the card in off-white light sans-serif the headline 'Zo doen wij het' and five short numbered lines. A workshop with a white boat hull softly blurred behind, daylight, premium. No other readable text, no watermark. Aspect ratio 4:3.\n\nBijlage: de export van dit artboard als referentie voor de kaart.",
+      "w": 760,
+      "x": 5040,
+      "y": 9200
+    },
+    "p-m20": {
+      "fill": "orange",
+      "size": 24,
+      "text": "GEMINI-PROMPT · M20 Partnerhavens\n\nPhotograph of a small white enamel sign mounted on the wooden wall of a harbour master's office at a Dutch marina. In dark navy light sans-serif: 'Klop Premium Service-punt' and below it a saffron-yellow tag reading 'Hier halen en brengen wij uw boot'. Boats and masts softly blurred, morning light. No other text, no watermark. Aspect ratio 4:3.\n\nBijlage: de export van dit artboard als referentie voor het bord.",
+      "w": 760,
+      "x": 0,
+      "y": 11500
+    },
+    "p-m21": {
+      "fill": "orange",
+      "size": 24,
+      "text": "GEMINI-PROMPT · M21 Naast de botenmerken\n\nMacro photograph of a small rectangular brushed steel plate on the transom of a white sloop, engraved in dark navy 'Geleverd en onderhouden door Klop', with the tiny oval badge from the attached logo beside it, unchanged. Water reflections, low sun, shallow depth of field, premium. No other text, no watermark. Aspect ratio 4:3.\n\nBijlage: het Klop-logo.",
+      "w": 760,
+      "x": 1680,
+      "y": 11500
+    },
+    "p-m22": {
+      "fill": "orange",
+      "size": 24,
+      "text": "GEMINI-PROMPT · M22 Aanleggen bij\n\nPhotograph of a folded off-white route map lying on a café table on a wooden terrace by a Dutch river. The cover reads in dark navy light sans-serif 'Aanleggen bij' and carries a small saffron-yellow tag. A white sloop is moored at the terrace jetty in the background, two coffee cups on the table, soft afternoon light. No other text, no watermark. Aspect ratio 4:3.\n\nBijlage: de export van dit artboard als referentie voor de kaart.",
+      "w": 760,
+      "x": 3360,
+      "y": 11500
+    },
+    "p-m23": {
+      "fill": "orange",
+      "size": 24,
+      "text": "GEMINI-PROMPT · M23 Website\n\nPhotorealistic laptop on a light oak desk showing a calm white website: a large dark navy light sans-serif headline 'Wij regelen het gedoe. U vaart.', one navy button and a wide photo of a small sloop on a misty river with a saffron-yellow tag on it. Soft daylight, premium. No other readable text, no watermark. Aspect ratio 4:3.\n\nBijlage: de export van dit artboard als referentie voor het scherm.",
+      "w": 760,
+      "x": 0,
+      "y": 13800
+    },
+    "p-m23b": {
+      "fill": "orange",
+      "size": 24,
+      "text": "GEMINI-PROMPT · M23b Website, bootpagina\n\nPhotorealistic laptop on a light oak desk showing a calm white boat product page: on the left a large photo of a white sloop on a still river at sunrise, on the right a column with a boat name in a dark navy light sans-serif, a price line and one saffron-yellow box holding four short lines of text. Soft daylight, premium, uncluttered. All other text illegible, no watermark. Aspect ratio 4:3.\n\nBijlage: de export van dit artboard als referentie voor het scherm.",
+      "w": 760,
+      "x": 1680,
+      "y": 13800
+    },
+    "p-m23c": {
+      "fill": "orange",
+      "size": 24,
+      "text": "GEMINI-PROMPT · M23c Configurator, boot en uitvoering\n\nPhotorealistic tablet held in two hands in a bright, quiet boat showroom, showing a clean boat configurator: a render of a white sloop on the left, large option cards and five small round step markers on the right, and a saffron-yellow badge in the bottom bar. Boats softly blurred in the background. All text on the screen illegible, no watermark. Aspect ratio 4:3.\n\nBijlage: de export van dit artboard als referentie voor het scherm.",
+      "w": 760,
+      "x": 3360,
+      "y": 13800
+    },
+    "p-m23d": {
+      "fill": "orange",
+      "size": 24,
+      "text": "GEMINI-PROMPT · M23d Configurator, service en overzicht\n\nPhotorealistic tablet on a white service counter showing a one-page summary: a short price list with one saffron-yellow highlighted line and two navy buttons. Next to the tablet lies a saffron-yellow key tag on a small cord. Soft daylight, calm, premium. All text illegible, no watermark. Aspect ratio 4:3.\n\nBijlage: de export van dit artboard als referentie voor het scherm.",
+      "w": 760,
+      "x": 5040,
+      "y": 13800
+    },
+    "p-m23e": {
+      "fill": "orange",
+      "size": 24,
+      "text": "GEMINI-PROMPT · M23e Website, servicepagina\n\nPhotorealistic desktop monitor in a bright office showing a website page: a dark navy header with a large off-white light sans-serif title, four white cards with saffron-yellow top borders and a timeline with five yellow dots. Soft daylight, premium. All other text illegible, no watermark. Aspect ratio 4:3.\n\nBijlage: de export van dit artboard als referentie voor het scherm.",
+      "w": 760,
+      "x": 6720,
+      "y": 13800
+    },
+    "p-m24": {
+      "fill": "orange",
+      "size": 24,
+      "text": "GEMINI-PROMPT · M24 Offerte en afleverbrief\n\nFlat lay photograph of a matte white A4 quotation on a dark navy desk pad, with a clear dark navy light sans-serif heading 'Offerte' and one line marked by a small saffron-yellow tag reading 'Klop Premium Service'. A pen and a boat key with a cork fob lie beside it. Soft daylight, premium stationery, all other text illegible, no watermark. Aspect ratio 4:3.\n\nBijlage: de export van dit artboard als referentie voor het document.",
+      "w": 760,
+      "x": 0,
+      "y": 18400
+    },
+    "p-m25": {
+      "fill": "orange",
+      "size": 24,
+      "text": "GEMINI-PROMPT · M25 Seizoenspost\n\nPhotograph of a matte white postcard on a doormat next to a pair of sailing shoes. On the card in dark navy light sans-serif: 'Uw boot is winterklaar.' and below in italic 'Klopt.' with a handwritten first name, and in the corner the small oval badge from the attached logo, unchanged. Soft hallway light, warm and personal. No other text, no watermark. Aspect ratio 4:3.\n\nBijlagen: het Klop-logo en de export van dit artboard.",
+      "w": 760,
+      "x": 1680,
+      "y": 18400
+    },
+    "p-m26": {
+      "fill": "orange",
+      "size": 24,
+      "text": "GEMINI-PROMPT · M26 Campagne\n\nPhotorealistic outdoor advertising poster in a bus shelter at dusk in a Dutch town. The poster shows a wide calm river at sunrise with one small white sloop, a large off-white light sans-serif headline 'Wij regelen het gedoe. U vaart.', a saffron-yellow tag in the lower left reading 'Winterklaar.' and in the lower right the small oval badge from the attached logo, unchanged. No other text, no watermark. Aspect ratio 4:3.\n\nBijlagen: het Klop-logo en de export van dit artboard.",
+      "w": 760,
+      "x": 0,
+      "y": 16100
+    },
+    "p-m26b": {
+      "fill": "orange",
+      "size": 24,
+      "text": "GEMINI-PROMPT · M26b Campagne, online\n\nPhotorealistic flat lay on a white table of a smartphone and a tablet. The phone shows a social post with a calm photo of a clean engine bay and a saffron-yellow bar reading 'Geregeld. U vaart.'; the tablet shows a small banner advert in the same style. Soft daylight. All other text illegible, no watermark. Aspect ratio 4:3.\n\nBijlage: het Klop-logo.",
+      "w": 760,
+      "x": 1680,
+      "y": 16100
+    },
+    "p-m26c": {
+      "fill": "orange",
+      "size": 24,
+      "text": "GEMINI-PROMPT · M26c Campagne, buiten en print\n\nPhotorealistic wide view of a large deep-navy billboard along a Dutch river road at dusk. The left half shows a calm photo of a white sloop under a soft sky, the right half a big off-white light sans-serif headline 'De winterstalling?' with a saffron-yellow label below it reading 'Geregeld. U vaart.' and the small oval badge from the attached logo, unchanged. No other readable text, no watermark. Aspect ratio 4:3.\n\nBijlagen: het Klop-logo en de export van dit artboard.",
+      "w": 760,
+      "x": 3360,
+      "y": 16100
+    },
+    "p-m26d": {
+      "fill": "orange",
+      "size": 24,
+      "text": "GEMINI-PROMPT · M26d Campagne, mail en direct\n\nPhotorealistic smartphone held in a hand showing a chat: a short message bubble from a boat yard and a saffron-yellow reply bubble. Behind it an open laptop with a clean e-mail that has a spring photo of a white sloop. Soft daylight, calm. All text illegible, no watermark. Aspect ratio 4:3.\n\nBijlage: de export van dit artboard.",
+      "w": 760,
+      "x": 5040,
+      "y": 16100
+    },
+    "p-m26e": {
+      "fill": "orange",
+      "size": 24,
+      "text": "GEMINI-PROMPT · M26e Campagne, video\n\nCinematic film stills as a 2x2 grid with a consistent calm, premium look and shallow depth of field: (1) a flat marine battery in a clean engine bay, (2) a mechanic in a saffron-yellow oilskin jacket calmly replacing it, (3) a saffron-yellow tag tied around a boat's steering wheel, (4) a white sloop leaving a misty harbour at golden hour. No text, no watermark. Aspect ratio 4:3.\n\nBijlage: de export van dit artboard als storyboard.",
+      "w": 760,
+      "x": 6720,
+      "y": 16100
+    },
+    "p-m27": {
+      "fill": "orange",
+      "size": 24,
+      "text": "GEMINI-PROMPT · M27 Bedrijfswagen en trailer\n\nPhotorealistic side view of a deep navy pickup truck towing a white sloop on a boat trailer along a Dutch river dike road in early morning light. On the truck door in off-white light sans-serif letters: 'Klop Premium Service. Sinds 1966.' and the small oval badge from the attached logo, unchanged. The trailer has saffron-yellow tie-down straps. Calm light, mist over the river. No other text, no watermark. Aspect ratio 4:3.\n\nBijlage: het Klop-logo.",
+      "w": 760,
+      "x": 3360,
+      "y": 18400
+    },
+    "p-m28": {
+      "fill": "orange",
+      "size": 24,
+      "text": "GEMINI-PROMPT · M28 Mailhandtekening\n\nPhotorealistic laptop screen showing the end of an e-mail with a minimal signature: a first and last name in dark navy, the line 'Klop Premium Service. Sinds 1966.', a thin saffron-yellow rule and on the right the small oval badge from the attached logo, unchanged. White background, calm, all other text illegible, no watermark. Aspect ratio 4:3.\n\nBijlagen: het Klop-logo en de export van dit artboard.",
+      "w": 760,
+      "x": 5040,
+      "y": 18400
+    },
+    "p-uitleg": {
+      "fill": "orange",
+      "size": 24,
+      "text": "PROMPTS VOOR GEMINI (NANO BANANA)\n\nOnder elk artboard met een uiting staat een notitie met de prompt.\n\n1. Open Gemini en kies beeld maken.\n2. Voeg het Klop-logo toe als bijlage. Bij een vlak ontwerp ook de export van het artboard.\n3. Plak de prompt. Vervang [voornaam] door een echte voornaam.\n4. Sleep het beeld op het beeldvak, of stuur het naar Claude om te plaatsen.\n\nAlle prompts vragen om 4:3, laag licht en geen extra tekst. Per uiting staat in het beeldplan (Klop-beeldplan.md) welke route geldt: Gemini of fotograaf. De notities gaan niet mee in de export.",
+      "w": 760,
+      "x": 6720,
+      "y": 0
+    },
+    "t-01": {
+      "kind": "title1",
+      "maxW": 6640,
+      "text": "01 Technologie",
+      "w": 240,
+      "x": 0,
+      "y": 1040
+    },
+    "t-02": {
+      "kind": "title1",
+      "maxW": 8000,
+      "text": "02 Producten & services",
+      "w": 240,
+      "x": 0,
+      "y": 3340
+    },
+    "t-03": {
+      "kind": "title1",
+      "maxW": 8000,
+      "text": "03 Plaats & events",
+      "w": 240,
+      "x": 0,
+      "y": 5640
+    },
+    "t-04": {
+      "kind": "title1",
+      "maxW": 6640,
+      "text": "04 Mens, talent & gedrag",
+      "w": 240,
+      "x": 0,
+      "y": 7940
+    },
+    "t-05": {
+      "kind": "title1",
+      "maxW": 4960,
+      "text": "05 Partnerships & samenwerkingen",
+      "w": 240,
+      "x": 0,
+      "y": 10240
+    },
+    "t-06": {
+      "kind": "title1",
+      "maxW": 8000,
+      "text": "06 Communicatie & kanalen · Website en configurator",
+      "w": 240,
+      "x": 0,
+      "y": 12540
+    },
+    "t-06b": {
+      "kind": "title1",
+      "maxW": 8000,
+      "text": "06 Communicatie & kanalen · Campagne over alle kanalen",
+      "w": 240,
+      "x": 0,
+      "y": 14840
+    },
+    "t-06c": {
+      "kind": "title1",
+      "maxW": 6640,
+      "text": "06 Communicatie & kanalen · Post, voertuigen en handtekening",
+      "w": 240,
+      "x": 0,
+      "y": 17140
+    },
+    "t-merkuitingen": {
+      "kind": "title1",
+      "maxW": 6640,
+      "text": "Klop merkuitingen",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    }
+  },
+  "order": [
+    "Main.dc.html",
+    "02-het-merk.dc.html",
+    "03-overzicht-1.dc.html",
+    "04-overzicht-2.dc.html",
+    "m01-mijn-klop.dc.html",
+    "m02-service-updates.dc.html",
+    "m03-serviceplaatje.dc.html",
+    "m04-vandaag-geregeld.dc.html",
+    "m05-overdrachtsbox.dc.html",
+    "m06-servicepas.dc.html",
+    "m07-logboek.dc.html",
+    "m08-het-gele-label.dc.html",
+    "m09-klop-onderhouden.dc.html",
+    "m10-gevel-entree.dc.html",
+    "m11-servicebalie.dc.html",
+    "m12-showroombordje.dc.html",
+    "m13-servicehaven.dc.html",
+    "m14-stalling.dc.html",
+    "m15-beursstand.dc.html",
+    "m16-oliegoed.dc.html",
+    "m17-naambadge.dc.html",
+    "m18-overdracht.dc.html",
+    "m19-zo-doen-wij-het.dc.html",
+    "m20-partnerhavens.dc.html",
+    "m21-botenmerken.dc.html",
+    "m22-aanleggen-bij.dc.html",
+    "m23-website.dc.html",
+    "m23b-productpagina.dc.html",
+    "m23c-configurator.dc.html",
+    "m23d-configurator-service.dc.html",
+    "m23e-servicepagina.dc.html",
+    "m26-campagne.dc.html",
+    "m26b-campagne-online.dc.html",
+    "m26c-campagne-buiten.dc.html",
+    "m26d-campagne-direct.dc.html",
+    "m26e-campagne-video.dc.html",
+    "m26f-campagne-planning.dc.html",
+    "m24-offerte-afleverbrief.dc.html",
+    "m25-seizoenspost.dc.html",
+    "m27-bedrijfswagen.dc.html",
+    "m28-mailhandtekening.dc.html",
+    "33-vervolg.dc.html"
+  ],
+  "pages": [],
+  "title": "Klop merkuitingen"
+}

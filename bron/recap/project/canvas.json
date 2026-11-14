@@ -1,0 +1,337 @@
+{
+ "v": 3,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-11-11T19:40:00Z"
+ },
+ "title": "Klop recap",
+ "launch": {
+  "view": "canvas"
+ },
+ "pages": [],
+ "boards": {
+  "Main.dc.html": {
+   "x": 0,
+   "y": 0,
+   "w": 1600,
+   "h": 900,
+   "title": "01 Cover"
+  },
+  "02-resultaat.dc.html": {
+   "x": 1680,
+   "y": 0,
+   "w": 1600,
+   "h": 900,
+   "title": "02 02 Het resultaat"
+  },
+  "03-strategie.dc.html": {
+   "x": 3360,
+   "y": 0,
+   "w": 1600,
+   "h": 900,
+   "title": "03 03 De strategie"
+  },
+  "04-merkverhaal.dc.html": {
+   "x": 5040,
+   "y": 0,
+   "w": 1600,
+   "h": 900,
+   "title": "04 04 Het merkverhaal"
+  },
+  "04b-vrijheid.dc.html": {
+   "x": 0,
+   "y": 1020,
+   "w": 1600,
+   "h": 900,
+   "title": "05 Varen is vrijheid"
+  },
+  "05-brandbook.dc.html": {
+   "x": 1680,
+   "y": 1020,
+   "w": 1600,
+   "h": 900,
+   "title": "06 05 Het brandbook"
+  },
+  "06-identiteit.dc.html": {
+   "x": 3360,
+   "y": 1020,
+   "w": 1600,
+   "h": 900,
+   "title": "07 06 Logo en label"
+  },
+  "07-typografie.dc.html": {
+   "x": 5040,
+   "y": 1020,
+   "w": 1600,
+   "h": 900,
+   "title": "08 07 Lettertype"
+  },
+  "07b-woordmerk.dc.html": {
+   "x": 0,
+   "y": 2040,
+   "w": 1600,
+   "h": 900,
+   "title": "09 Het woordmerk"
+  },
+  "08-kleur.dc.html": {
+   "x": 1680,
+   "y": 2040,
+   "w": 1600,
+   "h": 900,
+   "title": "10 08 Kleur"
+  },
+  "09-merkuitingen.dc.html": {
+   "x": 3360,
+   "y": 2040,
+   "w": 1600,
+   "h": 900,
+   "title": "11 09 Merkuitingen"
+  },
+  "10-website.dc.html": {
+   "x": 5040,
+   "y": 2040,
+   "w": 1600,
+   "h": 900,
+   "title": "12 10 De website"
+  },
+  "11-code.dc.html": {
+   "x": 0,
+   "y": 3060,
+   "w": 1600,
+   "h": 900,
+   "title": "13 11 De code"
+  },
+  "12-open.dc.html": {
+   "x": 1680,
+   "y": 3060,
+   "w": 1600,
+   "h": 900,
+   "title": "14 12 Zo gaat het verder"
+  },
+  "13-slot.dc.html": {
+   "x": 3360,
+   "y": 3060,
+   "w": 1600,
+   "h": 900,
+   "title": "15 13 Slot"
+  },
+  "v-04-merkverhaal-1.dc.html": {
+   "x": 0,
+   "y": 4320,
+   "w": 1600,
+   "h": 900,
+   "title": "04 04 Het merkverhaal · versie 1"
+  },
+  "v-04-merkverhaal-2.dc.html": {
+   "x": 1680,
+   "y": 4320,
+   "w": 1600,
+   "h": 900,
+   "title": "04 04 Het merkverhaal · versie 2"
+  },
+  "v-04-merkverhaal-3.dc.html": {
+   "x": 3360,
+   "y": 4320,
+   "w": 1600,
+   "h": 900,
+   "title": "04 04 Het merkverhaal · versie 3"
+  },
+  "v-13-slot-1.dc.html": {
+   "x": 0,
+   "y": 5340,
+   "w": 1600,
+   "h": 900,
+   "title": "15 13 Slot · versie 1"
+  },
+  "v-13-slot-2.dc.html": {
+   "x": 1680,
+   "y": 5340,
+   "w": 1600,
+   "h": 900,
+   "title": "15 13 Slot · versie 2"
+  },
+  "v-13-slot-3.dc.html": {
+   "x": 3360,
+   "y": 5340,
+   "w": 1600,
+   "h": 900,
+   "title": "15 13 Slot · versie 3"
+  },
+  "v-01-cover-2.dc.html": {
+   "x": 5040,
+   "y": 5340,
+   "w": 1600,
+   "h": 900,
+   "title": "01 Cover · versie 2: Klop Premium Service"
+  },
+  "b01.dc.html": {
+   "x": 0,
+   "y": 6720,
+   "w": 1600,
+   "h": 900,
+   "title": "B01 Cover: Vaar je vrijheid"
+  },
+  "b02.dc.html": {
+   "x": 1680,
+   "y": 6720,
+   "w": 1600,
+   "h": 900,
+   "title": "B02 Het resultaat"
+  },
+  "b03.dc.html": {
+   "x": 3360,
+   "y": 6720,
+   "w": 1600,
+   "h": 900,
+   "title": "B03 De strategie"
+  },
+  "b04.dc.html": {
+   "x": 5040,
+   "y": 6720,
+   "w": 1600,
+   "h": 900,
+   "title": "B04 Klop Premium Service™"
+  },
+  "b05.dc.html": {
+   "x": 0,
+   "y": 7740,
+   "w": 1600,
+   "h": 900,
+   "title": "B05 Het merkverhaal"
+  },
+  "b06.dc.html": {
+   "x": 1680,
+   "y": 7740,
+   "w": 1600,
+   "h": 900,
+   "title": "B06 Varen is vrijheid"
+  },
+  "b07.dc.html": {
+   "x": 3360,
+   "y": 7740,
+   "w": 1600,
+   "h": 900,
+   "title": "B07 Het brandbook"
+  },
+  "b08.dc.html": {
+   "x": 5040,
+   "y": 7740,
+   "w": 1600,
+   "h": 900,
+   "title": "B08 Logo en label"
+  },
+  "b09.dc.html": {
+   "x": 0,
+   "y": 8760,
+   "w": 1600,
+   "h": 900,
+   "title": "B09 Lettertype"
+  },
+  "b10.dc.html": {
+   "x": 1680,
+   "y": 8760,
+   "w": 1600,
+   "h": 900,
+   "title": "B10 Het woordmerk"
+  },
+  "b11.dc.html": {
+   "x": 3360,
+   "y": 8760,
+   "w": 1600,
+   "h": 900,
+   "title": "B11 Kleur"
+  },
+  "b12.dc.html": {
+   "x": 5040,
+   "y": 8760,
+   "w": 1600,
+   "h": 900,
+   "title": "B12 Merkuitingen"
+  },
+  "b13.dc.html": {
+   "x": 0,
+   "y": 9780,
+   "w": 1600,
+   "h": 900,
+   "title": "B13 De website"
+  },
+  "b14.dc.html": {
+   "x": 1680,
+   "y": 9780,
+   "w": 1600,
+   "h": 900,
+   "title": "B14 De code"
+  },
+  "b15.dc.html": {
+   "x": 3360,
+   "y": 9780,
+   "w": 1600,
+   "h": 900,
+   "title": "B15 Zo gaat het verder"
+  },
+  "b16.dc.html": {
+   "x": 5040,
+   "y": 9780,
+   "w": 1600,
+   "h": 900,
+   "title": "B16 Slot"
+  }
+ },
+ "order": [
+  "Main.dc.html",
+  "02-resultaat.dc.html",
+  "03-strategie.dc.html",
+  "04-merkverhaal.dc.html",
+  "04b-vrijheid.dc.html",
+  "05-brandbook.dc.html",
+  "06-identiteit.dc.html",
+  "07-typografie.dc.html",
+  "07b-woordmerk.dc.html",
+  "08-kleur.dc.html",
+  "09-merkuitingen.dc.html",
+  "10-website.dc.html",
+  "11-code.dc.html",
+  "12-open.dc.html",
+  "13-slot.dc.html",
+  "v-04-merkverhaal-1.dc.html",
+  "v-04-merkverhaal-2.dc.html",
+  "v-04-merkverhaal-3.dc.html",
+  "v-13-slot-1.dc.html",
+  "v-13-slot-2.dc.html",
+  "v-13-slot-3.dc.html",
+  "v-01-cover-2.dc.html",
+  "b01.dc.html",
+  "b02.dc.html",
+  "b03.dc.html",
+  "b04.dc.html",
+  "b05.dc.html",
+  "b06.dc.html",
+  "b07.dc.html",
+  "b08.dc.html",
+  "b09.dc.html",
+  "b10.dc.html",
+  "b11.dc.html",
+  "b12.dc.html",
+  "b13.dc.html",
+  "b14.dc.html",
+  "b15.dc.html",
+  "b16.dc.html"
+ ],
+ "notes": {
+  "t-versies": {
+   "x": 0,
+   "y": 4080,
+   "text": "Versie 1: Wij regelen het gedoe. U vaart. · Versie 2: Vrijheidsgarantie. · Versie 3: Onbezorgd genieten van vrijheid op het water.",
+   "kind": "title1",
+   "maxW": 5000
+  },
+  "t-deckb": {
+   "x": 0,
+   "y": 6600,
+   "text": "Deck B: Klop Premium Service™ als eigen pagina op 04",
+   "kind": "title1",
+   "maxW": 5000
+  }
+ },
+ "designSystems": []
+}

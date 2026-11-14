@@ -1,0 +1,670 @@
+{
+ "recap": [
+  {
+   "file": "recap/Main.jpg",
+   "title": "01 Cover"
+  },
+  {
+   "file": "recap/02-resultaat.jpg",
+   "title": "02 02 Het resultaat"
+  },
+  {
+   "file": "recap/03-strategie.jpg",
+   "title": "03 03 De strategie"
+  },
+  {
+   "file": "recap/04-merkverhaal.jpg",
+   "title": "04 04 Het merkverhaal"
+  },
+  {
+   "file": "recap/04b-vrijheid.jpg",
+   "title": "05 Varen is vrijheid"
+  },
+  {
+   "file": "recap/05-brandbook.jpg",
+   "title": "06 05 Het brandbook"
+  },
+  {
+   "file": "recap/06-identiteit.jpg",
+   "title": "07 06 Logo en label"
+  },
+  {
+   "file": "recap/07-typografie.jpg",
+   "title": "08 07 Lettertype"
+  },
+  {
+   "file": "recap/07b-woordmerk.jpg",
+   "title": "09 Het woordmerk"
+  },
+  {
+   "file": "recap/08-kleur.jpg",
+   "title": "10 08 Kleur"
+  },
+  {
+   "file": "recap/09-merkuitingen.jpg",
+   "title": "11 09 Merkuitingen"
+  },
+  {
+   "file": "recap/10-website.jpg",
+   "title": "12 10 De website"
+  },
+  {
+   "file": "recap/11-code.jpg",
+   "title": "13 11 De code"
+  },
+  {
+   "file": "recap/12-open.jpg",
+   "title": "14 12 Zo gaat het verder"
+  },
+  {
+   "file": "recap/13-slot.jpg",
+   "title": "15 13 Slot"
+  },
+  {
+   "file": "recap/v-04-merkverhaal-1.jpg",
+   "title": "04 04 Het merkverhaal · versie 1"
+  },
+  {
+   "file": "recap/v-04-merkverhaal-2.jpg",
+   "title": "04 04 Het merkverhaal · versie 2"
+  },
+  {
+   "file": "recap/v-04-merkverhaal-3.jpg",
+   "title": "04 04 Het merkverhaal · versie 3"
+  },
+  {
+   "file": "recap/v-13-slot-1.jpg",
+   "title": "15 13 Slot · versie 1"
+  },
+  {
+   "file": "recap/v-13-slot-2.jpg",
+   "title": "15 13 Slot · versie 2"
+  },
+  {
+   "file": "recap/v-13-slot-3.jpg",
+   "title": "15 13 Slot · versie 3"
+  },
+  {
+   "file": "recap/v-01-cover-2.jpg",
+   "title": "01 Cover · versie 2: Klop Premium Service"
+  },
+  {
+   "file": "recap/b01.jpg",
+   "title": "B01 Cover: Vaar je vrijheid"
+  },
+  {
+   "file": "recap/b02.jpg",
+   "title": "B02 Het resultaat"
+  },
+  {
+   "file": "recap/b03.jpg",
+   "title": "B03 De strategie"
+  },
+  {
+   "file": "recap/b04.jpg",
+   "title": "B04 Klop Premium Service™"
+  },
+  {
+   "file": "recap/b05.jpg",
+   "title": "B05 Het merkverhaal"
+  },
+  {
+   "file": "recap/b06.jpg",
+   "title": "B06 Varen is vrijheid"
+  },
+  {
+   "file": "recap/b07.jpg",
+   "title": "B07 Het brandbook"
+  },
+  {
+   "file": "recap/b08.jpg",
+   "title": "B08 Logo en label"
+  },
+  {
+   "file": "recap/b09.jpg",
+   "title": "B09 Lettertype"
+  },
+  {
+   "file": "recap/b10.jpg",
+   "title": "B10 Het woordmerk"
+  },
+  {
+   "file": "recap/b11.jpg",
+   "title": "B11 Kleur"
+  },
+  {
+   "file": "recap/b12.jpg",
+   "title": "B12 Merkuitingen"
+  },
+  {
+   "file": "recap/b13.jpg",
+   "title": "B13 De website"
+  },
+  {
+   "file": "recap/b14.jpg",
+   "title": "B14 De code"
+  },
+  {
+   "file": "recap/b15.jpg",
+   "title": "B15 Zo gaat het verder"
+  },
+  {
+   "file": "recap/b16.jpg",
+   "title": "B16 Slot"
+  }
+ ],
+ "brandbook": [
+  {
+   "file": "brandbook/Main.jpg",
+   "title": "01 Cover"
+  },
+  {
+   "file": "brandbook/02-inhoud.jpg",
+   "title": "02 Inhoud"
+  },
+  {
+   "file": "brandbook/03-herpositionering.jpg",
+   "title": "03 De herpositionering"
+  },
+  {
+   "file": "brandbook/03b-sfeer.jpg",
+   "title": "03b Sfeer"
+  },
+  {
+   "file": "brandbook/03c-vrijheid-en-gedoe.jpg",
+   "title": "03c Vrijheid en gedoe"
+  },
+  {
+   "file": "brandbook/03d-varen-is-vrijheid.jpg",
+   "title": "03d Varen is vrijheid"
+  },
+  {
+   "file": "brandbook/04-deel-kern.jpg",
+   "title": "04 Deel 1 Kern"
+  },
+  {
+   "file": "brandbook/05-visie-missie.jpg",
+   "title": "05 Visie en missie"
+  },
+  {
+   "file": "brandbook/06-kernwaarden.jpg",
+   "title": "06 Kernwaarden"
+  },
+  {
+   "file": "brandbook/07-merkarchitectuur.jpg",
+   "title": "07 Merkarchitectuur"
+  },
+  {
+   "file": "brandbook/08-herkomst-bewijs.jpg",
+   "title": "08 Herkomst en bewijs"
+  },
+  {
+   "file": "brandbook/09-deel-positionering.jpg",
+   "title": "09 Deel 2 Positionering"
+  },
+  {
+   "file": "brandbook/10-positionering.jpg",
+   "title": "10 De watersporthub"
+  },
+  {
+   "file": "brandbook/11-doelgroep.jpg",
+   "title": "11 Twee vaarders"
+  },
+  {
+   "file": "brandbook/12-premium-service.jpg",
+   "title": "12 Klop Premium Service"
+  },
+  {
+   "file": "brandbook/12b-pakket-in-beeld.jpg",
+   "title": "12b Het pakket in beeld"
+  },
+  {
+   "file": "brandbook/13-spelregels-klantreis.jpg",
+   "title": "13 Spelregels en klantreis"
+  },
+  {
+   "file": "brandbook/14-deel-identiteit.jpg",
+   "title": "14 Deel 3 Identiteit"
+  },
+  {
+   "file": "brandbook/15-persoonlijkheid.jpg",
+   "title": "15 Merkpersoonlijkheid"
+  },
+  {
+   "file": "brandbook/16-payoff.jpg",
+   "title": "16 Payoff en propositieregel"
+  },
+  {
+   "file": "brandbook/17-merkverhaal-kern.jpg",
+   "title": "17 Merkverhaal in het kort"
+  },
+  {
+   "file": "brandbook/17b-oplossing.jpg",
+   "title": "17b De oplossing: Klop Premium Service"
+  },
+  {
+   "file": "brandbook/18-merkverhaal.jpg",
+   "title": "18 Merkverhaal volledig"
+  },
+  {
+   "file": "brandbook/19-tone-of-voice.jpg",
+   "title": "19 Tone of voice"
+  },
+  {
+   "file": "brandbook/20-woordgebruik.jpg",
+   "title": "20 Woordgebruik"
+  },
+  {
+   "file": "brandbook/21-deel-basiselementen.jpg",
+   "title": "21 Deel 4 Basiselementen"
+  },
+  {
+   "file": "brandbook/22-geel-is-geregeld.jpg",
+   "title": "22 Geel is geregeld"
+  },
+  {
+   "file": "brandbook/23-logo.jpg",
+   "title": "23 Logo"
+  },
+  {
+   "file": "brandbook/24-logogebruik.jpg",
+   "title": "24 Logogebruik"
+  },
+  {
+   "file": "brandbook/24b-logo-in-context.jpg",
+   "title": "24b Logo in context"
+  },
+  {
+   "file": "brandbook/25-logo-niet-doen.jpg",
+   "title": "25 Logo: niet doen"
+  },
+  {
+   "file": "brandbook/26-woordbeeld.jpg",
+   "title": "26 Woordbeeld"
+  },
+  {
+   "file": "brandbook/26b-woordmerk.jpg",
+   "title": "26b Het woordmerk"
+  },
+  {
+   "file": "brandbook/26c-woordmerk-service.jpg",
+   "title": "26c Het woordmerk van de service"
+  },
+  {
+   "file": "brandbook/27-kleur.jpg",
+   "title": "27 Kleur"
+  },
+  {
+   "file": "brandbook/27b-kleur-in-beeld.jpg",
+   "title": "27b Kleur in beeld"
+  },
+  {
+   "file": "brandbook/28-typografie.jpg",
+   "title": "28 Typografie"
+  },
+  {
+   "file": "brandbook/29-grafische-elementen.jpg",
+   "title": "29 Grafische elementen"
+  },
+  {
+   "file": "brandbook/30-het-gele-label.jpg",
+   "title": "30 Het gele label"
+  },
+  {
+   "file": "brandbook/30b-label-in-beeld.jpg",
+   "title": "30b Het gele label in beeld"
+  },
+  {
+   "file": "brandbook/31-fotografie.jpg",
+   "title": "31 Fotografie"
+  },
+  {
+   "file": "brandbook/31b-fotografie-in-beeld.jpg",
+   "title": "31b Fotografie in beeld"
+  },
+  {
+   "file": "brandbook/32-knoppen-labels.jpg",
+   "title": "32 Knoppen en labels"
+  },
+  {
+   "file": "brandbook/32b-knoppen-detail.jpg",
+   "title": "32b Knoppen in detail"
+  },
+  {
+   "file": "brandbook/32c-knoppen-op-beeld.jpg",
+   "title": "32c Knoppen op beeld"
+  },
+  {
+   "file": "brandbook/32d-microcopy.jpg",
+   "title": "32d Microcopy"
+  },
+  {
+   "file": "brandbook/32e-overgangen.jpg",
+   "title": "32e Overgangen"
+  },
+  {
+   "file": "brandbook/33-deel-toepassingen.jpg",
+   "title": "33 Deel 5 Toepassingen"
+  },
+  {
+   "file": "brandbook/34-website.jpg",
+   "title": "34 Website"
+  },
+  {
+   "file": "brandbook/35-merkuitingen.jpg",
+   "title": "35 Merkuitingen"
+  },
+  {
+   "file": "brandbook/36-open-punten.jpg",
+   "title": "36 Zo gaat het verder"
+  },
+  {
+   "file": "brandbook/37-slot.jpg",
+   "title": "37 Slot"
+  }
+ ],
+ "merkuitingen": [
+  {
+   "file": "merkuitingen/Main.jpg",
+   "title": "01 Cover"
+  },
+  {
+   "file": "merkuitingen/02-het-merk.jpg",
+   "title": "02 Het merk in het kort"
+  },
+  {
+   "file": "merkuitingen/03-overzicht-1.jpg",
+   "title": "03 Overzicht 1 van 2"
+  },
+  {
+   "file": "merkuitingen/04-overzicht-2.jpg",
+   "title": "04 Overzicht 2 van 2"
+  },
+  {
+   "file": "merkuitingen/m01-mijn-klop.jpg",
+   "title": "M01 Mijn Klop"
+  },
+  {
+   "file": "merkuitingen/m02-service-updates.jpg",
+   "title": "M02 Service-updates"
+  },
+  {
+   "file": "merkuitingen/m03-serviceplaatje.jpg",
+   "title": "M03 Serviceplaatje"
+  },
+  {
+   "file": "merkuitingen/m04-vandaag-geregeld.jpg",
+   "title": "M04 Vandaag geregeld"
+  },
+  {
+   "file": "merkuitingen/m05-overdrachtsbox.jpg",
+   "title": "M05 De overdrachtsbox"
+  },
+  {
+   "file": "merkuitingen/m06-servicepas.jpg",
+   "title": "M06 De servicepas"
+  },
+  {
+   "file": "merkuitingen/m07-logboek.jpg",
+   "title": "M07 Het logboek"
+  },
+  {
+   "file": "merkuitingen/m08-het-gele-label.jpg",
+   "title": "M08 Het gele label"
+  },
+  {
+   "file": "merkuitingen/m09-klop-onderhouden.jpg",
+   "title": "M09 Klop-onderhouden"
+  },
+  {
+   "file": "merkuitingen/m10-gevel-entree.jpg",
+   "title": "M10 Gevel en entree"
+  },
+  {
+   "file": "merkuitingen/m11-servicebalie.jpg",
+   "title": "M11 De servicebalie"
+  },
+  {
+   "file": "merkuitingen/m12-showroombordje.jpg",
+   "title": "M12 Showroombordje"
+  },
+  {
+   "file": "merkuitingen/m13-servicehaven.jpg",
+   "title": "M13 Servicehaven en steiger"
+  },
+  {
+   "file": "merkuitingen/m14-stalling.jpg",
+   "title": "M14 De stalling"
+  },
+  {
+   "file": "merkuitingen/m15-beursstand.jpg",
+   "title": "M15 Beursstand"
+  },
+  {
+   "file": "merkuitingen/m16-oliegoed.jpg",
+   "title": "M16 Het oliegoed"
+  },
+  {
+   "file": "merkuitingen/m17-naambadge.jpg",
+   "title": "M17 Naambadge"
+  },
+  {
+   "file": "merkuitingen/m18-overdracht.jpg",
+   "title": "M18 De overdracht"
+  },
+  {
+   "file": "merkuitingen/m19-zo-doen-wij-het.jpg",
+   "title": "M19 Zo doen wij het"
+  },
+  {
+   "file": "merkuitingen/m20-partnerhavens.jpg",
+   "title": "M20 Partnerhavens"
+  },
+  {
+   "file": "merkuitingen/m21-botenmerken.jpg",
+   "title": "M21 Naast de botenmerken"
+  },
+  {
+   "file": "merkuitingen/m22-aanleggen-bij.jpg",
+   "title": "M22 Aanleggen bij"
+  },
+  {
+   "file": "merkuitingen/m23-website.jpg",
+   "title": "M23 Website, voorpagina"
+  },
+  {
+   "file": "merkuitingen/m23b-productpagina.jpg",
+   "title": "M23b Website, bootpagina"
+  },
+  {
+   "file": "merkuitingen/m23c-configurator.jpg",
+   "title": "M23c Configurator, boot en uitvoering"
+  },
+  {
+   "file": "merkuitingen/m23d-configurator-service.jpg",
+   "title": "M23d Configurator, service en overzicht"
+  },
+  {
+   "file": "merkuitingen/m23e-servicepagina.jpg",
+   "title": "M23e Website, servicepagina"
+  },
+  {
+   "file": "merkuitingen/m26-campagne.jpg",
+   "title": "M26 Campagne, het concept"
+  },
+  {
+   "file": "merkuitingen/m26b-campagne-online.jpg",
+   "title": "M26b Campagne, online"
+  },
+  {
+   "file": "merkuitingen/m26c-campagne-buiten.jpg",
+   "title": "M26c Campagne, buiten en print"
+  },
+  {
+   "file": "merkuitingen/m26d-campagne-direct.jpg",
+   "title": "M26d Campagne, mail en direct"
+  },
+  {
+   "file": "merkuitingen/m26e-campagne-video.jpg",
+   "title": "M26e Campagne, video"
+  },
+  {
+   "file": "merkuitingen/m26f-campagne-planning.jpg",
+   "title": "M26f Campagne, planning en kanalenmix"
+  },
+  {
+   "file": "merkuitingen/m24-offerte-afleverbrief.jpg",
+   "title": "M24 Offerte en afleverbrief"
+  },
+  {
+   "file": "merkuitingen/m25-seizoenspost.jpg",
+   "title": "M25 Seizoenspost"
+  },
+  {
+   "file": "merkuitingen/m27-bedrijfswagen.jpg",
+   "title": "M27 Bedrijfswagen en trailer"
+  },
+  {
+   "file": "merkuitingen/m28-mailhandtekening.jpg",
+   "title": "M28 Mailhandtekening"
+  },
+  {
+   "file": "merkuitingen/33-vervolg.jpg",
+   "title": "33 Zo gaan we verder"
+  }
+ ],
+ "ds": [
+  {
+   "file": "ds/BootResultaat.jpg",
+   "title": "BootResultaat",
+   "group": "Boten",
+   "readme": "# Bootresultaat (lijstkaart)\n\nBooking-stijl resultaatkaart: foto links met label (Laagste prijs, Langste boot, Gunstigste prijs per meter, alleen berekend uit echte data), midden specificaties met iconen, rechts prijs, prijs per meter, indicatieve maandlast met voetnoot, Bekijk boot en Vergelijk. Filters hebben live aantallen, actieve filters zijn chips, sorteren is een rij pillen. Geen verzonnen urgentie of reviews.\n"
+  },
+  {
+   "file": "ds/Button.jpg",
+   "title": "Button",
+   "group": "Actions",
+   "readme": "Knop in twee delen: label links, pijlcel rechts, gescheiden door een haarlijn. Hoogte 48px (klein 40px), rechthoekig, geen afronding. Hover: nachtblauwe vulling schuift van onderen omhoog, de pijl schuift 4px op.\n\nVarianten: lijn (secundair), solid (primair, één per scherm), wit en licht (op foto of donker), premium.\n\nPremium: altijd Oliegoed met nachtblauwe tekst en een afgeschuinde linkeronderhoek. Voor elke knop die naar Klop Premium Service™ leidt. Hover keert om: nachtblauw met gele tekst. De Klop Premium Service-knop is altijd geel, op elke achtergrond.\n"
+  },
+  {
+   "file": "ds/Card.jpg",
+   "title": "Card",
+   "group": "Cards",
+   "readme": "Bootkaart: foto in waterlijst-kader (4:3), merk en type, titel, prijs in Funnel Display 300. Geen schaduw, geen radius. Favoriet- en vergelijk-knoppen rechtsboven.\n"
+  },
+  {
+   "file": "ds/Categorietegel.jpg",
+   "title": "Categorietegel",
+   "group": "Merken",
+   "readme": "# Categorietegel\n\nFoto-tegel voor een categorie of subcategorie (type boot, nieuw en gebruikt). Elke categorie en subcategorie heeft een foto. Op de bootpagina en de merkpagina staan ze in een rij; op mobiel een horizontale scroller. Naam onderin in wit op de foto, met een donkere onderrand voor leesbaarheid (4.5:1).\n"
+  },
+  {
+   "file": "ds/Cover.jpg",
+   "title": "Cover",
+   "group": "",
+   "readme": ""
+  },
+  {
+   "file": "ds/Fotokader.jpg",
+   "title": "Fotokader",
+   "group": "Beeld",
+   "readme": "Waterlijst-fotokader: witte hairline 14px binnen de rand, open cirkel rechtsonder. Bij hover trekt de lijn naar 22px. Voor alle foto en bootbeelden.\n"
+  },
+  {
+   "file": "ds/Icon.jpg",
+   "title": "Icon",
+   "group": "Beeld",
+   "readme": "Lijnicoon uit de Klop-set. Gebruik de inline SVG met `currentColor`, zodat het icoon de tekstkleur volgt (Nachtblauw op licht, wit op donker). Maten: 24 px in navigatie, 36 px in tegels, 48 tot 56 px boven een kop. Lijn is altijd 1.25 px, niet schalend. Nooit geel: geel blijft voor het label \"geregeld\". Combineer niet met iconen uit andere sets.\n"
+  },
+  {
+   "file": "ds/Label.jpg",
+   "title": "Label",
+   "group": "Status",
+   "readme": "Gele label met afgeschuinde hoeken en een open oogje, links met 14px afstand tot de rand en 30px voorruimte voor de tekst. Klop Premium Service™ is altijd een Oliegoed-label, op elke achtergrond en in elke sectie. Overige koppen krijgen een gewoon label met open cirkel in grijs.\n"
+  },
+  {
+   "file": "ds/MegaMenu.jpg",
+   "title": "MegaMenu",
+   "group": "Navigatie",
+   "readme": "# MegaMenu\n\nUitklapmenu onder Boten, Showroom, Klop Premium Service en Over ons. Volgorde van de hoofdnavigatie: Boten, Showroom, Klop Premium Service, Over ons. Onder Boten staan merken met logo op een witte plaat en soorten boten met foto, geen losse tekstlijst. Tegels hebben `radius-water`. Alleen zichtbaar vanaf 1180px; daaronder werkt het mobiele menu.\n"
+  },
+  {
+   "file": "ds/MerkHero.jpg",
+   "title": "MerkHero",
+   "group": "Merken",
+   "readme": "# MerkHero\n\nOpening van een merkpagina: grote foto met het logo op een witte plaat, merkverhaal in een korte alinea, daarna type-tegels, uitgelichte boten in afwisselende rijen, galerij van 8 (of 4) foto's en een slotbanner. Knoptekst: \"Bekijk alle n boten van <merk>\"; bij één boot \"Bekijk de boot van <merk>\". Maxima Boats krijgt geen Klop-opmaak.\n"
+  },
+  {
+   "file": "ds/MerkTegel.jpg",
+   "title": "MerkTegel",
+   "group": "Merken",
+   "readme": "# MerkTegel\n\nFoto-tegel voor een merk (radius 22px). Het kleurenlogo staat op een witte plaat linksboven, nooit direct op de foto. Onderin de merknaam en het aantal boten. De laatste tegel in een raster is geel (\"Alle n boten\"), het enige gele accent in dat raster.\n"
+  },
+  {
+   "file": "ds/MijnKlopHero.jpg",
+   "title": "MijnKlopHero",
+   "group": "Mijn Klop",
+   "readme": "# MijnKlopHero\n\nOpening van Mijn Klop: Nachtblauw vlak (radius 22px) met begroeting in weight 300, korte alinea en twee pillen (Plan service geel, Maak afspraak omlijnd), rechts een foto van de eigen boot. Eronder drie cijfertegels (volgende afspraak, voortgang checklist, serviceverzoeken). In de demo-omgeving staan alleen voorbeeldgegevens, nooit verzonnen cijfers.\n"
+  },
+  {
+   "file": "ds/MijnKlopTegel.jpg",
+   "title": "MijnKlopTegel",
+   "group": "Mijn Klop",
+   "readme": "# MijnKlopTegel\n\nActietegel in Mijn Klop (Serviceplanner, Afspraken, Seizoenschecklist, Logboek, Documenten, Klop Premium Service™). Wit vlak, `radius-kader` 14px, titel in Funnel Display 300, korte regel in Staal en onderaan \"Open\" met een gele hairline. De tegels voor Klop Premium Service™ zijn informatief (\"Onderdeel van je pakket\") en niet klikbaar. Menu links: Nachtblauw, actief item met gele markering, teller als gele pill. Op mobiel een horizontale tabbalk.\n"
+  },
+  {
+   "file": "ds/Nav.jpg",
+   "title": "Nav",
+   "group": "Navigatie",
+   "readme": "Hoofdnavigatie: Boten, Vrijheidsroutes, Klop Premium Service, Over Klop, Mijn Klop, favorieten en één CTA. Megamenu per groep. Transparant over hero, gelcoat bij scroll.\n"
+  },
+  {
+   "file": "ds/PdfModal.jpg",
+   "title": "PdfModal",
+   "group": "Vergelijken",
+   "readme": "# PdfModal\n\nVenster bij \"Bewaar als PDF\" in de vergelijkingstool. Vraagt een e-mailadres (leadmoment) met een vinkje dat een adviseur contact mag opnemen. Daarna opent het printvenster met een A4-liggend overzicht: Klop-kop met datum en ontvanger, gele hairline, vergelijkingstabel. Navigatie, voet en trays zijn verborgen. Primaire knop is geel (Maak PDF). Eerlijk over de preview: de mail wordt in het prototype niet verstuurd.\n"
+  },
+  {
+   "file": "ds/PremiumStrook.jpg",
+   "title": "PremiumStrook",
+   "group": "Secties",
+   "readme": "# Premium Service-strook\n\nVolle gele band op de home, één keer per pagina. Een bewegende band met de vier onderdelen bovenin, de nachtblauwe pil Klop Premium Service™ (klikbaar), de kop \"Wij regelen het gedoe. U vaart.\", een foto met waterlijst-kader, de persoonskaart van het vaste aanspreekpunt (foto, naam, bellen, WhatsApp) en vier fototegels: Onderhoud (werkplaats), Schoonmaak (stuurwiel), Stalling (steiger), Halen en brengen (trailer). Daaronder de drie stappen, klein. Onderaan een Vaarspoor in nachtblauw. Op hover: foto zoomt, kader sluit, icoonring wordt geel, golflijn loopt.\n"
+  },
+  {
+   "file": "ds/Prijsinzicht.jpg",
+   "title": "Prijsinzicht",
+   "group": "Boten",
+   "readme": "# Prijsinzicht\n\nOp de bootpagina: de prijs van deze boot als gele stip tussen alle boten van het type (laagste tot hoogste), de plek (Nr. x van n), prijs per meter ten opzichte van de middelste waarde, en twee vergelijkbare boten met het verschil. Alleen berekend uit de eigen voorraad.\n"
+  },
+  {
+   "file": "ds/Tegel.jpg",
+   "title": "Tegel",
+   "group": "Keuze",
+   "readme": "# Tegel\n\nKleine afgeronde keuzetegel met icoon (radius 18px) voor de vaardersvinder: type boot, wat u zoekt op het water, budget. Geselecteerd: nachtblauw met gele icoonlijn.\n"
+  },
+  {
+   "file": "ds/Vaarspoor.jpg",
+   "title": "Vaarspoor",
+   "group": "Beeld",
+   "readme": "Vaarspoor: dunne golflijn als scheiding tussen secties. Tekent zich van links naar rechts als hij in beeld komt.\n"
+  },
+  {
+   "file": "ds/Vergelijken.jpg",
+   "title": "Vergelijken",
+   "group": "Boten",
+   "readme": "# Vergelijken\n\nTabel met tot drie boten. Per rij krijgt de beste waarde een gele markering en het woord Beste (laagste prijs, laagste prijs per meter, langste, nieuwste, direct leverbaar). Schakelaar Alleen verschillen. Vaste kop met foto, prijs en Plan proefvaart. Onderbalk met miniaturen.\n"
+  },
+  {
+   "file": "ds/Voorraadbadge.jpg",
+   "title": "Voorraadbadge",
+   "group": "Boten",
+   "readme": "# Voorraadbadge\n\nNachtblauwe pill met gele stip en de tekst \"Op voorraad\", linksonder op de foto van een boot die op voorraad is. Op kaart, lijstkaart en uitgelichte boot. Boten op bestelling krijgen geen badge. Wit op Nachtblauw haalt ruim 4.5:1.\n"
+  },
+  {
+   "file": "ds/Voortgang.jpg",
+   "title": "Voortgang",
+   "group": "Mijn Klop",
+   "readme": "# Voortgang\n\nSeizoenschecklist met vier seizoenen (Voorjaar, Zomer, Najaar, Winter). Afvinken bewaart direct; de balk toont \"n van m afgerond\". Balk: 10px hoog, pill, Oliegoed op Mist. Geel betekent hier \"geregeld\", dus alleen het afgeronde deel is geel.\n"
+  }
+ ]
+}

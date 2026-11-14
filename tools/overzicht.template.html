@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Klop Watersport overzicht</title>
+<meta name="description" content="Klop Watersport: recap, brandbook, designsysteem, merkuitingen en de nieuwe website in één bestand.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;400&family=Funnel+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--nacht:#0B1930;--diep:#14284A;--olie:#EFA91F;--gel:#F5F7F8;--mist:#DDE3E8;--chroom:#AAB3BD;--staal:#566373;
+--bg:var(--gel);--fg:var(--nacht);--card:#fff;--line:var(--mist);--mut:var(--staal);--chip:#fff;
+--fd:'Funnel Display','Helvetica Neue',Arial,sans-serif;--fs:'Funnel Sans','Helvetica Neue',Arial,sans-serif;--ez:cubic-bezier(.2,.7,.1,1);--bar:64px;--w:1320px;--pad:clamp(16px,4vw,56px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#08121F;--fg:#EEF2F5;--card:#0F1E36;--line:#22344F;--mut:#9AA6B4;--chip:#0F1E36}}
+:root[data-theme="dark"]{--bg:#08121F;--fg:#EEF2F5;--card:#0F1E36;--line:#22344F;--mut:#9AA6B4;--chip:#0F1E36}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--bar) + 12px)}
+body{background:var(--bg);color:var(--fg);font-family:var(--fs);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-family:var(--fd);font-weight:300;letter-spacing:-.035em;line-height:1.04}
+a{color:inherit}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+img{display:block;max-width:100%}
+code{font-family:ui-monospace,Menlo,monospace;font-size:13px}
+.wrap{max-width:calc(var(--w) + var(--pad)*2);margin:0 auto;padding:0 var(--pad)}
+.kick{display:inline-flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-weight:500;color:var(--mut)}
+.kick:before{content:"";width:8px;height:8px;border:1px solid currentColor;border-radius:50%}
+.lead{font-size:clamp(17px,1.5vw,20px);color:var(--mut);max-width:680px;line-height:1.55}
+/* balk */
+.bar{position:sticky;top:0;z-index:20;height:var(--bar);background:var(--nacht);color:#fff;display:flex;align-items:center;gap:clamp(12px,3vw,36px);padding:0 var(--pad)}
+.bar img{height:32px;width:auto;flex:none}
+.bar nav{flex:1;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;min-width:0}
+.bar nav::-webkit-scrollbar{display:none}
+.bar nav a{text-decoration:none;font-size:14.5px;color:var(--chroom);padding:8px 14px;border-radius:999px;white-space:nowrap;transition:color .3s,background .3s}
+.bar nav a:hover{color:#fff}.bar nav a.on{color:var(--nacht);background:#fff}
+.bar .tg{flex:none;width:36px;height:36px;border-radius:50%;border:1px solid #2A3C5A;display:grid;place-items:center;color:#fff}
+.bar .tg svg{width:16px;height:16px}
+/* cover */
+.cover{background:var(--nacht);color:#fff;position:relative;overflow:hidden}
+.cover .bgimg{position:absolute;inset:0;background-size:cover;background-position:70% 50%;opacity:.55}
+.cover .bgimg:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--nacht) 0%,rgba(11,25,48,.85) 40%,rgba(11,25,48,.2) 100%)}
+.cover .wrap{position:relative;padding-top:clamp(56px,10vh,120px);padding-bottom:clamp(48px,8vh,96px)}
+.cover .kick{color:var(--chroom)}
+.cover h1{font-size:clamp(48px,8vw,128px);letter-spacing:-.045em;line-height:.95;margin:22px 0 24px}
+.cover .lead{color:var(--mist)}
+.parts{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:clamp(40px,7vh,72px)}
+.parts a{display:flex;flex-direction:column;gap:8px;text-decoration:none;padding:20px;border-radius:22px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);min-height:190px;transition:transform .5s var(--ez),border-color .3s,background .3s}
+.parts a:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.1)}
+.parts small{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--chroom)}
+.parts b{font-family:var(--fd);font-weight:300;font-size:clamp(24px,2.2vw,32px);letter-spacing:-.03em;line-height:1.05}
+.parts p{font-size:14.5px;color:var(--chroom);flex:1}
+.parts span{font-size:14px}
+.parts a.y{background:var(--olie);border-color:var(--olie);color:var(--nacht)}.parts a.y small,.parts a.y p{color:var(--nacht)}
+/* secties */
+.sec{padding:clamp(64px,9vw,120px) 0;border-top:1px solid var(--line)}
+.sh{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,5vw,80px);align-items:end;margin-bottom:clamp(28px,4vw,52px)}
+.sh h2{font-size:clamp(40px,5.6vw,84px);margin-top:14px}
+.sh .n{font-family:var(--fd);font-weight:300;color:var(--mut)}
+.gh{font-size:clamp(22px,2vw,28px);margin:clamp(36px,4vw,56px) 0 18px;padding-top:16px;border-top:1px solid var(--line)}
+.gh:first-child{margin-top:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:22px 18px}
+.th{display:block;text-align:left;width:100%}
+.th img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:10px;background:var(--line);box-shadow:0 0 0 1px var(--line);transition:transform .5s var(--ez),box-shadow .3s}
+.th:hover img{transform:translateY(-3px);box-shadow:0 0 0 1px var(--fg),0 24px 40px -28px rgba(11,25,48,.6)}
+.th span{display:block;font-size:14.5px;margin-top:10px;color:var(--mut)}
+.th:hover span{color:var(--fg)}
+.th:focus-visible{outline:2px solid var(--olie);outline-offset:4px;border-radius:12px}
+/* recap viewer */
+.deck{background:var(--nacht);border-radius:22px;padding:clamp(10px,1.4vw,18px)}
+.deck .stage{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:16/9;background:#000}
+.deck .stage img{width:100%;height:100%;object-fit:contain}
+.deck .ctl{display:flex;align-items:center;justify-content:space-between;gap:16px;color:#fff;padding:14px 4px 4px}
+.deck .ctl b{font-weight:500}.deck .ctl small{color:var(--chroom);font-size:14px}
+.deck .ctl .b{display:flex;gap:8px}
+.rb{width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.3);display:grid;place-items:center;color:#fff;transition:border-color .3s,background .3s}
+.rb:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.rb svg{width:18px;height:10px;fill:none;stroke:currentColor;stroke-width:1.3}
+.strip{display:flex;gap:10px;overflow-x:auto;scrollbar-width:thin;margin-top:14px;padding:2px 2px 8px}
+.strip .th{flex:0 0 150px}.strip .th img{border-radius:6px;box-shadow:none;opacity:.55}.strip .th span{display:none}
+.strip .th.on img{opacity:1;box-shadow:0 0 0 2px var(--olie)}
+details{margin-top:28px}
+details summary{cursor:pointer;font-size:15px;color:var(--mut);padding:12px 0;list-style:none;display:flex;align-items:center;gap:10px}
+details summary:before{content:"+";width:24px;height:24px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center}
+details[open] summary:before{content:"–"}
+details .grid{margin-top:12px}
+/* designsysteem */
+.dsg{display:grid;gap:clamp(40px,5vw,72px)}
+.sws{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.sw{background:var(--card);border-radius:18px;padding:14px;box-shadow:0 0 0 1px var(--line)}
+.sw i{display:block;height:96px;border-radius:12px;box-shadow:inset 0 0 0 1px rgba(11,25,48,.1)}
+.sw b{display:block;margin-top:12px;font-weight:500}.sw code{color:var(--mut)}
+.sw p{font-size:14px;color:var(--mut);margin-top:6px;line-height:1.45}
+.ty{display:grid;grid-template-columns:260px minmax(0,1fr);gap:24px;align-items:center;padding:20px 0;border-top:1px solid var(--line)}
+.tm b{font-weight:500}.tm span{display:block;font-size:13px;color:var(--mut);font-family:ui-monospace,Menlo,monospace}.tm p{font-size:14px;color:var(--mut);margin-top:4px}
+.ts{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+table{width:100%;border-collapse:collapse;font-size:15px}
+td{padding:10px 12px 10px 0;border-top:1px solid var(--line);vertical-align:top}td:nth-child(2){font-family:ui-monospace,Menlo,monospace;font-size:13px;white-space:nowrap}td:last-child{color:var(--mut)}
+.tk3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,40px)}
+.tk3 h4,.dsg h3{font-family:var(--fd);font-weight:300;font-size:26px;letter-spacing:-.025em;margin-bottom:14px}
+.ics{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:10px}
+.ic{background:var(--card);border-radius:18px;box-shadow:0 0 0 1px var(--line);padding:18px 10px 12px;display:grid;justify-items:center;gap:8px;color:var(--fg)}
+.ic svg{width:40px;height:40px}.ic span{font-size:13px;color:var(--mut)}
+.logos{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.logos div{border-radius:18px;display:grid;place-items:center;padding:36px;box-shadow:0 0 0 1px var(--line)}
+.logos div:first-child{background:#fff}.logos div:last-child{background:var(--nacht)}
+.logos img{max-height:110px;width:auto}
+.cps{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px 18px}
+.cp .th img{aspect-ratio:auto;max-height:280px;object-fit:contain;object-position:top left;background:#F5F7F8}
+.cp figcaption{margin-top:10px}.cp b{font-weight:500}.cp small{margin-left:8px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}
+.cp p{font-size:14px;color:var(--mut);margin-top:4px;line-height:1.45}
+.rules{columns:2;column-gap:40px}.rules li{break-inside:avoid;margin:0 0 12px 18px;color:var(--mut)}.rules li b{color:var(--fg);font-weight:500}
+/* website */
+.new{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-bottom:28px}
+.new div{background:var(--card);border-radius:18px;padding:20px;box-shadow:0 0 0 1px var(--line)}
+.new small{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut)}
+.new b{display:block;font-family:var(--fd);font-weight:300;font-size:24px;letter-spacing:-.025em;margin:6px 0}
+.new p{font-size:14.5px;color:var(--mut)}
+.browser{border-radius:18px;overflow:hidden;box-shadow:0 0 0 1px var(--line),0 40px 80px -50px rgba(11,25,48,.6);background:var(--nacht)}
+.browser .top{display:flex;align-items:center;gap:12px;padding:10px 14px;color:var(--chroom);font-size:13px}
+.browser .top i{width:10px;height:10px;border-radius:50%;background:#2A3C5A}
+.browser .top span{flex:1;background:rgba(255,255,255,.06);border-radius:999px;padding:5px 14px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.browser iframe{display:block;width:100%;height:min(82vh,900px);border:0;background:#fff}
+.btn{display:inline-flex;align-items:center;gap:12px;min-height:48px;padding:0 24px;border-radius:999px;border:1px solid var(--fg);text-decoration:none;font-weight:500;font-size:15px;transition:background .3s,color .3s}
+.btn:hover{background:var(--fg);color:var(--bg)}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.btn.s{background:var(--nacht);color:#fff;border-color:var(--nacht)}
+footer{padding:48px 0 64px;border-top:1px solid var(--line);color:var(--mut);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:50;background:rgba(5,12,24,.94);display:none;flex-direction:column;align-items:center;justify-content:center;padding:56px 16px 24px}
+.lb.on{display:flex}
+.lb img{max-width:min(1600px,100%);max-height:calc(100vh - 140px);border-radius:8px;object-fit:contain}
+.lb .cap{color:#fff;margin-top:14px;font-size:15px;display:flex;gap:16px;align-items:center}
+.lb .cap small{color:var(--chroom)}
+.lb .x{position:absolute;top:12px;right:16px;font-size:30px;color:#fff;width:44px;height:44px}
+.lb .pv,.lb .nx{position:absolute;top:50%;transform:translateY(-50%)}.lb .pv{left:12px}.lb .nx{right:12px}
+@media(max-width:1040px){.parts{grid-template-columns:repeat(2,minmax(0,1fr))}.parts a{min-height:0}.sws{grid-template-columns:repeat(2,minmax(0,1fr))}.new,.tk3{grid-template-columns:1fr}.sh{grid-template-columns:1fr}}
+@media(max-width:640px){:root{--bar:56px}.parts{grid-template-columns:1fr}.bar img{height:26px}.ty{grid-template-columns:1fr;gap:8px}.rules{columns:1}.logos{grid-template-columns:1fr}.grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}.strip .th{flex-basis:110px}.lb .pv,.lb .nx{top:auto;bottom:16px;transform:none}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style></head><body>
+<header class="bar"><a href="#start" aria-label="Naar het begin"><img src="{{PFX}}klop-logo-wit.png" alt="Klop Watersport"></a>
+<nav id="nav" aria-label="Onderdelen"><a href="#recap">Recap</a><a href="#brandbook">Brandbook</a><a href="#designsysteem">Designsysteem</a><a href="#merkuitingen">Merkuitingen</a><a href="#website">Website</a></nav>
+<button class="tg" id="tg" aria-label="Wissel licht en donker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="5"/><path d="M12 7v10" /><path d="M12 7a5 5 0 0 1 0 10z" fill="currentColor"/></svg></button></header>
+
+<section class="cover" id="start"><div class="bgimg" style="background-image:url('{{PFX}}cover-showroom.jpg')"></div><div class="wrap">
+<span class="kick">Klop Watersport · herpositionering · november 2026</span>
+<h1>Vaar je<br>vrijheid.</h1>
+<p class="lead">Het hele traject in één bestand: het verhaal, het merk, de bouwstenen, het merk in de praktijk en de nieuwe website. Scroll door, of kies direct een onderdeel.</p>
+<div class="parts">
+<a href="#recap"><small>01 · Het verhaal</small><b>Recap</b><p>{{N_RC}} slides: strategie, merkverhaal en de gemaakte keuzes.</p><span>Bekijk →</span></a>
+<a href="#brandbook"><small>02 · Het merk</small><b>Brandbook</b><p>{{N_BB}} pagina's, van merkkern tot spelregels voor beeld en taal.</p><span>Bekijk →</span></a>
+<a href="#designsysteem"><small>03 · De bouwstenen</small><b>Design&shy;systeem</b><p>Kleur, type, ruimte, {{N_IC}} iconen en {{N_DS}} componenten.</p><span>Bekijk →</span></a>
+<a href="#merkuitingen"><small>04 · In het wild</small><b>Merk&shy;uitingen</b><p>{{N_MU}} ontwerpen, van servicepas tot campagne en bedrijfswagen.</p><span>Bekijk →</span></a>
+<a href="#website" class="y"><small>05 · Het resultaat</small><b>Website</b><p>De klikbare site, nu met de showroom centraal op de homepage.</p><span>Open de site →</span></a>
+</div></div></section>
+
+<section class="sec" id="recap"><div class="wrap">
+<div class="sh"><div><span class="kick">01 · Het verhaal</span><h2>Recap</h2></div><p class="lead">Eén belofte, volledig uitgewerkt. Klik door de slides met de pijlen of je pijltjestoetsen.</p></div>
+<div class="deck"><div class="stage"><img id="dimg" src="{{RECAP_MAIN}}" alt=""></div>
+<div class="ctl"><div><b id="dtit"></b> <small id="dnum"></small></div><div class="b"><button class="rb" data-d="-1" aria-label="Vorige slide"><svg viewBox="0 0 20 12"><path d="M20 6H2M6 1 1 6l5 5"/></svg></button><button class="rb" data-d="1" aria-label="Volgende slide"><svg viewBox="0 0 20 12"><path d="M0 6h18M14 1l5 5-5 5"/></svg></button></div></div></div>
+{{RECAP_STRIP}}
+<details><summary>Eerdere versies en varianten van de recap</summary>{{RECAP_OLD}}</details>
+</div></section>
+
+<section class="sec" id="brandbook"><div class="wrap">
+<div class="sh"><div><span class="kick">02 · Het merk</span><h2>Brandbook <span class="n">{{N_BB}}</span></h2></div><p class="lead">Positionering, kernwaarden, tone of voice en alle spelregels voor logo, kleur, typografie, het gele label en fotografie. Klik op een pagina om hem groot te bekijken.</p></div>
+{{BRANDBOOK}}
+</div></section>
+
+<section class="sec" id="designsysteem"><div class="wrap">
+<div class="sh"><div><span class="kick">03 · De bouwstenen</span><h2>Designsysteem</h2></div><p class="lead">Eén bron voor kleur, type, ruimte, vorm, iconen en componenten. Site en uitingen worden hiermee gebouwd.</p></div>
+<div class="dsg">
+<div><h3>Kleur</h3><div class="sws">{{SWATCHES}}</div></div>
+<div><h3>Typografie</h3><p class="lead" style="margin-bottom:12px">Funnel Display weight 300 voor koppen, Funnel Sans voor tekst.</p>{{TYPE}}</div>
+<div class="tk3"><div><h4>Ruimte</h4><table>{{SPACING}}</table></div><div><h4>Vorm</h4><table>{{RADIUS}}</table></div><div><h4>Layout</h4><table>{{LAYOUT}}</table></div></div>
+<div><h3>Logo</h3><div class="logos"><div><img src="{{PFX}}klop-logo-kleur.png" alt="Klop logo in kleur"></div><div><img src="{{PFX}}klop-logo-wit.png" alt="Klop logo wit"></div></div></div>
+<div><h3>Iconen <span class="n" style="color:var(--mut)">{{N_IC}}</span></h3><div class="ics">{{ICONS}}</div></div>
+<div><h3>Componenten <span class="n" style="color:var(--mut)">{{N_DS}}</span></h3><div class="cps">{{COMPS}}</div></div>
+<div><h3>Spelregels</h3><ol class="rules">
+<li><b>Geel is zeldzaam.</b> Eén gele accent per scherm; de PremiumStrook is de enige volle gele band.</li>
+<li><b>Geel op Nachtblauw of Gelcoat,</b> nooit gele tekst op wit.</li>
+<li><b>Tekst minimaal 17px,</b> bijschriften 15px, koppen weight 300.</li>
+<li><b>Het kleurenlogo nooit direct op een foto.</b></li>
+<li><b>Geen scherpe hoeken</b> en geen rechte decoratieve lijnen.</li>
+<li><b>Alleen berekenbare feiten</b> uit de eigen voorraad, geen verzonnen scores of schaarste.</li>
+<li><b>Klop Premium Service™ is altijd Oliegoed</b> in labels, knoppen en tegels.</li>
+<li><b>Je-vorm,</b> kort en concreet. Geen u, geen gedachtestreepjes.</li>
+</ol></div>
+</div></div></section>
+
+<section class="sec" id="merkuitingen"><div class="wrap">
+<div class="sh"><div><span class="kick">04 · In het wild</span><h2>Merkuitingen <span class="n">{{N_MU}}</span></h2></div><p class="lead">Hoe het merk er in de praktijk uitziet: voor de klant, op locatie, online, in de campagne en onderweg.</p></div>
+{{MERK}}
+</div></section>
+
+<section class="sec" id="website"><div class="wrap">
+<div class="sh"><div><span class="kick">05 · Het resultaat</span><h2>De website</h2></div><p class="lead">De klikbare preview van de nieuwe site. Alles werkt: boten zoeken en vergelijken, configurator, Klop Premium Service™, Mijn Klop.</p></div>
+<div class="new">
+<div><small>Nieuw op de homepage</small><b>De showroom centraal</b><p>Direct na de vaardersvinder: 4.000 m² aan het water, met een rondleiding in vijf stops en een link vanuit de hero.</p></div>
+<div><small>Live uit de voorraad</small><b>Nu in de showroom</b><p>Per soort boot hoeveel er op voorraad staan, berekend uit het aanbod en direct klikbaar.</p></div>
+<div><small>Vernieuwd</small><b>Showroompagina</b><p>Rondleiding, wat je er doet, voorraad met bootkaarten en het bezoekadres op één pagina.</p></div>
+</div>
+<div class="browser"><div class="top"><i></i><i></i><i></i><span>klopwatersport.nl</span><a href="{{SITE}}" target="_blank" rel="noopener">Open los ↗</a></div><iframe src="{{SITE}}" title="Klop Watersport, klikbare preview van de website" loading="lazy"></iframe></div>
+<div class="btns"><a class="btn s" href="{{SITE}}" target="_blank" rel="noopener">Open de site in een nieuw tabblad</a><a class="btn" href="{{SITE}}#/showroom" target="_blank" rel="noopener">Bekijk de showroompagina</a></div>
+</div></section>
+
+<footer><div class="wrap"><span>Klop Watersport · Vrijheidsvaarders sinds 1966</span><span>JUST.LEAD · november 2026</span></div></footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Vergroot beeld"><button class="x" id="lbx" aria-label="Sluiten">×</button>
+<button class="rb pv" data-l="-1" aria-label="Vorige"><svg viewBox="0 0 20 12"><path d="M20 6H2M6 1 1 6l5 5"/></svg></button>
+<img id="lbi" alt=""><div class="cap"><span id="lbt"></span><small id="lbn"></small></div>
+<button class="rb nx" data-l="1" aria-label="Volgende"><svg viewBox="0 0 20 12"><path d="M0 6h18M14 1l5 5-5 5"/></svg></button></div>
+
+<script>
+var D={{DATA}};
+var di=0,L={set:null,i:0};
+function $(s){return document.querySelector(s)}function $$(s){return Array.prototype.slice.call(document.querySelectorAll(s))}
+function deck(i){var r=D.recap;di=(i+r.length)%r.length;$('#dimg').src=r[di].f;$('#dtit').textContent=r[di].t;$('#dnum').textContent=(di+1)+' / '+r.length;
+ $$('.strip .th').forEach(function(t,j){t.classList.toggle('on',j===di)});var on=$$('.strip .th')[di];if(on)on.scrollIntoView({block:'nearest',inline:'center',behavior:'smooth'});
+ var n=new Image();n.src=r[(di+1)%r.length].f}
+function lb(set,i){var a=D[set];L.set=set;L.i=(i+a.length)%a.length;$('#lbi').src=a[L.i].f;$('#lbt').textContent=a[L.i].t;$('#lbn').textContent=(L.i+1)+' / '+a.length;$('#lb').classList.add('on');document.body.style.overflow='hidden'}
+function lbc(){$('#lb').classList.remove('on');document.body.style.overflow=''}
+document.addEventListener('click',function(e){var t=e.target.closest('button');if(!t)return;
+ if(t.dataset.d){deck(di+ +t.dataset.d)}
+ else if(t.dataset.l){lb(L.set,L.i+ +t.dataset.l)}
+ else if(t.dataset.set){if(t.dataset.set==='recap'){deck(+t.dataset.i)}else lb(t.dataset.set,+t.dataset.i)}
+ else if(t.id==='lbx'){lbc()}});
+$('#lb').addEventListener('click',function(e){if(e.target.id==='lb')lbc()});
+document.addEventListener('keydown',function(e){if($('#lb').classList.contains('on')){if(e.key==='Escape')lbc();if(e.key==='ArrowRight')lb(L.set,L.i+1);if(e.key==='ArrowLeft')lb(L.set,L.i-1);return}
+ var r=$('#recap').getBoundingClientRect();if(r.top<innerHeight*.6&&r.bottom>innerHeight*.4){if(e.key==='ArrowRight')deck(di+1);if(e.key==='ArrowLeft')deck(di-1)}});
+// actieve sectie in de balk
+var secs=['recap','brandbook','designsysteem','merkuitingen','website'].map(function(id){return document.getElementById(id)});
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting)$$('#nav a').forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+x.target.id)})})},{rootMargin:'-45% 0px -50% 0px'});secs.forEach(function(s){io.observe(s)})}
+// thema
+$('#tg').onclick=function(){var r=document.documentElement,d=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;r.dataset.theme=d?'light':'dark';try{localStorage.setItem('klop-theme',r.dataset.theme)}catch(x){}};
+try{var th=localStorage.getItem('klop-theme');if(th)document.documentElement.dataset.theme=th}catch(x){}
+deck(0);
+</script></body></html>

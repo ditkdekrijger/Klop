@@ -1,0 +1,1 @@
+Lijnicoon uit de Klop-set. Gebruik de inline SVG met `currentColor`, zodat het icoon de tekstkleur volgt (Nachtblauw op licht, wit op donker). Maten: 24 px in navigatie, 36 px in tegels, 48 tot 56 px boven een kop. Lijn is altijd 1.25 px, niet schalend. Nooit geel: geel blijft voor het label "geregeld". Combineer niet met iconen uit andere sets.

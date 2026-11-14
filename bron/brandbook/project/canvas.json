@@ -1,0 +1,492 @@
+{
+  "v": 3,
+  "attachments": {},
+  "boards": {
+    "02-inhoud.dc.html": {
+      "h": 900,
+      "title": "02 Inhoud",
+      "w": 1600,
+      "x": 1680,
+      "y": 0
+    },
+    "03-herpositionering.dc.html": {
+      "h": 900,
+      "title": "03 De herpositionering",
+      "w": 1600,
+      "x": 3360,
+      "y": 0
+    },
+    "03b-sfeer.dc.html": {
+      "h": 900,
+      "title": "03b Sfeer",
+      "w": 1600,
+      "x": 5040,
+      "y": 0
+    },
+    "03c-vrijheid-en-gedoe.dc.html": {
+      "h": 900,
+      "title": "03c Vrijheid en gedoe",
+      "w": 1600,
+      "x": 6720,
+      "y": 0
+    },
+    "03d-varen-is-vrijheid.dc.html": {
+      "h": 900,
+      "title": "03d Varen is vrijheid",
+      "w": 1600,
+      "x": 8400,
+      "y": 0
+    },
+    "04-deel-kern.dc.html": {
+      "h": 900,
+      "title": "04 Deel 1 Kern",
+      "w": 1600,
+      "x": 0,
+      "y": 1340
+    },
+    "05-visie-missie.dc.html": {
+      "h": 900,
+      "title": "05 Visie en missie",
+      "w": 1600,
+      "x": 1680,
+      "y": 1340
+    },
+    "06-kernwaarden.dc.html": {
+      "h": 900,
+      "title": "06 Kernwaarden",
+      "w": 1600,
+      "x": 3360,
+      "y": 1340
+    },
+    "07-merkarchitectuur.dc.html": {
+      "h": 900,
+      "title": "07 Merkarchitectuur",
+      "w": 1600,
+      "x": 5040,
+      "y": 1340
+    },
+    "08-herkomst-bewijs.dc.html": {
+      "h": 900,
+      "title": "08 Herkomst en bewijs",
+      "w": 1600,
+      "x": 6720,
+      "y": 1340
+    },
+    "09-deel-positionering.dc.html": {
+      "h": 900,
+      "title": "09 Deel 2 Positionering",
+      "w": 1600,
+      "x": 0,
+      "y": 2680
+    },
+    "10-positionering.dc.html": {
+      "h": 900,
+      "title": "10 De watersporthub",
+      "w": 1600,
+      "x": 1680,
+      "y": 2680
+    },
+    "11-doelgroep.dc.html": {
+      "h": 900,
+      "title": "11 Twee vaarders",
+      "w": 1600,
+      "x": 3360,
+      "y": 2680
+    },
+    "12-premium-service.dc.html": {
+      "h": 900,
+      "title": "12 Klop Premium Service",
+      "w": 1600,
+      "x": 5040,
+      "y": 2680
+    },
+    "12b-pakket-in-beeld.dc.html": {
+      "h": 900,
+      "title": "12b Het pakket in beeld",
+      "w": 1600,
+      "x": 6720,
+      "y": 2680
+    },
+    "13-spelregels-klantreis.dc.html": {
+      "h": 900,
+      "title": "13 Spelregels en klantreis",
+      "w": 1600,
+      "x": 8400,
+      "y": 2680
+    },
+    "14-deel-identiteit.dc.html": {
+      "h": 900,
+      "title": "14 Deel 3 Identiteit",
+      "w": 1600,
+      "x": 0,
+      "y": 4020
+    },
+    "15-persoonlijkheid.dc.html": {
+      "h": 900,
+      "title": "15 Merkpersoonlijkheid",
+      "w": 1600,
+      "x": 1680,
+      "y": 4020
+    },
+    "16-payoff.dc.html": {
+      "h": 900,
+      "title": "16 Payoff en propositieregel",
+      "w": 1600,
+      "x": 3360,
+      "y": 4020
+    },
+    "17-merkverhaal-kern.dc.html": {
+      "h": 900,
+      "title": "17 Merkverhaal in het kort",
+      "w": 1600,
+      "x": 5040,
+      "y": 4020
+    },
+    "17b-oplossing.dc.html": {
+      "h": 900,
+      "title": "17b De oplossing: Klop Premium Service",
+      "w": 1600,
+      "x": 6720,
+      "y": 4020
+    },
+    "18-merkverhaal.dc.html": {
+      "h": 900,
+      "title": "18 Merkverhaal volledig",
+      "w": 1600,
+      "x": 8400,
+      "y": 4020
+    },
+    "19-tone-of-voice.dc.html": {
+      "h": 900,
+      "title": "19 Tone of voice",
+      "w": 1600,
+      "x": 10080,
+      "y": 4020
+    },
+    "20-woordgebruik.dc.html": {
+      "h": 900,
+      "title": "20 Woordgebruik",
+      "w": 1600,
+      "x": 11760,
+      "y": 4020
+    },
+    "21-deel-basiselementen.dc.html": {
+      "h": 900,
+      "title": "21 Deel 4 Basiselementen",
+      "w": 1600,
+      "x": 0,
+      "y": 5360
+    },
+    "22-geel-is-geregeld.dc.html": {
+      "h": 900,
+      "title": "22 Geel is geregeld",
+      "w": 1600,
+      "x": 1680,
+      "y": 5360
+    },
+    "23-logo.dc.html": {
+      "h": 900,
+      "title": "23 Logo",
+      "w": 1600,
+      "x": 3360,
+      "y": 5360
+    },
+    "24-logogebruik.dc.html": {
+      "h": 900,
+      "title": "24 Logogebruik",
+      "w": 1600,
+      "x": 5040,
+      "y": 5360
+    },
+    "24b-logo-in-context.dc.html": {
+      "h": 900,
+      "title": "24b Logo in context",
+      "w": 1600,
+      "x": 6720,
+      "y": 5360
+    },
+    "25-logo-niet-doen.dc.html": {
+      "h": 900,
+      "title": "25 Logo: niet doen",
+      "w": 1600,
+      "x": 8400,
+      "y": 5360
+    },
+    "26-woordbeeld.dc.html": {
+      "h": 900,
+      "title": "26 Woordbeeld",
+      "w": 1600,
+      "x": 10080,
+      "y": 5360
+    },
+    "26b-woordmerk.dc.html": {
+      "h": 900,
+      "title": "26b Het woordmerk",
+      "w": 1600,
+      "x": 11760,
+      "y": 5360
+    },
+    "26c-woordmerk-service.dc.html": {
+      "h": 900,
+      "title": "26c Het woordmerk van de service",
+      "w": 1600,
+      "x": 13440,
+      "y": 5360
+    },
+    "27-kleur.dc.html": {
+      "h": 900,
+      "title": "27 Kleur",
+      "w": 1600,
+      "x": 0,
+      "y": 6700
+    },
+    "27b-kleur-in-beeld.dc.html": {
+      "h": 900,
+      "title": "27b Kleur in beeld",
+      "w": 1600,
+      "x": 1680,
+      "y": 6700
+    },
+    "28-typografie.dc.html": {
+      "h": 900,
+      "title": "28 Typografie",
+      "w": 1600,
+      "x": 3360,
+      "y": 6700
+    },
+    "29-grafische-elementen.dc.html": {
+      "h": 900,
+      "title": "29 Grafische elementen",
+      "w": 1600,
+      "x": 5040,
+      "y": 6700
+    },
+    "30-het-gele-label.dc.html": {
+      "h": 900,
+      "title": "30 Het gele label",
+      "w": 1600,
+      "x": 6720,
+      "y": 6700
+    },
+    "30b-label-in-beeld.dc.html": {
+      "h": 900,
+      "title": "30b Het gele label in beeld",
+      "w": 1600,
+      "x": 8400,
+      "y": 6700
+    },
+    "31-fotografie.dc.html": {
+      "h": 900,
+      "title": "31 Fotografie",
+      "w": 1600,
+      "x": 10080,
+      "y": 6700
+    },
+    "31b-fotografie-in-beeld.dc.html": {
+      "h": 900,
+      "title": "31b Fotografie in beeld",
+      "w": 1600,
+      "x": 11760,
+      "y": 6700
+    },
+    "32-knoppen-labels.dc.html": {
+      "h": 900,
+      "title": "32 Knoppen en labels",
+      "w": 1600,
+      "x": 0,
+      "y": 8040
+    },
+    "32b-knoppen-detail.dc.html": {
+      "h": 900,
+      "title": "32b Knoppen in detail",
+      "w": 1600,
+      "x": 1680,
+      "y": 8040
+    },
+    "32c-knoppen-op-beeld.dc.html": {
+      "h": 900,
+      "title": "32c Knoppen op beeld",
+      "w": 1600,
+      "x": 3360,
+      "y": 8040
+    },
+    "32d-microcopy.dc.html": {
+      "h": 900,
+      "title": "32d Microcopy",
+      "w": 1600,
+      "x": 5040,
+      "y": 8040
+    },
+    "32e-overgangen.dc.html": {
+      "h": 900,
+      "title": "32e Overgangen",
+      "w": 1600,
+      "x": 6720,
+      "y": 8040
+    },
+    "33-deel-toepassingen.dc.html": {
+      "h": 900,
+      "title": "33 Deel 5 Toepassingen",
+      "w": 1600,
+      "x": 0,
+      "y": 9380
+    },
+    "34-website.dc.html": {
+      "h": 900,
+      "title": "34 Website",
+      "w": 1600,
+      "x": 1680,
+      "y": 9380
+    },
+    "35-merkuitingen.dc.html": {
+      "h": 900,
+      "title": "35 Merkuitingen",
+      "w": 1600,
+      "x": 3360,
+      "y": 9380
+    },
+    "36-open-punten.dc.html": {
+      "h": 900,
+      "title": "36 Zo gaat het verder",
+      "w": 1600,
+      "x": 5040,
+      "y": 9380
+    },
+    "37-slot.dc.html": {
+      "h": 900,
+      "title": "37 Slot",
+      "w": 1600,
+      "x": 6720,
+      "y": 9380
+    },
+    "Main.dc.html": {
+      "h": 900,
+      "title": "01 Cover",
+      "w": 1600,
+      "x": 0,
+      "y": 0
+    }
+  },
+  "createdOnFiles": {
+    "at": "2026-11-11T16:20:00Z",
+    "v": 1
+  },
+  "designSystems": [],
+  "launch": {
+    "view": "canvas"
+  },
+  "noteOrder": [
+    "t-brandbook",
+    "t-kern",
+    "t-positionering",
+    "t-identiteit",
+    "t-basis",
+    "t-toepassingen"
+  ],
+  "notes": {
+    "t-basis": {
+      "kind": "title1",
+      "maxW": 8000,
+      "text": "04 Basiselementen",
+      "w": 240,
+      "x": 0,
+      "y": 5060
+    },
+    "t-brandbook": {
+      "kind": "title1",
+      "maxW": 4960,
+      "text": "Klop brandbook",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "t-identiteit": {
+      "kind": "title1",
+      "maxW": 8000,
+      "text": "03 Identiteit",
+      "w": 240,
+      "x": 0,
+      "y": 3720
+    },
+    "t-kern": {
+      "kind": "title1",
+      "maxW": 8000,
+      "text": "01 Kern",
+      "w": 240,
+      "x": 0,
+      "y": 1040
+    },
+    "t-positionering": {
+      "kind": "title1",
+      "maxW": 8000,
+      "text": "02 Positionering",
+      "w": 240,
+      "x": 0,
+      "y": 2380
+    },
+    "t-toepassingen": {
+      "kind": "title1",
+      "maxW": 8000,
+      "text": "05 Toepassingen",
+      "w": 240,
+      "x": 0,
+      "y": 9080
+    }
+  },
+  "order": [
+    "Main.dc.html",
+    "02-inhoud.dc.html",
+    "03-herpositionering.dc.html",
+    "03b-sfeer.dc.html",
+    "03c-vrijheid-en-gedoe.dc.html",
+    "03d-varen-is-vrijheid.dc.html",
+    "04-deel-kern.dc.html",
+    "05-visie-missie.dc.html",
+    "06-kernwaarden.dc.html",
+    "07-merkarchitectuur.dc.html",
+    "08-herkomst-bewijs.dc.html",
+    "09-deel-positionering.dc.html",
+    "10-positionering.dc.html",
+    "11-doelgroep.dc.html",
+    "12-premium-service.dc.html",
+    "12b-pakket-in-beeld.dc.html",
+    "13-spelregels-klantreis.dc.html",
+    "14-deel-identiteit.dc.html",
+    "15-persoonlijkheid.dc.html",
+    "16-payoff.dc.html",
+    "17-merkverhaal-kern.dc.html",
+    "17b-oplossing.dc.html",
+    "18-merkverhaal.dc.html",
+    "19-tone-of-voice.dc.html",
+    "20-woordgebruik.dc.html",
+    "21-deel-basiselementen.dc.html",
+    "22-geel-is-geregeld.dc.html",
+    "23-logo.dc.html",
+    "24-logogebruik.dc.html",
+    "24b-logo-in-context.dc.html",
+    "25-logo-niet-doen.dc.html",
+    "26-woordbeeld.dc.html",
+    "26b-woordmerk.dc.html",
+    "26c-woordmerk-service.dc.html",
+    "27-kleur.dc.html",
+    "27b-kleur-in-beeld.dc.html",
+    "28-typografie.dc.html",
+    "29-grafische-elementen.dc.html",
+    "30-het-gele-label.dc.html",
+    "30b-label-in-beeld.dc.html",
+    "31-fotografie.dc.html",
+    "31b-fotografie-in-beeld.dc.html",
+    "32-knoppen-labels.dc.html",
+    "32b-knoppen-detail.dc.html",
+    "32c-knoppen-op-beeld.dc.html",
+    "32d-microcopy.dc.html",
+    "32e-overgangen.dc.html",
+    "33-deel-toepassingen.dc.html",
+    "34-website.dc.html",
+    "35-merkuitingen.dc.html",
+    "36-open-punten.dc.html",
+    "37-slot.dc.html"
+  ],
+  "pages": [],
+  "title": "Klop brandbook"
+}

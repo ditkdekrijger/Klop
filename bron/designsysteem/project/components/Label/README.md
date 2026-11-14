@@ -1,0 +1,1 @@
+Gele label met afgeschuinde hoeken en een open oogje, links met 14px afstand tot de rand en 30px voorruimte voor de tekst. Klop Premium Service™ is altijd een Oliegoed-label, op elke achtergrond en in elke sectie. Overige koppen krijgen een gewoon label met open cirkel in grijs.
