@@ -79,12 +79,20 @@ foreach ($labels as $k => $label) {
     if ($v !== '') $lines[] = str_pad($label . ':', 14) . $v;
 }
 $lines[] = '';
+if ($type === 'quote' && array_key_exists('complete', $in) && !$in['complete']) {
+    $lines[] = 'LET OP: de samenstelling is nog niet compleet (niet alle verplichte keuzes zijn gemaakt).';
+}
 $lines[] = 'Configuratie';
 $lines[] = str_repeat('-', 60);
 $lines[] = str_pad('Basisprijs', 46) . $eur($in['basePrice'] ?? 0);
 foreach ((array)($in['options'] ?? []) as $o) {
     if (!is_array($o)) continue;
     $lines[] = str_pad($clean($o['step'] ?? '', 40) . ': ' . $clean($o['name'] ?? ''), 46) . $eur($o['price'] ?? 0);
+    // Originele Maxima-naam en -id, zodat de bestelling 1-op-1 bij Maxima in te voeren is.
+    $mxName = $clean($o['maximaName'] ?? '');
+    if ($mxName !== '' && $mxName !== $clean($o['name'] ?? '')) {
+        $lines[] = '    Maxima: ' . $mxName . (isset($o['maximaId']) ? ' (#' . (int)$o['maximaId'] . ')' : '');
+    }
 }
 foreach ((array)($in['fixedCosts'] ?? []) as $f) {
     if (!is_array($f)) continue;

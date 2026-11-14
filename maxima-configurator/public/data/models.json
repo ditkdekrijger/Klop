@@ -26,19 +26,6 @@
   "basePrice": 349000.0
  },
  {
-  "id": 1784,
-  "slug": "maxima-490",
-  "name": "Maxima 490",
-  "image": "https://www.maximaboats.nl/cache/images/artikel/1784/img-3781-aangepast1708202315353264de22248c199-1053x700.jpg",
-  "specs": {
-   "Lengte": "4.90m",
-   "Prijs (v.a.)": "€ 10.500,00",
-   "Aantal personen": "6",
-   "Zichtbaarheid motor": "Motor zichtbaar"
-  },
-  "basePrice": 10500.0
- },
- {
   "id": 1829,
   "slug": "maxima-490-xl-elektrisch",
   "name": "Maxima 490 XL Elektrisch",
@@ -52,10 +39,23 @@
   "basePrice": 10500.0
  },
  {
-  "id": 1785,
-  "slug": "maxima-550",
-  "name": "Maxima 550",
-  "image": "https://www.maximaboats.nl/cache/images/artikel/1785/dji-0186-21710202513194268f2264e4eba7-1247x700.jpg",
+  "id": 1784,
+  "slug": "maxima-490",
+  "name": "Maxima 490",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1784/img-3781-aangepast1708202315353264de22248c199-1053x700.jpg",
+  "specs": {
+   "Lengte": "4.90m",
+   "Prijs (v.a.)": "€ 10.500,00",
+   "Aantal personen": "6",
+   "Zichtbaarheid motor": "Motor zichtbaar"
+  },
+  "basePrice": 10500.0
+ },
+ {
+  "id": 1830,
+  "slug": "maxima-550-elektrisch",
+  "name": "Maxima 550 Elektrisch",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1830/shefotografie-maxima-114190920181302025ba23aba5553c-1051x700.jpg",
   "specs": {
    "Lengte": "5.30m",
    "Prijs (v.a.)": "€ 11.950,00",
@@ -65,10 +65,10 @@
   "basePrice": 11950.0
  },
  {
-  "id": 1830,
-  "slug": "maxima-550-elektrisch",
-  "name": "Maxima 550 Elektrisch",
-  "image": "https://www.maximaboats.nl/cache/images/artikel/1830/shefotografie-maxima-114190920181302025ba23aba5553c-1051x700.jpg",
+  "id": 1785,
+  "slug": "maxima-550",
+  "name": "Maxima 550",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1785/dji-0186-21710202513194268f2264e4eba7-1247x700.jpg",
   "specs": {
    "Lengte": "5.30m",
    "Prijs (v.a.)": "€ 11.950,00",
@@ -181,19 +181,6 @@
   "basePrice": 33950.0
  },
  {
-  "id": 1812,
-  "slug": "maxima-650-flying-lounge",
-  "name": "Maxima 650 Flying Lounge",
-  "image": "https://www.maximaboats.nl/cache/images/artikel/1812/maxima-650-192007202311525564b903f78e047-1150x700.jpg",
-  "specs": {
-   "Lengte": "6.50m",
-   "Prijs (v.a.)": "€ 24.500,00",
-   "Aantal personen": "8",
-   "Zichtbaarheid motor": "Motor uit het zicht (bun/inboard)"
-  },
-  "basePrice": 24500.0
- },
- {
   "id": 1826,
   "slug": "maxima-650-flying-lounge-elektrisch",
   "name": "Maxima 650 Flying Lounge Elektrisch",
@@ -202,6 +189,19 @@
    "Lengte": "6.50m",
    "Prijs (v.a.)": "€ 24.500,00",
    "Aantal personen": "10",
+   "Zichtbaarheid motor": "Motor uit het zicht (bun/inboard)"
+  },
+  "basePrice": 24500.0
+ },
+ {
+  "id": 1812,
+  "slug": "maxima-650-flying-lounge",
+  "name": "Maxima 650 Flying Lounge",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1812/maxima-650-192007202311525564b903f78e047-1150x700.jpg",
+  "specs": {
+   "Lengte": "6.50m",
+   "Prijs (v.a.)": "€ 24.500,00",
+   "Aantal personen": "8",
    "Zichtbaarheid motor": "Motor uit het zicht (bun/inboard)"
   },
   "basePrice": 24500.0
@@ -233,10 +233,10 @@
   "basePrice": 39950.0
  },
  {
-  "id": 1803,
-  "slug": "maxima-720-retro",
-  "name": "Maxima 720 retro",
-  "image": "https://www.maximaboats.nl/cache/images/artikel/1803/2025-09-22-guy-fleury-maxima-boats-maxima-720-retro-521310202510373168ecba4b2942c-1049x700.jpg",
+  "id": 1832,
+  "slug": "maxima-720-retro-elektrisch",
+  "name": "Maxima 720 retro Elektrisch",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1832/shefotografie-maxima-0689210920191154535d85f36d32dbc-1050x700.jpg",
   "specs": {
    "Lengte": "7.20m",
    "Prijs (v.a.)": "€ 34.950,00",
@@ -246,10 +246,10 @@
   "basePrice": 34950.0
  },
  {
-  "id": 1832,
-  "slug": "maxima-720-retro-elektrisch",
-  "name": "Maxima 720 retro Elektrisch",
-  "image": "https://www.maximaboats.nl/cache/images/artikel/1832/shefotografie-maxima-0689210920191154535d85f36d32dbc-1050x700.jpg",
+  "id": 1803,
+  "slug": "maxima-720-retro",
+  "name": "Maxima 720 retro",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1803/2025-09-22-guy-fleury-maxima-boats-maxima-720-retro-521310202510373168ecba4b2942c-1049x700.jpg",
   "specs": {
    "Lengte": "7.20m",
    "Prijs (v.a.)": "€ 34.950,00",
@@ -285,10 +285,10 @@
   "basePrice": 45950.0
  },
  {
-  "id": 1804,
-  "slug": "maxima-750-flying-lounge",
-  "name": "Maxima 750 Flying Lounge",
-  "image": "https://www.maximaboats.nl/cache/images/artikel/1804/shefotografie-maxima-1610300920191354125d91ece4b8976-1050x700.jpg",
+  "id": 1827,
+  "slug": "maxima-750-flying-lounge-electrisch",
+  "name": "Maxima 750 Flying Lounge Electrisch",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1827/shefotografie-maxima-1451300920191350155d91ebf71e91b-1052x700.jpg",
   "specs": {
    "Lengte": "7.50m",
    "Prijs (v.a.)": "€ 30.950,00",
@@ -298,10 +298,10 @@
   "basePrice": 30950.0
  },
  {
-  "id": 1827,
-  "slug": "maxima-750-flying-lounge-electrisch",
-  "name": "Maxima 750 Flying Lounge Electrisch",
-  "image": "https://www.maximaboats.nl/cache/images/artikel/1827/shefotografie-maxima-1451300920191350155d91ebf71e91b-1052x700.jpg",
+  "id": 1804,
+  "slug": "maxima-750-flying-lounge",
+  "name": "Maxima 750 Flying Lounge",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1804/shefotografie-maxima-1610300920191354125d91ece4b8976-1050x700.jpg",
   "specs": {
    "Lengte": "7.50m",
    "Prijs (v.a.)": "€ 30.950,00",
@@ -363,10 +363,10 @@
   "basePrice": 51950.0
  },
  {
-  "id": 1816,
-  "slug": "maxima-820-retro",
-  "name": "Maxima 820 retro",
-  "image": "https://www.maximaboats.nl/cache/images/artikel/1816/shefotografie-maxima-preview-077-kopie1901202411104965aa4aa93a8ca-1363x700.jpg",
+  "id": 1825,
+  "slug": "maxima-820-retro-elektrisch",
+  "name": "Maxima 820 retro Elektrisch",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1825/shefotografie-maxima-preview-0792908202308222664ed8ea2739da-1049x700.jpg",
   "specs": {
    "Lengte": "8.20m",
    "Prijs (v.a.)": "€ 49.950,00",
@@ -376,10 +376,10 @@
   "basePrice": 49950.0
  },
  {
-  "id": 1825,
-  "slug": "maxima-820-retro-elektrisch",
-  "name": "Maxima 820 retro Elektrisch",
-  "image": "https://www.maximaboats.nl/cache/images/artikel/1825/shefotografie-maxima-preview-0792908202308222664ed8ea2739da-1049x700.jpg",
+  "id": 1816,
+  "slug": "maxima-820-retro",
+  "name": "Maxima 820 retro",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1816/shefotografie-maxima-preview-077-kopie1901202411104965aa4aa93a8ca-1363x700.jpg",
   "specs": {
    "Lengte": "8.20m",
    "Prijs (v.a.)": "€ 49.950,00",

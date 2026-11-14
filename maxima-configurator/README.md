@@ -1,71 +1,90 @@
-# Klop Watersport — Maxima configurator
+# Maxima configurator 2.0
 
-Eigen herbouw van de Maxima Boats-configurator die nu als iframe van maximaboats.nl op
-[klopwatersport.nl/boot-configureren](https://www.klopwatersport.nl/boot-configureren/?id=97) staat,
-in de huisstijl van Klop Watersport.
+Configurator voor alle 32 Maxima-modellen, voor Klop Watersport als dealer. Vervangt de iframe naar
+maximaboats.nl op klopwatersport.nl. Op de nieuwe site (`site/`) vervangt hij ook de Mustang-iframe,
+die alleen de Maxima 760 had.
 
-## Wat zit erin
+De configurator gebruikt de Maxima-huisstijl (inkt `#1a1a23`, goud `#aa9882`, Karla en Playfair Display).
+Het designsysteem van Klop zegt namelijk: *"Maxima Boats is een apart merk en krijgt geen Klop-opmaak."*
+Klop staat als dealer in de kop en de voet. Aanvragen gaan naar Klop.
 
-| Onderdeel | Bestand |
+## Wat is er nieuw ten opzichte van 1.0
+
+| | 1.0 | 2.0 |
+|---|---|---|
+| Stappen | 11 tot 13 lange lijsten zoals bij Maxima | 7 tot 9 stappen met subgroepen (bijv. Exterieur: Deluxe pakket, Voordek, Besturing, Dek, Beveiliging) |
+| Keuzes die elkaar uitsluiten | konden samen aangevinkt worden (twee Deluxe pakketten, twee tafels) | "optioneel, kies er één" met een Geen-optie |
+| Kussensets | 14 opties (7 stoffen × glad/ruitjes) | 7 stoffen plus een aparte keuze "Stiksel" |
+| RAL-kleur | alleen de meerprijs | invoerveld voor de RAL-code, verplicht bij die keuze |
+| Namen | "Rompkleur donker blauw", "30 Honda LRTU" | "Donkerblauw", "Honda 30 pk LRTU", met toelichting eronder |
+| Afronden | formulier onderaan | overzichtsstap met alle keuzes, "Wijzig" per sectie, ontbrekende keuzes, prijsopbouw, pdf, link en offerte |
+| Huisstijl | oude klopwatersport.nl-stijl | Maxima-huisstijl |
+| Site-integratie | geen | `?embed=1` en `tools/patch_maxima.py` |
+
+Links uit 1.0 (`?model=…&c=…`) blijven werken, ook met ruitjeskussens.
+
+## Mappen
+
+| Pad | Inhoud |
 |---|---|
-| Pagina (overzicht + configurator) | `public/index.html` |
-| Logica (vanilla JS, geen build) | `public/assets/configurator.js` |
-| Styling | `public/assets/configurator.css` |
-| Offerte- en hulpaanvragen mailen | `public/api/offerte.php` |
-| Modeldata (32 modellen) | `public/data/*.json` |
-| Data synchroniseren met Maxima | `scripts/scrape_maxima.py` |
-
-### Functies
-- Overzicht van alle Maxima-modellen met zoeken, filter (brandstof/elektrisch) en sorteren.
-- Configurator per model: stappen (accordeon) met kleurvlakjes, optiefoto's met zoom, enkel- en meerkeuze.
-- Live bootvoorbeeld uit gelaagde afbeeldingen, met zij-, achter- en vooraanzicht.
-- Live totaalprijs plus een prijsspecificatie (basisprijs, opties en afleverkosten).
-- Deelbare link (`?model=maxima-550&c=…`). De configuratie wordt ook lokaal onthouden.
-- Offerteaanvraag (controleert of alle verplichte stappen gekozen zijn), hulpaanvraag, PDF via printen.
-- Mobiel: vaste balk onderin met totaalprijs en offerteknop.
-- Spamfilter (honeypot) en rate limit op het PHP-endpoint. Als het endpoint niet bereikbaar is, opent de mailclient van de bezoeker.
+| `public/index.html` | De pagina (overzicht en configurator) |
+| `public/assets/configurator.js` | Logica, vanilla JS zonder build-stap |
+| `public/assets/configurator.css` | Styling |
+| `public/api/offerte.php` | Mailt offerte- en hulpaanvragen naar de verkoop |
+| `public/data/*.json` | Ingedeelde modeldata (gemaakt door `curate.py`) |
+| `bron/*.json` | Ruwe data van Maxima (gemaakt door `scrape_maxima.py`) |
+| `scripts/scrape_maxima.py` | Haalt prijzen, opties en beeldlagen op bij de dealerconfigurator van Maxima |
+| `scripts/curate.py` | Deelt de ruwe data in: secties, groepen, namen, stiksel, RAL |
 
 ## Lokaal draaien
 
-Commando's draai je vanuit de root van de repo. De tabel hierboven noemt paden binnen `maxima-configurator/`.
-
 ```bash
 cd maxima-configurator/public
-php -S localhost:8000      # of: python3 -m http.server 8000 (dan zonder mail-endpoint)
+php -S localhost:8000          # met mail-endpoint
+# of: python3 -m http.server 8000  (zonder endpoint; dan opent de mailclient van de bezoeker)
 ```
 
-Open daarna http://localhost:8000/ of http://localhost:8000/?model=maxima-550.
+Open http://localhost:8000/ of http://localhost:8000/?model=maxima-760-nieuw.
 
-## Integratie op klopwatersport.nl
+## URL's
 
-1. Zet de map `public/` op de server, bijvoorbeeld als `/maxima-configurator/`.
-2. Stel in `public/index.html` (`window.KLOP_CONFIG`) en `public/api/offerte.php` (`TO_EMAIL`, `FROM_EMAIL`) de juiste adressen in.
-3. Vervang op `/boot-configureren/` de iframe naar maximaboats.nl door een link of iframe naar
-   `/maxima-configurator/?p=<maxima-product-id>`. Het oude product-id uit de huidige iframe-URL
-   werkt direct (bijv. Maxima 550: `?p=1785`). Een slug mag ook: `?model=maxima-550`.
+| URL | Wat |
+|---|---|
+| `?` | Overzicht van alle modellen |
+| `?model=maxima-550` | Configurator voor dat model |
+| `?p=1785` | Idem, via het Maxima-product-id uit de oude iframe-links |
+| `&c=41651.41680…` | Gekozen opties (originele Maxima-optie-id's) |
+| `&ral=rompkleur~7016` | RAL-code per groep |
+| `&stap=3`, `&stap=overzicht` | Open stap |
+| `&embed=1` | Zonder eigen kop en voet, voor een iframe |
+
+De samenstelling wordt per model ook in de browser onthouden.
 
 ## Data bijwerken
 
-Prijzen, opties en afbeeldingspaden komen van de dealerconfigurator van Maxima (dealer-hash van Klop).
-Draai het script opnieuw als Maxima iets wijzigt:
-
 ```bash
 pip install beautifulsoup4
-python3 maxima-configurator/scripts/scrape_maxima.py
+python3 maxima-configurator/scripts/scrape_maxima.py   # ruwe data naar bron/
+python3 maxima-configurator/scripts/curate.py          # ingedeelde data naar public/data/
 ```
 
-Het script stopt zonder bestanden te overschrijven als een model geen stappen oplevert
-(bijv. door de bot-check van maximaboats.nl).
+`curate.py` meldt opties die geen regel raken. Die komen onder "Overig" en horen een regel in `RULES`
+te krijgen. Het script controleert niet zelf of er opties verloren gaan. Dat is wel nagelopen: alle
+Maxima-optie-id's uit `bron/` komen terug in `public/data/`.
 
-## Verhouding tot de nieuwe site
+## Koppeling met de nieuwe site
 
-`site/index.html` laadt op `#/stel-samen/maxima-760` nu een iframe van
-`https://maxima.mustang.dev/configurator/maxima-760-nieuw`. Die versie heeft een 3D-model, maar bestaat
-alleen voor de Maxima 760. Deze herbouw dekt alle 32 modellen. Hoe de twee samenkomen is nog niet besloten;
-de site is in deze map niet aangepast.
+`python3 tools/patch_maxima.py site/index.html` (vanuit de root; is al toegepast in deze branch):
+
+- `#/stel-samen/maxima` toont het overzicht van alle Maxima-modellen.
+- `#/stel-samen/maxima-<model>` toont de configurator voor dat model. De oude link `#/stel-samen/maxima-760` blijft werken.
+- "Stel samen" bij 22 Maxima-boten gaat direct naar het juiste model. De Maxima 485 en 730i zitten niet in de Maxima-configurator en houden de algemene configurator.
+- De iframe laadt `../maxima-configurator/public/?model=…&embed=1`. Pas `MXC` in het script aan als de configurator elders gehost wordt.
 
 ## Aandachtspunten
-- **Afbeeldingen** (bootlagen, optiefoto's, modelfoto's) worden direct vanaf maximaboats.nl geladen.
-  Stem met Maxima af of dat mag, of host ze zelf.
-- De Maxima 800 sport heeft bij Maxima geen gelaagde afbeeldingen. Daar toont de configurator de modelfoto.
-- Prijzen zijn een indicatie, overgenomen van de Maxima-configurator.
+
+- **Afbeeldingen** (bootlagen, optiefoto's, modelfoto's) komen direct van maximaboats.nl. Stem met Maxima af of dat mag, of host ze zelf.
+- **3D:** de Mustang-versie van de 760 heeft een 3D-model. Daarvoor zijn per model 3D-bestanden nodig. Deze versie gebruikt de 2D-beeldlagen van Maxima, met zij-, achter- en vooraanzicht.
+- **Maxima 800 sport** heeft bij Maxima geen beeldlagen. Daar toont de configurator de modelfoto.
+- **Prijzen** zijn overgenomen van de dealerconfigurator van Maxima en zijn een indicatie.
+- **Exclusiviteit** ("kies er één") is afgeleid uit de optienamen. Controleer bij twijfel met Maxima of combinaties toch mogelijk zijn (bijv. GPS-dieptemeter plus Glass cockpit).

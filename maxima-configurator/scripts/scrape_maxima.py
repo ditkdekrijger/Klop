@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
 Haalt de configuratordata van alle Maxima-modellen op van maximaboats.nl
-(dealer-hash van Klop Watersport) en schrijft deze naar public/data/.
+(dealer-hash van Klop Watersport) en schrijft de ruwe data naar bron/.
+Daarna: python3 scripts/curate.py  (maakt de ingedeelde data in public/data/).
 
 Gebruik:  python3 scripts/scrape_maxima.py
 Alleen stdlib; draai opnieuw wanneer Maxima prijzen of opties wijzigt.
@@ -12,7 +13,7 @@ from pathlib import Path
 
 BASE = "https://www.maximaboats.nl/"
 HASH = "edd9dcdb1a193e689569d0de6e024d76e18c9684"  # dealer-hash Klop Watersport
-OUT = Path(__file__).resolve().parent.parent / "public" / "data"
+OUT = Path(__file__).resolve().parent.parent / "bron"  # ruwe data; scripts/curate.py maakt daar public/data van
 UA = {"User-Agent": "Mozilla/5.0 (KlopConfiguratorSync)"}
 
 

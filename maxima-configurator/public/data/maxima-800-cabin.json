@@ -1,5 +1,6 @@
 {
  "id": 1818,
+ "slug": "maxima-800-cabin",
  "name": "Maxima 800 cabin",
  "image": "https://www.maximaboats.nl/cache/images/artikel/1818/maxima-800-cabin-zeikant2608202417320266cc9ff208936-1050x700.jpg",
  "specs": {
@@ -8,8 +9,14 @@
   "Aantal personen": "12",
   "Zichtbaarheid motor": "Motor zichtbaar"
  },
+ "basePrice": 66950.0,
+ "fixedCosts": [
+  {
+   "label": "Afleverkosten",
+   "price": 2195.0
+  }
+ ],
  "imageBase": "https://www.maximaboats.nl/images/configurator/maxima-800-cabin/",
- "defaultView": "side",
  "views": [
   "side",
   "back",
@@ -23,921 +30,921 @@
   "striping",
   "motor"
  ],
- "basePrice": 66950.0,
- "fixedCosts": [
+ "defaultView": "side",
+ "sections": [
   {
-   "label": "Afleverkosten",
-   "price": 2195.0
+   "key": "romp",
+   "title": "Romp",
+   "intro": "De kleur van de buitenkant en de waterlijn langs de zijkant.",
+   "groups": [
+    {
+     "key": "rompkleur",
+     "title": "Rompkleur",
+     "type": "single",
+     "required": true,
+     "options": [
+      {
+       "id": 45024,
+       "name": "Wit",
+       "raw": "Rompkleur wit",
+       "price": 0.0,
+       "layer": "kleur-buitenkant",
+       "layerId": "646"
+      },
+      {
+       "id": 45025,
+       "name": "Lichtgrijs",
+       "raw": "Rompkleur lichtgrijs",
+       "price": 0.0,
+       "layer": "kleur-buitenkant",
+       "layerId": "648"
+      },
+      {
+       "id": 45026,
+       "name": "Donkergrijs",
+       "raw": "Rompkleur donker grijs",
+       "price": 0.0,
+       "layer": "kleur-buitenkant",
+       "layerId": "647"
+      },
+      {
+       "id": 45027,
+       "name": "Donkerblauw",
+       "raw": "Rompkleur donker blauw",
+       "price": 0.0,
+       "layer": "kleur-buitenkant",
+       "layerId": "645"
+      },
+      {
+       "id": 45028,
+       "name": "Zwart",
+       "raw": "Rompkleur zwart",
+       "price": 0.0,
+       "layer": "kleur-buitenkant",
+       "layerId": "644"
+      },
+      {
+       "id": 45029,
+       "name": "RAL-kleur naar keuze",
+       "raw": "Rompkleur in RAL kleur",
+       "price": 900.0,
+       "ral": true
+      }
+     ]
+    },
+    {
+     "key": "waterlijn",
+     "title": "Waterlijn",
+     "type": "single",
+     "required": true,
+     "options": [
+      {
+       "id": 45162,
+       "name": "Wit",
+       "raw": "Waterlijn wit",
+       "price": 0.0,
+       "layer": "striping",
+       "layerId": "691"
+      },
+      {
+       "id": 45163,
+       "name": "Zilvergrijs",
+       "raw": "Waterlijn zilvergrijs",
+       "price": 0.0,
+       "layer": "striping",
+       "layerId": "692"
+      },
+      {
+       "id": 45164,
+       "name": "Grijs",
+       "raw": "Waterlijn grijs",
+       "price": 0.0,
+       "layer": "striping",
+       "layerId": "690"
+      },
+      {
+       "id": 45165,
+       "name": "Oranje",
+       "raw": "Waterlijn oranje",
+       "price": 0.0,
+       "layer": "striping",
+       "layerId": "683"
+      },
+      {
+       "id": 45166,
+       "name": "Zwart",
+       "raw": "Waterlijn zwart",
+       "price": 0.0,
+       "layer": "striping",
+       "layerId": "689"
+      },
+      {
+       "id": 45167,
+       "name": "Geen waterlijn",
+       "raw": "Geen waterlijn",
+       "price": 0.0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key": "kuip",
+   "title": "Kuip & kussens",
+   "intro": "De binnenkant van de boot en de bekleding van de zitplaatsen.",
+   "groups": [
+    {
+     "key": "binnenkant",
+     "title": "Kleur binnenkant",
+     "type": "single",
+     "required": true,
+     "options": [
+      {
+       "id": 45156,
+       "name": "Wit",
+       "raw": "Binnenkant wit",
+       "price": 0.0,
+       "layer": "kleur-binnenkant",
+       "layerId": "693"
+      },
+      {
+       "id": 45157,
+       "name": "Lichtgrijs",
+       "raw": "Binnenkant lichtgrijs",
+       "price": 900.0,
+       "layer": "kleur-binnenkant",
+       "layerId": "694"
+      },
+      {
+       "id": 45158,
+       "name": "Donkergrijs",
+       "raw": "Binnenkant donker grijs",
+       "price": 900.0,
+       "layer": "kleur-binnenkant",
+       "layerId": "695"
+      },
+      {
+       "id": 45159,
+       "name": "Donkerblauw",
+       "raw": "Binnenkant donker blauw",
+       "price": 900.0,
+       "layer": "kleur-binnenkant",
+       "layerId": "697"
+      },
+      {
+       "id": 45160,
+       "name": "Zwart",
+       "raw": "Binnenkant zwart",
+       "price": 900.0,
+       "layer": "kleur-binnenkant",
+       "layerId": "696"
+      },
+      {
+       "id": 45161,
+       "name": "RAL-kleur naar keuze",
+       "raw": "Binnenkant in RAL kleur",
+       "price": 900.0,
+       "ral": true
+      }
+     ]
+    },
+    {
+     "key": "kussenset",
+     "title": "Kussenset",
+     "type": "single",
+     "required": true,
+     "options": [
+      {
+       "id": 45032,
+       "name": "Diamand carbon",
+       "raw": "Diamand carbon",
+       "price": 0.0,
+       "layer": "kussenset",
+       "layerId": "669",
+       "stitch": {
+        "id": 45031,
+        "price": 850.0,
+        "layerId": "670"
+       }
+      },
+      {
+       "id": 45042,
+       "name": "Diamand otono",
+       "raw": "Diamand otono",
+       "price": 0.0,
+       "layer": "kussenset",
+       "layerId": "671",
+       "stitch": {
+        "id": 45043,
+        "price": 850.0,
+        "layerId": "672"
+       }
+      },
+      {
+       "id": 45040,
+       "name": "Diamand sunset",
+       "raw": "Diamand sunset",
+       "price": 0.0,
+       "layer": "kussenset",
+       "layerId": "673",
+       "stitch": {
+        "id": 45041,
+        "price": 850.0,
+        "layerId": "674"
+       }
+      },
+      {
+       "id": 45038,
+       "name": "Cognac buck",
+       "raw": "Cognac buck",
+       "price": 0.0,
+       "layer": "kussenset",
+       "layerId": "675",
+       "stitch": {
+        "id": 45039,
+        "price": 850.0,
+        "layerId": "676"
+       }
+      },
+      {
+       "id": 45037,
+       "name": "Charcoal",
+       "raw": "Charcoal",
+       "price": 0.0,
+       "layer": "kussenset",
+       "layerId": "677",
+       "stitch": {
+        "id": 45030,
+        "price": 850.0,
+        "layerId": "752"
+       }
+      },
+      {
+       "id": 45035,
+       "name": "Hitch Neutra",
+       "raw": "Hitch Neutra",
+       "price": 0.0,
+       "layer": "kussenset",
+       "layerId": "700",
+       "stitch": {
+        "id": 45036,
+        "price": 850.0,
+        "layerId": "701"
+       }
+      },
+      {
+       "id": 45033,
+       "name": "Hitch Seashell",
+       "raw": "Hitch Seashell",
+       "price": 0.0,
+       "layer": "kussenset",
+       "layerId": "702",
+       "stitch": {
+        "id": 45034,
+        "price": 850.0,
+        "layerId": "703"
+       }
+      }
+     ]
+    },
+    {
+     "key": "stiksel",
+     "title": "Stiksel kussenset",
+     "type": "stitch",
+     "required": true,
+     "options": [
+      {
+       "id": "glad",
+       "name": "Glad",
+       "price": 0
+      },
+      {
+       "id": "ruitjes",
+       "name": "Ruitjesstiksel",
+       "sub": "Doorgestikt ruitpatroon op zitting en rugleuning.",
+       "price": 850.0,
+       "priceFrom": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key": "buiskap",
+   "title": "Buiskap",
+   "intro": "Beschutting tegen zon en regen.",
+   "groups": [
+    {
+     "key": "buiskap",
+     "title": "Buiskap",
+     "type": "single",
+     "required": true,
+     "options": [
+      {
+       "id": 45960,
+       "name": "Carbon family",
+       "raw": "Buiskap carbon family",
+       "price": 6150.0,
+       "layer": "buiskap",
+       "layerId": "661"
+      },
+      {
+       "id": 45961,
+       "name": "Tweed negro family",
+       "raw": "Buiskap tweed negro family",
+       "price": 6150.0,
+       "layer": "buiskap",
+       "layerId": "660"
+      },
+      {
+       "id": 45962,
+       "name": "Mineral family",
+       "raw": "Buiskap mineral family",
+       "price": 6150.0,
+       "layer": "buiskap",
+       "layerId": "663"
+      },
+      {
+       "id": 45963,
+       "name": "Negro family",
+       "raw": "Buiskap negro family",
+       "price": 6150.0,
+       "layer": "buiskap",
+       "layerId": "659"
+      },
+      {
+       "id": 45964,
+       "name": "Vision family",
+       "raw": "Buiskap vision family",
+       "price": 6150.0,
+       "layer": "buiskap",
+       "layerId": "662"
+      },
+      {
+       "id": 45965,
+       "name": "Geen buiskap",
+       "raw": "Geen buiskap",
+       "price": 0.0
+      }
+     ]
+    },
+    {
+     "key": "kap-extra",
+     "title": "Extra bij de kap",
+     "type": "many",
+     "required": false,
+     "options": [
+      {
+       "id": 47488,
+       "name": "Biminitop met rvs frame en opberghoes",
+       "raw": "Biminitop met rvs frame en opberghoes",
+       "price": 3250.0,
+       "image": "https://www.maximaboats.nl/images/opties/Biminitop.jpg"
+      },
+      {
+       "id": 46780,
+       "name": "Kuiphoes",
+       "raw": "Kuiphoes",
+       "price": 2495.0,
+       "image": "https://www.maximaboats.nl/images/opties/Maxima800cabin_afdekzeil.jpg"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key": "motor",
+   "title": "Motor",
+   "intro": "De aandrijving van je boot.",
+   "groups": [
+    {
+     "key": "motor",
+     "title": "Motor",
+     "type": "single",
+     "required": true,
+     "options": [
+      {
+       "id": 45117,
+       "name": "2x Honda BF200 XDU",
+       "raw": "2x Honda BF200 XDU drive by wire",
+       "price": 53670.0,
+       "sub": "Drive-by-wire",
+       "image": "https://www.maximaboats.nl/images/opties/2xbf200.jpg"
+      },
+      {
+       "id": 45116,
+       "name": "1x Honda BF250 XDU elektronische motorbediening",
+       "raw": "1x Honda BF250 XDU el.motorbediening",
+       "price": 29742.0,
+       "image": "https://www.maximaboats.nl/images/opties/250.jpg"
+      },
+      {
+       "id": 45114,
+       "name": "2x Honda BF150 XDU elektronische motorbediening",
+       "raw": "2x Honda BF150 XDU el.motorbediening",
+       "price": 42634.0,
+       "image": "https://www.maximaboats.nl/images/opties/2xbf150.jpg"
+      },
+      {
+       "id": 45118,
+       "name": "1x Honda BF350 XDU elektronische motorbediening",
+       "raw": "1x Honda BF350 XDU el.motorbediening",
+       "price": 38830.0,
+       "image": "https://www.maximaboats.nl/images/opties/350.jpg"
+      },
+      {
+       "id": 45115,
+       "name": "1x Honda BF200 XDU elektronische motorbediening",
+       "raw": "1x Honda BF200 XDU el.motorbediening",
+       "price": 26835.0,
+       "image": "https://www.maximaboats.nl/images/opties/200.jpg"
+      },
+      {
+       "id": 46591,
+       "name": "2x Honda BF100XRTU",
+       "raw": "2x Honda BF100XRTU",
+       "price": 29456.0,
+       "image": "https://www.maximaboats.nl/images/opties/100.jpg"
+      },
+      {
+       "id": 46779,
+       "name": "Honda 150 pk",
+       "raw": "150 Honda met elektronische motorbediening",
+       "price": 21317.0,
+       "sub": "Met elektronische motorbediening",
+       "image": "https://www.maximaboats.nl/images/opties/150.jpg"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key": "exterieur",
+   "title": "Exterieur",
+   "intro": "Dek, besturing en uitrusting. Alles is optioneel.",
+   "groups": [
+    {
+     "key": "afwerking",
+     "title": "Romp & afwerking",
+     "type": "many",
+     "required": false,
+     "options": [
+      {
+       "id": 45966,
+       "name": "Metallic gespoten romp",
+       "raw": "Metallic gespoten romp",
+       "price": 6295.0,
+       "image": "https://www.maximaboats.nl/images/opties/Metallic_gespoten_romp.jpg"
+      },
+      {
+       "id": 45967,
+       "name": "Wrapped romp",
+       "raw": "Wrapped romp",
+       "price": 3595.0,
+       "image": "https://www.maximaboats.nl/images/opties/wrappedhull37.jpg"
+      },
+      {
+       "id": 47487,
+       "name": "Motorkap spuiten in dezelfde kleur als romp",
+       "raw": "Motorkap spuiten in dezelfde kleur als romp (per motor)",
+       "price": 1800.0,
+       "sub": "Per motor",
+       "image": "https://www.maximaboats.nl/images/opties/motorkap_gespoten.png"
+      },
+      {
+       "id": 45975,
+       "name": "Carbon pakket - carbon stuur & carbon wrap console & carbon wrap inserts",
+       "raw": "Carbon pakket - carbon stuur & carbon wrap console & carbon wrap inserts",
+       "price": 995.0,
+       "image": "https://www.maximaboats.nl/images/opties/Carbon_pakket.jpg"
+      }
+     ]
+    },
+    {
+     "key": "besturing",
+     "title": "Manoeuvreren & besturing",
+     "type": "many",
+     "required": false,
+     "options": [
+      {
+       "id": 45969,
+       "name": "Boegschroef Vetus 45 kgf",
+       "raw": "Boegschroef Vetus 45kgf",
+       "price": 3700.0,
+       "image": "https://www.maximaboats.nl/images/opties/Boegschroef.png"
+      },
+      {
+       "id": 45970,
+       "name": "Hydraulische besturing",
+       "raw": "Hydraulische besturing",
+       "price": 1850.0,
+       "image": "https://www.maximaboats.nl/images/opties/Hydraulische_besturing.jpg"
+      },
+      {
+       "id": 47518,
+       "name": "Stuurbekrachtiging",
+       "raw": "Stuurbekrachtiging (+ 200 pk)",
+       "price": 5795.0,
+       "sub": "+ 200 pk"
+      },
+      {
+       "id": 47519,
+       "name": "Stuurbekrachtiging dubbele motorisering",
+       "raw": "Stuurbekrachtiging dubbele motorisering",
+       "price": 6395.0
+      },
+      {
+       "id": 47520,
+       "name": "Trimtabs",
+       "raw": "Trimtabs",
+       "price": 2250.0
+      },
+      {
+       "id": 47521,
+       "name": "Zipwake systeem",
+       "raw": "Zipwake systeem",
+       "price": 7195.0,
+       "image": "https://www.maximaboats.nl/images/opties/zipwake.jpg"
+      }
+     ]
+    },
+    {
+     "key": "dek",
+     "title": "Dek & uitrusting",
+     "type": "many",
+     "required": false,
+     "options": [
+      {
+       "id": 45168,
+       "name": "Zonnedek op voordek",
+       "raw": "Zonnedek op voordek",
+       "price": 1250.0,
+       "image": "https://www.maximaboats.nl/images/opties/Zonnedek_voordek_800cabin.jpg"
+      },
+      {
+       "id": 45169,
+       "name": "Permateek vloer en zwemplateau",
+       "raw": "Permateek vloer en zwemplateau",
+       "price": 5100.0,
+       "image": "https://www.maximaboats.nl/images/opties/permateekaftcockpit.jpg"
+      },
+      {
+       "id": 45968,
+       "name": "Seadeck evafoam op vloer in cockpit en zwemplateau",
+       "raw": "Seadeck evafoam op vloer in cockpit en zwemplateau",
+       "price": 2950.0,
+       "image": "https://www.maximaboats.nl/images/opties/Seadeck_evafoam_op_vloer_in_cockpit_en_zwemplateau.jpg"
+      },
+      {
+       "id": 46989,
+       "name": "Seadeck evafoam vloer grijs in kuip en op zwemplateaus",
+       "raw": "Seadeck evafoam vloer grijs in kuip en op zwemplateaus",
+       "price": 2950.0,
+       "image": "https://www.maximaboats.nl/images/opties/Seadeck_evafoam_grey_800cabin.jpg"
+      },
+      {
+       "id": 45971,
+       "name": "Elektrische ankerlier",
+       "raw": "Electrische ankerlier",
+       "price": 2195.0,
+       "image": "https://www.maximaboats.nl/images/opties/Elektrische_ankerlier.jpg"
+      },
+      {
+       "id": 45973,
+       "name": "Hekdouche met 40 liter tank",
+       "raw": "Hekdouche met 40 liter tank",
+       "price": 1095.0,
+       "image": "https://www.maximaboats.nl/images/opties/heckshower.jpeg"
+      },
+      {
+       "id": 45972,
+       "name": "RVS anker met 30m ketting",
+       "raw": "RVS anker met 30m ketting",
+       "price": 1395.0,
+       "image": "https://www.maximaboats.nl/images/opties/RVS_anker.jpg"
+      },
+      {
+       "id": 45976,
+       "name": "Antifouling systeem",
+       "raw": "Antifouling systeem (5 lagen)",
+       "price": 1750.0,
+       "sub": "5 lagen",
+       "image": "https://www.maximaboats.nl/images/opties/Antifouling.jpg"
+      },
+      {
+       "id": 45979,
+       "name": "Vaarklaarpakket",
+       "raw": "Vaarklaarpakket ( 4 lijnen, 4 fenders, anker +lijn en pikhaak)",
+       "price": 375.0,
+       "sub": "4 lijnen, 4 fenders, anker + lijn en pikhaak",
+       "image": "https://www.maximaboats.nl/images/opties/Vaarklaar_pakket.jpg"
+      }
+     ]
+    },
+    {
+     "key": "vlaggenmast",
+     "title": "Vlaggenmast",
+     "type": "one",
+     "required": false,
+     "options": [
+      {
+       "id": 45977,
+       "name": "Klein model",
+       "raw": "Vlaggemast klein model",
+       "price": 125.0,
+       "image": "https://www.maximaboats.nl/images/opties/Bunkussen_620.jpg"
+      },
+      {
+       "id": 45978,
+       "name": "Groot model",
+       "raw": "Vlaggemast groot model",
+       "price": 185.0,
+       "image": "https://www.maximaboats.nl/images/opties/Vlaggenmast_groot.jpg"
+      }
+     ]
+    },
+    {
+     "key": "verlichting",
+     "title": "Verlichting",
+     "type": "many",
+     "required": false,
+     "options": [
+      {
+       "id": 45974,
+       "name": "Led lichtpakket",
+       "raw": "Led lichtpakket",
+       "price": 1495.0,
+       "image": "https://www.maximaboats.nl/images/opties/LED_lichtpakket.png"
+      }
+     ]
+    },
+    {
+     "key": "beveiliging",
+     "title": "Beveiliging",
+     "type": "many",
+     "required": false,
+     "hint": "SCM-gekeurd, vaak verplicht voor je verzekering.",
+     "options": [
+      {
+       "id": 45980,
+       "name": "SCM gekeurde ketting 2 meter",
+       "raw": "SCM gekeurde ketting 2 meter",
+       "price": 200.0,
+       "image": "https://www.maximaboats.nl/images/opties/kettingslot_6787b1375a895.jpg"
+      },
+      {
+       "id": 45981,
+       "name": "SCM gekeurd kabelslot 5 meter",
+       "raw": "SCM gekeurd kabelslot 5 meter",
+       "price": 140.0,
+       "image": "https://www.maximaboats.nl/images/opties/kabelslot_6787b1376e16c.jpg"
+      },
+      {
+       "id": 45982,
+       "name": "SCM gekeurd buitenboordmotorslot",
+       "raw": "SCM gekeurd buitenboordmotorslot",
+       "price": 145.0,
+       "image": "https://www.maximaboats.nl/images/opties/buitenboordmotorslot_6787b1376d0fd.jpg"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key": "interieur",
+   "title": "Interieur",
+   "intro": "Extra kussens, een tafel en handige details.",
+   "groups": [
+    {
+     "key": "zitten",
+     "title": "Zitten & liggen",
+     "type": "many",
+     "required": false,
+     "hint": "Kussens in dezelfde stof als je kussenset.",
+     "options": [
+      {
+       "id": 45996,
+       "name": "Armsteun met 2 rvs bekerhouders",
+       "raw": "Armsteun met 2 rvs bekerhouders (dezelfde stof als het kussenset)",
+       "price": 225.0,
+       "image": "https://www.maximaboats.nl/images/opties/Armsteun.jpg"
+      },
+      {
+       "id": 45997,
+       "name": "Verhoogd zitkussen",
+       "raw": "Verhoogd zitkussen (dezelfde stof als het kussenset)",
+       "price": 325.0,
+       "image": "https://www.maximaboats.nl/images/opties/Verhoogd_zitkussen.jpg"
+      },
+      {
+       "id": 45998,
+       "name": "Sierkussen klein",
+       "raw": "Sierkussen klein",
+       "price": 65.0,
+       "image": "https://www.maximaboats.nl/images/opties/Sierkussen_klein.jpg"
+      },
+      {
+       "id": 45999,
+       "name": "Sierkussen middel",
+       "raw": "Sierkussen middel",
+       "price": 85.0,
+       "image": "https://www.maximaboats.nl/images/opties/Sierkussen_middel.jpg"
+      },
+      {
+       "id": 46000,
+       "name": "Sierkussen groot",
+       "raw": "Sierkussen groot",
+       "price": 100.0,
+       "image": "https://www.maximaboats.nl/images/opties/Sierkussen_groot.jpg"
+      }
+     ]
+    },
+    {
+     "key": "handig",
+     "title": "Handig",
+     "type": "many",
+     "required": false,
+     "options": [
+      {
+       "id": 46001,
+       "name": "Prullenbak",
+       "raw": "Prullenbak",
+       "price": 70.0,
+       "image": "https://www.maximaboats.nl/images/opties/20210209_134522_6787b1375732a.jpg"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key": "elektronica",
+   "title": "Elektronica",
+   "intro": "Navigatie, audio en stroom aan boord.",
+   "groups": [
+    {
+     "key": "display",
+     "title": "Display & navigatie",
+     "type": "one",
+     "required": false,
+     "options": [
+      {
+       "id": 45984,
+       "name": "Garmin GPS diepte- en snelheidsmeter",
+       "raw": "Garmin GPS diepte- en snelheidsmeter",
+       "price": 699.0,
+       "image": "https://www.maximaboats.nl/images/opties/striker-4.2-500x500_6787b1375f927.jpg"
+      },
+      {
+       "id": 45985,
+       "name": "Glass cockpit Garmin 7\" touch",
+       "raw": "Glass in cockpit Garmin 7 touch met motorgegevens, navigatie en dieptemeter",
+       "price": 2495.0,
+       "sub": "Met motorgegevens, navigatie en dieptemeter",
+       "image": "https://www.maximaboats.nl/images/opties/Glass-in-Cockpit-Garmin.jpg"
+      },
+      {
+       "id": 45986,
+       "name": "Glass cockpit Garmin 9\" touch",
+       "raw": "Glass in cockpit Garmin 9 touch met motorgegevens, navigatie en dieptemeter",
+       "price": 2895.0,
+       "sub": "Met motorgegevens, navigatie en dieptemeter",
+       "image": "https://www.maximaboats.nl/images/opties/Garmin_9_touch.jpg"
+      },
+      {
+       "id": 45987,
+       "name": "Glass cockpit Garmin 12\" touch",
+       "raw": "Glass in cockpit Garmin 12 touch met motorgegevens, navigatie en dieptemeter",
+       "price": 4295.0,
+       "sub": "Met motorgegevens, navigatie en dieptemeter",
+       "image": "https://www.maximaboats.nl/images/opties/garmin-12inch.jpg"
+      },
+      {
+       "id": 45990,
+       "name": "Maxima display 10\"",
+       "raw": "Maxima display 10 inch (tracker/motordata/diepte/radio, 4x160w speaker)",
+       "price": 5195.0,
+       "sub": "Tracker, motordata, diepte, radio, 4 × 160 W speaker",
+       "image": "https://www.maximaboats.nl/images/opties/Maxima_display_10_inch.jpg"
+      },
+      {
+       "id": 45991,
+       "name": "Maxima display 2x10\"",
+       "raw": "Maxima display 2x10 inch(tracker/motordata/depth/radio, 4x160w speaker)",
+       "price": 6795.0,
+       "sub": "Tracker, motordata, diepte, radio, 4 × 160 W speaker",
+       "image": "https://www.maximaboats.nl/images/opties/Maxima_display_2x10inch.jpg"
+      },
+      {
+       "id": 45992,
+       "name": "Maxima display 12\"",
+       "raw": "Maxima display 12 inch(tracker/motordata/depth/radio,4x160w speaker)",
+       "price": 5695.0,
+       "sub": "Tracker, motordata, diepte, radio, 4 × 160 W speaker",
+       "image": "https://www.maximaboats.nl/images/opties/Maxima_display_12inch.jpg"
+      },
+      {
+       "id": 45993,
+       "name": "Maxima display 16\"",
+       "raw": "Maxima display 16 inch(tracker/motordata/depth/radio,4x160w speaker)",
+       "price": 6595.0,
+       "sub": "Tracker, motordata, diepte, radio, 4 × 160 W speaker",
+       "image": "https://www.maximaboats.nl/images/opties/Maxima_display_16_inch.jpg"
+      }
+     ]
+    },
+    {
+     "key": "audio",
+     "title": "Audio",
+     "type": "many",
+     "required": false,
+     "options": [
+      {
+       "id": 45983,
+       "name": "Radio Fusion BT",
+       "raw": "Radio Fusion BT met 2 x 120 watt LED speakers",
+       "price": 1195.0,
+       "sub": "Met 2 × 120 W led-speakers",
+       "image": "https://www.maximaboats.nl/images/opties/0043067_FUSION_MS_RA55_Marine_Stereo_00360539_1.jpg_6787b1376a90c.jpg"
+      },
+      {
+       "id": 45988,
+       "name": "Audio-uitbreiding op Garmin",
+       "raw": "Audio uitbreiding op Garmin met 4 x 120 w LED speakers",
+       "price": 1450.0,
+       "sub": "4 × 120 W led-speakers",
+       "image": "https://www.maximaboats.nl/images/opties/Speakers_led.jpg"
+      },
+      {
+       "id": 45989,
+       "name": "Audio-uitbreiding op Garmin plus versterker",
+       "raw": "Audio uitbreiding op Garmin met 4 x 160w LED speakers en versterker",
+       "price": 2450.0,
+       "sub": "4 × 160 W led-speakers en versterker",
+       "image": "https://www.maximaboats.nl/images/opties/CSM16RGB-B_MaximaBoats_6787b13780df5.jpg"
+      }
+     ]
+    },
+    {
+     "key": "stroom",
+     "title": "Stroom",
+     "type": "many",
+     "required": false,
+     "options": [
+      {
+       "id": 45994,
+       "name": "Tweede accu met diodebrug",
+       "raw": "2de accu met diodebrug",
+       "price": 795.0,
+       "image": "https://www.maximaboats.nl/images/opties/PLUS50_6787b13775817.jpg"
+      },
+      {
+       "id": 45995,
+       "name": "Walstroomaansluiting",
+       "raw": "Walstroomaansluiting met rvs inlet en walstroomkabel 15m",
+       "price": 1495.0,
+       "sub": "Met rvs inlet en 15 m walstroomkabel",
+       "image": "https://www.maximaboats.nl/images/opties/Walstroom_aansluiting.jpg"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key": "comfort",
+   "title": "Comfort",
+   "intro": "Koelen, koken en meer comfort voor lange dagen op het water.",
+   "groups": [
+    {
+     "key": "koeling",
+     "title": "Koeling",
+     "type": "one",
+     "required": false,
+     "options": [
+      {
+       "id": 45151,
+       "name": "Koellade compressor extra groot",
+       "raw": "Koellade compressor extra groot",
+       "price": 2495.0,
+       "image": "https://www.maximaboats.nl/images/opties/Koellade_XL.jpg"
+      }
+     ]
+    },
+    {
+     "key": "keuken",
+     "title": "Keuken & sanitair",
+     "type": "many",
+     "required": false,
+     "options": [
+      {
+       "id": 45139,
+       "name": "Chemisch toilet",
+       "raw": "Chemisch toilet",
+       "price": 195.0,
+       "image": "https://www.maximaboats.nl/images/opties/20200206_160901.jpg"
+      }
+     ]
+    }
+   ]
   }
- ],
- "steps": [
-  {
-   "title": "Kies kleur buitenkant",
-   "type": "single",
-   "optional": false,
-   "options": [
-    {
-     "id": 45024,
-     "name": "Rompkleur wit",
-     "price": 0.0,
-     "image": null,
-     "layer": "kleur-buitenkant",
-     "layerId": "646",
-     "description": null
-    },
-    {
-     "id": 45025,
-     "name": "Rompkleur lichtgrijs",
-     "price": 0.0,
-     "image": null,
-     "layer": "kleur-buitenkant",
-     "layerId": "648",
-     "description": null
-    },
-    {
-     "id": 45026,
-     "name": "Rompkleur donker grijs",
-     "price": 0.0,
-     "image": null,
-     "layer": "kleur-buitenkant",
-     "layerId": "647",
-     "description": null
-    },
-    {
-     "id": 45027,
-     "name": "Rompkleur donker blauw",
-     "price": 0.0,
-     "image": null,
-     "layer": "kleur-buitenkant",
-     "layerId": "645",
-     "description": null
-    },
-    {
-     "id": 45028,
-     "name": "Rompkleur zwart",
-     "price": 0.0,
-     "image": null,
-     "layer": "kleur-buitenkant",
-     "layerId": "644",
-     "description": null
-    },
-    {
-     "id": 45029,
-     "name": "Rompkleur in RAL kleur",
-     "price": 900.0,
-     "image": null,
-     "layer": null,
-     "layerId": "778",
-     "description": null
-    }
-   ]
-  },
-  {
-   "title": "Kies kleur binnenkant",
-   "type": "single",
-   "optional": false,
-   "options": [
-    {
-     "id": 45156,
-     "name": "Binnenkant wit",
-     "price": 0.0,
-     "image": null,
-     "layer": "kleur-binnenkant",
-     "layerId": "693",
-     "description": null
-    },
-    {
-     "id": 45157,
-     "name": "Binnenkant lichtgrijs",
-     "price": 900.0,
-     "image": null,
-     "layer": "kleur-binnenkant",
-     "layerId": "694",
-     "description": null
-    },
-    {
-     "id": 45158,
-     "name": "Binnenkant donker grijs",
-     "price": 900.0,
-     "image": null,
-     "layer": "kleur-binnenkant",
-     "layerId": "695",
-     "description": null
-    },
-    {
-     "id": 45159,
-     "name": "Binnenkant donker blauw",
-     "price": 900.0,
-     "image": null,
-     "layer": "kleur-binnenkant",
-     "layerId": "697",
-     "description": null
-    },
-    {
-     "id": 45160,
-     "name": "Binnenkant zwart",
-     "price": 900.0,
-     "image": null,
-     "layer": "kleur-binnenkant",
-     "layerId": "696",
-     "description": null
-    },
-    {
-     "id": 45161,
-     "name": "Binnenkant in RAL kleur",
-     "price": 900.0,
-     "image": null,
-     "layer": null,
-     "layerId": "780",
-     "description": null
-    }
-   ]
-  },
-  {
-   "title": "Kies buiskap",
-   "type": "single",
-   "optional": false,
-   "options": [
-    {
-     "id": 45960,
-     "name": "Buiskap carbon family",
-     "price": 6150.0,
-     "image": null,
-     "layer": "buiskap",
-     "layerId": "661",
-     "description": null
-    },
-    {
-     "id": 45961,
-     "name": "Buiskap tweed negro family",
-     "price": 6150.0,
-     "image": null,
-     "layer": "buiskap",
-     "layerId": "660",
-     "description": null
-    },
-    {
-     "id": 45962,
-     "name": "Buiskap mineral family",
-     "price": 6150.0,
-     "image": null,
-     "layer": "buiskap",
-     "layerId": "663",
-     "description": null
-    },
-    {
-     "id": 45963,
-     "name": "Buiskap negro family",
-     "price": 6150.0,
-     "image": null,
-     "layer": "buiskap",
-     "layerId": "659",
-     "description": null
-    },
-    {
-     "id": 45964,
-     "name": "Buiskap vision family",
-     "price": 6150.0,
-     "image": null,
-     "layer": "buiskap",
-     "layerId": "662",
-     "description": null
-    },
-    {
-     "id": 45965,
-     "name": "Geen buiskap",
-     "price": 0.0,
-     "image": null,
-     "layer": null,
-     "layerId": "741",
-     "description": null
-    }
-   ]
-  },
-  {
-   "title": "Kies kussenset",
-   "type": "single",
-   "optional": false,
-   "options": [
-    {
-     "id": 45032,
-     "name": "Diamand carbon",
-     "price": 0.0,
-     "image": null,
-     "layer": "kussenset",
-     "layerId": "669",
-     "description": null
-    },
-    {
-     "id": 45031,
-     "name": "Diamand carbon ruitjes",
-     "price": 850.0,
-     "image": null,
-     "layer": "kussenset",
-     "layerId": "670",
-     "description": null
-    },
-    {
-     "id": 45042,
-     "name": "Diamand otono",
-     "price": 0.0,
-     "image": null,
-     "layer": "kussenset",
-     "layerId": "671",
-     "description": null
-    },
-    {
-     "id": 45043,
-     "name": "Diamand otono ruitjes",
-     "price": 850.0,
-     "image": null,
-     "layer": "kussenset",
-     "layerId": "672",
-     "description": null
-    },
-    {
-     "id": 45040,
-     "name": "Diamand sunset",
-     "price": 0.0,
-     "image": null,
-     "layer": "kussenset",
-     "layerId": "673",
-     "description": null
-    },
-    {
-     "id": 45041,
-     "name": "Diamand sunset ruitjes",
-     "price": 850.0,
-     "image": null,
-     "layer": "kussenset",
-     "layerId": "674",
-     "description": null
-    },
-    {
-     "id": 45038,
-     "name": "Cognac buck",
-     "price": 0.0,
-     "image": null,
-     "layer": "kussenset",
-     "layerId": "675",
-     "description": null
-    },
-    {
-     "id": 45039,
-     "name": "Cognac buck ruitjes",
-     "price": 850.0,
-     "image": null,
-     "layer": "kussenset",
-     "layerId": "676",
-     "description": null
-    },
-    {
-     "id": 45037,
-     "name": "Charcoal",
-     "price": 0.0,
-     "image": null,
-     "layer": "kussenset",
-     "layerId": "677",
-     "description": null
-    },
-    {
-     "id": 45030,
-     "name": "Charcoal ruitjes",
-     "price": 850.0,
-     "image": null,
-     "layer": "kussenset",
-     "layerId": "752",
-     "description": null
-    },
-    {
-     "id": 45035,
-     "name": "Hitch Neutra",
-     "price": 0.0,
-     "image": null,
-     "layer": "kussenset",
-     "layerId": "700",
-     "description": null
-    },
-    {
-     "id": 45036,
-     "name": "Hitch Neutra ruitjes",
-     "price": 850.0,
-     "image": null,
-     "layer": "kussenset",
-     "layerId": "701",
-     "description": null
-    },
-    {
-     "id": 45033,
-     "name": "Hitch Seashell",
-     "price": 0.0,
-     "image": null,
-     "layer": "kussenset",
-     "layerId": "702",
-     "description": null
-    },
-    {
-     "id": 45034,
-     "name": "Hitch Seashell ruitjes",
-     "price": 850.0,
-     "image": null,
-     "layer": "kussenset",
-     "layerId": "703",
-     "description": null
-    }
-   ]
-  },
-  {
-   "title": "Kies striping",
-   "type": "single",
-   "optional": false,
-   "options": [
-    {
-     "id": 45162,
-     "name": "Waterlijn wit",
-     "price": 0.0,
-     "image": null,
-     "layer": "striping",
-     "layerId": "691",
-     "description": null
-    },
-    {
-     "id": 45163,
-     "name": "Waterlijn zilvergrijs",
-     "price": 0.0,
-     "image": null,
-     "layer": "striping",
-     "layerId": "692",
-     "description": null
-    },
-    {
-     "id": 45164,
-     "name": "Waterlijn grijs",
-     "price": 0.0,
-     "image": null,
-     "layer": "striping",
-     "layerId": "690",
-     "description": null
-    },
-    {
-     "id": 45165,
-     "name": "Waterlijn oranje",
-     "price": 0.0,
-     "image": null,
-     "layer": "striping",
-     "layerId": "683",
-     "description": null
-    },
-    {
-     "id": 45166,
-     "name": "Waterlijn zwart",
-     "price": 0.0,
-     "image": null,
-     "layer": "striping",
-     "layerId": "689",
-     "description": null
-    },
-    {
-     "id": 45167,
-     "name": "Geen waterlijn",
-     "price": 0.0,
-     "image": null,
-     "layer": null,
-     "layerId": "742",
-     "description": null
-    }
-   ]
-  },
-  {
-   "title": "Kies motor",
-   "type": "single",
-   "optional": false,
-   "options": [
-    {
-     "id": 45117,
-     "name": "2x Honda BF200 XDU drive by wire",
-     "price": 53670.0,
-     "image": "https://www.maximaboats.nl/images/opties/2xbf200.jpg",
-     "layer": null,
-     "layerId": "882",
-     "description": null
-    },
-    {
-     "id": 45116,
-     "name": "1x Honda BF250 XDU el.motorbediening",
-     "price": 29742.0,
-     "image": "https://www.maximaboats.nl/images/opties/250.jpg",
-     "layer": null,
-     "layerId": "884",
-     "description": null
-    },
-    {
-     "id": 45114,
-     "name": "2x Honda BF150 XDU el.motorbediening",
-     "price": 42634.0,
-     "image": "https://www.maximaboats.nl/images/opties/2xbf150.jpg",
-     "layer": null,
-     "layerId": "800",
-     "description": null
-    },
-    {
-     "id": 45118,
-     "name": "1x Honda BF350 XDU el.motorbediening",
-     "price": 38830.0,
-     "image": "https://www.maximaboats.nl/images/opties/350.jpg",
-     "layer": null,
-     "layerId": "885",
-     "description": null
-    },
-    {
-     "id": 45115,
-     "name": "1x Honda BF200 XDU el.motorbediening",
-     "price": 26835.0,
-     "image": "https://www.maximaboats.nl/images/opties/200.jpg",
-     "layer": null,
-     "layerId": "883",
-     "description": null
-    },
-    {
-     "id": 46591,
-     "name": "2x Honda BF100XRTU",
-     "price": 29456.0,
-     "image": "https://www.maximaboats.nl/images/opties/100.jpg",
-     "layer": null,
-     "layerId": "904",
-     "description": null
-    },
-    {
-     "id": 46779,
-     "name": "150 Honda met elektronische motorbediening",
-     "price": 21317.0,
-     "image": "https://www.maximaboats.nl/images/opties/150.jpg",
-     "layer": null,
-     "layerId": "790",
-     "description": null
-    }
-   ]
-  },
-  {
-   "title": "Kies exterieur opties",
-   "type": "multi",
-   "optional": true,
-   "options": [
-    {
-     "id": 45966,
-     "name": "Metallic gespoten romp",
-     "price": 6295.0,
-     "image": "https://www.maximaboats.nl/images/opties/Metallic_gespoten_romp.jpg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 45967,
-     "name": "Wrapped romp",
-     "price": 3595.0,
-     "image": "https://www.maximaboats.nl/images/opties/wrappedhull37.jpg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 47487,
-     "name": "Motorkap spuiten in dezelfde kleur als romp (per motor)",
-     "price": 1800.0,
-     "image": "https://www.maximaboats.nl/images/opties/motorkap_gespoten.png",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 47488,
-     "name": "Biminitop met rvs frame en opberghoes",
-     "price": 3250.0,
-     "image": "https://www.maximaboats.nl/images/opties/Biminitop.jpg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 45168,
-     "name": "Zonnedek op voordek",
-     "price": 1250.0,
-     "image": "https://www.maximaboats.nl/images/opties/Zonnedek_voordek_800cabin.jpg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 46780,
-     "name": "Kuiphoes",
-     "price": 2495.0,
-     "image": "https://www.maximaboats.nl/images/opties/Maxima800cabin_afdekzeil.jpg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 45169,
-     "name": "Permateek vloer en zwemplateau",
-     "price": 5100.0,
-     "image": "https://www.maximaboats.nl/images/opties/permateekaftcockpit.jpg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 45968,
-     "name": "Seadeck evafoam op vloer in cockpit en zwemplateau",
-     "price": 2950.0,
-     "image": "https://www.maximaboats.nl/images/opties/Seadeck_evafoam_op_vloer_in_cockpit_en_zwemplateau.jpg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 46989,
-     "name": "Seadeck evafoam vloer grijs in kuip en op zwemplateaus",
-     "price": 2950.0,
-     "image": "https://www.maximaboats.nl/images/opties/Seadeck_evafoam_grey_800cabin.jpg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 45969,
-     "name": "Boegschroef Vetus 45kgf",
-     "price": 3700.0,
-     "image": "https://www.maximaboats.nl/images/opties/Boegschroef.png",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 45970,
-     "name": "Hydraulische besturing",
-     "price": 1850.0,
-     "image": "https://www.maximaboats.nl/images/opties/Hydraulische_besturing.jpg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 47518,
-     "name": "Stuurbekrachtiging (+ 200 pk)",
-     "price": 5795.0,
-     "image": null,
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 47519,
-     "name": "Stuurbekrachtiging dubbele motorisering",
-     "price": 6395.0,
-     "image": null,
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 45971,
-     "name": "Electrische ankerlier",
-     "price": 2195.0,
-     "image": "https://www.maximaboats.nl/images/opties/Elektrische_ankerlier.jpg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 45973,
-     "name": "Hekdouche met 40 liter tank",
-     "price": 1095.0,
-     "image": "https://www.maximaboats.nl/images/opties/heckshower.jpeg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 45972,
-     "name": "RVS anker met 30m ketting",
-     "price": 1395.0,
-     "image": "https://www.maximaboats.nl/images/opties/RVS_anker.jpg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 45974,
-     "name": "Led lichtpakket",
-     "price": 1495.0,
-     "image": "https://www.maximaboats.nl/images/opties/LED_lichtpakket.png",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 45975,
-     "name": "Carbon pakket - carbon stuur & carbon wrap console & carbon wrap inserts",
-     "price": 995.0,
-     "image": "https://www.maximaboats.nl/images/opties/Carbon_pakket.jpg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 45976,
-     "name": "Antifouling systeem (5 lagen)",
-     "price": 1750.0,
-     "image": "https://www.maximaboats.nl/images/opties/Antifouling.jpg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 47520,
-     "name": "Trimtabs",
-     "price": 2250.0,
-     "image": null,
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 47521,
-     "name": "Zipwake systeem",
-     "price": 7195.0,
-     "image": "https://www.maximaboats.nl/images/opties/zipwake.jpg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 45977,
-     "name": "Vlaggemast klein model",
-     "price": 125.0,
-     "image": "https://www.maximaboats.nl/images/opties/Bunkussen_620.jpg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 45978,
-     "name": "Vlaggemast groot model",
-     "price": 185.0,
-     "image": "https://www.maximaboats.nl/images/opties/Vlaggenmast_groot.jpg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 45979,
-     "name": "Vaarklaarpakket ( 4 lijnen, 4 fenders, anker +lijn en pikhaak)",
-     "price": 375.0,
-     "image": "https://www.maximaboats.nl/images/opties/Vaarklaar_pakket.jpg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 45980,
-     "name": "SCM gekeurde ketting 2 meter",
-     "price": 200.0,
-     "image": "https://www.maximaboats.nl/images/opties/kettingslot_6787b1375a895.jpg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 45981,
-     "name": "SCM gekeurd kabelslot 5 meter",
-     "price": 140.0,
-     "image": "https://www.maximaboats.nl/images/opties/kabelslot_6787b1376e16c.jpg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 45982,
-     "name": "SCM gekeurd buitenboordmotorslot",
-     "price": 145.0,
-     "image": "https://www.maximaboats.nl/images/opties/buitenboordmotorslot_6787b1376d0fd.jpg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    }
-   ]
-  },
-  {
-   "title": "Kies interieur opties",
-   "type": "multi",
-   "optional": true,
-   "options": [
-    {
-     "id": 45996,
-     "name": "Armsteun met 2 rvs bekerhouders (dezelfde stof als het kussenset)",
-     "price": 225.0,
-     "image": "https://www.maximaboats.nl/images/opties/Armsteun.jpg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 45997,
-     "name": "Verhoogd zitkussen (dezelfde stof als het kussenset)",
-     "price": 325.0,
-     "image": "https://www.maximaboats.nl/images/opties/Verhoogd_zitkussen.jpg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 45998,
-     "name": "Sierkussen klein",
-     "price": 65.0,
-     "image": "https://www.maximaboats.nl/images/opties/Sierkussen_klein.jpg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 45999,
-     "name": "Sierkussen middel",
-     "price": 85.0,
-     "image": "https://www.maximaboats.nl/images/opties/Sierkussen_middel.jpg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 46000,
-     "name": "Sierkussen groot",
-     "price": 100.0,
-     "image": "https://www.maximaboats.nl/images/opties/Sierkussen_groot.jpg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 46001,
-     "name": "Prullenbak",
-     "price": 70.0,
-     "image": "https://www.maximaboats.nl/images/opties/20210209_134522_6787b1375732a.jpg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    }
-   ]
-  },
-  {
-   "title": "Kies electronics",
-   "type": "multi",
-   "optional": true,
-   "options": [
-    {
-     "id": 45983,
-     "name": "Radio Fusion BT met 2 x 120 watt LED speakers",
-     "price": 1195.0,
-     "image": "https://www.maximaboats.nl/images/opties/0043067_FUSION_MS_RA55_Marine_Stereo_00360539_1.jpg_6787b1376a90c.jpg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 45984,
-     "name": "Garmin GPS diepte- en snelheidsmeter",
-     "price": 699.0,
-     "image": "https://www.maximaboats.nl/images/opties/striker-4.2-500x500_6787b1375f927.jpg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 45985,
-     "name": "Glass in cockpit Garmin 7 touch met motorgegevens, navigatie en dieptemeter",
-     "price": 2495.0,
-     "image": "https://www.maximaboats.nl/images/opties/Glass-in-Cockpit-Garmin.jpg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 45986,
-     "name": "Glass in cockpit Garmin 9 touch met motorgegevens, navigatie en dieptemeter",
-     "price": 2895.0,
-     "image": "https://www.maximaboats.nl/images/opties/Garmin_9_touch.jpg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 45987,
-     "name": "Glass in cockpit Garmin 12 touch met motorgegevens, navigatie en dieptemeter",
-     "price": 4295.0,
-     "image": "https://www.maximaboats.nl/images/opties/garmin-12inch.jpg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 45988,
-     "name": "Audio uitbreiding op Garmin met 4 x 120 w LED speakers",
-     "price": 1450.0,
-     "image": "https://www.maximaboats.nl/images/opties/Speakers_led.jpg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 45989,
-     "name": "Audio uitbreiding op Garmin met 4 x 160w LED speakers en versterker",
-     "price": 2450.0,
-     "image": "https://www.maximaboats.nl/images/opties/CSM16RGB-B_MaximaBoats_6787b13780df5.jpg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 45990,
-     "name": "Maxima display 10 inch (tracker/motordata/diepte/radio, 4x160w speaker)",
-     "price": 5195.0,
-     "image": "https://www.maximaboats.nl/images/opties/Maxima_display_10_inch.jpg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 45991,
-     "name": "Maxima display 2x10 inch(tracker/motordata/depth/radio, 4x160w speaker)",
-     "price": 6795.0,
-     "image": "https://www.maximaboats.nl/images/opties/Maxima_display_2x10inch.jpg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 45992,
-     "name": "Maxima display 12 inch(tracker/motordata/depth/radio,4x160w speaker)",
-     "price": 5695.0,
-     "image": "https://www.maximaboats.nl/images/opties/Maxima_display_12inch.jpg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 45993,
-     "name": "Maxima display 16 inch(tracker/motordata/depth/radio,4x160w speaker)",
-     "price": 6595.0,
-     "image": "https://www.maximaboats.nl/images/opties/Maxima_display_16_inch.jpg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 45994,
-     "name": "2de accu met diodebrug",
-     "price": 795.0,
-     "image": "https://www.maximaboats.nl/images/opties/PLUS50_6787b13775817.jpg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 45995,
-     "name": "Walstroomaansluiting met rvs inlet en walstroomkabel 15m",
-     "price": 1495.0,
-     "image": "https://www.maximaboats.nl/images/opties/Walstroom_aansluiting.jpg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    }
-   ]
-  },
-  {
-   "title": "Kies comfort",
-   "type": "multi",
-   "optional": true,
-   "options": [
-    {
-     "id": 45151,
-     "name": "Koellade compressor extra groot",
-     "price": 2495.0,
-     "image": "https://www.maximaboats.nl/images/opties/Koellade_XL.jpg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    },
-    {
-     "id": 45139,
-     "name": "Chemisch toilet",
-     "price": 195.0,
-     "image": "https://www.maximaboats.nl/images/opties/20200206_160901.jpg",
-     "layer": null,
-     "layerId": null,
-     "description": null
-    }
-   ]
-  }
- ],
- "slug": "maxima-800-cabin"
+ ]
 }
