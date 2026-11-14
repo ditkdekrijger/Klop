@@ -8,6 +8,7 @@ Herpositionering "Vaar je vrijheid." Alles op één plek.
 | `site/index.html` | De klikbare website (213 boten), met de showroom centraal op de homepage |
 | `bron/` | Ruwe bronbestanden uit de ontwerpen: recap, brandbook, merkuitingen (boards + beeld) en designsysteem (tokens, iconen, logo's, componenten) |
 | `tools/` | Scripts om alles opnieuw te bouwen |
+| `maxima-configurator/` | Herbouw van de Maxima-configurator voor alle 32 modellen (zie de README in die map) |
 
 ## Opnieuw bouwen
 
