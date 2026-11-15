@@ -17,11 +17,14 @@
     dataPath: 'data/', endpoint: 'api/offerte.php', dealer: 'Klop Watersport',
     email: 'verkoop@klopwatersport.nl', phone: '+31184612227', phoneLabel: '0184 - 61 22 27',
     whatsapp: '31633180500', address: '',
-    parentOrigin: location.origin,   // de Klop-site die de configurator in een iframe toont
+    parentOrigin: location.origin,   // de Klop-site die de configurator in een iframe toont; berichten gaan alleen daarheen
   }, window.MX_CONFIG || {});
 
   const app = document.getElementById('app');
   const EMBED = document.documentElement.classList.contains('is-embed');
+  // Koppeling met de Klop-site: in embed-modus meldt de configurator zijn stand aan de omringende pagina.
+  const PARENT = EMBED && window.parent !== window ? window.parent : null;
+  const tell = (type, data) => { if (PARENT) { try { PARENT.postMessage(Object.assign({ source: 'klop-mx', type }, data || {}), CFG.parentOrigin); } catch { /* geen ouder */ } } };
   const VIEW_LABELS = { side: 'Zijkant', back: 'Achter', front: 'Voor' };
   const STORE_KEY = 'mx-config-v2';
   const SWATCH_GROUPS = new Set(['rompkleur', 'binnenkant', 'waterlijn', 'kabelaring', 'kussenset', 'buiskap']);
@@ -34,7 +37,6 @@
   };
   const optPrice = (p) => (p ? money(p, { sign: true }) : 'Inbegrepen');
   const delta = (d) => (d < 0 ? '− ' + money(-d) : '+ ' + money(d));
-  const IN_FRAME = window.parent !== window;
   const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const store = {
     all() { try { return JSON.parse(localStorage.getItem(STORE_KEY) || '{}'); } catch { return {}; } },
@@ -99,6 +101,7 @@
   // =====================================================================
   function renderOverview(models) {
     document.title = 'Stel je Maxima samen | ' + CFG.dealer;
+    tell('overview');
     const st = { q: '', drive: 'all', sort: 'price-asc' };
     const len = (m) => parseFloat(String(m.specs?.Lengte || '0').replace(',', '.')) || 0;
 
@@ -575,7 +578,6 @@
           <div class="price__total"><dt>Totaal</dt><dd>${money(total())}</dd></div>
         </dl>
         <div class="tools">
-          ${IN_FRAME ? '<button type="button" class="btn btn--ink" data-save>Bewaar in Mijn Klop</button>' : ''}
           <button type="button" class="btn btn--line" data-print-btn>Print of bewaar als pdf</button>
           <button type="button" class="btn btn--line" data-share>Kopieer link</button>
           <a class="btn btn--line" data-wa href="${esc(waHref())}" target="_blank" rel="noopener">Stuur naar een adviseur</a>
@@ -691,34 +693,6 @@
       return `https://wa.me/${CFG.whatsapp}?text=${encodeURIComponent(lines.join('\n'))}`;
     }
 
-    // Bewaren in Mijn Klop: de Klop-site (ouderpagina) slaat de samenstelling op.
-    function saveToParent(btn) {
-      const rs = resolved();
-      const pick = (k) => rs.filter((r) => r.group.key === k).map((r) => r.name).join(', ');
-      const qs = new URLSearchParams();
-      const c = encodeC(); if (c) qs.set('c', c);
-      const r = encodeRal(); if (r) qs.set('ral', r);
-      let acked = false;
-      const onAck = (e) => {
-        if (e.source !== window.parent || e.origin !== CFG.parentOrigin || e.data?.type !== 'mx:saved') return;
-        acked = true;
-        window.removeEventListener('message', onAck);
-        btn.textContent = 'Bewaard in Mijn Klop';
-        toast('Bewaard. Je vindt deze samenstelling terug in Mijn Klop, onder Configuraties.');
-      };
-      window.addEventListener('message', onAck);
-      window.parent.postMessage({
-        type: 'mx:save', slug: model.slug, naam: model.name,
-        kleur: pick('rompkleur') || 'Kleur nog niet gekozen', motor: pick('motor') || 'Motor nog niet gekozen',
-        tot: total(), qs: qs.toString(),
-      }, CFG.parentOrigin);
-      setTimeout(() => {
-        if (acked) return;
-        window.removeEventListener('message', onAck);
-        toast('Bewaren in Mijn Klop lukte niet. Gebruik Kopieer link om je samenstelling te bewaren.');
-      }, 1500);
-    }
-
     // ----- opslaan + URL -----
     function encodeC() { return resolved().map((r) => r.id).join('.'); }
     function encodeRal() { return [...ral].filter(([k, v]) => v && chosenOpts(gByKey.get(k)).some((o) => o.ral)).map(([k, v]) => `${k}~${encodeURIComponent(v)}`).join(','); }
@@ -731,6 +705,11 @@
       if (EMBED) qq.set('embed', '1');
       history.replaceState(null, '', '?' + qq);
       store.set(model.slug, c || r ? { c, ral: r } : null);
+      tell('state', {
+        slug: model.slug, name: model.name, total: total(), c, ral: r, stap: qq.get('stap'),
+        complete: missing().length === 0,
+        picks: resolved().map((x) => [x.group.key, x.group.title, x.name]),
+      });
     }
 
     // ----- interactie -----
@@ -797,8 +776,6 @@
       const mn = e.target.closest('[data-mnext]');
       if (mn) { if (mn.dataset.target === 'quote') focusQuote(); else goTo(+mn.dataset.target); return; }
       if (e.target.closest('[data-print-btn]')) { printSheet(); return; }
-      const sv = e.target.closest('[data-save]');
-      if (sv) { saveToParent(sv); return; }
       const wa = e.target.closest('[data-wa]');
       if (wa) { wa.href = waHref(); return; }
       if (e.target.closest('[data-share]')) { share(e.target.closest('[data-share]')); return; }
@@ -900,12 +877,14 @@
         const r = await fetch(CFG.endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(p) });
         const res = await r.json().catch(() => ({}));
         if (!r.ok || res.ok === false) throw new Error(res.error || String(r.status));
+        tell(type, { payload: p });
         form.reset();
         msg.textContent = type === 'help' ? 'Bedankt. We nemen zo snel mogelijk contact met je op.'
           : `Bedankt voor je aanvraag. ${CFG.dealer} stuurt je zo snel mogelijk een offerte.`;
         msg.hidden = false; msg.classList.add('is-ok');
       } catch (err) {
         console.warn('Endpoint niet bereikbaar, mailto als terugval', err);
+        tell(type, { payload: p });
         mailto(p);
         msg.textContent = `Je e-mailprogramma opent met je aanvraag. Lukt dat niet? Mail naar ${CFG.email} of bel ${CFG.phoneLabel}.`;
         msg.hidden = false; msg.classList.add('is-ok');

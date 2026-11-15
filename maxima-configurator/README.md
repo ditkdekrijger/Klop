@@ -32,7 +32,7 @@ Links uit 1.0 (`?model=…&c=…`) blijven werken, ook met ruitjeskussens.
 - **Prijsfeedback:** het totaal telt op en af en laat kort het verschil zien (bijv. "+ € 550").
 - **Jouw keuzes:** onder het bootbeeld (desktop) alle keuzes met prijs en een voortgangsbalk voor de verplichte keuzes.
 - **Groot beeld:** de knop "Groot" toont de boot schermvullend, met alle drie de aanzichten.
-- **Bewaren in Mijn Klop:** in de site bewaart "Bewaar in Mijn Klop" de samenstelling onder Mijn Klop › Configuraties, met een link die hem weer opent (`tools/patch_maxima_bewaren.py`). De site neemt alleen berichten aan van dezelfde oorsprong en uit de configurator-iframe.
+- **Berichten aan de site alleen naar de eigen oorsprong:** de configurator meldt zijn stand en aanvragen (met contactgegevens) alleen aan `parentOrigin` (standaard dezelfde oorsprong), niet aan elke pagina die hem inbouwt.
 - **Stuur naar een adviseur:** opent WhatsApp met de samenstelling, het totaal en de link. De bezoeker verstuurt het bericht zelf.
 
 ## Mappen
@@ -86,13 +86,19 @@ Maxima-optie-id's uit `bron/` komen terug in `public/data/`.
 
 ## Koppeling met de nieuwe site
 
-`python3 tools/patch_maxima.py site/index.html` en daarna `python3 tools/patch_maxima_bewaren.py site/index.html` (vanuit de root; beide al toegepast):
+`python3 tools/patch_maxima.py site/index.html` (vanuit de root; is al toegepast):
 
 - `#/stel-samen/maxima` toont het overzicht van alle Maxima-modellen.
 - `#/stel-samen/maxima-<model>` toont de configurator voor dat model. De oude link `#/stel-samen/maxima-760` blijft werken.
 - "Stel samen" bij 22 Maxima-boten gaat direct naar het juiste model. De Maxima 485 en 730i zitten niet in de Maxima-configurator en houden de algemene configurator.
-- Bewaren in Mijn Klop zet de samenstelling in Mijn Klop › Configuraties, met een link `#/stel-samen/<model>?c=…`.
 - De iframe laadt `../maxima-configurator/public/?model=…&embed=1`. Pas `MXC` in het script aan als de configurator elders gehost wordt.
+
+Daarna `python3 tools/patch_configurator.py site/index.html`:
+
+- De Maxima-pagina is schermvullend: een smalle Klop-balk met model en totaal, de configurator eronder. Geen dubbele kop, geen voet, geen actiebalk.
+- In embed-modus stuurt de configurator berichten naar de site (`postMessage`, `source: 'klop-mx'`): `overview`, `state` (model, keuzes, totaal, compleet) en `quote`/`help` bij een aanvraag.
+- De site zet de samenstelling in de adresbalk (`#/stel-samen/maxima-760-nieuw?c=…&ral=…&stap=…`), zodat hij deelbaar is en terug te openen.
+- "Bewaar in Mijn Klop" en offerteaanvragen komen in Mijn Klop > Configuraties, met "Verder samenstellen".
 
 ## Aandachtspunten
 
