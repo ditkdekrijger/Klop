@@ -93,6 +93,7 @@ for k, v in {
     '{{SWATCHES}}': sw, '{{TYPE}}': typ, '{{SPACING}}': toklist('spacing'), '{{RADIUS}}': toklist('radius'), '{{LAYOUT}}': toklist('layout'),
     '{{ICONS}}': icons, '{{COMPS}}': comps, '{{DATA}}': json.dumps(DATA, ensure_ascii=False),
     '{{N_BB}}': str(N['bb']), '{{N_MU}}': str(N['mu']), '{{N_DS}}': str(N['ds']), '{{N_RC}}': str(N['rc']), '{{N_IC}}': str(icons.count('class="ic"')),
+    '{{CODE}}': open(os.path.join(ROOT, 'tools/code_sectie.html')).read(),
 }.items():
     page = page.replace(k, v)
 open(OUT, 'w').write(page)

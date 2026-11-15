@@ -14,7 +14,8 @@ Herpositionering "Vaar je vrijheid." Alles op één plek.
 
 ```bash
 node tools/render_boards.js          # boards en componenten naar overzicht/ov/
-python3 tools/build_overzicht.py     # overzicht/index.html
+python3 tools/build_overzicht.py     # overzicht/index.html (sectie Code staat in tools/code_sectie.html)
+python3 tools/pack_overzicht.py      # publiceerbare versie in dist/ (beelden gebundeld, site en configurator erbij)
 # site/index.html opnieuw opbouwen vanaf de originele site, in deze volgorde:
 python3 tools/patch_showroom.py site/index.html   # showroom-uitbreiding
 python3 tools/patch_maxima.py site/index.html     # Maxima-configurator 2.0 koppelen

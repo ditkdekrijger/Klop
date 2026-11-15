@@ -38,7 +38,7 @@ code{font-family:ui-monospace,Menlo,monospace;font-size:13px}
 .cover .kick{color:var(--chroom)}
 .cover h1{font-size:clamp(48px,8vw,128px);letter-spacing:-.045em;line-height:.95;margin:22px 0 24px}
 .cover .lead{color:var(--mist)}
-.parts{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:clamp(40px,7vh,72px)}
+.parts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:clamp(40px,7vh,72px)}
 .parts a{display:flex;flex-direction:column;gap:8px;text-decoration:none;padding:20px;border-radius:22px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);min-height:190px;transition:transform .5s var(--ez),border-color .3s,background .3s}
 .parts a:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.1)}
 .parts small{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--chroom)}
@@ -121,6 +121,42 @@ td{padding:10px 12px 10px 0;border-top:1px solid var(--line);vertical-align:top}
 .btn.s{background:var(--nacht);color:#fff;border-color:var(--nacht)}
 footer{padding:48px 0 64px;border-top:1px solid var(--line);color:var(--mut);font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+/* code */
+.cx{margin-top:clamp(48px,6vw,88px)}.cx:first-of-type{margin-top:0}
+.cx>h3{font-size:clamp(28px,3vw,40px);margin-bottom:16px}.cx>.lead{margin-bottom:24px}
+.roles{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.role{background:var(--card);border-radius:22px;padding:24px;box-shadow:0 0 0 1px var(--line)}
+.role small,.seoh small,.base small,.phase small{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);font-weight:500}
+.role b{display:block;font-family:var(--fd);font-weight:300;font-size:28px;letter-spacing:-.03em;margin:6px 0 12px}
+.role ul,.seoc ul{list-style:none}.role li,.seoc li{padding:8px 0 8px 22px;border-top:1px solid var(--line);position:relative;font-size:15.5px}
+.role li:before,.seoc li:before{content:"";position:absolute;left:2px;top:15px;width:8px;height:8px;border:1px solid currentColor;border-radius:50%;opacity:.6}
+.role.y{box-shadow:0 0 0 2px var(--olie)}
+.why3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.why3>div,.base>div,.build>div{background:var(--card);border-radius:18px;padding:20px;box-shadow:0 0 0 1px var(--line)}
+.why3 b,.base b,.build b{display:block;font-weight:500;margin-bottom:6px}.why3 p,.base p,.build p{font-size:15px;color:var(--mut)}
+.seo2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.seoc{background:var(--card);border-radius:22px;padding:24px;box-shadow:0 0 0 1px var(--line)}
+.seoh{padding-bottom:14px;margin-bottom:6px}.seoh b{display:block;font-family:var(--fd);font-weight:300;font-size:28px;letter-spacing:-.03em;margin:4px 0}.seoh span{font-size:14px;color:var(--mut)}
+.seoc h4{font-size:15px;font-weight:600;margin:18px 0 4px}
+.build{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.build i{display:block;font-style:normal;font-family:var(--fd);font-size:28px;font-weight:300;color:var(--mut);margin-bottom:10px}
+.build .io,.phase .io{box-shadow:0 0 0 1px var(--line);background:transparent;border:1px dashed var(--mut)}
+.arch{margin:0;background:var(--card);border-radius:22px;padding:clamp(14px,2vw,28px);box-shadow:0 0 0 1px var(--line);overflow-x:auto}
+.arch svg{display:block;width:100%;min-width:720px;height:auto;color:var(--fg)}
+.arch figcaption{font-size:14.5px;color:var(--mut);margin-top:14px;max-width:820px}
+.tblw{overflow-x:auto;border-radius:18px;box-shadow:0 0 0 1px var(--line);background:var(--card)}
+table.cmp{min-width:760px}table.cmp th,table.cmp td{padding:14px 16px;text-align:left;vertical-align:top;border-top:1px solid var(--line);font-size:15px}
+table.cmp thead th{border-top:0;font-weight:600;font-size:14px}table.cmp td:first-child{font-weight:500;white-space:nowrap}
+table.cmp td:nth-child(2),table.cmp td:nth-child(4){color:var(--mut);font-family:var(--fs);font-size:15px;white-space:normal}
+table.cmp .on{background:rgba(239,169,31,.1)}table.cmp th.on{box-shadow:inset 0 3px 0 var(--olie)}
+.note{font-size:14px;color:var(--mut);margin-top:12px}
+.base{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.phase{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.phase li{background:var(--card);border-radius:18px;padding:20px;box-shadow:0 0 0 1px var(--line);border-top:3px solid var(--fg)}
+.phase li.io{border-top:3px dashed var(--mut)}
+.phase b{display:block;font-family:var(--fd);font-weight:300;font-size:24px;letter-spacing:-.025em;margin:6px 0}.phase p{font-size:15px;color:var(--mut)}
+@media(max-width:1040px){.build{grid-template-columns:repeat(2,minmax(0,1fr))}.phase,.base,.why3{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.roles,.seo2,.why3,.base,.phase,.build{grid-template-columns:1fr}}
 /* lightbox */
 .lb{position:fixed;inset:0;z-index:50;background:rgba(5,12,24,.94);display:none;flex-direction:column;align-items:center;justify-content:center;padding:56px 16px 24px}
 .lb.on{display:flex}
@@ -138,19 +174,20 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 .browser.full iframe{flex:1;height:auto}.browser.full .fsx{display:inline-block}.browser.full .fsb{display:none}
 </style></head><body>
 <header class="bar"><a href="#start" aria-label="Naar het begin"><img src="{{PFX}}klop-logo-wit.png" alt="Klop Watersport"></a>
-<nav id="nav" aria-label="Onderdelen"><a href="#recap">Recap</a><a href="#brandbook">Brandbook</a><a href="#designsysteem">Designsysteem</a><a href="#merkuitingen">Merkuitingen</a><a href="#website">Website</a></nav>
+<nav id="nav" aria-label="Onderdelen"><a href="#recap">Recap</a><a href="#brandbook">Brandbook</a><a href="#designsysteem">Designsysteem</a><a href="#merkuitingen">Merkuitingen</a><a href="#website">Website</a><a href="#code">Code</a></nav>
 <button class="tg" id="tg" aria-label="Wissel licht en donker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="5"/><path d="M12 7v10" /><path d="M12 7a5 5 0 0 1 0 10z" fill="currentColor"/></svg></button></header>
 
 <section class="cover" id="start"><div class="bgimg" style="background-image:url('{{PFX}}cover-showroom.jpg')"></div><div class="wrap">
 <span class="kick">Klop Watersport · herpositionering · november 2026</span>
 <h1>Vaar je<br>vrijheid.</h1>
-<p class="lead">Het hele traject in één bestand: het verhaal, het merk, de bouwstenen, het merk in de praktijk en de nieuwe website. Scroll door, of kies direct een onderdeel.</p>
+<p class="lead">Het hele traject in één bestand: het verhaal, het merk, de bouwstenen, het merk in de praktijk, de nieuwe website en de techniek eronder. Scroll door, of kies direct een onderdeel.</p>
 <div class="parts">
 <a href="#recap"><small>01 · Het verhaal</small><b>Recap</b><p>{{N_RC}} slides: strategie, merkverhaal en de gemaakte keuzes.</p><span>Bekijk →</span></a>
 <a href="#brandbook"><small>02 · Het merk</small><b>Brandbook</b><p>{{N_BB}} pagina's, van merkkern tot spelregels voor beeld en taal.</p><span>Bekijk →</span></a>
 <a href="#designsysteem"><small>03 · De bouwstenen</small><b>Design&shy;systeem</b><p>Kleur, type, ruimte, {{N_IC}} iconen en {{N_DS}} componenten.</p><span>Bekijk →</span></a>
 <a href="#merkuitingen"><small>04 · In het wild</small><b>Merk&shy;uitingen</b><p>{{N_MU}} ontwerpen, van servicepas tot campagne en bedrijfswagen.</p><span>Bekijk →</span></a>
 <a href="#website" class="y"><small>05 · Het resultaat</small><b>Website</b><p>De klikbare site, nu met de showroom centraal op de homepage.</p><span>Open de site →</span></a>
+<a href="#code"><small>06 · De techniek</small><b>Code</b><p>WordPress, SEO en GEO, configurator, CRM en de architectuur met ERP en CAD.</p><span>Bekijk →</span></a>
 </div></div></section>
 
 <section class="sec" id="recap"><div class="wrap">
@@ -203,6 +240,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 <div class="btns"><button class="btn s" data-full="">Bekijk de site schermvullend</button><button class="btn" data-full="#/showroom">Bekijk de showroompagina</button></div>
 </div></section>
 
+{{CODE}}
+
 <footer><div class="wrap"><span>Klop Watersport · Vrijheidsvaarders sinds 1966</span><span>JUST.LEAD · november 2026</span></div></footer>
 
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Vergroot beeld"><button class="x" id="lbx" aria-label="Sluiten">×</button>
@@ -233,7 +272,7 @@ $('#lb').addEventListener('click',function(e){if(e.target.id==='lb')lbc()});
 document.addEventListener('keydown',function(e){if($('#lb').classList.contains('on')){if(e.key==='Escape')lbc();if(e.key==='ArrowRight')lb(L.set,L.i+1);if(e.key==='ArrowLeft')lb(L.set,L.i-1);return}
  var r=$('#recap').getBoundingClientRect();if(r.top<innerHeight*.6&&r.bottom>innerHeight*.4){if(e.key==='ArrowRight')deck(di+1);if(e.key==='ArrowLeft')deck(di-1)}});
 // actieve sectie in de balk
-var secs=['recap','brandbook','designsysteem','merkuitingen','website'].map(function(id){return document.getElementById(id)});
+var secs=['recap','brandbook','designsysteem','merkuitingen','website','code'].map(function(id){return document.getElementById(id)});
 if('IntersectionObserver' in window){var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting)$$('#nav a').forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+x.target.id)})})},{rootMargin:'-45% 0px -50% 0px'});secs.forEach(function(s){io.observe(s)})}
 // thema
 $('#tg').onclick=function(){var r=document.documentElement,d=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;r.dataset.theme=d?'light':'dark';try{localStorage.setItem('klop-theme',r.dataset.theme)}catch(x){}};
