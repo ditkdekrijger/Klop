@@ -17,6 +17,7 @@
     dataPath: 'data/', endpoint: 'api/offerte.php', dealer: 'Klop Watersport',
     email: 'verkoop@klopwatersport.nl', phone: '+31184612227', phoneLabel: '0184 - 61 22 27',
     whatsapp: '31633180500', address: '',
+    mediaBase: '',                   // bijv. 'media/' als de beelden zelf gehost worden (scripts/mirror_media.py)
     parentOrigin: location.origin,   // de Klop-site die de configurator in een iframe toont; berichten gaan alleen daarheen
   }, window.MX_CONFIG || {});
 
@@ -60,6 +61,9 @@
     }
     return imgCache.get(src);
   };
+  // Beelden van maximaboats.nl, of zelf gehost als mediaBase is ingesteld.
+  const MX_HOST = 'https://www.maximaboats.nl/';
+  const media = (u) => (u && CFG.mediaBase && u.startsWith(MX_HOST) ? CFG.mediaBase + u.slice(MX_HOST.length) : u);
   const isElectric = (m) => /elektris|electris/i.test(m.name);
   const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -75,8 +79,9 @@
       const slug = q.get('model');
       const pid = q.get('p');
       const meta = slug ? models.find((m) => m.slug === slug) : pid ? models.find((m) => String(m.id) === pid) : null;
+      models.forEach((m) => { m.image = media(m.image); });
       if (meta) return renderConfigurator(meta, q);
-      return renderOverview(models);
+      return renderOverview(models, slug || pid ? 'Dit model staat niet (meer) in de configurator. Kies hieronder een ander model.' : '');
     }).catch((err) => {
       console.error(err);
       app.innerHTML = `<div class="wrap app__error"><h1>De configurator kon niet geladen worden</h1>
@@ -99,7 +104,7 @@
   // =====================================================================
   // Overzicht
   // =====================================================================
-  function renderOverview(models) {
+  function renderOverview(models, notice = '') {
     document.title = 'Stel je Maxima samen | ' + CFG.dealer;
     tell('overview');
     const st = { q: '', drive: 'all', sort: 'price-asc' };
@@ -130,6 +135,7 @@
               <option value="name">Naam</option>
             </select></label>
         </div>
+        ${notice ? `<p class="ov-notice" role="status">${esc(notice)}</p>` : ''}
         <p class="ov-count" data-count aria-live="polite"></p>
         <div class="ov-grid" data-grid></div>
       </section>`;
@@ -187,6 +193,9 @@
   async function renderConfigurator(meta, q) {
     app.innerHTML = `<div class="app__loading"><span class="spinner"></span> ${esc(meta.name)} laden…</div>`;
     const model = await getJSON(CFG.dataPath + meta.slug + '.json');
+    model.image = media(model.image);
+    model.imageBase = media(model.imageBase);
+    model.sections.forEach((sec) => sec.groups.forEach((g) => g.options.forEach((o) => { if (o.image) o.image = media(o.image); })));
     document.title = `Stel je ${model.name} samen | ${CFG.dealer}`;
 
     // ----- index: groepen en optie-id's -----

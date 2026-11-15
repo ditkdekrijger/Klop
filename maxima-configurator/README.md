@@ -35,6 +35,28 @@ Links uit 1.0 (`?model=…&c=…`) blijven werken, ook met ruitjeskussens.
 - **Berichten aan de site alleen naar de eigen oorsprong:** de configurator meldt zijn stand en aanvragen (met contactgegevens) alleen aan `parentOrigin` (standaard dezelfde oorsprong), niet aan elke pagina die hem inbouwt.
 - **Stuur naar een adviseur:** opent WhatsApp met de samenstelling, het totaal en de link. De bezoeker verstuurt het bericht zelf.
 
+## Klaar voor livegang (2.2)
+
+- **Geen aanvraag kwijt:** `api/offerte.php` bewaart elke geldige aanvraag eerst in `aanvragen/aanvragen.jsonl` (één JSON-regel per aanvraag) en mailt hem daarna. Lukt mailen niet, dan krijgt de bezoeker toch een bevestiging en staat de aanvraag in dat bestand. Het pad is aan te passen met de omgevingsvariabele `MX_LEADS_FILE`. De map `aanvragen/` staat buiten `public/`, heeft een `.htaccess` met `Require all denied` en de inhoud gaat niet mee in git.
+- **Beelden zelf hosten (optioneel):** `python3 maxima-configurator/scripts/mirror_media.py` kopieert alle ±3.300 beelden naar `public/media/`. Zet daarna `mediaBase: 'media/'` in `window.MX_CONFIG`. Doe dit pas als Maxima akkoord is.
+- **Onbekend model:** een link naar een model dat niet meer bestaat, toont het overzicht met een melding.
+- **Zonder JavaScript:** een korte melding met het telefoonnummer.
+
+### Lokaal alles op één adres
+
+```bash
+php -S localhost:8080 tools/dev-router.php   # vanuit de root
+```
+
+`/` opent de site op de Maxima-configurator. `/maxima-configurator/public/` toont de configurator los. `/maxima-configurator/aanvragen/` en `/.git` zijn afgeschermd.
+
+### Checklist livegang
+
+1. Zet `maxima-configurator/public/` en `site/` op de server. De iframe verwacht de configurator op `../maxima-configurator/public/` naast `site/`; pas anders `MXC` aan.
+2. Controleer `TO_EMAIL` en `FROM_EMAIL` in `api/offerte.php`. Doe één proefaanvraag en kijk of de mail aankomt.
+3. Zorg dat `aanvragen/` niet via het web bereikbaar is. Apache leest de `.htaccess`; bij nginx is een eigen `deny`-regel nodig.
+4. Spreek met Maxima af of hun beelden zelf gehost mogen worden. Zo ja, draai `mirror_media.py` en zet `mediaBase`.
+
 ## Mappen
 
 | Pad | Inhoud |
