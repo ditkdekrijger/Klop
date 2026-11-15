@@ -1,0 +1,417 @@
+[
+ {
+  "id": 1817,
+  "slug": "maxima-35-nieuw",
+  "name": "Maxima 35 NIEUW",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1817/2026-08-24-guy-fleury-maxima-boats-maxima-35-123280820261145096a9158a531925-1050x700.jpg",
+  "specs": {
+   "Lengte": "10.40m",
+   "Prijs (v.a.)": "€ 355.000,00",
+   "Aantal personen": "12",
+   "Zichtbaarheid motor": "Motor uit het zicht (bun/inboard)"
+  },
+  "basePrice": 355000.0
+ },
+ {
+  "id": 1814,
+  "slug": "maxima-37-cabin",
+  "name": "Maxima 37 cabin",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1814/maxima-37-2-kopie-216122023094518657d639edc5d1-930x700.jpg",
+  "specs": {
+   "Lengte": "11.60m",
+   "Prijs (v.a.)": "€ 349.000,00",
+   "Aantal personen": "8",
+   "Zichtbaarheid motor": "Motor uit het zicht (bun/inboard)"
+  },
+  "basePrice": 349000.0
+ },
+ {
+  "id": 1829,
+  "slug": "maxima-490-xl-elektrisch",
+  "name": "Maxima 490 XL Elektrisch",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1829/img-04451c17062024103451666ff52bc67dd-1050x700.JPG",
+  "specs": {
+   "Lengte": "4.90m",
+   "Prijs (v.a.)": "€ 10.500,00",
+   "Aantal personen": "6",
+   "Zichtbaarheid motor": "Motor zichtbaar"
+  },
+  "basePrice": 10500.0
+ },
+ {
+  "id": 1784,
+  "slug": "maxima-490",
+  "name": "Maxima 490",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1784/img-3781-aangepast1708202315353264de22248c199-1053x700.jpg",
+  "specs": {
+   "Lengte": "4.90m",
+   "Prijs (v.a.)": "€ 10.500,00",
+   "Aantal personen": "6",
+   "Zichtbaarheid motor": "Motor zichtbaar"
+  },
+  "basePrice": 10500.0
+ },
+ {
+  "id": 1830,
+  "slug": "maxima-550-elektrisch",
+  "name": "Maxima 550 Elektrisch",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1830/shefotografie-maxima-114190920181302025ba23aba5553c-1051x700.jpg",
+  "specs": {
+   "Lengte": "5.30m",
+   "Prijs (v.a.)": "€ 11.950,00",
+   "Aantal personen": "7",
+   "Zichtbaarheid motor": "Motor zichtbaar"
+  },
+  "basePrice": 11950.0
+ },
+ {
+  "id": 1785,
+  "slug": "maxima-550",
+  "name": "Maxima 550",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1785/dji-0186-21710202513194268f2264e4eba7-1247x700.jpg",
+  "specs": {
+   "Lengte": "5.30m",
+   "Prijs (v.a.)": "€ 11.950,00",
+   "Aantal personen": "7",
+   "Zichtbaarheid motor": "Motor zichtbaar"
+  },
+  "basePrice": 11950.0
+ },
+ {
+  "id": 1840,
+  "slug": "maxima-580-sport-lounge-nieuw",
+  "name": "Maxima 580 Sport Lounge NIEUW",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1840/2026-08-24-guy-fleury-maxima-boats-maxima-580-97290820261633046a92eda08e117-1049x700.jpg",
+  "specs": {
+   "Lengte": "5.80m",
+   "Prijs (v.a.)": "€ 25.950,00",
+   "Aantal personen": "8",
+   "Zichtbaarheid motor": "Motor zichtbaar"
+  },
+  "basePrice": 25950.0
+ },
+ {
+  "id": 1831,
+  "slug": "maxima-600-elektrisch",
+  "name": "Maxima 600 Elektrisch",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1831/maxima-600-exports-57-retouched0705202611254369fc5a978fa05-1050x700.jpg",
+  "specs": {
+   "Lengte": "5.80m",
+   "Prijs (v.a.)": "€ 18.950,00",
+   "Aantal personen": "8",
+   "Zichtbaarheid motor": "Motor uit het zicht (bun/inboard)"
+  },
+  "basePrice": 18950.0
+ },
+ {
+  "id": 1786,
+  "slug": "maxima-600-nieuw",
+  "name": "Maxima 600 NIEUW",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1786/2026-08-24-guy-fleury-maxima-boats-maxima-600-61280820261203416a915cfd08d7e-1049x700.jpg",
+  "specs": {
+   "Lengte": "5.80m",
+   "Prijs (v.a.)": "€ 18.950,00",
+   "Aantal personen": "8",
+   "Zichtbaarheid motor": "Motor uit het zicht (bun/inboard)"
+  },
+  "basePrice": 18950.0
+ },
+ {
+  "id": 1822,
+  "slug": "maxima-620-mc-elektrisch",
+  "name": "Maxima 620 MC Elektrisch",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1822/shefotografie-maxima-00060805202614020769fdd0bfd059d-1050x700.jpg",
+  "specs": {
+   "Lengte": "6.15m",
+   "Prijs (v.a.)": "€ 25.950,00",
+   "Aantal personen": "8",
+   "Zichtbaarheid motor": "Motor uit het zicht (bun/inboard)"
+  },
+  "basePrice": 25950.0
+ },
+ {
+  "id": 1808,
+  "slug": "maxima-620-retro-mc",
+  "name": "Maxima 620 Retro MC",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1808/maxima-620-retro-bf40-2026-venice-drone-3160620261418386a313f1ef12d3-933x700.jpg",
+  "specs": {
+   "Lengte": "6.15m",
+   "Prijs (v.a.)": "€ 25.950,00",
+   "Aantal personen": "8",
+   "Zichtbaarheid motor": "Motor uit het zicht (bun/inboard)"
+  },
+  "basePrice": 25950.0
+ },
+ {
+  "id": 1823,
+  "slug": "maxima-630-elektrisch",
+  "name": "Maxima 630 Elektrisch",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1823/shefotografie-maxima-187190920181319175ba23ec5bb629-1050x700.jpg",
+  "specs": {
+   "Lengte": "6.10m",
+   "Prijs (v.a.)": "€ 25.950,00",
+   "Aantal personen": "8",
+   "Zichtbaarheid motor": "Motor uit het zicht (bun/inboard)"
+  },
+  "basePrice": 25950.0
+ },
+ {
+  "id": 1795,
+  "slug": "maxima-630-nieuw",
+  "name": "Maxima 630 NIEUW",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1795/2026-08-24-guy-fleury-maxima-boats-maxima-630-63280820261241276a9165d7a47fd-1049x700.jpg",
+  "specs": {
+   "Lengte": "6.10m",
+   "Prijs (v.a.)": "€ 25.950,00",
+   "Aantal personen": "8"
+  },
+  "basePrice": 25950.0
+ },
+ {
+  "id": 1815,
+  "slug": "maxima-640",
+  "name": "Maxima 640",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1815/060a40852908202317142564ee0b514b72a-1050x700.jpg",
+  "specs": {
+   "Lengte": "6.60m",
+   "Prijs (v.a.)": "€ 33.950,00",
+   "Aantal personen": "10",
+   "Zichtbaarheid motor": "Motor uit het zicht (bun/inboard)"
+  },
+  "basePrice": 33950.0
+ },
+ {
+  "id": 1826,
+  "slug": "maxima-650-flying-lounge-elektrisch",
+  "name": "Maxima 650 Flying Lounge Elektrisch",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1826/maxima650-60805202614515869fddc6e3f860-1050x700.jpg",
+  "specs": {
+   "Lengte": "6.50m",
+   "Prijs (v.a.)": "€ 24.500,00",
+   "Aantal personen": "10",
+   "Zichtbaarheid motor": "Motor uit het zicht (bun/inboard)"
+  },
+  "basePrice": 24500.0
+ },
+ {
+  "id": 1812,
+  "slug": "maxima-650-flying-lounge",
+  "name": "Maxima 650 Flying Lounge",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1812/maxima-650-192007202311525564b903f78e047-1150x700.jpg",
+  "specs": {
+   "Lengte": "6.50m",
+   "Prijs (v.a.)": "€ 24.500,00",
+   "Aantal personen": "8",
+   "Zichtbaarheid motor": "Motor uit het zicht (bun/inboard)"
+  },
+  "basePrice": 24500.0
+ },
+ {
+  "id": 1834,
+  "slug": "maxima-680-sport-lounge",
+  "name": "Maxima 680 sport lounge",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1834/maxima-680-bf150-2026-venice-ground-17160620261434506a3142ea6a29f-1049x700.jpg",
+  "specs": {
+   "Lengte": "6.80m",
+   "Prijs (v.a.)": "€ 34.950,00",
+   "Aantal personen": "10",
+   "Zichtbaarheid motor": "Motor zichtbaar"
+  },
+  "basePrice": 34950.0
+ },
+ {
+  "id": 1820,
+  "slug": "maxima-700-sport",
+  "name": "Maxima 700 sport",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1820/dji-00261710202512152968f21741dd1db-1247x700.jpg",
+  "specs": {
+   "Lengte": "7.05m",
+   "Prijs (v.a.)": "€ 39.950,00",
+   "Aantal personen": "10",
+   "Zichtbaarheid motor": "Motor zichtbaar"
+  },
+  "basePrice": 39950.0
+ },
+ {
+  "id": 1832,
+  "slug": "maxima-720-retro-elektrisch",
+  "name": "Maxima 720 retro Elektrisch",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1832/shefotografie-maxima-0689210920191154535d85f36d32dbc-1050x700.jpg",
+  "specs": {
+   "Lengte": "7.20m",
+   "Prijs (v.a.)": "€ 34.950,00",
+   "Aantal personen": "10",
+   "Zichtbaarheid motor": "Motor uit het zicht (bun/inboard)"
+  },
+  "basePrice": 34950.0
+ },
+ {
+  "id": 1803,
+  "slug": "maxima-720-retro",
+  "name": "Maxima 720 retro",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1803/2025-09-22-guy-fleury-maxima-boats-maxima-720-retro-521310202510373168ecba4b2942c-1049x700.jpg",
+  "specs": {
+   "Lengte": "7.20m",
+   "Prijs (v.a.)": "€ 34.950,00",
+   "Aantal personen": "10",
+   "Zichtbaarheid motor": "Motor uit het zicht (bun/inboard)"
+  },
+  "basePrice": 34950.0
+ },
+ {
+  "id": 1797,
+  "slug": "maxima-730",
+  "name": "Maxima 730",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1797/maxima-730-zij-achter-aanzicht-kopie091120260945406af18834f3f22-869x700.jpg",
+  "specs": {
+   "Lengte": "7.10m",
+   "Prijs (v.a.)": "€ 35.950,00",
+   "Aantal personen": "10",
+   "Zichtbaarheid motor": "Motor uit het zicht (bun/inboard)"
+  },
+  "basePrice": 35950.0
+ },
+ {
+  "id": 1813,
+  "slug": "maxima-740",
+  "name": "Maxima 740",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1813/2026-08-24-guy-fleury-maxima-boats-maxima-740-95290820261712416a92f6e9a7cfb-1049x700.jpg",
+  "specs": {
+   "Lengte": "7.60m",
+   "Prijs (v.a.)": "€ 45.950,00",
+   "Aantal personen": "12",
+   "Zichtbaarheid motor": "Motor uit het zicht (bun/inboard)"
+  },
+  "basePrice": 45950.0
+ },
+ {
+  "id": 1827,
+  "slug": "maxima-750-flying-lounge-electrisch",
+  "name": "Maxima 750 Flying Lounge Electrisch",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1827/shefotografie-maxima-1451300920191350155d91ebf71e91b-1052x700.jpg",
+  "specs": {
+   "Lengte": "7.50m",
+   "Prijs (v.a.)": "€ 30.950,00",
+   "Aantal personen": "12",
+   "Zichtbaarheid motor": "Motor uit het zicht (bun/inboard)"
+  },
+  "basePrice": 30950.0
+ },
+ {
+  "id": 1804,
+  "slug": "maxima-750-flying-lounge",
+  "name": "Maxima 750 Flying Lounge",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1804/shefotografie-maxima-1610300920191354125d91ece4b8976-1050x700.jpg",
+  "specs": {
+   "Lengte": "7.50m",
+   "Prijs (v.a.)": "€ 30.950,00",
+   "Aantal personen": "12",
+   "Zichtbaarheid motor": "Motor uit het zicht (bun/inboard)"
+  },
+  "basePrice": 30950.0
+ },
+ {
+  "id": 1841,
+  "slug": "maxima-760-elektrisch",
+  "name": "Maxima 760 Elektrisch",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1841/76008-74070920261613256a9ec685d8b9a-1049x700.jpg",
+  "specs": {
+   "Lengte": "7.60m",
+   "Prijs (v.a.)": "€ 39.950,00",
+   "Aantal personen": "10",
+   "Zichtbaarheid motor": "Motor uit het zicht (bun/inboard)"
+  },
+  "basePrice": 39950.0
+ },
+ {
+  "id": 1839,
+  "slug": "maxima-760-nieuw",
+  "name": "Maxima 760 NIEUW",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1839/2026-08-24-guy-fleury-maxima-boats-maxima-760-72290820261533376a92dfb1668f8-1049x700.jpg",
+  "specs": {
+   "Lengte": "7.60m",
+   "Prijs (v.a.)": "€ 39.950,00",
+   "Aantal personen": "10",
+   "Zichtbaarheid motor": "Motor uit het zicht (bun/inboard)"
+  },
+  "basePrice": 39950.0
+ },
+ {
+  "id": 1818,
+  "slug": "maxima-800-cabin",
+  "name": "Maxima 800 cabin",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1818/maxima-800-cabin-zeikant2608202417320266cc9ff208936-1050x700.jpg",
+  "specs": {
+   "Lengte": "8.00m",
+   "Prijs (v.a.)": "€ 66.950,00",
+   "Aantal personen": "12",
+   "Zichtbaarheid motor": "Motor zichtbaar"
+  },
+  "basePrice": 66950.0
+ },
+ {
+  "id": 1835,
+  "slug": "maxima-800-sport",
+  "name": "Maxima 800 sport",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1835/maxima-800-sport-bf250-2026-venice-ground-15160620261459436a3148bf25535-1049x700.jpg",
+  "specs": {
+   "Lengte": "8.00m",
+   "Prijs (v.a.)": "€ 51.950,00",
+   "Aantal personen": "10",
+   "Zichtbaarheid motor": "Motor zichtbaar"
+  },
+  "basePrice": 51950.0
+ },
+ {
+  "id": 1825,
+  "slug": "maxima-820-retro-elektrisch",
+  "name": "Maxima 820 retro Elektrisch",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1825/shefotografie-maxima-preview-0792908202308222664ed8ea2739da-1049x700.jpg",
+  "specs": {
+   "Lengte": "8.20m",
+   "Prijs (v.a.)": "€ 49.950,00",
+   "Aantal personen": "12",
+   "Zichtbaarheid motor": "Motor uit het zicht (bun/inboard)"
+  },
+  "basePrice": 49950.0
+ },
+ {
+  "id": 1816,
+  "slug": "maxima-820-retro",
+  "name": "Maxima 820 retro",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1816/shefotografie-maxima-preview-077-kopie1901202411104965aa4aa93a8ca-1363x700.jpg",
+  "specs": {
+   "Lengte": "8.20m",
+   "Prijs (v.a.)": "€ 49.950,00",
+   "Aantal personen": "12",
+   "Zichtbaarheid motor": "Motor uit het zicht (bun/inboard)"
+  },
+  "basePrice": 49950.0
+ },
+ {
+  "id": 1805,
+  "slug": "maxima-840",
+  "name": "Maxima 840",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1805/shefotografie-maxima-preview-1512908202308295064ed905ed0785-1049x700.jpg",
+  "specs": {
+   "Lengte": "8.40m",
+   "Prijs (v.a.)": "€ 55.950,00",
+   "Aantal personen": "12",
+   "Zichtbaarheid motor": "Motor uit het zicht (bun/inboard)"
+  },
+  "basePrice": 55950.0
+ },
+ {
+  "id": 1819,
+  "slug": "maxima-920-cabin",
+  "name": "Maxima 920 cabin",
+  "image": "https://www.maximaboats.nl/cache/images/artikel/1819/maxima-920-cabin-liggend2608202417343266cca088bcb34-1050x700.jpg",
+  "specs": {
+   "Lengte": "9.20m",
+   "Prijs (v.a.)": "€ 115.950,00",
+   "Aantal personen": "12",
+   "Zichtbaarheid motor": "Motor uit het zicht (bun/inboard)"
+  },
+  "basePrice": 115950.0
+ }
+]
