@@ -326,3 +326,5 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; line-height: 1.12; mar
   padding: 12px 18px; background: var(--ink); color: #fff; font-size: 15px; box-shadow: 0 18px 40px -20px rgba(26,26,35,.6); }
 @media (max-width: 1023px) { .toast { bottom: calc(86px + env(safe-area-inset-bottom)); } }
 @media (prefers-reduced-motion: reduce) { .cx-delta.is-on { animation: none; opacity: 1; transform: none; } }
+.ov-notice { margin: 18px 0 0; padding: 12px 16px; background: var(--gold-tint); border-left: 3px solid var(--gold-deep); }
+.app noscript p, .noscript { padding: 80px 16px; max-width: 60ch; margin: 0 auto; }

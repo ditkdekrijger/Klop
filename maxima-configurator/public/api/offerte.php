@@ -3,7 +3,11 @@
  * Klop Watersport — ontvangt offerte- en hulpaanvragen uit de Maxima configurator
  * en mailt deze naar de verkoop. Verwacht een JSON-POST (zie configurator.js → payload()).
  *
- * Antwoord: {"ok":true} of {"ok":false,"error":"..."} met passende HTTP-status.
+ * Elke geldige aanvraag wordt eerst bewaard in LEADS_FILE (één JSON-regel per aanvraag), daarna gemaild.
+ * Mislukt het mailen, dan is de aanvraag dus niet kwijt; de verkoop vindt hem in dat bestand.
+ * LEADS_FILE staat buiten public/ en mag niet via het web bereikbaar zijn.
+ *
+ * Antwoord: {"ok":true,"mailed":bool} of {"ok":false,"error":"..."} met passende HTTP-status.
  */
 declare(strict_types=1);
 
@@ -11,6 +15,7 @@ const TO_EMAIL   = 'verkoop@klopwatersport.nl';
 const FROM_EMAIL = 'noreply@klopwatersport.nl';
 const RATE_LIMIT = 5;      // max. aanvragen per IP ...
 const RATE_WINDOW = 3600;  // ... per uur
+define('LEADS_FILE', getenv('MX_LEADS_FILE') ?: dirname(__DIR__, 2) . '/aanvragen/aanvragen.jsonl');
 
 header('Content-Type: application/json; charset=utf-8');
 
@@ -113,7 +118,28 @@ $headers = implode("\r\n", [
     'Content-Transfer-Encoding: 8bit',
 ]);
 
-if (!mail(TO_EMAIL, $subject, implode("\n", $lines), $headers)) {
+// 1. Bewaren, zodat een aanvraag nooit verloren gaat.
+$lead = [
+    'ontvangen' => date('c'),
+    'type' => $type,
+    'model' => $model,
+    'contact' => array_map(static fn($v) => $clean($v, 2000), array_intersect_key($c, $labels)),
+    'opties' => array_values(array_filter((array)($in['options'] ?? []), 'is_array')),
+    'totaal' => (float)($in['total'] ?? 0),
+    'compleet' => (bool)($in['complete'] ?? true),
+    'link' => $url,
+];
+$dir = dirname(LEADS_FILE);
+$stored = (is_dir($dir) || @mkdir($dir, 0750, true))
+    && @file_put_contents(LEADS_FILE, json_encode($lead, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) . "\n", FILE_APPEND | LOCK_EX) !== false;
+
+// 2. Mailen naar de verkoop.
+$mailed = @mail(TO_EMAIL, $subject, implode("\n", $lines), $headers);
+
+if (!$stored && !$mailed) {
     respond(500, ['ok' => false, 'error' => 'Versturen mislukt.']);
 }
-respond(200, ['ok' => true]);
+if (!$mailed) {
+    error_log('Maxima-configurator: aanvraag bewaard maar niet gemaild (' . LEADS_FILE . ')');
+}
+respond(200, ['ok' => true, 'mailed' => $mailed]);
