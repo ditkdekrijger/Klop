@@ -18,6 +18,7 @@ python3 tools/build_overzicht.py     # overzicht/index.html
 # site/index.html opnieuw opbouwen vanaf de originele site, in deze volgorde:
 python3 tools/patch_showroom.py site/index.html   # showroom-uitbreiding
 python3 tools/patch_maxima.py site/index.html     # Maxima-configurator 2.0 koppelen
+python3 tools/patch_configurator.py site/index.html  # configurator afgemaakt: schermvullend, Mijn Klop, opties per boottype
 python3 tools/patch_mobile.py site/index.html     # mobiele UX
 ```
 

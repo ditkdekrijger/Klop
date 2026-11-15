@@ -81,6 +81,13 @@ Maxima-optie-id's uit `bron/` komen terug in `public/data/`.
 - "Stel samen" bij 22 Maxima-boten gaat direct naar het juiste model. De Maxima 485 en 730i zitten niet in de Maxima-configurator en houden de algemene configurator.
 - De iframe laadt `../maxima-configurator/public/?model=…&embed=1`. Pas `MXC` in het script aan als de configurator elders gehost wordt.
 
+Daarna `python3 tools/patch_configurator.py site/index.html`:
+
+- De Maxima-pagina is schermvullend: een smalle Klop-balk met model en totaal, de configurator eronder. Geen dubbele kop, geen voet, geen actiebalk.
+- In embed-modus stuurt de configurator berichten naar de site (`postMessage`, `source: 'klop-mx'`): `overview`, `state` (model, keuzes, totaal, compleet) en `quote`/`help` bij een aanvraag.
+- De site zet de samenstelling in de adresbalk (`#/stel-samen/maxima-760-nieuw?c=…&ral=…&stap=…`), zodat hij deelbaar is en terug te openen.
+- "Bewaar in Mijn Klop" en offerteaanvragen komen in Mijn Klop > Configuraties, met "Verder samenstellen".
+
 ## Aandachtspunten
 
 - **Afbeeldingen** (bootlagen, optiefoto's, modelfoto's) komen direct van maximaboats.nl. Stem met Maxima af of dat mag, of host ze zelf.

@@ -21,6 +21,9 @@
 
   const app = document.getElementById('app');
   const EMBED = document.documentElement.classList.contains('is-embed');
+  // Koppeling met de Klop-site: in embed-modus meldt de configurator zijn stand aan de omringende pagina.
+  const PARENT = EMBED && window.parent !== window ? window.parent : null;
+  const tell = (type, data) => { if (PARENT) { try { PARENT.postMessage(Object.assign({ source: 'klop-mx', type }, data || {}), '*'); } catch { /* geen ouder */ } } };
   const VIEW_LABELS = { side: 'Zijkant', back: 'Achter', front: 'Voor' };
   const STORE_KEY = 'mx-config-v2';
   const SWATCH_GROUPS = new Set(['rompkleur', 'binnenkant', 'waterlijn', 'kabelaring', 'kussenset', 'buiskap']);
@@ -96,6 +99,7 @@
   // =====================================================================
   function renderOverview(models) {
     document.title = 'Stel je Maxima samen | ' + CFG.dealer;
+    tell('overview');
     const st = { q: '', drive: 'all', sort: 'price-asc' };
     const len = (m) => parseFloat(String(m.specs?.Lengte || '0').replace(',', '.')) || 0;
 
@@ -548,6 +552,11 @@
       if (EMBED) qq.set('embed', '1');
       history.replaceState(null, '', '?' + qq);
       store.set(model.slug, c || r ? { c, ral: r } : null);
+      tell('state', {
+        slug: model.slug, name: model.name, total: total(), c, ral: r, stap: qq.get('stap'),
+        complete: missing().length === 0,
+        picks: resolved().map((x) => [x.group.key, x.group.title, x.name]),
+      });
     }
 
     // ----- interactie -----
@@ -699,12 +708,14 @@
         const r = await fetch(CFG.endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(p) });
         const res = await r.json().catch(() => ({}));
         if (!r.ok || res.ok === false) throw new Error(res.error || String(r.status));
+        tell(type, { payload: p });
         form.reset();
         msg.textContent = type === 'help' ? 'Bedankt. We nemen zo snel mogelijk contact met je op.'
           : `Bedankt voor je aanvraag. ${CFG.dealer} stuurt je zo snel mogelijk een offerte.`;
         msg.hidden = false; msg.classList.add('is-ok');
       } catch (err) {
         console.warn('Endpoint niet bereikbaar, mailto als terugval', err);
+        tell(type, { payload: p });
         mailto(p);
         msg.textContent = `Je e-mailprogramma opent met je aanvraag. Lukt dat niet? Mail naar ${CFG.email} of bel ${CFG.phoneLabel}.`;
         msg.hidden = false; msg.classList.add('is-ok');
