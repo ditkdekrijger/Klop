@@ -23,6 +23,18 @@ Klop staat als dealer in de kop en de voet. Aanvragen gaan naar Klop.
 
 Links uit 1.0 (`?model=…&c=…`) blijven werken, ook met ruitjeskussens.
 
+## Nieuw in 2.1
+
+- **Voorproefje:** met de muis of het toetsenbord op een kleur, kap of kussenset zie je die direct op de boot, nog voordat je kiest.
+- **Afhankelijkheden** (uit `curate.py`, alleen waar de optienaam ze noemt):
+  - *Hard:* "Blindering buiskap" en "Uitritsbaar voorraam buiskap" kunnen alleen met een buiskap. Zonder buiskap zijn ze uitgeschakeld met uitleg. Kies je later "Geen buiskap", dan verdwijnen ze en zegt een melding dat.
+  - *Zacht:* Garmin-uitbreidingen (audio, tweede scherm, radar, stuurautomaat) krijgen een waarschuwing zonder Garmin-display, ook in het overzicht.
+- **Prijsfeedback:** het totaal telt op en af en laat kort het verschil zien (bijv. "+ € 550").
+- **Jouw keuzes:** onder het bootbeeld (desktop) alle keuzes met prijs en een voortgangsbalk voor de verplichte keuzes.
+- **Groot beeld:** de knop "Groot" toont de boot schermvullend, met alle drie de aanzichten.
+- **Berichten aan de site alleen naar de eigen oorsprong:** de configurator meldt zijn stand en aanvragen (met contactgegevens) alleen aan `parentOrigin` (standaard dezelfde oorsprong), niet aan elke pagina die hem inbouwt.
+- **Stuur naar een adviseur:** opent WhatsApp met de samenstelling, het totaal en de link. De bezoeker verstuurt het bericht zelf.
+
 ## Mappen
 
 | Pad | Inhoud |
@@ -74,7 +86,7 @@ Maxima-optie-id's uit `bron/` komen terug in `public/data/`.
 
 ## Koppeling met de nieuwe site
 
-`python3 tools/patch_maxima.py site/index.html` (vanuit de root; is al toegepast in deze branch):
+`python3 tools/patch_maxima.py site/index.html` (vanuit de root; is al toegepast):
 
 - `#/stel-samen/maxima` toont het overzicht van alle Maxima-modellen.
 - `#/stel-samen/maxima-<model>` toont de configurator voor dat model. De oude link `#/stel-samen/maxima-760` blijft werken.

@@ -849,35 +849,60 @@
        "name": "Garmin 9\" 2de scherm",
        "raw": "Garmin 9inch 2de scherm",
        "price": 2895.0,
-       "image": "https://www.maximaboats.nl/images/opties/garmin-2x12inch.jpg"
+       "image": "https://www.maximaboats.nl/images/opties/garmin-2x12inch.jpg",
+       "advice": {
+        "group": "display",
+        "match": "garmin|glass cockpit",
+        "reason": "Hoort bij een Garmin-display. Kies er een bij Display & navigatie."
+       }
       },
       {
        "id": 46569,
        "name": "Garmin 12\" 2de scherm",
        "raw": "Garmin 12inch 2de scherm",
        "price": 4250.0,
-       "image": "https://www.maximaboats.nl/images/opties/garmin-2x12inch.jpg"
+       "image": "https://www.maximaboats.nl/images/opties/garmin-2x12inch.jpg",
+       "advice": {
+        "group": "display",
+        "match": "garmin|glass cockpit",
+        "reason": "Hoort bij een Garmin-display. Kies er een bij Display & navigatie."
+       }
       },
       {
        "id": 46577,
        "name": "Garmin 18\" Radardome black",
        "raw": "Garmin 18inch Radardome black",
        "price": 3495.0,
-       "image": "https://www.maximaboats.nl/images/opties/garmin-gmr-fantom-dome-radar-black_6787b137940b2.jpg"
+       "image": "https://www.maximaboats.nl/images/opties/garmin-gmr-fantom-dome-radar-black_6787b137940b2.jpg",
+       "advice": {
+        "group": "display",
+        "match": "garmin|glass cockpit",
+        "reason": "Hoort bij een Garmin-display. Kies er een bij Display & navigatie."
+       }
       },
       {
        "id": 46578,
        "name": "Garmin VHF met AIS ontvanger",
        "raw": "Garmin VHF met AIS ontvanger",
        "price": 2995.0,
-       "image": "https://www.maximaboats.nl/images/opties/VHF-garmin.jpg"
+       "image": "https://www.maximaboats.nl/images/opties/VHF-garmin.jpg",
+       "advice": {
+        "group": "display",
+        "match": "garmin|glass cockpit",
+        "reason": "Hoort bij een Garmin-display. Kies er een bij Display & navigatie."
+       }
       },
       {
        "id": 46579,
        "name": "Garmin stuurautomaat system",
        "raw": "Garmin stuurautomaat system",
        "price": 6995.0,
-       "image": "https://www.maximaboats.nl/images/opties/autopilot-garmin.jpg"
+       "image": "https://www.maximaboats.nl/images/opties/autopilot-garmin.jpg",
+       "advice": {
+        "group": "display",
+        "match": "garmin|glass cockpit",
+        "reason": "Hoort bij een Garmin-display. Kies er een bij Display & navigatie."
+       }
       }
      ]
     }
