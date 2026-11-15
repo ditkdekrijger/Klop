@@ -17,6 +17,7 @@
     dataPath: 'data/', endpoint: 'api/offerte.php', dealer: 'Klop Watersport',
     email: 'verkoop@klopwatersport.nl', phone: '+31184612227', phoneLabel: '0184 - 61 22 27',
     whatsapp: '31633180500', address: '',
+    parentOrigin: location.origin,   // de Klop-site die de configurator in een iframe toont
   }, window.MX_CONFIG || {});
 
   const app = document.getElementById('app');
@@ -32,6 +33,8 @@
     return (opts.sign ? '+ ' : '') + '€ ' + v.toLocaleString('nl-NL', { minimumFractionDigits: dec, maximumFractionDigits: dec });
   };
   const optPrice = (p) => (p ? money(p, { sign: true }) : 'Inbegrepen');
+  const delta = (d) => (d < 0 ? '− ' + money(-d) : '+ ' + money(d));
+  const IN_FRAME = window.parent !== window;
   const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const store = {
     all() { try { return JSON.parse(localStorage.getItem(STORE_KEY) || '{}'); } catch { return {}; } },
@@ -256,6 +259,35 @@
     const missing = () => groups.filter((g) => (g.required && !groupDone(g)) || ralMissing(g));
     const sectionDone = (s) => s.groups.every((g) => (!g.required || groupDone(g)) && !ralMissing(g));
 
+    // Afhankelijkheden (curate.py): needs = harde voorwaarde, advice = waarschuwing.
+    const needsOk = (o) => {
+      const n = o.needs;
+      if (!n) return true;
+      const v = sel.get(n.group);
+      if (v == null || v instanceof Set) return false;
+      return !(n.exclude || []).map(String).includes(String(v));
+    };
+    const adviceOk = (o) => {
+      const a = o.advice;
+      const ag = a && gByKey.get(a.group);
+      if (!ag) return true;
+      const re = new RegExp(a.match, 'i');
+      return chosenOpts(ag).some((x) => re.test(x.name));
+    };
+    /** Haalt gekozen opties weg waarvan de voorwaarde is vervallen; geeft hun namen + reden terug. */
+    function enforceNeeds() {
+      const removed = [];
+      groups.forEach((g) => {
+        chosenOpts(g).forEach((o) => {
+          if (needsOk(o)) return;
+          if (g.type === 'many') sel.get(g.key).delete(String(o.id)); else sel.set(g.key, null);
+          removed.push(`${o.name} is weggehaald: ${o.needs.reason.charAt(0).toLowerCase()}${o.needs.reason.slice(1)}`);
+        });
+      });
+      return removed;
+    }
+    const adviceList = () => resolved().filter((r) => !adviceOk(r.opt));
+
     // ----- stappen -----
     const steps = [...model.sections.map((s, i) => ({ type: 'section', s, i })), { type: 'overview' }];
     const stepParam = q.get('stap');
@@ -275,7 +307,7 @@
             </div>
             <div class="cx-top__price">
               <button type="button" class="cx-total" data-open-spec aria-haspopup="dialog">
-                <small>Totaalprijs</small><strong data-total></strong>
+                <small>Totaalprijs</small><strong data-total></strong><span class="cx-delta" data-delta aria-hidden="true"></span>
               </button>
               <button type="button" class="btn btn--gold" data-goto-overview>Offerte aanvragen</button>
             </div>
@@ -287,10 +319,17 @@
             <div class="stage ${hasLayers ? '' : 'stage--photo'}" data-stage>
               ${hasLayers ? '' : `<img class="stage__photo" src="${esc(model.image)}" alt="${esc(model.name)}">`}
               <span class="stage__loader" data-loader aria-hidden="true"><span class="spinner"></span></span>
+              <span class="stage__preview" data-preview hidden></span>
+              <button type="button" class="stage__zoom" data-bigview aria-label="Boot groot bekijken">⤢ Groot</button>
             </div>
             ${hasLayers ? `<div class="stage__views" role="tablist" aria-label="Aanzicht">${model.views.map((v) =>
               `<button type="button" role="tab" class="vtab" data-view="${esc(v)}" aria-selected="${v === view}">${esc(VIEW_LABELS[v] || v)}</button>`).join('')}</div>` : ''}
             <p class="stage__note">${hasLayers ? 'Impressie. Je boot kan in werkelijkheid afwijken.' : 'Foto ter impressie. Voor dit model is nog geen samenstelbeeld beschikbaar.'}</p>
+            <aside class="mine" aria-label="Jouw keuzes">
+              <div class="mine__head"><h2>Jouw keuzes</h2><span data-progress-label></span></div>
+              <div class="mine__bar" role="progressbar" aria-label="Verplichte keuzes" aria-valuemin="0" data-progress><i></i></div>
+              <ul class="mine__list" data-mine></ul>
+            </aside>
             <button type="button" class="cx-help" data-open-help>Hulp nodig bij het samenstellen?</button>
           </section>
 
@@ -301,7 +340,7 @@
         </div>
 
         <div class="cx-mbar">
-          <button type="button" class="cx-mbar__total" data-open-spec><small>Totaal</small><strong data-total></strong></button>
+          <button type="button" class="cx-mbar__total" data-open-spec><small>Totaal</small><strong data-total></strong><span class="cx-delta" data-delta aria-hidden="true"></span></button>
           <button type="button" class="btn btn--gold" data-mnext></button>
         </div>
       </div>
@@ -330,6 +369,12 @@
         <div class="modal__head"><h2 id="zoom-t" data-zoom-title></h2><button type="button" class="modal__x" data-close aria-label="Sluiten">×</button></div>
         <img data-zoom-img alt="">
       </dialog>
+      <dialog class="modal modal--big" data-big aria-labelledby="big-t">
+        <div class="modal__head"><h2 id="big-t">${esc(model.name)}</h2><button type="button" class="modal__x" data-close aria-label="Sluiten">×</button></div>
+        <div class="big" data-big-stage></div>
+        <div class="big__views" data-big-views></div>
+      </dialog>
+      <div class="toast" data-toast role="status" aria-live="polite" hidden></div>
       <div class="print" data-print aria-hidden="true"></div>`;
 
     const $ = (s) => app.querySelector(s);
@@ -358,10 +403,15 @@
       return out;
     }
     let drawToken = 0;
-    async function drawStage() {
+    let previewing = null;
+    async function drawStage(preview) {
       if (!hasLayers) return;
       const token = ++drawToken;
       const ch = layerChoices();
+      if (preview) ch[preview.layer] = preview.id;
+      const pv = $('[data-preview]');
+      pv.hidden = !preview;
+      if (preview) pv.textContent = 'Voorbeeld: ' + preview.name;
       const jobs = [['full', fullSrc(view)], ...model.layers.map((l) => [l, ch[l] ? layerSrc(view, l, ch[l]) : null])];
       loader.classList.add('is-on');
       const imgs = await Promise.all(jobs.map(([, src]) => (src ? loadImg(src) : null)));
@@ -384,6 +434,45 @@
       $$('[data-view]').forEach((x) => x.setAttribute('aria-selected', String(x === b)));
       drawStage();
     }));
+
+    // Voorproefje: met muis of toetsenbord op een kleuroptie zie je hem direct op de boot.
+    function previewFrom(label) {
+      const inp = label && label.querySelector('input[data-g]');
+      if (!inp || !hasLayers || inp.disabled) return null;
+      const g = gByKey.get(inp.dataset.g);
+      const o = g && optOf(g, inp.value);
+      if (!o) return null;
+      let id = o.layerId;
+      if (g.key === 'kussenset' && o.stitch && ruitjes()) id = o.stitch.layerId || id;
+      return o.layer && id ? { layer: o.layer, id, name: o.name } : null;
+    }
+    function setPreview(label) {
+      const pv = previewFrom(label);
+      const key = pv ? pv.layer + ':' + pv.id : null;
+      if (key === previewing) return;
+      previewing = key;
+      drawStage(pv || undefined);
+    }
+    stepEl.addEventListener('pointerover', (e) => { if (e.pointerType === 'mouse') setPreview(e.target.closest('.opt')); });
+    stepEl.addEventListener('pointerleave', () => setPreview(null));
+    stepEl.addEventListener('focusin', (e) => { if (e.target.matches('input[data-g]')) setPreview(e.target.closest('.opt')); });
+    stepEl.addEventListener('focusout', (e) => { if (!stepEl.contains(e.relatedTarget)) setPreview(null); });
+
+    function openBig() {
+      const big = $('[data-big-stage]');
+      const draw = (v) => {
+        if (!hasLayers) { big.innerHTML = `<img src="${esc(model.image)}" alt="${esc(model.name)}">`; return; }
+        const ch = layerChoices();
+        const srcs = [fullSrc(v), ...model.layers.filter((l) => ch[l]).map((l) => layerSrc(v, l, ch[l]))];
+        big.innerHTML = srcs.map((s2, i) => `<img src="${esc(s2)}" alt="${i ? '' : esc(model.name + ', ' + (VIEW_LABELS[v] || v).toLowerCase())}">`).join('');
+        $('[data-big-views]').innerHTML = model.views.map((x) =>
+          `<button type="button" class="vtab" data-big-view="${esc(x)}" aria-pressed="${x === v}">${esc(VIEW_LABELS[x] || x)}</button>`).join('');
+      };
+      draw(view);
+      $('[data-big-views]').onclick = (e) => { const b = e.target.closest('[data-big-view]'); if (b) draw(b.dataset.bigView); };
+      $('[data-big]').showModal();
+    }
+    $('[data-bigview]').addEventListener('click', openBig);
 
     // ----- stapnavigatie -----
     function drawStepNav() {
@@ -425,13 +514,16 @@
       const opts = g.options.map((o) => {
         let price = optPrice(o.price);
         if (g.type === 'stitch' && o.id === 'ruitjes') price = o.priceFrom != null ? 'vanaf ' + money(o.priceFrom, { sign: true }) : optPrice(o.price);
+        const blocked = !needsOk(o) && !isOn(o);
+        const note = blocked ? `<span class="opt__note">${esc(o.needs.reason)}</span>`
+          : (!adviceOk(o) ? `<span class="opt__note ${isOn(o) ? 'opt__note--warn' : ''}">${esc(o.advice.reason)}</span>` : '');
         return `
-          <label class="opt ${hasImg ? 'opt--img' : ''}">
-            <input type="${type}" name="${name}" value="${esc(o.id)}" ${isOn(o) ? 'checked' : ''} data-g="${esc(g.key)}">
+          <label class="opt ${hasImg ? 'opt--img' : ''} ${blocked ? 'is-off' : ''}">
+            <input type="${type}" name="${name}" value="${esc(o.id)}" ${isOn(o) ? 'checked' : ''} ${blocked ? 'disabled' : ''} data-g="${esc(g.key)}">
             ${hasImg ? `<span class="opt__img">${o.image ? `<img src="${esc(o.image)}" alt="" loading="lazy">
               <button type="button" class="opt__zoom" data-zoom-src="${esc(o.image)}" data-zoom-name="${esc(o.name)}" aria-label="Foto van ${esc(o.name)} vergroten">⤢</button>` : ''}</span>` : ''}
             ${swatch ? `<span class="opt__sw" style="${swatchCss(g.key, o.name)}"></span>` : ''}
-            <span class="opt__txt"><span class="opt__name">${esc(o.name)}</span>${o.sub ? `<span class="opt__sub">${esc(o.sub)}</span>` : ''}<span class="opt__price">${price}</span></span>
+            <span class="opt__txt"><span class="opt__name">${esc(o.name)}</span>${o.sub ? `<span class="opt__sub">${esc(o.sub)}</span>` : ''}<span class="opt__price">${price}</span>${note}</span>
             <span class="opt__mark" aria-hidden="true"></span>
           </label>`;
       }).join('');
@@ -462,6 +554,8 @@
         <p class="cx-step__intro">Controleer je keuzes en vraag een vrijblijvende offerte aan.</p>
         ${miss.length ? `<div class="warn" role="alert"><b>Nog niet compleet.</b> Kies nog:
           <ul>${miss.map((g) => `<li><button type="button" class="lnk" data-go="${g.sectionIndex}" data-focus="${esc(g.key)}">${esc(g.title)}${ralMissing(g) && groupDone(g) ? ' (RAL-code)' : ''}</button></li>`).join('')}</ul></div>` : ''}
+        ${adviceList().length ? `<div class="warn warn--soft"><b>Let op.</b><ul>${adviceList().map((r) =>
+          `<li><b>${esc(r.name)}.</b> ${esc(r.opt.advice.reason)} <button type="button" class="lnk" data-go="${gByKey.get(r.opt.advice.group).sectionIndex}" data-focus="${esc(r.opt.advice.group)}">Naar ${esc(gByKey.get(r.opt.advice.group).title.toLowerCase())}</button></li>`).join('')}</ul></div>` : ''}
         <div class="sum">
           ${model.sections.map((s, si) => {
             const rows = s.groups.filter((g) => g.type !== 'stitch').map((g) => {
@@ -481,10 +575,13 @@
           <div class="price__total"><dt>Totaal</dt><dd>${money(total())}</dd></div>
         </dl>
         <div class="tools">
+          ${IN_FRAME ? '<button type="button" class="btn btn--ink" data-save>Bewaar in Mijn Klop</button>' : ''}
           <button type="button" class="btn btn--line" data-print-btn>Print of bewaar als pdf</button>
           <button type="button" class="btn btn--line" data-share>Kopieer link</button>
+          <a class="btn btn--line" data-wa href="${esc(waHref())}" target="_blank" rel="noopener">Stuur naar een adviseur</a>
           <button type="button" class="lnk" data-reset>Opnieuw beginnen</button>
         </div>
+        <p class="muted small tools__wa">De WhatsApp-knop opent een bericht aan ${esc(CFG.dealer)} met je samenstelling en de link erin. Je verstuurt het zelf.</p>
 
         <form class="quote" data-quote novalidate>
           <h3>Offerte aanvragen</h3>
@@ -529,11 +626,97 @@
       persist();
     }
 
+    let shownTotal = null;
+    let tween = 0;
     function updateBars() {
-      $$('[data-total]').forEach((el) => { el.textContent = money(total()); });
+      const t = total();
+      const from = shownTotal == null ? t : shownTotal;
+      const d = t - from;
+      shownTotal = t;
+      if (d && !reduceMotion) {
+        const start = performance.now();
+        const id = ++tween;
+        const tick = (now) => {
+          if (id !== tween) return;
+          const k = Math.min(1, (now - start) / 420);
+          const v = Math.round(from + d * (1 - Math.pow(1 - k, 3)));
+          $$('[data-total]').forEach((el) => { el.textContent = money(k === 1 ? t : v); });
+          if (k < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      } else {
+        $$('[data-total]').forEach((el) => { el.textContent = money(t); });
+      }
+      if (d) {
+        $$('[data-delta]').forEach((el) => {
+          el.textContent = delta(d);
+          el.classList.toggle('is-down', d < 0);
+          el.classList.remove('is-on'); void el.offsetWidth; el.classList.add('is-on');
+        });
+      }
+      drawMine();
       const mnext = $('[data-mnext]');
       if (steps[step].type === 'overview') { mnext.textContent = 'Offerte aanvragen'; mnext.dataset.target = 'quote'; }
       else { mnext.textContent = steps[step + 1].type === 'overview' ? 'Naar overzicht' : 'Volgende'; mnext.dataset.target = String(step + 1); }
+    }
+
+    function drawMine() {
+      const req = groups.filter((g) => g.required);
+      const done = req.filter((g) => groupDone(g) && !ralMissing(g)).length;
+      const bar = $('[data-progress]');
+      bar.setAttribute('aria-valuemax', String(req.length));
+      bar.setAttribute('aria-valuenow', String(done));
+      bar.firstElementChild.style.width = (req.length ? (done / req.length) * 100 : 100) + '%';
+      $('[data-progress-label]').textContent = `${done} van ${req.length} verplicht`;
+      const rs = resolved();
+      $('[data-mine]').innerHTML = rs.length
+        ? rs.map((r) => `<li><span><small>${esc(r.group.title)}</small>${esc(r.name)}</span><b>${r.price ? money(r.price) : ''}</b></li>`).join('')
+        : '<li class="mine__empty">Nog niets gekozen. Begin bij stap 1.</li>';
+    }
+
+    let toastTimer = 0;
+    function toast(msg) {
+      const el = $('[data-toast]');
+      el.textContent = msg;
+      el.hidden = false;
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => { el.hidden = true; }, 4200);
+    }
+
+    function cleanUrl() { return location.href.replace(/([?&])embed=1&?/, '$1').replace(/[?&]$/, ''); }
+    function waHref() {
+      const rs = resolved();
+      const lines = [`Hallo ${CFG.dealer}, ik heb een ${model.name} samengesteld:`, '',
+        ...rs.map((r) => `- ${r.group.title}: ${r.name}`), '', `Totaal (indicatie): ${money(total())}`, '', cleanUrl()];
+      return `https://wa.me/${CFG.whatsapp}?text=${encodeURIComponent(lines.join('\n'))}`;
+    }
+
+    // Bewaren in Mijn Klop: de Klop-site (ouderpagina) slaat de samenstelling op.
+    function saveToParent(btn) {
+      const rs = resolved();
+      const pick = (k) => rs.filter((r) => r.group.key === k).map((r) => r.name).join(', ');
+      const qs = new URLSearchParams();
+      const c = encodeC(); if (c) qs.set('c', c);
+      const r = encodeRal(); if (r) qs.set('ral', r);
+      let acked = false;
+      const onAck = (e) => {
+        if (e.source !== window.parent || e.origin !== CFG.parentOrigin || e.data?.type !== 'mx:saved') return;
+        acked = true;
+        window.removeEventListener('message', onAck);
+        btn.textContent = 'Bewaard in Mijn Klop';
+        toast('Bewaard. Je vindt deze samenstelling terug in Mijn Klop, onder Configuraties.');
+      };
+      window.addEventListener('message', onAck);
+      window.parent.postMessage({
+        type: 'mx:save', slug: model.slug, naam: model.name,
+        kleur: pick('rompkleur') || 'Kleur nog niet gekozen', motor: pick('motor') || 'Motor nog niet gekozen',
+        tot: total(), qs: qs.toString(),
+      }, CFG.parentOrigin);
+      setTimeout(() => {
+        if (acked) return;
+        window.removeEventListener('message', onAck);
+        toast('Bewaren in Mijn Klop lukte niet. Gebruik Kopieer link om je samenstelling te bewaren.');
+      }, 1500);
     }
 
     // ----- opslaan + URL -----
@@ -561,14 +744,28 @@
       } else {
         sel.set(g.key, inp.value === '' ? null : inp.value);
       }
-      // RAL-veld tonen/verbergen zonder de hele stap opnieuw te tekenen
-      const fs = inp.closest('.grp');
-      const hadRal = !!fs.querySelector('[data-ral]');
-      const needsRal = chosenOpts(g).some((o) => o.ral);
-      if (hadRal !== needsRal) {
-        fs.outerHTML = renderGroup(g);
-        if (needsRal) stepEl.querySelector(`[data-ral="${CSS.escape(g.key)}"]`)?.focus();
+      const removed = enforceNeeds();
+      const dependents = groups.some((x) => x.options.some((o) => (o.needs && o.needs.group === g.key) || (o.advice && o.advice.group === g.key)));
+      if (removed.length || dependents) {
+        // Andere groepen in deze stap hangen van deze keuze af: stap opnieuw tekenen, focus behouden.
+        const keep = { g: inp.dataset.g, v: inp.value, y: window.scrollY };
+        stepEl.innerHTML = renderSection(steps[step].s, steps[step].i);
+        stepEl.querySelector(`input[data-g="${CSS.escape(keep.g)}"][value="${CSS.escape(keep.v)}"]`)?.focus({ preventScroll: true });
+        window.scrollTo(0, keep.y);
+        if (removed.length) toast(removed.join(' '));
+      } else {
+        // RAL-veld tonen/verbergen zonder de hele stap opnieuw te tekenen
+        const fs = inp.closest('.grp');
+        const hadRal = !!fs.querySelector('[data-ral]');
+        const needsRal = chosenOpts(g).some((o) => o.ral);
+        const ownNotes = g.options.some((o) => o.advice || o.needs);   // eigen waarschuwing moet meekleuren
+        if (hadRal !== needsRal || ownNotes) {
+          fs.outerHTML = renderGroup(g);
+          if (needsRal && !hadRal) stepEl.querySelector(`[data-ral="${CSS.escape(g.key)}"]`)?.focus();
+          else stepEl.querySelector(`input[data-g="${CSS.escape(inp.dataset.g)}"][value="${CSS.escape(inp.value)}"]`)?.focus({ preventScroll: true });
+        }
       }
+      previewing = null;
       drawStepNav();
       updateBars();
       drawStage();
@@ -600,6 +797,10 @@
       const mn = e.target.closest('[data-mnext]');
       if (mn) { if (mn.dataset.target === 'quote') focusQuote(); else goTo(+mn.dataset.target); return; }
       if (e.target.closest('[data-print-btn]')) { printSheet(); return; }
+      const sv = e.target.closest('[data-save]');
+      if (sv) { saveToParent(sv); return; }
+      const wa = e.target.closest('[data-wa]');
+      if (wa) { wa.href = waHref(); return; }
       if (e.target.closest('[data-share]')) { share(e.target.closest('[data-share]')); return; }
       if (e.target.closest('[data-reset]')) {
         if (!confirm('Alle keuzes voor deze boot wissen?')) return;
@@ -631,7 +832,7 @@
     }
 
     async function share(btn) {
-      const url = location.href.replace(/([?&])embed=1&?/, '$1').replace(/[?&]$/, '');
+      const url = cleanUrl();
       try { await navigator.clipboard.writeText(url); btn.textContent = 'Link gekopieerd'; }
       catch { prompt('Kopieer deze link:', url); }
       setTimeout(() => { btn.textContent = 'Kopieer link'; }, 2500);
@@ -729,6 +930,7 @@
     });
 
     // ----- start -----
+    enforceNeeds();
     drawStep(false);
     drawStage();
     persist();

@@ -23,6 +23,18 @@ Klop staat als dealer in de kop en de voet. Aanvragen gaan naar Klop.
 
 Links uit 1.0 (`?model=…&c=…`) blijven werken, ook met ruitjeskussens.
 
+## Nieuw in 2.1
+
+- **Voorproefje:** met de muis of het toetsenbord op een kleur, kap of kussenset zie je die direct op de boot, nog voordat je kiest.
+- **Afhankelijkheden** (uit `curate.py`, alleen waar de optienaam ze noemt):
+  - *Hard:* "Blindering buiskap" en "Uitritsbaar voorraam buiskap" kunnen alleen met een buiskap. Zonder buiskap zijn ze uitgeschakeld met uitleg. Kies je later "Geen buiskap", dan verdwijnen ze en zegt een melding dat.
+  - *Zacht:* Garmin-uitbreidingen (audio, tweede scherm, radar, stuurautomaat) krijgen een waarschuwing zonder Garmin-display, ook in het overzicht.
+- **Prijsfeedback:** het totaal telt op en af en laat kort het verschil zien (bijv. "+ € 550").
+- **Jouw keuzes:** onder het bootbeeld (desktop) alle keuzes met prijs en een voortgangsbalk voor de verplichte keuzes.
+- **Groot beeld:** de knop "Groot" toont de boot schermvullend, met alle drie de aanzichten.
+- **Bewaren in Mijn Klop:** in de site bewaart "Bewaar in Mijn Klop" de samenstelling onder Mijn Klop › Configuraties, met een link die hem weer opent (`tools/patch_maxima_bewaren.py`). De site neemt alleen berichten aan van dezelfde oorsprong en uit de configurator-iframe.
+- **Stuur naar een adviseur:** opent WhatsApp met de samenstelling, het totaal en de link. De bezoeker verstuurt het bericht zelf.
+
 ## Mappen
 
 | Pad | Inhoud |
@@ -74,11 +86,12 @@ Maxima-optie-id's uit `bron/` komen terug in `public/data/`.
 
 ## Koppeling met de nieuwe site
 
-`python3 tools/patch_maxima.py site/index.html` (vanuit de root; is al toegepast in deze branch):
+`python3 tools/patch_maxima.py site/index.html` en daarna `python3 tools/patch_maxima_bewaren.py site/index.html` (vanuit de root; beide al toegepast):
 
 - `#/stel-samen/maxima` toont het overzicht van alle Maxima-modellen.
 - `#/stel-samen/maxima-<model>` toont de configurator voor dat model. De oude link `#/stel-samen/maxima-760` blijft werken.
 - "Stel samen" bij 22 Maxima-boten gaat direct naar het juiste model. De Maxima 485 en 730i zitten niet in de Maxima-configurator en houden de algemene configurator.
+- Bewaren in Mijn Klop zet de samenstelling in Mijn Klop › Configuraties, met een link `#/stel-samen/<model>?c=…`.
 - De iframe laadt `../maxima-configurator/public/?model=…&embed=1`. Pas `MXC` in het script aan als de configurator elders gehost wordt.
 
 ## Aandachtspunten

@@ -787,7 +787,12 @@
        "raw": "Audio uitbreiding op Garmin met 4 x 120 w LED speakers",
        "price": 1450.0,
        "sub": "4 × 120 W led-speakers",
-       "image": "https://www.maximaboats.nl/images/opties/Speakers_led.jpg"
+       "image": "https://www.maximaboats.nl/images/opties/Speakers_led.jpg",
+       "advice": {
+        "group": "display",
+        "match": "garmin|glass cockpit",
+        "reason": "Hoort bij een Garmin-display. Kies er een bij Display & navigatie."
+       }
       },
       {
        "id": 46788,
@@ -795,7 +800,12 @@
        "raw": "Audio uitbreiding op Garmin met 4 x 160w LED speakers en versterker",
        "price": 2450.0,
        "sub": "4 × 160 W led-speakers en versterker",
-       "image": "https://www.maximaboats.nl/images/opties/CSM16RGB-B_MaximaBoats_6787b13780df5.jpg"
+       "image": "https://www.maximaboats.nl/images/opties/CSM16RGB-B_MaximaBoats_6787b13780df5.jpg",
+       "advice": {
+        "group": "display",
+        "match": "garmin|glass cockpit",
+        "reason": "Hoort bij een Garmin-display. Kies er een bij Display & navigatie."
+       }
       }
      ]
     },

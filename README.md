@@ -17,6 +17,7 @@ node tools/render_boards.js          # boards en componenten naar overzicht/ov/
 python3 tools/build_overzicht.py     # overzicht/index.html
 python3 tools/patch_showroom.py site/index.html   # showroom-uitbreiding (alleen op de originele site toepassen)
 python3 tools/patch_maxima.py site/index.html     # Maxima-configurator 2.0 koppelen (eenmalig)
+python3 tools/patch_maxima_bewaren.py site/index.html  # bewaren in Mijn Klop (eenmalig, na patch_maxima)
 ```
 
 Lokaal bekijken: `python3 -m http.server` in de root en open `/overzicht/`.
