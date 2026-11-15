@@ -14,7 +14,8 @@ Herpositionering "Vaar je vrijheid." Alles op één plek.
 ```bash
 node tools/render_boards.js          # boards en componenten naar overzicht/ov/
 python3 tools/build_overzicht.py     # overzicht/index.html
-python3 tools/patch_showroom.py site/index.html   # showroom-uitbreiding (alleen op de originele site toepassen)
+python3 tools/patch_showroom.py site/index.html   # showroom-uitbreiding (op de originele site)
+python3 tools/patch_mobile.py site/index.html     # mobiele UX (na de showroom-patch)
 ```
 
 Lokaal bekijken: `python3 -m http.server` in de root en open `/overzicht/`.
