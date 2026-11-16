@@ -211,6 +211,12 @@ table.btab td:nth-child(3){width:200px}table.btab td:last-child{color:var(--mut)
 .bsc small{color:var(--mut);font-size:13.5px}
 .bscs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
 @media(max-width:1040px){.bths,.bsps{grid-template-columns:repeat(2,minmax(0,1fr))}.bsum{grid-template-columns:1fr 1fr}.bcanva,.bscs,.bdemo{grid-template-columns:1fr}}
+.cfgtabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}.cfgtabs button{padding:9px 16px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--line);font-size:14.5px}.cfgtabs button.on{background:var(--fg);color:var(--bg)}
+#cf{height:min(84vh,860px)}
+.cfgf{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:22px}
+.cfgf>div{background:var(--card);border-radius:18px;padding:20px;box-shadow:0 0 0 1px var(--line)}
+.cfgf small{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut)}.cfgf b{display:block;font-family:var(--fd);font-weight:300;font-size:24px;letter-spacing:-.025em;margin:6px 0}.cfgf p{font-size:14.5px;color:var(--mut)}
+@media(max-width:1040px){.cfgf{grid-template-columns:1fr 1fr}}@media(max-width:640px){.cfgf{grid-template-columns:1fr}}
 /* lightbox */
 .lb{position:fixed;inset:0;z-index:50;background:rgba(5,12,24,.94);display:none;flex-direction:column;align-items:center;justify-content:center;padding:56px 16px 24px}
 .lb.on{display:flex}
@@ -228,7 +234,7 @@ table.btab td:nth-child(3){width:200px}table.btab td:last-child{color:var(--mut)
 .browser.full iframe{flex:1;height:auto}.browser.full .fsx{display:inline-block}.browser.full .fsb{display:none}
 </style></head><body>
 <header class="bar"><a href="#start" aria-label="Naar het begin"><img src="ov/klop-logo-wit.png" alt="Klop Watersport"></a>
-<nav id="nav" aria-label="Onderdelen"><a href="#recap">Recap</a><a href="#brandbook">Brandbook</a><a href="#designsysteem">Designsysteem</a><a href="#merkuitingen">Merkuitingen</a><a href="#website">Website</a><a href="#code">Code</a><a href="#powermarketing">Powermarketing</a></nav>
+<nav id="nav" aria-label="Onderdelen"><a href="#recap">Recap</a><a href="#brandbook">Brandbook</a><a href="#designsysteem">Designsysteem</a><a href="#merkuitingen">Merkuitingen</a><a href="#website">Website</a><a href="#configurator">Configurator</a><a href="#code">Code</a><a href="#powermarketing">Powermarketing</a></nav>
 <button class="tg" id="tg" aria-label="Wissel licht en donker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="5"/><path d="M12 7v10" /><path d="M12 7a5 5 0 0 1 0 10z" fill="currentColor"/></svg></button></header>
 
 <section class="cover" id="start"><div class="bgimg" style="background-image:url('ov/cover-showroom.jpg')"></div><div class="wrap">
@@ -241,8 +247,9 @@ table.btab td:nth-child(3){width:200px}table.btab td:last-child{color:var(--mut)
 <a href="#designsysteem"><small>03 · De bouwstenen</small><b>Design&shy;systeem</b><p>Kleur, type, ruimte, 26 iconen en 22 componenten.</p><span>Bekijk →</span></a>
 <a href="#merkuitingen"><small>04 · In het wild</small><b>Merk&shy;uitingen</b><p>42 ontwerpen, van servicepas tot campagne en bedrijfswagen.</p><span>Bekijk →</span></a>
 <a href="#website" class="y"><small>05 · Het resultaat</small><b>Website</b><p>De klikbare site, nu met de showroom centraal op de homepage.</p><span>Open de site →</span></a>
-<a href="#code"><small>06 · De techniek</small><b>Code</b><p>WordPress, SEO en GEO, configurator, CRM en de architectuur met ERP en CAD.</p><span>Bekijk →</span></a>
-<a href="#powermarketing"><small>07 · Het model</small><b>Power&shy;marketing</b><p>Marketing, sales, code en change tegen bereik, kliks, leads en sales. Wat gaat er aan?</p><span>Bekijk →</span></a>
+<a href="#configurator"><small>06 · Het hulpmiddel</small><b>Configu&shy;rator</b><p>Alle 32 Maxima-modellen en de andere merken, te bewaren in Mijn Klop.</p><span>Bekijk →</span></a>
+<a href="#code"><small>07 · De techniek</small><b>Code</b><p>WordPress, SEO en GEO, configurator, CRM en de architectuur met ERP en CAD.</p><span>Bekijk →</span></a>
+<a href="#powermarketing"><small>08 · Het model</small><b>Power&shy;marketing</b><p>Marketing, sales, code en change tegen bereik, kliks, leads en sales. Wat gaat er aan?</p><span>Bekijk →</span></a>
 </div></div></section>
 
 <section class="sec" id="recap"><div class="wrap">
@@ -376,8 +383,22 @@ NO text, NO letters, NO numbers, NO logos, NO signs, NO screens with content, NO
 <div class="btns"><button class="btn s" data-full="">Bekijk de site schermvullend</button><button class="btn" data-full="#/showroom">Bekijk de showroompagina</button></div>
 </div></section>
 
+<section class="sec" id="configurator"><div class="wrap">
+<div class="sh"><div><span class="kick">06 · Het hulpmiddel</span><h2>Configurator</h2></div><p class="lead">Stel je boot samen op de site: alle 32 Maxima-modellen in de eigen Maxima-huisstijl, en de andere merken met opties per soort boot. Elke samenstelling is deelbaar, te bewaren in Mijn Klop en komt als offerteaanvraag binnen.</p></div>
+<div class="cfgtabs" role="tablist"><button class="on" data-cfg="#/stel-samen/maxima" role="tab" aria-selected="true">Maxima Boats · 32 modellen</button><button data-cfg="#/stel-samen/maxima-760-nieuw" role="tab" aria-selected="false">Maxima 760 samenstellen</button><button data-cfg="#/stel-samen" role="tab" aria-selected="false">Andere merken</button></div>
+<div class="browser"><div class="top"><i></i><i></i><i></i><span id="cfurl">klopwatersport.nl/stel-samen/maxima</span><button class="fsb" data-full="" data-frame="cf">Schermvullend ⤢</button><button class="fsx" aria-label="Sluit schermvullend">Sluiten ×</button></div><iframe id="cf" src="../site/index.html#/stel-samen/maxima" data-site="../site/index.html" title="Klop configurator" loading="lazy"></iframe></div>
+<div class="cfgf">
+<div><small>Maxima</small><b>Alle 32 modellen</b><p>Romp, kussens, buiskap, motor en opties in stappen, met beeldlagen van de boot en een prijs die meeloopt. In de Maxima-huisstijl, want Maxima is een apart merk.</p></div>
+<div><small>Andere merken</small><b>Opties per soort boot</b><p>Sloep, elektrische sloep, open boot, RIB en cruiser hebben elk hun eigen motoren, vloeren en opties. Maxima-boten springen naar de Maxima-configurator.</p></div>
+<div><small>Mijn Klop</small><b>Bewaren en verder</b><p>Elke keuze staat in de link. Bewaar de samenstelling in Mijn Klop en ga later verder, of deel hem met je partner.</p></div>
+<div><small>Opvolging</small><b>Offerte als lead</b><p>Een aanvraag komt met de complete samenstelling binnen. In fase 2 gaat die direct het CRM in (zie Code).</p></div>
+</div>
+<p class="note">Prijzen zijn een indicatie. Beelden van de Maxima-boten komen van maximaboats.nl; afstemmen met Maxima of zelf hosten.</p>
+</div></section>
+
+
 <section class="sec" id="code"><div class="wrap">
-<div class="sh"><div><span class="kick">06 · De techniek</span><h2>Code</h2></div><p class="lead">Tot nu toe deed JUST.LEAD het merk, de campagnes en de site. Vanaf nu bouwt en koppelt JUST.CODE de techniek eronder: de website, de configurator, het CRM en, in overleg, de koppeling met ERP en CAD. Zo werkt het merk tot in de systemen.</p></div>
+<div class="sh"><div><span class="kick">07 · De techniek</span><h2>Code</h2></div><p class="lead">Tot nu toe deed JUST.LEAD het merk, de campagnes en de site. Vanaf nu bouwt en koppelt JUST.CODE de techniek eronder: de website, de configurator, het CRM en, in overleg, de koppeling met ERP en CAD. Zo werkt het merk tot in de systemen.</p></div>
 
 <div class="cx">
 <h3>Wie doet wat</h3>
@@ -522,7 +543,7 @@ NO text, NO letters, NO numbers, NO logos, NO signs, NO screens with content, NO
 
 
 <section class="sec" id="powermarketing"><div class="wrap">
-<div class="sh"><div><span class="kick">07 · Het model</span><h2>Powermarketing</h2></div><p class="lead">Vier werkgebieden tegen vier fases. Klik blokken aan om een raket te lanceren, sleep Change-blokken naar een andere fase.</p></div>
+<div class="sh"><div><span class="kick">08 · Het model</span><h2>Powermarketing</h2></div><p class="lead">Vier werkgebieden tegen vier fases. Klik blokken aan om een raket te lanceren, sleep Change-blokken naar een andere fase.</p></div>
 <div class="pmframe"><iframe id="pmf" src="powermarketing.html" title="Powermarketing-grid" scrolling="no"></iframe></div>
 </div></section>
 
@@ -535,9 +556,10 @@ NO text, NO letters, NO numbers, NO logos, NO signs, NO screens with content, NO
 <button class="rb nx" data-l="1" aria-label="Volgende"><svg viewBox="0 0 20 12"><path d="M0 6h18M14 1l5 5-5 5"/></svg></button></div>
 
 <script>
-document.addEventListener('click',function(e){var t=e.target.closest('[data-full]');if(t){var f=document.getElementById('sf'),h=t.getAttribute('data-full');if(h){f.src=f.dataset.site+h}var b=f.closest('.browser');b.classList.add('full');document.body.style.overflow='hidden';try{if(b.requestFullscreen)b.requestFullscreen().catch(function(){})}catch(x){}}
- else if(e.target.closest('#fsx'))fsClose()},true);
-function fsClose(){var b=document.querySelector('.browser');b.classList.remove('full');document.body.style.overflow='';if(document.fullscreenElement&&document.exitFullscreen)document.exitFullscreen().catch(function(){})}
+document.addEventListener('click',function(e){var t=e.target.closest('[data-full]');if(t){var f=document.getElementById(t.dataset.frame||'sf'),h=t.getAttribute('data-full');if(h){f.src=f.dataset.site+h}var b=f.closest('.browser');b.classList.add('full');document.body.style.overflow='hidden';try{if(b.requestFullscreen)b.requestFullscreen().catch(function(){})}catch(x){}}
+ else if(e.target.closest('.fsx'))fsClose();
+ var c=e.target.closest('[data-cfg]');if(c){var cf=document.getElementById('cf');cf.src=cf.dataset.site+c.dataset.cfg;document.getElementById('cfurl').textContent='klopwatersport.nl'+c.dataset.cfg.replace('#','');document.querySelectorAll('[data-cfg]').forEach(function(x){x.classList.toggle('on',x===c);x.setAttribute('aria-selected',x===c)})}},true);
+function fsClose(){var b=document.querySelector('.browser.full');if(b)b.classList.remove('full');document.body.style.overflow='';if(document.fullscreenElement&&document.exitFullscreen)document.exitFullscreen().catch(function(){})}
 document.addEventListener('fullscreenchange',function(){if(!document.fullscreenElement&&document.querySelector('.browser.full'))fsClose()});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&document.querySelector('.browser.full'))fsClose()});
 document.addEventListener('click',function(e){var b=e.target.closest('[data-bf]');if(!b)return;var f=b.dataset.bf;document.querySelectorAll('[data-bf]').forEach(function(x){x.classList.toggle('on',x===b)});document.querySelectorAll('#btb tr').forEach(function(r){r.style.display=(f==='all'||(f==='p1'?r.dataset.p==='1':f==='p0'?r.dataset.p==='0':r.dataset.s===f))?'':'none'})});
@@ -558,7 +580,7 @@ $('#lb').addEventListener('click',function(e){if(e.target.id==='lb')lbc()});
 document.addEventListener('keydown',function(e){if($('#lb').classList.contains('on')){if(e.key==='Escape')lbc();if(e.key==='ArrowRight')lb(L.set,L.i+1);if(e.key==='ArrowLeft')lb(L.set,L.i-1);return}
  var r=$('#recap').getBoundingClientRect();if(r.top<innerHeight*.6&&r.bottom>innerHeight*.4){if(e.key==='ArrowRight')deck(di+1);if(e.key==='ArrowLeft')deck(di-1)}});
 // actieve sectie in de balk
-var secs=['recap','brandbook','designsysteem','merkuitingen','website','code','powermarketing'].map(function(id){return document.getElementById(id)});
+var secs=['recap','brandbook','designsysteem','merkuitingen','website','configurator','code','powermarketing'].map(function(id){return document.getElementById(id)});
 if('IntersectionObserver' in window){var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting)$$('#nav a').forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+x.target.id)})})},{rootMargin:'-45% 0px -50% 0px'});secs.forEach(function(s){io.observe(s)})}
 // thema
 $('#tg').onclick=function(){var r=document.documentElement,d=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;r.dataset.theme=d?'light':'dark';try{localStorage.setItem('klop-theme',r.dataset.theme)}catch(x){}};

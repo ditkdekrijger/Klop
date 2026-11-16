@@ -89,6 +89,7 @@ N = {'bb': len(M['brandbook']), 'mu': len(M['merkuitingen']), 'ds': len(M['ds'])
 DATA['beeld'] = BEELD
 DATA['beelddemo'] = [{'f': PFX + 'beeld/demo-billboard.jpg', 't': 'Proef: billboard met opmaak uit het designsysteem'}]
 page = open(os.path.join(ROOT, 'tools/overzicht.template.html')).read()
+page = page.replace('{{CFG}}', open(os.path.join(ROOT, 'tools/configurator_sectie.html')).read())
 page = page.replace('{{BEELD}}', open(os.path.join(ROOT, 'tools/beeld_sectie.html')).read())
 for k, v in {
     '{{SITE}}': SITE, '{{PFX}}': PFX, '{{RECAP_MAIN}}': PFX + recap[0]['file'],
