@@ -25,3 +25,12 @@ python3 tools/patch_mobile.py site/index.html     # mobiele UX
 
 Lokaal bekijken: `python3 -m http.server` in de root en open `/overzicht/`.
 Site met werkende Maxima-configurator en offerte-endpoint: `php -S localhost:8080 tools/dev-router.php` in de root en open `/`.
+
+## Pitch (versie 2)
+
+`pitch/index.html`: compacte pitch in tien bouwblokken, elk blok schermvullend te openen.
+
+```bash
+node tools/pitch_mockups.js                 # mockups van homepage, aanbod, bootpagina, keuzehulp en configurator
+python3 tools/build_pitch.py --dist dist-pitch   # pitch/index.html, plus publiceerbare map
+```

@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Klop pitch versie 2</title>
+<meta name="description" content="Klop Watersport: het merk, de site, de keuzehulp, de configurator en de techniek, in tien bouwblokken.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;400&family=Funnel+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+{{CSS}}
+/* ===== pitch ===== */
+body{overflow-x:hidden}
+.pt-hero{background:var(--nacht);color:#fff;position:relative;overflow:hidden}
+.pt-hero .bgimg{position:absolute;inset:0;background-size:cover;background-position:60% 50%;opacity:.5}
+.pt-hero .bgimg:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--nacht) 0%,rgba(11,25,48,.8) 45%,rgba(11,25,48,.25) 100%)}
+.pt-hero .wrap{position:relative;padding-top:clamp(48px,8vh,96px);padding-bottom:clamp(40px,6vh,72px)}
+.pt-hero .kick{color:var(--chroom)}
+.pt-hero h1{font-size:clamp(46px,7.4vw,112px);letter-spacing:-.045em;line-height:.95;margin:20px 0 20px}
+.pt-hero .lead{color:var(--mist);max-width:640px}
+.pt-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.pt-meta span{font-size:13.5px;padding:7px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.22);color:#fff}
+.pt-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px;padding:clamp(32px,5vw,64px) 0 clamp(48px,7vw,96px)}
+.pt-card{grid-column:span 4;position:relative;display:flex;flex-direction:column;text-align:left;background:var(--card);border-radius:22px;overflow:hidden;box-shadow:0 0 0 1px var(--line);transition:transform .5s var(--ez),box-shadow .3s;min-height:330px}
+.pt-card.w6{grid-column:span 6}.pt-card.w8{grid-column:span 8}.pt-card.w12{grid-column:span 12}
+.pt-card:hover{transform:translateY(-4px);box-shadow:0 0 0 1px var(--fg),0 30px 60px -40px rgba(11,25,48,.5)}
+.pt-card:focus-visible{outline:3px solid var(--olie);outline-offset:3px}
+.pt-card .im{flex:1;min-height:190px;background-size:cover;background-position:top center;background-color:#E9EDF0}
+.pt-card .tx{padding:18px 20px 20px;display:grid;gap:6px;border-top:1px solid var(--line)}
+.pt-card small{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);font-weight:500}
+.pt-card b{font-family:var(--fd);font-weight:300;font-size:clamp(24px,2.1vw,32px);letter-spacing:-.03em;line-height:1.05}
+.pt-card p{font-size:14.5px;color:var(--mut)}
+.pt-card .op{position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.92);color:var(--nacht);display:grid;place-items:center;box-shadow:0 4px 14px -6px rgba(0,0,0,.4);font-size:18px}
+.pt-card.y .tx{background:var(--olie);color:var(--nacht);border-color:var(--olie)}.pt-card.y small,.pt-card.y p{color:var(--nacht)}
+/* fullscreen */
+.pv{position:fixed;inset:0;z-index:40;background:var(--bg);display:none;flex-direction:column}
+.pv.on{display:flex}
+.pv-bar{flex:none;display:flex;align-items:center;gap:14px;height:64px;padding:0 var(--pad);background:var(--nacht);color:#fff}
+.pv-bar img{height:28px}
+.pv-bar .t{flex:1;min-width:0;display:flex;align-items:baseline;gap:12px;white-space:nowrap;overflow:hidden}
+.pv-bar .t small{color:var(--chroom);font-size:13px;letter-spacing:.08em}
+.pv-bar .t b{font-family:var(--fd);font-weight:300;font-size:22px;overflow:hidden;text-overflow:ellipsis}
+.pv-bar .rb{width:40px;height:40px}
+.pv-bar .x{width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.3);color:#fff;font-size:22px}
+.pv-body{flex:1;overflow:auto;overscroll-behavior:contain}
+.pv-body .wrap{padding-top:clamp(28px,4vw,56px);padding-bottom:clamp(48px,6vw,88px)}
+.pv-dots{display:flex;gap:6px}.pv-dots i{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.25)}.pv-dots i.on{background:var(--olie)}
+article.blk{display:none}article.blk.on{display:block}
+.blk-h{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(20px,4vw,64px);align-items:end;margin-bottom:clamp(24px,3vw,44px)}
+.blk-h h2{font-size:clamp(40px,5.2vw,80px);margin-top:12px}
+.pts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:22px}
+.pts>div{background:var(--card);border-radius:18px;padding:20px;box-shadow:0 0 0 1px var(--line)}
+.pts small{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut)}
+.pts b{display:block;font-family:var(--fd);font-weight:300;font-size:23px;letter-spacing:-.025em;margin:6px 0;line-height:1.1}
+.pts p{font-size:14.5px;color:var(--mut)}
+.mock{display:block;width:100%;border-radius:18px;box-shadow:0 0 0 1px var(--line)}
+.mock2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.scrollshot{height:min(70vh,760px);overflow:auto;border-radius:18px;box-shadow:0 0 0 1px var(--line);background:#fff}
+.scrollshot img{width:100%;display:block}
+.cap{font-size:14px;color:var(--mut);margin-top:10px}
+.flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:10px;margin-top:22px}
+.flow div{flex:1 1 160px;background:var(--card);border-radius:18px;padding:16px 18px;box-shadow:0 0 0 1px var(--line);position:relative}
+.flow div small{font-size:12px;color:var(--mut);letter-spacing:.06em;text-transform:uppercase}.flow div b{display:block;font-weight:500;margin-top:4px}
+.flow div.y{box-shadow:0 0 0 2px var(--olie)}
+.pillars{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.pillars div{border-top:2px solid var(--fg);padding-top:14px}.pillars b{font-family:var(--fd);font-weight:300;font-size:26px;letter-spacing:-.025em;display:block}.pillars p{font-size:14.5px;color:var(--mut);margin-top:6px}
+.sw4{display:flex;gap:10px;margin-top:16px}.sw4 i{flex:1;height:64px;border-radius:12px;box-shadow:inset 0 0 0 1px rgba(11,25,48,.1)}
+.btnrow{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.pmw2{border-radius:22px;overflow:hidden;box-shadow:0 0 0 1px var(--line);background:#fff}.pmw2 iframe{display:block;width:100%;height:1500px;border:0}
+.nx{display:flex;justify-content:space-between;gap:12px;margin-top:clamp(36px,5vw,64px);padding-top:22px;border-top:1px solid var(--line)}
+.nx button{font-size:15px;padding:12px 20px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--line)}.nx button:hover{box-shadow:inset 0 0 0 1px var(--fg)}
+@media(max-width:1040px){.pt-card,.pt-card.w6,.pt-card.w8{grid-column:span 6}.pts,.pillars{grid-template-columns:1fr 1fr}.blk-h{grid-template-columns:1fr}}
+@media(max-width:640px){.pt-card,.pt-card.w6,.pt-card.w8,.pt-card.w12{grid-column:span 12}.pts,.pillars,.mock2{grid-template-columns:1fr}.pv-bar .t small,.pv-dots{display:none}}
+</style></head><body>
+
+<section class="pt-hero"><div class="bgimg" style="background-image:url('{{PFX}}cover-showroom.jpg')"></div><div class="wrap">
+<span class="kick">Klop Watersport · pitch voor Leendert Klop · versie 2</span>
+<h1>Vaar je<br>vrijheid.</h1>
+<p class="lead">Alles wat we voor Klop maken, in tien bouwblokken: het verhaal, het merk, de site, de keuzehulp, de configurator, de techniek en de aanpak. Klik een blok open.</p>
+<div class="pt-meta"><span>Merk en brandbook</span><span>Site en mockups</span><span>Keuzehulp en configurator</span><span>CODE: WordPress, CRM, koppelingen</span><span>Powermarketing</span></div>
+</div></section>
+
+<main class="wrap"><div class="pt-grid" id="grid">
+<button class="pt-card w8" data-open="1"><span class="op">⤢</span><span class="im" style="background-image:url('{{PFX}}recap/b01.jpg')"></span><span class="tx"><small>01 · Het verhaal</small><b>Recap</b><p>Van herpositionering tot resultaat, in zestien slides.</p></span></button>
+<button class="pt-card" data-open="2"><span class="op">⤢</span><span class="im" style="background-image:url('{{PFX}}brandbook/30-het-gele-label.jpg')"></span><span class="tx"><small>02 · Het merk</small><b>Brandbook</b><p>{{N_BB}} pagina's: verhaal, toon, kleur, letter en beeld.</p></span></button>
+<button class="pt-card" data-open="3"><span class="op">⤢</span><span class="im" style="background-image:url('{{PFX}}merkuitingen/m08-het-gele-label.jpg')"></span><span class="tx"><small>03 · In de praktijk</small><b>Merkuitingen</b><p>{{N_MU}} ontwerpen, en hoe we de beelden goed maken.</p></span></button>
+<button class="pt-card w8" data-open="4"><span class="op">⤢</span><span class="im" style="background-image:url('{{PFX}}pitch/mock-home.jpg')"></span><span class="tx"><small>04 · De site</small><b>Homepage</b><p>De showroom centraal, Klop Premium Service™ op elke pagina.</p></span></button>
+<button class="pt-card w6" data-open="5"><span class="op">⤢</span><span class="im" style="background-image:url('{{PFX}}pitch/mock-plp.jpg')"></span><span class="tx"><small>05 · De site</small><b>Aanbod en bootpagina</b><p>213 boten: filteren, vergelijken en elke boot met de service erbij.</p></span></button>
+<button class="pt-card w6" data-open="6"><span class="op">⤢</span><span class="im" style="background-image:url('{{PFX}}pitch/mock-keuzehulp.jpg')"></span><span class="tx"><small>06 · Kiezen</small><b>Keuzehulp</b><p>Weet je nog niet wat? Drie vragen, direct het juiste aanbod.</p></span></button>
+<button class="pt-card w8 y" data-open="7"><span class="op">⤢</span><span class="im" style="background-image:url('{{PFX}}pitch/mock-proto.jpg')"></span><span class="tx"><small>07 · Samenstellen</small><b>Configurator</b><p>Alle Maxima-modellen en de andere merken. Met app-prototype in 3D.</p></span></button>
+<button class="pt-card" data-open="8"><span class="op">⤢</span><span class="im" style="background-image:url('{{PFX}}pitch/arch.jpg');background-size:contain;background-repeat:no-repeat;background-position:center;background-color:#fff"></span><span class="tx"><small>08 · De techniek</small><b>CODE</b><p>WordPress, SEO en GEO, CRM en de koppelingen.</p></span></button>
+<button class="pt-card w6" data-open="9"><span class="op">⤢</span><span class="im" style="background-image:url('{{PFX}}pitch/pm.jpg')"></span><span class="tx"><small>09 · Het model</small><b>Powermarketing</b><p>Marketing en content, sales, code en change: wat gaat er aan?</p></span></button>
+<button class="pt-card w6" data-open="10"><span class="op">⤢</span><span class="im" style="background-image:url('{{PFX}}merkuitingen/m13-servicehaven.jpg')"></span><span class="tx"><small>10 · Zo verder</small><b>De aanpak</b><p>Vier fases, en wat we van Klop nodig hebben.</p></span></button>
+</div></main>
+
+<div class="pv" id="pv" role="dialog" aria-modal="true" aria-label="Bouwblok">
+<div class="pv-bar"><img src="{{PFX}}klop-logo-wit.png" alt="Klop Watersport"><div class="t"><small id="pvn"></small><b id="pvt"></b></div><div class="pv-dots" id="pvd"></div><button class="rb" data-step="-1" aria-label="Vorig blok"><svg viewBox="0 0 20 12"><path d="M20 6H2M6 1 1 6l5 5"/></svg></button><button class="rb" data-step="1" aria-label="Volgend blok"><svg viewBox="0 0 20 12"><path d="M0 6h18M14 1l5 5-5 5"/></svg></button><button class="x" id="pvx" aria-label="Sluiten">×</button></div>
+<div class="pv-body" id="pvb"><div class="wrap">
+
+<article class="blk" data-n="1" data-t="Recap"><div class="blk-h"><div><span class="kick">01 · Het verhaal</span><h2>Eén belofte, volledig uitgewerkt.</h2></div><p class="lead">Klop verkoopt geen boten met service erbij, maar vrijheid op het water: Vaar je vrijheid. Klop Premium Service™ maakt die belofte waar, de boten zijn het bewijs.</p></div>
+<div class="deck"><div class="stage"><img id="dimg" src="{{PFX}}recap/b01.jpg" alt=""></div><div class="ctl"><div><b id="dtit"></b> <small id="dnum"></small></div><div class="b"><button class="rb" data-d="-1" aria-label="Vorige slide"><svg viewBox="0 0 20 12"><path d="M20 6H2M6 1 1 6l5 5"/></svg></button><button class="rb" data-d="1" aria-label="Volgende slide"><svg viewBox="0 0 20 12"><path d="M0 6h18M14 1l5 5-5 5"/></svg></button></div></div></div>
+{{RECAP_STRIP}}
+<div class="pts"><div><small>Brandbook</small><b>{{N_BB}} pagina's</b><p>Van merkkern tot spelregels voor foto, kleur en label.</p></div><div><small>In de praktijk</small><b>{{N_MU}} merkuitingen</b><p>Van servicepas en gevel tot campagne en bedrijfswagen.</p></div><div><small>Site</small><b>213 boten</b><p>Aanbod, filters, vergelijken, keuzehulp en configurator.</p></div><div><small>Service</small><b>1 pakket</b><p>Klop Premium Service™: onderhoud, schoonmaak, stalling, halen en brengen.</p></div></div>
+</article>
+
+<article class="blk" data-n="2" data-t="Brandbook"><div class="blk-h"><div><span class="kick">02 · Het merk</span><h2>Rustig, licht, en geel waar het telt.</h2></div><p class="lead">De botenmarkt is blauw, vol en luid. Klop is rustig, met het embleem als sieraad en geel als teken dat er iets geregeld is.</p></div>
+<div class="pillars"><div><b>Vaar je vrijheid.</b><p>De belofte. Afzender: Vrijheidsvaarders sinds 1966.</p></div><div><b>Wij regelen het gedoe. Jij vaart.</b><p>De zin die de service uitlegt, in je-vorm.</p></div><div><b>Geel is geregeld.</b><p>Oliegoed, het gele werkgoed: waar je geel ziet, heeft Klop iets uit handen genomen.</p></div><div><b>Funnel, licht en ruim.</b><p>Funnel Display en Sans, veel lucht, laag licht in beeld.</p></div></div>
+<div class="sw4"><i style="background:#F5F7F8"></i><i style="background:#0B1930"></i><i style="background:#EFA91F"></i><i style="background:#DDE3E8"></i><i style="background:#566373"></i></div>
+<h3 class="gh" style="margin-top:36px">Alle pagina's</h3>{{BB_GRID}}
+</article>
+
+<article class="blk" data-n="3" data-t="Merkuitingen"><div class="blk-h"><div><span class="kick">03 · In de praktijk</span><h2>Het merk, van pas tot billboard.</h2></div><p class="lead">Elke uiting laat zien wat er geregeld is: het gele label aan het stuur, de servicepas, de seizoenspost, het showroombordje.</p></div>
+{{MU_GRID}}
+<div class="cx"><h3>De beelden: zo maken we ze goed</h3><p class="lead">De ideeën zijn sterk, de visualisaties zijn nog gegenereerd: getekende letters, een leeg logo en verzonnen namen. Daarom vier sporen.</p>
+<div class="pts"><div><small>Spoor 1</small><b>Fotodag</b><p>Eigen mensen, gevel, haven en werkplaats: echt, op één dag aan de Rivierdijk.</p></div><div><small>Spoor 2</small><b>Echte schermen</b><p>Site, configurator en Mijn Klop rechtstreeks uit de site, in een apparaat.</p></div><div><small>Spoor 3</small><b>Drukwerk eerst</b><p>Pas, label, kaart en offerte eerst echt opmaken, daarna in beeld.</p></div><div><small>Spoor 4</small><b>Plaat plus opmaak</b><p>AI alleen voor sfeer zonder tekst; letter, logo en label uit het designsysteem.</p></div></div>
+<div class="bdemo" style="margin-top:22px"><figure><img src="{{PFX}}beeld/40.jpg" alt=""><figcaption><b>Nu</b> Getekende letter, u-vorm, leeg logo.</figcaption></figure><figure><img src="{{PFX}}beeld/demo-billboard.jpg" alt=""><figcaption><b>Zo wordt het</b> Zelfde plaat, opmaak uit het designsysteem: Funnel, het gele label, "Jij vaart." en het echte logo.</figcaption></figure></div></div>
+</article>
+
+<article class="blk" data-n="4" data-t="Homepage"><div class="blk-h"><div><span class="kick">04 · De site</span><h2>De showroom centraal.</h2></div><p class="lead">De homepage nodigt uit om langs te komen: 4.000 m² aan het water, een rondleiding in vijf stops en de grote knop: Bezoek showroom.</p></div>
+<img class="mock" src="{{PFX}}pitch/mock-home.jpg" alt="Homepage op laptop en telefoon">
+<div class="pts"><div><small>Hero</small><b>Vaar je vrijheid.</b><p>Direct: vind je boot, of lees wat Klop Premium Service™ is.</p></div><div><small>Kiezen</small><b>Keuzehulp</b><p>Drie vragen onder de hero leiden naar het juiste aanbod.</p></div><div><small>Showroom</small><b>Kom kijken</b><p>Rondleiding, voorraad per soort boot en Bezoek showroom.</p></div><div><small>Service</small><b>Geel is geregeld</b><p>De PremiumStrook: één gele band, met je vaste aanspreekpunt.</p></div></div>
+<h3 class="gh" style="margin-top:36px">Scroll door de homepage</h3><div class="scrollshot"><img src="{{PFX}}pitch/home-lang.jpg" alt="Homepage, van boven naar beneden"></div>
+</article>
+
+<article class="blk" data-n="5" data-t="Aanbod en bootpagina"><div class="blk-h"><div><span class="kick">05 · De site</span><h2>213 boten, elk met de service erbij.</h2></div><p class="lead">Het aanbod is overzichtelijk te filteren en te vergelijken. Op elke bootpagina staat wat Klop voor je regelt, zonder blauw vlak: licht, met één geel accent.</p></div>
+<div class="mock2"><figure style="margin:0"><img class="mock" src="{{PFX}}pitch/mock-plp.jpg" alt="Productoverzicht"><figcaption class="cap">Productoverzicht: soorten boten met foto, filters, vergelijken.</figcaption></figure><figure style="margin:0"><img class="mock" src="{{PFX}}pitch/mock-pdp.jpg" alt="Productpagina"><figcaption class="cap">Bootpagina: prijs, proefvaart, aanspreekpunt en Klop Premium Service™.</figcaption></figure></div>
+<div class="pts"><div><small>Overzicht</small><b>Filters en soorten</b><p>Type, merk, budget en voorraad, met foto per soort boot.</p></div><div><small>Vergelijken</small><b>Tot drie naast elkaar</b><p>Alleen berekenbare feiten uit de eigen voorraad.</p></div><div><small>Bootpagina</small><b>Prijsinzicht</b><p>Waar staat deze boot in prijs binnen zijn soort.</p></div><div><small>Actie</small><b>Proefvaart of bezoek</b><p>Altijd één duidelijke volgende stap.</p></div></div>
+<div class="mock2" style="margin-top:28px"><div><h3 class="gh">Scroll: overzicht</h3><div class="scrollshot"><img src="{{PFX}}pitch/plp-lang.jpg" alt=""></div></div><div><h3 class="gh">Scroll: bootpagina</h3><div class="scrollshot"><img src="{{PFX}}pitch/pdp-lang.jpg" alt=""></div></div></div>
+</article>
+
+<article class="blk" data-n="6" data-t="Keuzehulp"><div class="blk-h"><div><span class="kick">06 · Kiezen</span><h2>Wat voor vaarder ben je?</h2></div><p class="lead">Niet iedereen weet welke boot het moet worden. De keuzehulp stelt drie vragen en toont meteen het passende aanbod. Wie het al weet, gaat door naar de configurator.</p></div>
+<img class="mock" src="{{PFX}}pitch/mock-keuzehulp.jpg" alt="Keuzehulp op laptop en telefoon">
+<div class="flow"><div><small>Vraag 1</small><b>Type boot</b>Sloep, open boot, RIB of cruiser</div><div><small>Vraag 2</small><b>Wat zoek je?</b>Rust, familie of snelheid</div><div><small>Vraag 3</small><b>Budget</b>Tot 50.000, tot 100.000 of geen limiet</div><div class="y"><small>Resultaat</small><b>Het juiste aanbod</b>Direct gefilterd, met de service erbij</div></div>
+<div class="pts"><div><small>Waarom</small><b>Minder keuzestress</b><p>213 boten is veel. Drie vragen maken het overzichtelijk.</p></div><div><small>Leads</small><b>Je weet wat iemand zoekt</b><p>De antwoorden gaan mee naar de aanvraag en het CRM.</p></div><div><small>Samen</small><b>Keuzehulp en configurator</b><p>Eerst kiezen, dan samenstellen: één route.</p></div><div><small>Verder</small><b>Uit te breiden</b><p>Vaargebied, ligplaats en gebruik als extra vragen.</p></div></div>
+</article>
+
+<article class="blk" data-n="7" data-t="Configurator"><div class="blk-h"><div><span class="kick">07 · Samenstellen</span><h2>Stel je boot samen.</h2></div><p class="lead">Alle 32 Maxima-modellen in de eigen Maxima-huisstijl, en de andere merken met opties per soort boot. Elke samenstelling is te bewaren in Mijn Klop en komt als offerte binnen.</p></div>
+<img class="mock" src="{{PFX}}pitch/mock-proto.jpg" alt="App-prototype van de Maxima-configurator in 3D">
+<div class="btnrow"><a class="btn s" href="https://maxima.mustang.dev/" target="_blank" rel="noopener">Open het app-prototype ↗</a><span class="cap" style="align-self:center">Prototype met 3D-weergave, maxima.mustang.dev</span></div>
+<div class="mock2" style="margin-top:22px"><figure style="margin:0"><img class="mock" src="{{PFX}}pitch/mock-configurator.jpg" alt=""><figcaption class="cap">Maxima 760 op de site: romp, kussens, buiskap, motor en opties in stappen.</figcaption></figure><figure style="margin:0"><img class="mock" src="{{PFX}}pitch/mock-configurator-overzicht.jpg" alt=""><figcaption class="cap">Overzicht: wat je koos, wat nog ontbreekt, en de offerte.</figcaption></figure></div>
+<figure style="margin:16px 0 0"><img class="mock" src="{{PFX}}pitch/mock-configurator-alg.jpg" alt=""><figcaption class="cap">Andere merken: opties per soort boot, met de service als vaste stap.</figcaption></figure>
+<div class="flow"><div><small>1</small><b>Keuzehulp</b>Welke boot past bij je?</div><div><small>2</small><b>Configurator</b>Stel hem samen</div><div><small>3</small><b>Mijn Klop</b>Bewaren en later verder</div><div class="y"><small>4</small><b>Offerte</b>Als lead in het CRM</div></div>
+</article>
+
+<article class="blk" data-n="8" data-t="CODE"><div class="blk-h"><div><span class="kick">08 · De techniek</span><h2>CODE</h2></div><p class="lead">De techniek onder het merk: WordPress met een eigen thema, SEO en GEO, een CRM en configurator op maat, en in overleg de koppeling met ERP en CAD.</p></div>
+{{CODE_BODY}}
+</article>
+
+<article class="blk" data-n="9" data-t="Powermarketing"><div class="blk-h"><div><span class="kick">09 · Het model</span><h2>Powermarketing</h2></div><p class="lead">Marketing en content, sales, code en change tegen bereik, kliks, leads en sales. Klik blokken aan om te zien wat er voor Klop aangaat.</p></div>
+<div class="pmw2"><iframe id="pmf" data-src="powermarketing.html" title="Powermarketing-grid" scrolling="no"></iframe></div>
+</article>
+
+<article class="blk" data-n="10" data-t="De aanpak"><div class="blk-h"><div><span class="kick">10 · Zo verder</span><h2>Vier fases.</h2></div><p class="lead">We beginnen bij het fundament en bouwen stap voor stap door. Elke fase levert iets op dat je direct ziet.</p></div>
+<ol class="phase"><li><small>Fase 1</small><b>Fundament</b><p>WordPress-thema op het designsysteem, SEO- en GEO-techniek, tracking. Content en offpage starten.</p></li><li><small>Fase 2</small><b>Keuzehulp en configurator</b><p>Maxima en de andere merken in één motor, elke samenstelling als lead.</p></li><li><small>Fase 3</small><b>CRM en Mijn Klop</b><p>Klantkaart, offertes, Klop Premium Service™, serviceplanning, klantomgeving.</p></li><li class="io"><small>Fase 4 · in overleg</small><b>ERP en CAD</b><p>Voorraad en orders uit het ERP, maatvoering en beelden uit CAD.</p></li></ol>
+<div class="pts" style="margin-top:28px"><div><small>Nodig van Klop</small><b>Eén set feiten</b><p>Brandbook: 5.000 m² en 15 merken. Site: 4.000 m² en 13 merken. Welke klopt?</p></div><div><small>Nodig van Klop</small><b>Een fotodag</b><p>Gevel, showroom, haven, werkplaats en Vrijheidsvaarders, met toestemming.</p></div><div><small>Nodig van Klop</small><b>Adres en postcode</b><p>Rivierdijk 27a: 3372 BG of BE? Overal gelijk voor vindbaarheid.</p></div><div><small>Nodig van Klop</small><b>Toegang</b><p>Huidige site, voorraadbron en het systeem waarin nu offertes staan.</p></div></div>
+</article>
+
+</div></div></div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Vergroot beeld"><button class="x" id="lbx" aria-label="Sluiten">×</button>
+<button class="rb pv2" data-l="-1" aria-label="Vorige" style="position:absolute;left:12px;top:50%"><svg viewBox="0 0 20 12"><path d="M20 6H2M6 1 1 6l5 5"/></svg></button>
+<img id="lbi" alt=""><div class="cap2" style="color:#fff;margin-top:14px"><span id="lbt"></span> <small id="lbn" style="color:#AAB3BD"></small></div>
+<button class="rb nx2" data-l="1" aria-label="Volgende" style="position:absolute;right:12px;top:50%"><svg viewBox="0 0 20 12"><path d="M0 6h18M14 1l5 5-5 5"/></svg></button></div>
+
+<script>
+var D={{DATA}};
+function $(s){return document.querySelector(s)}function $$(s){return Array.prototype.slice.call(document.querySelectorAll(s))}
+var N=10,cur=0,di=0,L={set:null,i:0};
+var blocks=$$('article.blk');$('#pvd').innerHTML=blocks.map(function(){return'<i></i>'}).join('');
+function open(n){cur=(n-1+N)%N+1;var a=blocks[cur-1];blocks.forEach(function(b){b.classList.toggle('on',b===a)});$('#pvn').textContent=String(cur).padStart(2,'0')+' / 10';$('#pvt').textContent=a.dataset.t;
+ $$('#pvd i').forEach(function(d,i){d.classList.toggle('on',i===cur-1)});$('#pv').classList.add('on');document.body.style.overflow='hidden';$('#pvb').scrollTop=0;
+ if(cur===9){var f=$('#pmf');if(!f.src)f.src=f.dataset.src}if(cur===1)deck(di);try{history.replaceState(null,'','#blok-'+cur)}catch(x){}}
+function close(){$('#pv').classList.remove('on');document.body.style.overflow='';try{history.replaceState(null,'',location.pathname+location.search)}catch(x){}}
+function deck(i){var r=D.recap;di=(i+r.length)%r.length;$('#dimg').src=r[di].f;$('#dtit').textContent=r[di].t;$('#dnum').textContent=(di+1)+' / '+r.length;$$('.strip .th').forEach(function(t,j){t.classList.toggle('on',j===di)})}
+function lb(set,i){var a=D[set];L.set=set;L.i=(i+a.length)%a.length;$('#lbi').src=a[L.i].f;$('#lbt').textContent=a[L.i].t;$('#lbn').textContent=(L.i+1)+' / '+a.length;$('#lb').classList.add('on')}
+function lbc(){$('#lb').classList.remove('on')}
+document.addEventListener('click',function(e){var o=e.target.closest('[data-open]');if(o){open(+o.dataset.open);return}
+ var t=e.target.closest('button');if(!t)return;
+ if(t.dataset.step)open(cur+ +t.dataset.step);else if(t.id==='pvx')close();else if(t.dataset.d)deck(di+ +t.dataset.d);else if(t.dataset.l)lb(L.set,L.i+ +t.dataset.l);
+ else if(t.dataset.set){if(t.dataset.set==='recap')deck(+t.dataset.i);else lb(t.dataset.set,+t.dataset.i)}else if(t.id==='lbx')lbc();else if(t.dataset.go)open(+t.dataset.go)});
+$('#lb').addEventListener('click',function(e){if(e.target.id==='lb')lbc()});
+document.addEventListener('keydown',function(e){if($('#lb').classList.contains('on')){if(e.key==='Escape')lbc();if(e.key==='ArrowRight')lb(L.set,L.i+1);if(e.key==='ArrowLeft')lb(L.set,L.i-1);return}
+ if(!$('#pv').classList.contains('on'))return;if(e.key==='Escape')close();if(e.key==='ArrowRight')open(cur+1);if(e.key==='ArrowLeft')open(cur-1)});
+// navigatie onderaan elk blok
+blocks.forEach(function(a,i){var n=i+1,p=blocks[(i-1+N)%N],q=blocks[(i+1)%N];a.insertAdjacentHTML('beforeend','<div class="nx"><button data-go="'+((n-2+N)%N+1)+'">← '+p.dataset.t+'</button><button data-go="'+(n%N+1)+'">'+q.dataset.t+' →</button></div>')});
+// Powermarketing-hoogte
+(function(){var f=$('#pmf');function fit(){try{var d=f.contentDocument;if(d&&d.body){var h=d.documentElement.scrollHeight;if(Math.abs(h-f.offsetHeight)>2)f.style.height=h+'px'}}catch(x){}}f.addEventListener('load',function(){fit();setTimeout(fit,700);try{new ResizeObserver(fit).observe(f.contentDocument.body)}catch(x){}});addEventListener('resize',fit)})();
+var m=/^#blok-(\d+)$/.exec(location.hash);if(m)open(+m[1]);
+deck(0);
+</script></body></html>
