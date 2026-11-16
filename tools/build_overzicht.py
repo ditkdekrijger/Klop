@@ -83,6 +83,13 @@ for i, c in enumerate(M['ds']):
     comps += '<figure class="cp"><button class="th" data-set="ds" data-i="%d"><img src="%s%s" alt=""></button><figcaption><b>%s</b><small>%s</small><p>%s</p></figcaption></figure>' % (i, PFX, c['file'], e(c['title']), e(c['group']), rd)
 
 BEELD = [{'f': x['f'].replace('{{PFX}}', PFX), 't': x['t']} for x in json.load(open(os.path.join(ROOT, 'tools/beeld_data.json')))]
+def hd_list():
+    """Relatieve paden van de scherpe (2x) beelden in overzicht/hd (gemaakt met tools/render_hd.js)."""
+    base = os.path.join(ROOT, 'overzicht/hd'); out = []
+    for d, _, ff in os.walk(base):
+        out += [os.path.relpath(os.path.join(d, f), base) for f in ff if f.endswith('.jpg')]
+    return sorted(out)
+
 DATA = {k: [{'f': PFX + x['file'], 't': clean(x['title'])} for x in v] for k, v in {'recap': recap, 'old': recap_old, 'brandbook': M['brandbook'], 'merk': M['merkuitingen'], 'ds': M['ds']}.items()}
 N = {'bb': len(M['brandbook']), 'mu': len(M['merkuitingen']), 'ds': len(M['ds']), 'rc': len(recap)}
 
@@ -96,7 +103,7 @@ for k, v in {
     '{{RECAP_STRIP}}': flat(recap, 'recap', 'strip'), '{{RECAP_OLD}}': flat(recap_old, 'old'),
     '{{BRANDBOOK}}': grid(M['brandbook'], bb_deel, 'brandbook'), '{{MERK}}': grid(M['merkuitingen'], mu_groep, 'merk'),
     '{{SWATCHES}}': sw, '{{TYPE}}': typ, '{{SPACING}}': toklist('spacing'), '{{RADIUS}}': toklist('radius'), '{{LAYOUT}}': toklist('layout'),
-    '{{ICONS}}': icons, '{{COMPS}}': comps, '{{DATA}}': json.dumps(DATA, ensure_ascii=False),
+    '{{HD}}': json.dumps(hd_list()), '{{HDP}}': 'hd/', '{{ICONS}}': icons, '{{COMPS}}': comps, '{{DATA}}': json.dumps(DATA, ensure_ascii=False),
     '{{N_BB}}': str(N['bb']), '{{N_MU}}': str(N['mu']), '{{N_DS}}': str(N['ds']), '{{N_RC}}': str(N['rc']), '{{N_IC}}': str(icons.count('class="ic"')),
     '{{CODE}}': open(os.path.join(ROOT, 'tools/code_sectie.html')).read(),
     '{{PM}}': open(os.path.join(ROOT, 'tools/powermarketing_sectie.html')).read(),

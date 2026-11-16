@@ -30,7 +30,7 @@ assert h.count('deck(0);\n</script>') == 1
 h = h.replace('deck(0);\n</script>', '''</script><script src="ov.js"></script><script>(function(){function R(p){return(window.OV&&OV[p])||p}
 document.querySelectorAll('img[data-ov]').forEach(function(i){i.src=R(i.dataset.ov)});
 document.querySelectorAll('[data-bg]').forEach(function(e){e.style.backgroundImage='url('+R(e.dataset.bg)+')'});
-for(var k in D)D[k].forEach(function(x){x.f=R(x.f)});deck(0)})();</script>''')
+for(var k in D)D[k].forEach(function(x){x.o=x.f;x.f=R(x.f)});deck(0)})();</script>''')
 open(os.path.join(OUT, 'index.html'), 'w').write(h)
 # site met configurator
 s = open(os.path.join(ROOT, 'site/index.html')).read()
@@ -44,3 +44,24 @@ for x in ('assets', 'data'):
     shutil.copytree(os.path.join(pub, x), os.path.join(OUT, 'mx', x))
 shutil.copy(os.path.join(ROOT, 'overzicht/powermarketing.html'), os.path.join(OUT, 'powermarketing.html'))
 print('klaar:', OUT)
+
+# scherpe (2x) beelden voor schermvullende weergave: gebundeld in kleine pakketjes hd/cN.js (de site gebruikt al veel losse bestanden),
+# die pas laden zodra een sheet schermvullend opent
+PAGE = open(os.path.join(OUT, 'index.html')).read(); HDC = {}; chunk = []; size = 0; n = 0
+HDB = os.path.join(ROOT, 'overzicht/hd'); shutil.rmtree(os.path.join(OUT, 'hd'), ignore_errors=True); os.makedirs(os.path.join(OUT, 'hd'))
+def flush():
+    global chunk, size, n
+    if not chunk: return
+    open(os.path.join(OUT, 'hd', 'c%d.js' % n), 'w').write('(function(H){' + ''.join('H[%s]=%s;' % (json.dumps(r), json.dumps(u)) for r, u in chunk) + '})(window.HDX||(window.HDX={}));')
+    chunk = []; size = 0; n += 1
+for sub in ['recap', 'brandbook', 'merkuitingen', 'pitch']:
+    for d, _, ff in sorted(os.walk(os.path.join(HDB, sub))):
+        for f in sorted(ff):
+            rel = os.path.relpath(os.path.join(d, f), HDB)
+            if 'ov/' + rel not in PAGE: continue
+            u = 'data:image/jpeg;base64,' + base64.b64encode(open(os.path.join(d, f), 'rb').read()).decode()
+            HDC[rel] = n; chunk.append((rel, u)); size += len(u)
+            if size > 3_500_000: flush()
+flush()
+PAGE = PAGE.replace('var HDC=null,', 'var HDC=' + json.dumps(HDC) + ',', 1); open(os.path.join(OUT, 'index.html'), 'w').write(PAGE)
+print('hd', len(HDC), 'beelden in', n, 'pakketjes')
