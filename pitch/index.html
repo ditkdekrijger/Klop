@@ -266,6 +266,8 @@ body{overflow-x:hidden}
 .pv-bar .t small{color:var(--chroom);font-size:13px;letter-spacing:.08em}
 .pv-bar .t b{font-family:var(--fd);font-weight:300;font-size:22px;overflow:hidden;text-overflow:ellipsis}
 .pv-bar .rb{width:40px;height:40px}
+.pv-bar .fsbtn{width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.3);color:#fff;font-size:18px}.pv-bar .fsbtn:hover,.pv-bar .x:hover{border-color:#fff}
+.pt-start{background:var(--olie)!important;color:var(--nacht)!important;border-color:var(--olie)!important}
 .pv-bar .x{width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.3);color:#fff;font-size:22px}
 .pv-body{flex:1;overflow:auto;overscroll-behavior:contain}
 .pv-body .wrap{padding-top:clamp(28px,4vw,56px);padding-bottom:clamp(48px,6vw,88px)}
@@ -302,6 +304,7 @@ article.blk{display:none}article.blk.on{display:block}
 <span class="kick">Klop Watersport · pitch voor Leendert Klop · versie 2</span>
 <h1>Vaar je<br>vrijheid.</h1>
 <p class="lead">Alles wat we voor Klop maken, in tien bouwblokken: het verhaal, het merk, de site, de keuzehulp, de configurator, de techniek en de aanpak. Klik een blok open.</p>
+<div class="btnrow" style="margin-top:28px"><button class="btn s pt-start" data-open="1" data-fs="1">Start presentatie ⤢</button><span class="cap" style="color:var(--chroom);align-self:center">Opent schermvullend. Pijltjes om te bladeren, Esc om terug te gaan.</span></div>
 <div class="pt-meta"><span>Merk en brandbook</span><span>Site en mockups</span><span>Keuzehulp en configurator</span><span>CODE: WordPress, CRM, koppelingen</span><span>Powermarketing</span></div>
 </div></section>
 
@@ -319,7 +322,7 @@ article.blk{display:none}article.blk.on{display:block}
 </div></main>
 
 <div class="pv" id="pv" role="dialog" aria-modal="true" aria-label="Bouwblok">
-<div class="pv-bar"><img src="../overzicht/ov/klop-logo-wit.png" alt="Klop Watersport"><div class="t"><small id="pvn"></small><b id="pvt"></b></div><div class="pv-dots" id="pvd"></div><button class="rb" data-step="-1" aria-label="Vorig blok"><svg viewBox="0 0 20 12"><path d="M20 6H2M6 1 1 6l5 5"/></svg></button><button class="rb" data-step="1" aria-label="Volgend blok"><svg viewBox="0 0 20 12"><path d="M0 6h18M14 1l5 5-5 5"/></svg></button><button class="x" id="pvx" aria-label="Sluiten">×</button></div>
+<div class="pv-bar"><img src="../overzicht/ov/klop-logo-wit.png" alt="Klop Watersport"><div class="t"><small id="pvn"></small><b id="pvt"></b></div><div class="pv-dots" id="pvd"></div><button class="rb" data-step="-1" aria-label="Vorig blok"><svg viewBox="0 0 20 12"><path d="M20 6H2M6 1 1 6l5 5"/></svg></button><button class="rb" data-step="1" aria-label="Volgend blok"><svg viewBox="0 0 20 12"><path d="M0 6h18M14 1l5 5-5 5"/></svg></button><button class="fsbtn" id="pvfs" aria-label="Volledig scherm aan of uit" title="Volledig scherm">⛶</button><button class="x" id="pvx" aria-label="Sluiten">×</button></div>
 <div class="pv-body" id="pvb"><div class="wrap">
 
 <article class="blk" data-n="1" data-t="Recap"><div class="blk-h"><div><span class="kick">01 · Het verhaal</span><h2>Eén belofte, volledig uitgewerkt.</h2></div><p class="lead">Klop verkoopt geen boten met service erbij, maar vrijheid op het water: Vaar je vrijheid. Klop Premium Service™ maakt die belofte waar, de boten zijn het bewijs.</p></div>
@@ -534,11 +537,15 @@ var blocks=$$('article.blk');$('#pvd').innerHTML=blocks.map(function(){return'<i
 function open(n){cur=(n-1+N)%N+1;var a=blocks[cur-1];blocks.forEach(function(b){b.classList.toggle('on',b===a)});$('#pvn').textContent=String(cur).padStart(2,'0')+' / 10';$('#pvt').textContent=a.dataset.t;
  $$('#pvd i').forEach(function(d,i){d.classList.toggle('on',i===cur-1)});$('#pv').classList.add('on');document.body.style.overflow='hidden';$('#pvb').scrollTop=0;
  if(cur===9){var f=$('#pmf');if(!f.src)f.src=f.dataset.src}if(cur===1)deck(di);try{history.replaceState(null,'','#blok-'+cur)}catch(x){}}
-function close(){$('#pv').classList.remove('on');document.body.style.overflow='';try{history.replaceState(null,'',location.pathname+location.search)}catch(x){}}
+function isFs(){return!!(document.fullscreenElement||document.webkitFullscreenElement)}
+function fsOn(){if(isFs())return;var el=document.documentElement,f=el.requestFullscreen||el.webkitRequestFullscreen;if(f){try{var r=f.call(el);if(r&&r.catch)r.catch(function(){})}catch(x){}}}
+function fsOff(){if(!isFs())return;var f=document.exitFullscreen||document.webkitExitFullscreen;if(f){try{var r=f.call(document);if(r&&r.catch)r.catch(function(){})}catch(x){}}}
+function close(){fsOff();$('#pv').classList.remove('on');document.body.style.overflow='';try{history.replaceState(null,'',location.pathname+location.search)}catch(x){}}
 function deck(i){var r=D.recap;di=(i+r.length)%r.length;$('#dimg').src=r[di].f;$('#dtit').textContent=r[di].t;$('#dnum').textContent=(di+1)+' / '+r.length;$$('.strip .th').forEach(function(t,j){t.classList.toggle('on',j===di)})}
 function lb(set,i){var a=D[set];L.set=set;L.i=(i+a.length)%a.length;$('#lbi').src=a[L.i].f;$('#lbt').textContent=a[L.i].t;$('#lbn').textContent=(L.i+1)+' / '+a.length;$('#lb').classList.add('on')}
 function lbc(){$('#lb').classList.remove('on')}
-document.addEventListener('click',function(e){var o=e.target.closest('[data-open]');if(o){open(+o.dataset.open);return}
+document.addEventListener('click',function(e){var o=e.target.closest('[data-open]');if(o){fsOn();open(+o.dataset.open);return}
+ if(e.target.closest('#pvfs')){isFs()?fsOff():fsOn();return}
  var t=e.target.closest('button');if(!t)return;
  if(t.dataset.step)open(cur+ +t.dataset.step);else if(t.id==='pvx')close();else if(t.dataset.d)deck(di+ +t.dataset.d);else if(t.dataset.l)lb(L.set,L.i+ +t.dataset.l);
  else if(t.dataset.set){if(t.dataset.set==='recap')deck(+t.dataset.i);else lb(t.dataset.set,+t.dataset.i)}else if(t.id==='lbx')lbc();else if(t.dataset.go)open(+t.dataset.go)});
