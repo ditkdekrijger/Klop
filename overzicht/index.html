@@ -38,7 +38,7 @@ code{font-family:ui-monospace,Menlo,monospace;font-size:13px}
 .cover .kick{color:var(--chroom)}
 .cover h1{font-size:clamp(48px,8vw,128px);letter-spacing:-.045em;line-height:.95;margin:22px 0 24px}
 .cover .lead{color:var(--mist)}
-.parts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:clamp(40px,7vh,72px)}
+.parts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:clamp(40px,7vh,72px)}
 .parts a{display:flex;flex-direction:column;gap:8px;text-decoration:none;padding:20px;border-radius:22px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);min-height:190px;transition:transform .5s var(--ez),border-color .3s,background .3s}
 .parts a:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.1)}
 .parts small{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--chroom)}
@@ -157,6 +157,29 @@ table.cmp .on{background:rgba(239,169,31,.1)}table.cmp th.on{box-shadow:inset 0 
 .phase b{display:block;font-family:var(--fd);font-weight:300;font-size:24px;letter-spacing:-.025em;margin:6px 0}.phase p{font-size:15px;color:var(--mut)}
 @media(max-width:1040px){.build{grid-template-columns:repeat(2,minmax(0,1fr))}.phase,.base,.why3{grid-template-columns:1fr 1fr}}
 @media(max-width:640px){.roles,.seo2,.why3,.base,.phase,.build{grid-template-columns:1fr}}
+/* powermarketing */
+.pmbar{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;margin-bottom:18px;font-size:14.5px}
+.pmsw{display:inline-flex;align-items:center;gap:10px;cursor:pointer;font-weight:500}
+.pmsw input{position:absolute;opacity:0}.pmsw span{width:40px;height:22px;border-radius:999px;background:var(--line);position:relative;transition:background .3s}
+.pmsw span:after{content:"";position:absolute;left:3px;top:3px;width:16px;height:16px;border-radius:50%;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.3);transition:transform .3s var(--ez)}
+.pmsw input:checked+span{background:var(--olie)}.pmsw input:checked+span:after{transform:translateX(18px)}
+.pmsw input:focus-visible+span{outline:2px solid var(--fg);outline-offset:2px}
+.pmleg{display:inline-flex;align-items:center;gap:8px;color:var(--mut)}.pmleg i{width:14px;height:14px;border-radius:4px;box-shadow:inset 0 0 0 1px var(--line);background:var(--card)}.pmleg i.n{background:rgba(239,169,31,.35);box-shadow:inset 0 0 0 1.5px var(--olie)}
+.pmw{overflow-x:auto;border-radius:22px;box-shadow:0 0 0 1px var(--line);background:var(--card)}
+.pm{display:grid;grid-template-columns:150px repeat(4,minmax(170px,1fr));min-width:860px}
+.pmc{padding:18px 18px;border-top:1px solid var(--line);border-left:1px solid var(--line);transition:background .4s,box-shadow .4s}
+.pmc:nth-child(5n+1){border-left:0}.pmc:nth-child(-n+5){border-top:0}
+.pmc p{font-size:15.5px;line-height:1.45}
+.pmc small{display:none;font-size:13px;color:var(--mut);margin-top:8px;line-height:1.4}
+.pmh,.pmr{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center}
+.pmh svg,.pmr svg{width:38px;height:38px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.pmh b,.pmr b{font-weight:600;font-size:15px;letter-spacing:.02em;padding-bottom:3px;background:linear-gradient(var(--line),var(--line)) 0 100%/100% 5px no-repeat}
+.pmt{background:rgba(127,127,127,.04)}.pmt b{font-size:14px;font-weight:600}
+.pmt ul{list-style:none;font-size:14px;color:var(--mut)}.pmt li{padding:3px 0}
+.pm.on .pmc.n{background:rgba(239,169,31,.16);box-shadow:inset 0 0 0 1.5px rgba(239,169,31,.85)}
+.pm.on .pmc.n small{display:block}
+.pm.on .pmh.n b{background:linear-gradient(var(--olie),var(--olie)) 0 100%/100% 5px no-repeat}
+@media(max-width:640px){.pm{grid-template-columns:110px repeat(4,minmax(150px,1fr))}}
 /* lightbox */
 .lb{position:fixed;inset:0;z-index:50;background:rgba(5,12,24,.94);display:none;flex-direction:column;align-items:center;justify-content:center;padding:56px 16px 24px}
 .lb.on{display:flex}
@@ -174,7 +197,7 @@ table.cmp .on{background:rgba(239,169,31,.1)}table.cmp th.on{box-shadow:inset 0 
 .browser.full iframe{flex:1;height:auto}.browser.full .fsx{display:inline-block}.browser.full .fsb{display:none}
 </style></head><body>
 <header class="bar"><a href="#start" aria-label="Naar het begin"><img src="ov/klop-logo-wit.png" alt="Klop Watersport"></a>
-<nav id="nav" aria-label="Onderdelen"><a href="#recap">Recap</a><a href="#brandbook">Brandbook</a><a href="#designsysteem">Designsysteem</a><a href="#merkuitingen">Merkuitingen</a><a href="#website">Website</a><a href="#code">Code</a></nav>
+<nav id="nav" aria-label="Onderdelen"><a href="#recap">Recap</a><a href="#brandbook">Brandbook</a><a href="#designsysteem">Designsysteem</a><a href="#merkuitingen">Merkuitingen</a><a href="#website">Website</a><a href="#code">Code</a><a href="#powermarketing">Powermarketing</a></nav>
 <button class="tg" id="tg" aria-label="Wissel licht en donker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="5"/><path d="M12 7v10" /><path d="M12 7a5 5 0 0 1 0 10z" fill="currentColor"/></svg></button></header>
 
 <section class="cover" id="start"><div class="bgimg" style="background-image:url('ov/cover-showroom.jpg')"></div><div class="wrap">
@@ -188,6 +211,7 @@ table.cmp .on{background:rgba(239,169,31,.1)}table.cmp th.on{box-shadow:inset 0 
 <a href="#merkuitingen"><small>04 · In het wild</small><b>Merk&shy;uitingen</b><p>42 ontwerpen, van servicepas tot campagne en bedrijfswagen.</p><span>Bekijk →</span></a>
 <a href="#website" class="y"><small>05 · Het resultaat</small><b>Website</b><p>De klikbare site, nu met de showroom centraal op de homepage.</p><span>Open de site →</span></a>
 <a href="#code"><small>06 · De techniek</small><b>Code</b><p>WordPress, SEO en GEO, configurator, CRM en de architectuur met ERP en CAD.</p><span>Bekijk →</span></a>
+<a href="#powermarketing"><small>07 · Het model</small><b>Power&shy;marketing</b><p>Marketing, sales, code en change tegen bereik, kliks, leads en sales. Wat gaat er aan?</p><span>Bekijk →</span></a>
 </div></div></section>
 
 <section class="sec" id="recap"><div class="wrap">
@@ -415,6 +439,53 @@ Premium: altijd Olie</p></figcaption></figure><figure class="cp"><button class="
 </div></section>
 
 
+<section class="sec" id="powermarketing"><div class="wrap">
+<div class="sh"><div><span class="kick">07 · Het model</span><h2>Powermarketing</h2></div><p class="lead">Vier vakgebieden tegen vier fases van de klantreis: van bereik tot verkoop. Het grid laat zien waar Klop nu al op draait en wat er met dit plan bij aangaat.</p></div>
+
+<div class="pmbar"><label class="pmsw"><input type="checkbox" id="pmon" checked><span></span>Markeer wat er met dit plan aangaat</label>
+<span class="pmleg"><i class="n"></i>Gaat aan met dit plan</span><span class="pmleg"><i class="b"></i>Powermarketing-basis</span></div>
+
+<div class="pmw"><div class="pm on" id="pm">
+<div class="pmc pmh0"></div>
+<div class="pmc pmh"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="11" cy="20" r="2.6" fill="currentColor"/><path d="M17 14a8 8 0 0 1 0 12M21 10.5a13 13 0 0 1 0 19M25 7a18 18 0 0 1 0 26"/></svg><b>Marketing</b></div>
+<div class="pmc pmh"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M14 34v-5h12v5M14 29v-9l-2-4.5a2 2 0 0 1 3.6-1.7L17 17V8a2 2 0 0 1 4 0v8-10a2 2 0 0 1 4 0v10-7a2 2 0 0 1 4 0v12l-3 8"/><path d="M14 24h12"/></svg><b>Sales</b></div>
+<div class="pmc pmh n"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M14 12 6 20l8 8M26 12l8 8-8 8M23 9l-6 22"/></svg><b>Code</b></div>
+<div class="pmc pmh"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M14 15a6 6 0 0 1 12 0"/><ellipse cx="20" cy="17" rx="14" ry="3.6"/><path d="M15 21l-3 9M25 21l3 9M20 21v10"/><path d="M17 8.5 20 6l3 2.5" opacity=".6"/></svg><b>Change</b></div>
+
+<div class="pmc pmr"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="13"/><path d="M13 17q2.5 2 5 0M22 17q2.5 2 5 0M15.5 26h9"/></svg><b>Bereik</b></div>
+<div class="pmc"><p>Displaycampagnes, SEO</p></div>
+<div class="pmc"><p>Direct mail, events</p></div>
+<div class="pmc n"><p>Sites, platforms</p><small>Bij Klop: WordPress met eigen thema, SEO- en GEO-techniek</small></div>
+<div class="pmc n"><p>Merk- en productpositionering</p><small>Bij Klop: Vaar je vrijheid, Klop Premium Service™, het brandbook</small></div>
+
+<div class="pmc pmr"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="13"/><circle cx="15.5" cy="17" r="1.4" fill="currentColor"/><circle cx="24.5" cy="17" r="1.4" fill="currentColor"/><path d="M16 26h8"/></svg><b>Kliks</b></div>
+<div class="pmc"><p>Klikcampagnes, UI/UX</p></div>
+<div class="pmc"><p>Salespitch, lead-inzichten</p></div>
+<div class="pmc n"><p>PDP's, CRO</p><small>Bij Klop: bootpagina's, aanbod en vergelijken, conversie meten</small></div>
+<div class="pmc"><p>Processen en structuur</p></div>
+
+<div class="pmc pmr"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="13"/><circle cx="15.5" cy="17" r="1.4" fill="currentColor"/><circle cx="24.5" cy="17" r="1.4" fill="currentColor"/><path d="M15.5 24.5q4.5 2.5 9 0"/></svg><b>Leads</b></div>
+<div class="pmc"><p>Leadcampagnes</p></div>
+<div class="pmc"><p>Follow-up, (bel)scripts</p></div>
+<div class="pmc n"><p>Configurators, pijplijn</p><small>Bij Klop: Maxima- en algemene configurator, leads direct in het CRM</small></div>
+<div class="pmc"><p>Leiderschap en management</p></div>
+
+<div class="pmc pmr"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="13"/><circle cx="15.5" cy="16.5" r="1.4" fill="currentColor"/><circle cx="24.5" cy="16.5" r="1.4" fill="currentColor"/><path d="M13.5 22.5q6.5 6.5 13 0"/></svg><b>Sales</b></div>
+<div class="pmc"><p>Retargetingcampagnes, datamanagement</p></div>
+<div class="pmc"><p>Pitch, salestechniek</p></div>
+<div class="pmc n"><p>Dashboards, automations</p><small>Bij Klop: CRM op maat, Mijn Klop, rapportage; ERP en CAD in overleg</small></div>
+<div class="pmc"><p>Businessmodel en waardepropositie</p></div>
+
+<div class="pmc pmt"><b>Tools en kanalen</b></div>
+<div class="pmc pmt"><ul><li>Google (Ads, Tag Manager, Search Console, Merchant Center)</li><li>LinkedIn, Meta, TikTok, Pinterest, Snap</li><li>SEO PowerSuite</li><li>Adobe, Canva (foto en video)</li></ul></div>
+<div class="pmc pmt"><ul><li>Leadinfo</li><li>Direct mail</li><li>Notion, Pipedrive</li><li>EmailOctopus</li></ul></div>
+<div class="pmc pmt n"><ul><li>Claude Code</li><li>Codex</li><li>GitHub</li><li>Shopify, WordPress, Laravel</li></ul></div>
+<div class="pmc pmt"><ul><li>Strategyzer</li><li>Covey</li><li>Lean</li><li>Brandling</li></ul></div>
+</div></div>
+<p class="note">Change-onderwerpen zijn over alle fases toepasbaar. Met dit plan gaan het bovenste Change-vak en de hele Code-kolom aan: vijf vakken erbij.</p>
+</div></section>
+
+
 <footer><div class="wrap"><span>Klop Watersport · Vrijheidsvaarders sinds 1966</span><span>JUST.LEAD · november 2026</span></div></footer>
 
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Vergroot beeld"><button class="x" id="lbx" aria-label="Sluiten">×</button>
@@ -445,10 +516,11 @@ $('#lb').addEventListener('click',function(e){if(e.target.id==='lb')lbc()});
 document.addEventListener('keydown',function(e){if($('#lb').classList.contains('on')){if(e.key==='Escape')lbc();if(e.key==='ArrowRight')lb(L.set,L.i+1);if(e.key==='ArrowLeft')lb(L.set,L.i-1);return}
  var r=$('#recap').getBoundingClientRect();if(r.top<innerHeight*.6&&r.bottom>innerHeight*.4){if(e.key==='ArrowRight')deck(di+1);if(e.key==='ArrowLeft')deck(di-1)}});
 // actieve sectie in de balk
-var secs=['recap','brandbook','designsysteem','merkuitingen','website','code'].map(function(id){return document.getElementById(id)});
+var secs=['recap','brandbook','designsysteem','merkuitingen','website','code','powermarketing'].map(function(id){return document.getElementById(id)});
 if('IntersectionObserver' in window){var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting)$$('#nav a').forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+x.target.id)})})},{rootMargin:'-45% 0px -50% 0px'});secs.forEach(function(s){io.observe(s)})}
 // thema
 $('#tg').onclick=function(){var r=document.documentElement,d=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;r.dataset.theme=d?'light':'dark';try{localStorage.setItem('klop-theme',r.dataset.theme)}catch(x){}};
 try{var th=localStorage.getItem('klop-theme');if(th)document.documentElement.dataset.theme=th}catch(x){}
+var pmon=document.getElementById('pmon');if(pmon)pmon.addEventListener('change',function(){document.getElementById('pm').classList.toggle('on',pmon.checked)});
 deck(0);
 </script></body></html>
