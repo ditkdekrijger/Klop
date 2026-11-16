@@ -40,4 +40,5 @@ os.makedirs(os.path.join(OUT, 'mx'))
 shutil.copy(os.path.join(pub, 'index.html'), os.path.join(OUT, 'mx', 'index.html'))
 for x in ('assets', 'data'):
     shutil.copytree(os.path.join(pub, x), os.path.join(OUT, 'mx', x))
+shutil.copy(os.path.join(ROOT, 'overzicht/powermarketing.html'), os.path.join(OUT, 'powermarketing.html'))
 print('klaar:', OUT)

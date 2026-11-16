@@ -357,7 +357,7 @@
     "p-m01": {
       "fill": "orange",
       "size": 24,
-      "text": "GEMINI-PROMPT · M01 Mijn Klop\n\nPhotorealistic close-up of a hand holding a modern smartphone on a wooden jetty at a Dutch river marina in low morning light. On the screen a clean white app interface with a dark navy light sans-serif headline 'Uw boot ligt voor u klaar.' and one saffron-yellow status tag reading 'Geregeld'. A white sloop is softly blurred in the background. Calm, premium, shallow depth of field. No other readable text, no watermark. Aspect ratio 4:3.\n\nBijlage: de export van dit artboard als referentie voor het scherm.",
+      "text": "GEMINI-PROMPT · M01 Mijn Klop\n\nPhotorealistic close-up of a hand holding a modern smartphone on a wooden jetty at a Dutch river marina in low morning light. On the screen a clean white app interface with a dark navy light sans-serif headline 'Je boot ligt voor je klaar.' and one saffron-yellow status tag reading 'Geregeld'. A white sloop is softly blurred in the background. Calm, premium, shallow depth of field. No other readable text, no watermark. Aspect ratio 4:3.\n\nBijlage: de export van dit artboard als referentie voor het scherm.",
       "w": 760,
       "x": 0,
       "y": 2300
@@ -365,7 +365,7 @@
     "p-m02": {
       "fill": "orange",
       "size": 24,
-      "text": "GEMINI-PROMPT · M02 Service-updates\n\nPhotorealistic smartphone lying on the helm console of an open white sloop, soft morning light on the river behind. The screen shows a messaging app with one incoming message in Dutch: 'Goedemorgen. Uw boot is gepoetst en ligt klaar aan de steiger. Klopt. [voornaam]' and below it a small photo of the same sloop at a jetty. Calm, premium, shallow depth of field. No other readable text, no watermark. Aspect ratio 4:3.\n\nVervang [voornaam] door een echte voornaam.",
+      "text": "GEMINI-PROMPT · M02 Service-updates\n\nPhotorealistic smartphone lying on the helm console of an open white sloop, soft morning light on the river behind. The screen shows a messaging app with one incoming message in Dutch: 'Goedemorgen. Je boot is gepoetst en ligt klaar aan de steiger. Klopt. [voornaam]' and below it a small photo of the same sloop at a jetty. Calm, premium, shallow depth of field. No other readable text, no watermark. Aspect ratio 4:3.\n\nVervang [voornaam] door een echte voornaam.",
       "w": 760,
       "x": 1680,
       "y": 2300
@@ -469,7 +469,7 @@
     "p-m15": {
       "fill": "orange",
       "size": 24,
-      "text": "GEMINI-PROMPT · M15 Beursstand\n\nPhotorealistic boat show stand in a large exhibition hall: a minimalist white stand with one white sloop, a deep navy back wall with large off-white light sans-serif text 'Wij regelen het gedoe. U vaart.' and a saffron-yellow counter in the centre. The surrounding stands are blurred, blue and busy. Calm, premium, spacious. No other readable text, no watermark. Aspect ratio 4:3.",
+      "text": "GEMINI-PROMPT · M15 Beursstand\n\nPhotorealistic boat show stand in a large exhibition hall: a minimalist white stand with one white sloop, a deep navy back wall with large off-white light sans-serif text 'Wij regelen het gedoe. Jij vaart.' and a saffron-yellow counter in the centre. The surrounding stands are blurred, blue and busy. Calm, premium, spacious. No other readable text, no watermark. Aspect ratio 4:3.",
       "w": 760,
       "x": 8400,
       "y": 6900
@@ -509,7 +509,7 @@
     "p-m20": {
       "fill": "orange",
       "size": 24,
-      "text": "GEMINI-PROMPT · M20 Partnerhavens\n\nPhotograph of a small white enamel sign mounted on the wooden wall of a harbour master's office at a Dutch marina. In dark navy light sans-serif: 'Klop Premium Service-punt' and below it a saffron-yellow tag reading 'Hier halen en brengen wij uw boot'. Boats and masts softly blurred, morning light. No other text, no watermark. Aspect ratio 4:3.\n\nBijlage: de export van dit artboard als referentie voor het bord.",
+      "text": "GEMINI-PROMPT · M20 Partnerhavens\n\nPhotograph of a small white enamel sign mounted on the wooden wall of a harbour master's office at a Dutch marina. In dark navy light sans-serif: 'Klop Premium Service-punt' and below it a saffron-yellow tag reading 'Hier halen en brengen wij je boot'. Boats and masts softly blurred, morning light. No other text, no watermark. Aspect ratio 4:3.\n\nBijlage: de export van dit artboard als referentie voor het bord.",
       "w": 760,
       "x": 0,
       "y": 11500
@@ -533,7 +533,7 @@
     "p-m23": {
       "fill": "orange",
       "size": 24,
-      "text": "GEMINI-PROMPT · M23 Website\n\nPhotorealistic laptop on a light oak desk showing a calm white website: a large dark navy light sans-serif headline 'Wij regelen het gedoe. U vaart.', one navy button and a wide photo of a small sloop on a misty river with a saffron-yellow tag on it. Soft daylight, premium. No other readable text, no watermark. Aspect ratio 4:3.\n\nBijlage: de export van dit artboard als referentie voor het scherm.",
+      "text": "GEMINI-PROMPT · M23 Website\n\nPhotorealistic laptop on a light oak desk showing a calm white website: a large dark navy light sans-serif headline 'Wij regelen het gedoe. Jij vaart.', one navy button and a wide photo of a small sloop on a misty river with a saffron-yellow tag on it. Soft daylight, premium. No other readable text, no watermark. Aspect ratio 4:3.\n\nBijlage: de export van dit artboard als referentie voor het scherm.",
       "w": 760,
       "x": 0,
       "y": 13800
@@ -581,7 +581,7 @@
     "p-m25": {
       "fill": "orange",
       "size": 24,
-      "text": "GEMINI-PROMPT · M25 Seizoenspost\n\nPhotograph of a matte white postcard on a doormat next to a pair of sailing shoes. On the card in dark navy light sans-serif: 'Uw boot is winterklaar.' and below in italic 'Klopt.' with a handwritten first name, and in the corner the small oval badge from the attached logo, unchanged. Soft hallway light, warm and personal. No other text, no watermark. Aspect ratio 4:3.\n\nBijlagen: het Klop-logo en de export van dit artboard.",
+      "text": "GEMINI-PROMPT · M25 Seizoenspost\n\nPhotograph of a matte white postcard on a doormat next to a pair of sailing shoes. On the card in dark navy light sans-serif: 'Je boot is winterklaar.' and below in italic 'Klopt.' with a handwritten first name, and in the corner the small oval badge from the attached logo, unchanged. Soft hallway light, warm and personal. No other text, no watermark. Aspect ratio 4:3.\n\nBijlagen: het Klop-logo en de export van dit artboard.",
       "w": 760,
       "x": 1680,
       "y": 18400
@@ -589,7 +589,7 @@
     "p-m26": {
       "fill": "orange",
       "size": 24,
-      "text": "GEMINI-PROMPT · M26 Campagne\n\nPhotorealistic outdoor advertising poster in a bus shelter at dusk in a Dutch town. The poster shows a wide calm river at sunrise with one small white sloop, a large off-white light sans-serif headline 'Wij regelen het gedoe. U vaart.', a saffron-yellow tag in the lower left reading 'Winterklaar.' and in the lower right the small oval badge from the attached logo, unchanged. No other text, no watermark. Aspect ratio 4:3.\n\nBijlagen: het Klop-logo en de export van dit artboard.",
+      "text": "GEMINI-PROMPT · M26 Campagne\n\nPhotorealistic outdoor advertising poster in a bus shelter at dusk in a Dutch town. The poster shows a wide calm river at sunrise with one small white sloop, a large off-white light sans-serif headline 'Wij regelen het gedoe. Jij vaart.', a saffron-yellow tag in the lower left reading 'Winterklaar.' and in the lower right the small oval badge from the attached logo, unchanged. No other text, no watermark. Aspect ratio 4:3.\n\nBijlagen: het Klop-logo en de export van dit artboard.",
       "w": 760,
       "x": 0,
       "y": 16100
@@ -597,7 +597,7 @@
     "p-m26b": {
       "fill": "orange",
       "size": 24,
-      "text": "GEMINI-PROMPT · M26b Campagne, online\n\nPhotorealistic flat lay on a white table of a smartphone and a tablet. The phone shows a social post with a calm photo of a clean engine bay and a saffron-yellow bar reading 'Geregeld. U vaart.'; the tablet shows a small banner advert in the same style. Soft daylight. All other text illegible, no watermark. Aspect ratio 4:3.\n\nBijlage: het Klop-logo.",
+      "text": "GEMINI-PROMPT · M26b Campagne, online\n\nPhotorealistic flat lay on a white table of a smartphone and a tablet. The phone shows a social post with a calm photo of a clean engine bay and a saffron-yellow bar reading 'Geregeld. Jij vaart.'; the tablet shows a small banner advert in the same style. Soft daylight. All other text illegible, no watermark. Aspect ratio 4:3.\n\nBijlage: het Klop-logo.",
       "w": 760,
       "x": 1680,
       "y": 16100
@@ -605,7 +605,7 @@
     "p-m26c": {
       "fill": "orange",
       "size": 24,
-      "text": "GEMINI-PROMPT · M26c Campagne, buiten en print\n\nPhotorealistic wide view of a large deep-navy billboard along a Dutch river road at dusk. The left half shows a calm photo of a white sloop under a soft sky, the right half a big off-white light sans-serif headline 'De winterstalling?' with a saffron-yellow label below it reading 'Geregeld. U vaart.' and the small oval badge from the attached logo, unchanged. No other readable text, no watermark. Aspect ratio 4:3.\n\nBijlagen: het Klop-logo en de export van dit artboard.",
+      "text": "GEMINI-PROMPT · M26c Campagne, buiten en print\n\nPhotorealistic wide view of a large deep-navy billboard along a Dutch river road at dusk. The left half shows a calm photo of a white sloop under a soft sky, the right half a big off-white light sans-serif headline 'De winterstalling?' with a saffron-yellow label below it reading 'Geregeld. Jij vaart.' and the small oval badge from the attached logo, unchanged. No other readable text, no watermark. Aspect ratio 4:3.\n\nBijlagen: het Klop-logo en de export van dit artboard.",
       "w": 760,
       "x": 3360,
       "y": 16100

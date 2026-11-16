@@ -628,7 +628,7 @@
    "file": "ds/PremiumStrook.jpg",
    "title": "PremiumStrook",
    "group": "Secties",
-   "readme": "# Premium Service-strook\n\nVolle gele band op de home, één keer per pagina. Een bewegende band met de vier onderdelen bovenin, de nachtblauwe pil Klop Premium Service™ (klikbaar), de kop \"Wij regelen het gedoe. U vaart.\", een foto met waterlijst-kader, de persoonskaart van het vaste aanspreekpunt (foto, naam, bellen, WhatsApp) en vier fototegels: Onderhoud (werkplaats), Schoonmaak (stuurwiel), Stalling (steiger), Halen en brengen (trailer). Daaronder de drie stappen, klein. Onderaan een Vaarspoor in nachtblauw. Op hover: foto zoomt, kader sluit, icoonring wordt geel, golflijn loopt.\n"
+   "readme": "# Premium Service-strook\n\nVolle gele band op de home, één keer per pagina. Een bewegende band met de vier onderdelen bovenin, de nachtblauwe pil Klop Premium Service™ (klikbaar), de kop \"Wij regelen het gedoe. Jij vaart.\", een foto met waterlijst-kader, de persoonskaart van het vaste aanspreekpunt (foto, naam, bellen, WhatsApp) en vier fototegels: Onderhoud (werkplaats), Schoonmaak (stuurwiel), Stalling (steiger), Halen en brengen (trailer). Daaronder de drie stappen, klein. Onderaan een Vaarspoor in nachtblauw. Op hover: foto zoomt, kader sluit, icoonring wordt geel, golflijn loopt.\n"
   },
   {
    "file": "ds/Prijsinzicht.jpg",
@@ -640,7 +640,7 @@
    "file": "ds/Tegel.jpg",
    "title": "Tegel",
    "group": "Keuze",
-   "readme": "# Tegel\n\nKleine afgeronde keuzetegel met icoon (radius 18px) voor de vaardersvinder: type boot, wat u zoekt op het water, budget. Geselecteerd: nachtblauw met gele icoonlijn.\n"
+   "readme": "# Tegel\n\nKleine afgeronde keuzetegel met icoon (radius 18px) voor de vaardersvinder: type boot, wat je zoekt op het water, budget. Geselecteerd: nachtblauw met gele icoonlijn.\n"
   },
   {
    "file": "ds/Vaarspoor.jpg",

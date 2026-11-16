@@ -180,6 +180,8 @@ table.cmp .on{background:rgba(239,169,31,.1)}table.cmp th.on{box-shadow:inset 0 
 .pm.on .pmc.n small{display:block}
 .pm.on .pmh.n b{background:linear-gradient(var(--olie),var(--olie)) 0 100%/100% 5px no-repeat}
 @media(max-width:640px){.pm{grid-template-columns:110px repeat(4,minmax(150px,1fr))}}
+.pmframe{border-radius:22px;overflow:hidden;box-shadow:0 0 0 1px var(--line);background:#fff}
+.pmframe iframe{display:block;width:100%;height:1400px;border:0}
 /* lightbox */
 .lb{position:fixed;inset:0;z-index:50;background:rgba(5,12,24,.94);display:none;flex-direction:column;align-items:center;justify-content:center;padding:56px 16px 24px}
 .lb.on{display:flex}
@@ -303,6 +305,6 @@ if('IntersectionObserver' in window){var io=new IntersectionObserver(function(en
 // thema
 $('#tg').onclick=function(){var r=document.documentElement,d=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;r.dataset.theme=d?'light':'dark';try{localStorage.setItem('klop-theme',r.dataset.theme)}catch(x){}};
 try{var th=localStorage.getItem('klop-theme');if(th)document.documentElement.dataset.theme=th}catch(x){}
-var pmon=document.getElementById('pmon');if(pmon)pmon.addEventListener('change',function(){document.getElementById('pm').classList.toggle('on',pmon.checked)});
+(function(){var f=document.getElementById('pmf');if(!f)return;function fit(){try{var d=f.contentDocument;if(d&&d.body){var h=d.documentElement.scrollHeight;if(Math.abs(h-f.offsetHeight)>2)f.style.height=h+'px'}}catch(x){}}f.addEventListener('load',function(){fit();setTimeout(fit,600);try{new ResizeObserver(fit).observe(f.contentDocument.body)}catch(x){}});addEventListener('resize',fit)})();
 deck(0);
 </script></body></html>

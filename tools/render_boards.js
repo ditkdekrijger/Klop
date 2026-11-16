@@ -1,6 +1,6 @@
 // Rendert de .dc.html-boards (recap, brandbook, merkuitingen) en de componentpreviews van het designsysteem naar JPG.
 const {chromium}=require('playwright');const fs=require('fs');const path=require('path');
-const ROOT=path.resolve(__dirname,'..');const OUT=path.join(ROOT,'overzicht/img');
+const ROOT=path.resolve(__dirname,'..');const OUT=path.join(ROOT,'overzicht/ov');
 const SETS={recap:null,brandbook:null,merkuitingen:null};
 function plain(src,blobDir){
   let s=fs.readFileSync(src,'utf8');
