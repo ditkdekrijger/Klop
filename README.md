@@ -24,3 +24,4 @@ python3 tools/patch_mobile.py site/index.html     # mobiele UX
 ```
 
 Lokaal bekijken: `python3 -m http.server` in de root en open `/overzicht/`.
+Site met werkende Maxima-configurator en offerte-endpoint: `php -S localhost:8080 tools/dev-router.php` in de root en open `/`.

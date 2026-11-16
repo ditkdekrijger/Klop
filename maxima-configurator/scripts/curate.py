@@ -328,10 +328,35 @@ def curate(raw):
             s["title"] = label
             s["groups"][0]["title"] = f"Kleur {label.lower()}"
 
+    add_dependencies(groups)
+
     out = {k: raw[k] for k in ("id", "slug", "name", "image", "specs", "basePrice", "fixedCosts",
                                "imageBase", "views", "layers", "defaultView")}
     out["sections"] = sections
     return out, unmatched
+
+
+def add_dependencies(groups):
+    """Afhankelijkheden tussen opties, alleen waar de optienaam ze zelf noemt.
+
+    needs:  harde voorwaarde. De optie is uit te kiezen zolang de voorwaarde niet klopt,
+            en verdwijnt automatisch als de voorwaarde vervalt.
+    advice: zachte voorwaarde. De optie blijft kiesbaar, maar krijgt een waarschuwing.
+    Formaat: {"group": <groepkey>, "exclude": [optie-id's] | "match": <regex op naam>, "reason": <tekst>}
+    """
+    hood = groups.get("buiskap")
+    if hood:
+        no_hood = [o["id"] for o in hood["options"] if re.match(r"geen", o["raw"], re.I)]
+        for key in ("kap-extra", "kap-extra-ext"):
+            for o in groups.get(key, {}).get("options", []):
+                if re.search(r"buiskap", o["raw"], re.I):
+                    o["needs"] = {"group": "buiskap", "exclude": no_hood, "reason": "Alleen met een buiskap."}
+    if "display" in groups:
+        for key in ("audio", "navigatie-extra"):
+            for o in groups.get(key, {}).get("options", []):
+                if re.search(r"op garmin|^garmin", o["raw"], re.I):
+                    o["advice"] = {"group": "display", "match": "garmin|glass cockpit",
+                                   "reason": "Hoort bij een Garmin-display. Kies er een bij Display & navigatie."}
 
 
 def main():

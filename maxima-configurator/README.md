@@ -23,6 +23,40 @@ Klop staat als dealer in de kop en de voet. Aanvragen gaan naar Klop.
 
 Links uit 1.0 (`?model=…&c=…`) blijven werken, ook met ruitjeskussens.
 
+## Nieuw in 2.1
+
+- **Voorproefje:** met de muis of het toetsenbord op een kleur, kap of kussenset zie je die direct op de boot, nog voordat je kiest.
+- **Afhankelijkheden** (uit `curate.py`, alleen waar de optienaam ze noemt):
+  - *Hard:* "Blindering buiskap" en "Uitritsbaar voorraam buiskap" kunnen alleen met een buiskap. Zonder buiskap zijn ze uitgeschakeld met uitleg. Kies je later "Geen buiskap", dan verdwijnen ze en zegt een melding dat.
+  - *Zacht:* Garmin-uitbreidingen (audio, tweede scherm, radar, stuurautomaat) krijgen een waarschuwing zonder Garmin-display, ook in het overzicht.
+- **Prijsfeedback:** het totaal telt op en af en laat kort het verschil zien (bijv. "+ € 550").
+- **Jouw keuzes:** onder het bootbeeld (desktop) alle keuzes met prijs en een voortgangsbalk voor de verplichte keuzes.
+- **Groot beeld:** de knop "Groot" toont de boot schermvullend, met alle drie de aanzichten.
+- **Berichten aan de site alleen naar de eigen oorsprong:** de configurator meldt zijn stand en aanvragen (met contactgegevens) alleen aan `parentOrigin` (standaard dezelfde oorsprong), niet aan elke pagina die hem inbouwt.
+- **Stuur naar een adviseur:** opent WhatsApp met de samenstelling, het totaal en de link. De bezoeker verstuurt het bericht zelf.
+
+## Klaar voor livegang (2.2)
+
+- **Geen aanvraag kwijt:** `api/offerte.php` bewaart elke geldige aanvraag eerst in `aanvragen/aanvragen.jsonl` (één JSON-regel per aanvraag) en mailt hem daarna. Lukt mailen niet, dan krijgt de bezoeker toch een bevestiging en staat de aanvraag in dat bestand. Het pad is aan te passen met de omgevingsvariabele `MX_LEADS_FILE`. De map `aanvragen/` staat buiten `public/`, heeft een `.htaccess` met `Require all denied` en de inhoud gaat niet mee in git.
+- **Beelden zelf hosten (optioneel):** `python3 maxima-configurator/scripts/mirror_media.py` kopieert alle ±3.300 beelden naar `public/media/`. Zet daarna `mediaBase: 'media/'` in `window.MX_CONFIG`. Doe dit pas als Maxima akkoord is.
+- **Onbekend model:** een link naar een model dat niet meer bestaat, toont het overzicht met een melding.
+- **Zonder JavaScript:** een korte melding met het telefoonnummer.
+
+### Lokaal alles op één adres
+
+```bash
+php -S localhost:8080 tools/dev-router.php   # vanuit de root
+```
+
+`/` opent de site op de Maxima-configurator. `/maxima-configurator/public/` toont de configurator los. `/maxima-configurator/aanvragen/` en `/.git` zijn afgeschermd.
+
+### Checklist livegang
+
+1. Zet `maxima-configurator/public/` en `site/` op de server. De iframe verwacht de configurator op `../maxima-configurator/public/` naast `site/`; pas anders `MXC` aan.
+2. Controleer `TO_EMAIL` en `FROM_EMAIL` in `api/offerte.php`. Doe één proefaanvraag en kijk of de mail aankomt.
+3. Zorg dat `aanvragen/` niet via het web bereikbaar is. Apache leest de `.htaccess`; bij nginx is een eigen `deny`-regel nodig.
+4. Spreek met Maxima af of hun beelden zelf gehost mogen worden. Zo ja, draai `mirror_media.py` en zet `mediaBase`.
+
 ## Mappen
 
 | Pad | Inhoud |
@@ -74,7 +108,7 @@ Maxima-optie-id's uit `bron/` komen terug in `public/data/`.
 
 ## Koppeling met de nieuwe site
 
-`python3 tools/patch_maxima.py site/index.html` (vanuit de root; is al toegepast in deze branch):
+`python3 tools/patch_maxima.py site/index.html` (vanuit de root; is al toegepast):
 
 - `#/stel-samen/maxima` toont het overzicht van alle Maxima-modellen.
 - `#/stel-samen/maxima-<model>` toont de configurator voor dat model. De oude link `#/stel-samen/maxima-760` blijft werken.
