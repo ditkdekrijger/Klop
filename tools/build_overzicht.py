@@ -90,16 +90,24 @@ def hd_list():
         out += [os.path.relpath(os.path.join(d, f), base) for f in ff if f.endswith('.jpg')]
     return sorted(out)
 
-DATA = {k: [{'f': PFX + x['file'], 't': clean(x['title'])} for x in v] for k, v in {'recap': recap, 'old': recap_old, 'brandbook': M['brandbook'], 'merk': M['merkuitingen'], 'ds': M['ds']}.items()}
+MU_TOP = ['merkuitingen/m08-het-gele-label.jpg', 'merkuitingen/m18-overdracht.jpg', 'merkuitingen/m16-oliegoed.jpg', 'merkuitingen/m13-servicehaven.jpg', 'merkuitingen/m26-campagne.jpg']
+def mu_overzicht(pfx):
+    t = {x['file']: x['title'] for x in M['merkuitingen']}
+    top = '<div class="mutop">' + ''.join('<button class="th" data-set="mutop" data-i="%d"><img loading="lazy" src="%s%s" alt=""><span>%s</span></button>' % (i, pfx, f, html.escape(clean(t[f]))) for i, f in enumerate(MU_TOP)) + '</div>'
+    return open(os.path.join(ROOT, 'tools/mu_overzicht.html')).read().replace('{{MU_TOP}}', top)
+def mu_data(pfx):
+    t = {x['file']: x['title'] for x in M['merkuitingen']}
+    return [{'f': pfx + f, 't': clean(t[f])} for f in MU_TOP]
+DATA = {k: [{'f': PFX + x['file'], 't': clean(x['title'])} for x in v] for k, v in {'recap': recap, 'old': recap_old, 'brandbook': M['brandbook'], 'ds': M['ds']}.items()}
 N = {'bb': len(M['brandbook']), 'mu': len(M['merkuitingen']), 'ds': len(M['ds']), 'rc': len(recap)}
 
-DATA['beeld'] = BEELD
+DATA['mutop'] = mu_data(PFX)
 SCHERMEN = json.load(open(os.path.join(ROOT, 'tools/schermen.json')))['schermen']
 DATA['site'] = [{'f': PFX + x['file'], 't': x['title']} for x in SCHERMEN]
 def sg(g): return '<div class="grid sitegrid">' + ''.join('<button class="th" data-set="site" data-i="%d"><img loading="lazy" src="%s%s" alt=""><span>%s</span></button>' % (i, PFX, x['file'], e(x['title'])) for i, x in enumerate(SCHERMEN) if x['g'] == g) + '</div>'
-DATA['beelddemo'] = [{'f': PFX + 'beeld/demo-billboard.jpg', 't': 'Proef: billboard met opmaak uit het designsysteem'}]
 page = open(os.path.join(ROOT, 'tools/overzicht.template.html')).read()
 page = page.replace('{{CFG}}', open(os.path.join(ROOT, 'tools/configurator_sectie.html')).read())
+page = page.replace('{{MU_OVERZICHT}}', mu_overzicht(PFX))
 for k, g in {'{{SITE_HOME}}': 'home', '{{SITE_AANBOD}}': 'aanbod', '{{SITE_PAG}}': 'pag', '{{PROTO}}': 'proto'}.items(): page = page.replace(k, sg(g))
 page = page.replace('{{BEELD}}', open(os.path.join(ROOT, 'tools/beeld_sectie.html')).read())
 for k, v in {

@@ -235,6 +235,9 @@ table.btab td:nth-child(3){width:200px}table.btab td:last-child{color:var(--mut)
 img{cursor:zoom-in}#lb img,.bar img,header img,nav img,.th img,.logos img,.lg img{cursor:default}.th img{cursor:pointer}
 .mk2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin:8px 0 34px}.mk2 figure{margin:0}.mk2 img{width:100%;display:block;border-radius:12px}.mk2 figcaption{font-size:14px;color:var(--mut);margin-top:8px}@media(max-width:760px){.mk2{grid-template-columns:1fr}}
 .sitegrid{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}.sitegrid .th img{aspect-ratio:16/10;object-fit:cover;object-position:top}
+.muo{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 28px}.muo>div{border-top:2px solid var(--ink,#0B1930);padding-top:10px}.muo small{font-size:11px;letter-spacing:.14em;color:var(--mut)}.muo h4{font-size:22px;font-weight:400;margin:2px 0 8px}.muo ul{list-style:none;margin:0;padding:0}.muo li{display:flex;gap:10px;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line);font-size:14.5px;line-height:1.45}.muo li i{font-style:normal;font-size:10.5px;letter-spacing:.12em;color:var(--mut);white-space:nowrap;padding-top:3px}
+.mutop{display:grid;grid-template-columns:2fr 1fr 1fr;gap:14px;align-items:start}.mutop .th:first-child{grid-row:span 2}.mutop .th img{aspect-ratio:16/9;object-fit:cover;width:100%;height:auto}
+@media(max-width:900px){.muo{grid-template-columns:1fr 1fr}.mutop{grid-template-columns:1fr 1fr}.mutop .th:first-child{grid-column:span 2;grid-row:auto}}@media(max-width:560px){.muo{grid-template-columns:1fr}}
 </style></head><body>
 <header class="bar"><a href="#start" aria-label="Naar het begin"><img src="{{PFX}}klop-logo-wit.png" alt="Klop Watersport"></a>
 <nav id="nav" aria-label="Onderdelen"><a href="#recap">Recap</a><a href="#brandbook">Brandbook</a><a href="#designsysteem">Designsysteem</a><a href="#merkuitingen">Merkuitingen</a><a href="#website">Website</a><a href="#configurator">Configurator</a><a href="#code">Code</a><a href="#powermarketing">Powermarketing</a></nav>
@@ -290,9 +293,8 @@ img{cursor:zoom-in}#lb img,.bar img,header img,nav img,.th img,.logos img,.lg im
 </div></div></section>
 
 <section class="sec" id="merkuitingen"><div class="wrap">
-<div class="sh"><div><span class="kick">04 · In het wild</span><h2>Merkuitingen <span class="n">{{N_MU}}</span></h2></div><p class="lead">Hoe het merk er in de praktijk uitziet: voor de klant, op locatie, online, in de campagne en onderweg.</p></div>
-{{MERK}}
-{{BEELD}}
+<div class="sh"><div><span class="kick">04 · In het wild</span><h2>Merkuitingen</h2></div><p class="lead">Hoe het merk er in de praktijk uitziet: voor de klant, op locatie, online, in de campagne en onderweg.</p></div>
+{{MU_OVERZICHT}}
 </div></section>
 
 <section class="sec" id="website"><div class="wrap">

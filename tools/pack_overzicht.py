@@ -14,7 +14,7 @@ src = os.path.join(ROOT, 'overzicht')
 for d, _, ff in os.walk(os.path.join(src, 'ov')):
     for f in ff:
         p = os.path.join(d, f); rel = os.path.relpath(p, src)
-        if rel.startswith('ov/pitch/') and rel not in PAGE: continue  # pitchbeelden alleen als het overzicht ze gebruikt
+        if rel not in PAGE: continue  # alleen beelden die het overzicht gebruikt
         if f.endswith('.png'):
             OV[rel] = 'data:image/png;base64,' + base64.b64encode(open(p, 'rb').read()).decode(); continue
         im = Image.open(p).convert('RGB')
