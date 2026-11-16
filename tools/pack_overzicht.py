@@ -9,10 +9,12 @@ os.makedirs(OUT, exist_ok=True)
 subprocess.check_call([sys.executable, os.path.join(ROOT, 'tools/build_overzicht.py'), 'site.html', os.path.join(OUT, 'index.html'), 'ov/'])
 # beelden bundelen
 OV = {}
+PAGE = open(os.path.join(OUT, 'index.html')).read()
 src = os.path.join(ROOT, 'overzicht')
 for d, _, ff in os.walk(os.path.join(src, 'ov')):
     for f in ff:
         p = os.path.join(d, f); rel = os.path.relpath(p, src)
+        if rel.startswith('ov/pitch/') and rel not in PAGE: continue  # pitchbeelden alleen als het overzicht ze gebruikt
         if f.endswith('.png'):
             OV[rel] = 'data:image/png;base64,' + base64.b64encode(open(p, 'rb').read()).decode(); continue
         im = Image.open(p).convert('RGB')
