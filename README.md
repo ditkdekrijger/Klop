@@ -14,6 +14,7 @@ Herpositionering "Vaar je vrijheid." Alles op één plek.
 
 ```bash
 node tools/render_boards.js          # boards en componenten naar overzicht/ov/
+node tools/render_hd.js               # scherpe 2x-sheets in overzicht/hd (niet in git), nodig voor publiceren
 python3 tools/build_overzicht.py     # overzicht/index.html (sectie Code staat in tools/code_sectie.html)
 python3 tools/pack_overzicht.py      # publiceerbare versie in dist/ (beelden gebundeld, site en configurator erbij)
 # site/index.html opnieuw opbouwen vanaf de originele site, in deze volgorde:
