@@ -82,10 +82,14 @@ for i, c in enumerate(M['ds']):
     rd = e(re.sub(r'[`*_]', '', rd))[:340]
     comps += '<figure class="cp"><button class="th" data-set="ds" data-i="%d"><img src="%s%s" alt=""></button><figcaption><b>%s</b><small>%s</small><p>%s</p></figcaption></figure>' % (i, PFX, c['file'], e(c['title']), e(c['group']), rd)
 
+BEELD = [{'f': x['f'].replace('{{PFX}}', PFX), 't': x['t']} for x in json.load(open(os.path.join(ROOT, 'tools/beeld_data.json')))]
 DATA = {k: [{'f': PFX + x['file'], 't': clean(x['title'])} for x in v] for k, v in {'recap': recap, 'old': recap_old, 'brandbook': M['brandbook'], 'merk': M['merkuitingen'], 'ds': M['ds']}.items()}
 N = {'bb': len(M['brandbook']), 'mu': len(M['merkuitingen']), 'ds': len(M['ds']), 'rc': len(recap)}
 
+DATA['beeld'] = BEELD
+DATA['beelddemo'] = [{'f': PFX + 'beeld/demo-billboard.jpg', 't': 'Proef: billboard met opmaak uit het designsysteem'}]
 page = open(os.path.join(ROOT, 'tools/overzicht.template.html')).read()
+page = page.replace('{{BEELD}}', open(os.path.join(ROOT, 'tools/beeld_sectie.html')).read())
 for k, v in {
     '{{SITE}}': SITE, '{{PFX}}': PFX, '{{RECAP_MAIN}}': PFX + recap[0]['file'],
     '{{RECAP_STRIP}}': flat(recap, 'recap', 'strip'), '{{RECAP_OLD}}': flat(recap_old, 'old'),

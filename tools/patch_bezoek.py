@@ -15,5 +15,8 @@ return'<section class="phead"><div class="wrap">'+lbl(b?'Proefvaart en bezoek':'
 rep('<a class="sa" href="#/bezoek">Plan proefvaart</a>', '<a class="sa" href="#/bezoek">Plan bezoek</a>')
 # showroompagina: grote CTA is het bezoek
 rep("btn('Plan een bezoek of proefvaart','#/bezoek','solid')", "btn('Plan je bezoek','#/bezoek','solid')")
+# hoofd-CTA in de kop en in de mobiele balk: altijd een bezoek aan de showroom
+rep('<a class="btn cta" href="#/stel-samen">Configureer boot</a>', '<a class="btn cta" href="#/bezoek">Bezoek showroom</a>', 2)
+rep('<a class="go" href="#/stel-samen"><span>Configureer boot</span></a>', '<a class="go" href="#/bezoek"><span>Bezoek showroom</span></a>')
 open(p, 'w', encoding='utf-8').write(s)
 print('ok: bezoek')

@@ -182,6 +182,35 @@ table.cmp .on{background:rgba(239,169,31,.1)}table.cmp th.on{box-shadow:inset 0 
 @media(max-width:640px){.pm{grid-template-columns:110px repeat(4,minmax(150px,1fr))}}
 .pmframe{border-radius:22px;overflow:hidden;box-shadow:0 0 0 1px var(--line);background:#fff}
 .pmframe iframe{display:block;width:100%;height:1400px;border:0}
+/* beeld */
+.bsum{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.bsum div,.bth,.bsp,.bcanva>div{background:var(--card);border-radius:18px;padding:20px;box-shadow:0 0 0 1px var(--line)}
+.bsum b,.bth b,.bsp b{display:block;font-family:var(--fd);font-weight:300;font-size:48px;letter-spacing:-.04em;line-height:1}
+.bsum span,.bth span,.bsp span{display:block;margin-top:6px;font-weight:500}
+.bths{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.bth p,.bsp p,.bcanva p{font-size:14px;color:var(--mut);margin-top:6px;line-height:1.45}
+.bdemo{display:grid;grid-template-columns:1fr 1.6fr;gap:16px;align-items:start}
+.bdemo img{border-radius:12px;width:100%}.bdemo figure{margin:0}.bdemo figcaption{font-size:14.5px;color:var(--mut);margin-top:10px}.bdemo figcaption b{color:var(--fg);margin-right:6px}
+.bcanva{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.bcanva b{font-weight:600}
+.bcanva>div:last-child{box-shadow:0 0 0 2px var(--olie)}
+.bsps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.bsp{border-top:4px solid var(--c,var(--fg))}
+.sp-FOTO{--c:#14284A}.sp-SCHERM{--c:#566373}.sp-DRUK{--c:#AAB3BD}.sp-PLAAT{--c:#EFA91F}.sp-OK{--c:#9FC9A4}
+.bflt{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}.bflt button{padding:8px 14px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--line);font-size:14px}.bflt button.on{background:var(--fg);color:var(--bg)}
+table.btab{min-width:980px}table.btab td,table.btab th{padding:12px 14px;border-top:1px solid var(--line);vertical-align:top;text-align:left;font-size:14.5px}
+table.btab td{font-family:var(--fs)!important;white-space:normal!important}table.btab td.pr{white-space:nowrap!important}
+table.btab thead th{border-top:0;font-size:13px;color:var(--mut);font-weight:500}
+table.btab td:first-child{width:150px}table.btab td:first-child img{width:140px;aspect-ratio:4/3;object-fit:cover;border-radius:8px}
+table.btab td:nth-child(2) b{display:block;font-weight:600}table.btab td:nth-child(2) small{color:var(--mut)}
+table.btab td:nth-child(3){width:200px}table.btab td:last-child{color:var(--mut);max-width:380px}
+.bt{display:inline-block;font-style:normal;font-size:12px;font-weight:500;padding:2px 9px;border-radius:999px;margin:0 4px 4px 0;background:rgba(239,169,31,.18);box-shadow:inset 0 0 0 1px rgba(239,169,31,.6)}
+.sp{display:inline-block;font-size:12.5px;font-weight:500;padding:3px 10px;border-radius:999px;border-left:4px solid var(--c);background:var(--bg);box-shadow:inset 0 0 0 1px var(--line);white-space:nowrap}
+.pr{white-space:nowrap}
+.bsc{background:var(--card);border-radius:18px;padding:20px;box-shadow:0 0 0 1px var(--line);margin-top:14px}.bsc b{font-weight:600}
+.bsc pre{white-space:pre-wrap;font-family:ui-monospace,Menlo,monospace;font-size:13px;line-height:1.55;margin:10px 0;padding:14px;border-radius:12px;background:rgba(127,127,127,.08)}
+.bsc small{color:var(--mut);font-size:13.5px}
+.bscs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+@media(max-width:1040px){.bths,.bsps{grid-template-columns:repeat(2,minmax(0,1fr))}.bsum{grid-template-columns:1fr 1fr}.bcanva,.bscs,.bdemo{grid-template-columns:1fr}}
 /* lightbox */
 .lb{position:fixed;inset:0;z-index:50;background:rgba(5,12,24,.94);display:none;flex-direction:column;align-items:center;justify-content:center;padding:56px 16px 24px}
 .lb.on{display:flex}
@@ -253,6 +282,7 @@ table.cmp .on{background:rgba(239,169,31,.1)}table.cmp th.on{box-shadow:inset 0 
 <section class="sec" id="merkuitingen"><div class="wrap">
 <div class="sh"><div><span class="kick">04 · In het wild</span><h2>Merkuitingen <span class="n">{{N_MU}}</span></h2></div><p class="lead">Hoe het merk er in de praktijk uitziet: voor de klant, op locatie, online, in de campagne en onderweg.</p></div>
 {{MERK}}
+{{BEELD}}
 </div></section>
 
 <section class="sec" id="website"><div class="wrap">
@@ -283,6 +313,7 @@ document.addEventListener('click',function(e){var t=e.target.closest('[data-full
 function fsClose(){var b=document.querySelector('.browser');b.classList.remove('full');document.body.style.overflow='';if(document.fullscreenElement&&document.exitFullscreen)document.exitFullscreen().catch(function(){})}
 document.addEventListener('fullscreenchange',function(){if(!document.fullscreenElement&&document.querySelector('.browser.full'))fsClose()});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&document.querySelector('.browser.full'))fsClose()});
+document.addEventListener('click',function(e){var b=e.target.closest('[data-bf]');if(!b)return;var f=b.dataset.bf;document.querySelectorAll('[data-bf]').forEach(function(x){x.classList.toggle('on',x===b)});document.querySelectorAll('#btb tr').forEach(function(r){r.style.display=(f==='all'||(f==='p1'?r.dataset.p==='1':f==='p0'?r.dataset.p==='0':r.dataset.s===f))?'':'none'})});
 var D={{DATA}};
 var di=0,L={set:null,i:0};
 function $(s){return document.querySelector(s)}function $$(s){return Array.prototype.slice.call(document.querySelectorAll(s))}
