@@ -1,7 +1,9 @@
 // Mockups uit de aangeleverde site-schermen (bron/site-screens), in laptop en telefoon.
 const {chromium}=require('playwright');const path=require('path');const fs=require('fs');
 const ROOT=path.resolve(__dirname,'..');const SRC=path.join(ROOT,'overzicht/ov/pitch/site');const OUT=path.join(ROOT,'overzicht/ov/pitch');
-const SETS=[['mock-home','home-hero','m-home'],['mock-plp','collectie','m-collectie'],['mock-pdp','pdp','m-pdp'],['mock-keuzehulp','home-zoeker',null],['mock-premium','home-premium',null]];
+const SETS=[['mock-home','home-hero','m-home'],['mock-plp','collectie','m-collectie'],['mock-pdp','pdp','m-pdp'],['mock-keuzehulp','home-zoeker',null],['mock-premium','home-premium',null],
+ ['mock-proto-modellen','../proto/modellen-d','../proto/modellen-m'],['mock-proto-kussens','../proto/kussens-d','../proto/kussens-m'],['mock-proto-3d','../proto/3d-d','../proto/motor-m'],['mock-proto-overzicht','../proto/overzicht-d','../proto/overzicht-m']];
+// proto-schermen: node tools/proto_shots.js
 (async()=>{const b=await chromium.launch();const f=await b.newPage({viewport:{width:2400,height:1500}});
 for(const [n,dk,mb] of SETS){const u=x=>'file://'+path.join(SRC,x+'.jpg');
  const html=`<!doctype html><html><head><style>html,body{margin:0;width:2400px;height:1500px;background:linear-gradient(160deg,#F5F7F8 0%,#DDE3E8 100%);overflow:hidden}

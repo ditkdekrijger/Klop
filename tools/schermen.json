@@ -1,0 +1,155 @@
+{
+ "_uitleg": "Siteschermen (ontwerpoverzicht 16 november 2026, pdp-premium bewust weggelaten: blauw achter Klop Premium Service) en schermen van het configurator-prototype (tools/proto_shots.js).",
+ "schermen": [
+  {
+   "g": "home",
+   "file": "pitch/site/home-hero.jpg",
+   "title": "Homepage: opening, Vaar je vrijheid."
+  },
+  {
+   "g": "home",
+   "file": "pitch/site/home-zoeker.jpg",
+   "title": "Wat voor vaarder ben je? Drie keuzes en een teller"
+  },
+  {
+   "g": "home",
+   "file": "pitch/site/home-vrij.jpg",
+   "title": "Vrijheid is geen boot"
+  },
+  {
+   "g": "home",
+   "file": "pitch/site/home-premium.jpg",
+   "title": "Wij regelen het gedoe. Jij vaart."
+  },
+  {
+   "g": "home",
+   "file": "pitch/site/home-showroom.jpg",
+   "title": "4.000 m² aan het water"
+  },
+  {
+   "g": "home",
+   "file": "pitch/site/home-voorraad.jpg",
+   "title": "Op voorraad bij Klop"
+  },
+  {
+   "g": "home",
+   "file": "pitch/site/home-tijdlijn.jpg",
+   "title": "Sinds 1966 aan de Rivierdijk"
+  },
+  {
+   "g": "home",
+   "file": "pitch/site/m-home.jpg",
+   "title": "Homepage op de telefoon"
+  },
+  {
+   "g": "aanbod",
+   "file": "pitch/site/megamenu.jpg",
+   "title": "Megamenu Boten"
+  },
+  {
+   "g": "aanbod",
+   "file": "pitch/site/collectie.jpg",
+   "title": "Alle boten"
+  },
+  {
+   "g": "aanbod",
+   "file": "pitch/site/collectie-lijst.jpg",
+   "title": "Filters en horizontale bootkaarten"
+  },
+  {
+   "g": "aanbod",
+   "file": "pitch/site/soort.jpg",
+   "title": "Soortpagina"
+  },
+  {
+   "g": "aanbod",
+   "file": "pitch/site/pdp.jpg",
+   "title": "Bootpagina: galerij en koopkolom"
+  },
+  {
+   "g": "aanbod",
+   "file": "pitch/site/pdp-prijsinzicht.jpg",
+   "title": "Prijsinzicht: zo verhoudt deze boot zich"
+  },
+  {
+   "g": "aanbod",
+   "file": "pitch/site/m-collectie.jpg",
+   "title": "Bootkaart op de telefoon"
+  },
+  {
+   "g": "aanbod",
+   "file": "pitch/site/m-pdp.jpg",
+   "title": "Bootpagina op de telefoon"
+  },
+  {
+   "g": "pag",
+   "file": "pitch/site/showroom.jpg",
+   "title": "Showroom: een boot koop je niet van een foto"
+  },
+  {
+   "g": "pag",
+   "file": "pitch/site/premium-service.jpg",
+   "title": "Klop Premium Service™: na de aankoop begint het pas"
+  },
+  {
+   "g": "pag",
+   "file": "pitch/site/over-klop.jpg",
+   "title": "Over Klop"
+  },
+  {
+   "g": "proto",
+   "file": "pitch/proto/modellen-d.jpg",
+   "title": "Kies je Maxima: alle modellen met vanafprijs"
+  },
+  {
+   "g": "proto",
+   "file": "pitch/proto/romp-d.jpg",
+   "title": "Stap 1: romp en waterlijn, de boot kleurt direct mee"
+  },
+  {
+   "g": "proto",
+   "file": "pitch/proto/kussens-d.jpg",
+   "title": "Stap 2: kuip en kussens"
+  },
+  {
+   "g": "proto",
+   "file": "pitch/proto/motor-d.jpg",
+   "title": "Stap 5: motor, met de prijs per keuze"
+  },
+  {
+   "g": "proto",
+   "file": "pitch/proto/3d-d.jpg",
+   "title": "3D: draai de boot rond en bekijk hem van alle kanten"
+  },
+  {
+   "g": "proto",
+   "file": "pitch/proto/overzicht-d.jpg",
+   "title": "Overzicht: wat je koos, wat nog ontbreekt, en de offerte"
+  },
+  {
+   "g": "proto",
+   "file": "pitch/proto/modellen-m.jpg",
+   "title": "Modellen op de telefoon"
+  },
+  {
+   "g": "proto",
+   "file": "pitch/proto/romp-m.jpg",
+   "title": "Romp op de telefoon"
+  },
+  {
+   "g": "proto",
+   "file": "pitch/proto/kussens-m.jpg",
+   "title": "Kuip en kussens op de telefoon"
+  },
+  {
+   "g": "proto",
+   "file": "pitch/proto/motor-m.jpg",
+   "title": "Motor op de telefoon"
+  },
+  {
+   "g": "proto",
+   "file": "pitch/proto/overzicht-m.jpg",
+   "title": "Overzicht op de telefoon"
+  }
+ ]
+}

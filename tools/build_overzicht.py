@@ -94,9 +94,13 @@ DATA = {k: [{'f': PFX + x['file'], 't': clean(x['title'])} for x in v] for k, v 
 N = {'bb': len(M['brandbook']), 'mu': len(M['merkuitingen']), 'ds': len(M['ds']), 'rc': len(recap)}
 
 DATA['beeld'] = BEELD
+SCHERMEN = json.load(open(os.path.join(ROOT, 'tools/schermen.json')))['schermen']
+DATA['site'] = [{'f': PFX + x['file'], 't': x['title']} for x in SCHERMEN]
+def sg(g): return '<div class="grid sitegrid">' + ''.join('<button class="th" data-set="site" data-i="%d"><img loading="lazy" src="%s%s" alt=""><span>%s</span></button>' % (i, PFX, x['file'], e(x['title'])) for i, x in enumerate(SCHERMEN) if x['g'] == g) + '</div>'
 DATA['beelddemo'] = [{'f': PFX + 'beeld/demo-billboard.jpg', 't': 'Proef: billboard met opmaak uit het designsysteem'}]
 page = open(os.path.join(ROOT, 'tools/overzicht.template.html')).read()
 page = page.replace('{{CFG}}', open(os.path.join(ROOT, 'tools/configurator_sectie.html')).read())
+for k, g in {'{{SITE_HOME}}': 'home', '{{SITE_AANBOD}}': 'aanbod', '{{SITE_PAG}}': 'pag', '{{PROTO}}': 'proto'}.items(): page = page.replace(k, sg(g))
 page = page.replace('{{BEELD}}', open(os.path.join(ROOT, 'tools/beeld_sectie.html')).read())
 for k, v in {
     '{{SITE}}': SITE, '{{PFX}}': PFX, '{{RECAP_MAIN}}': PFX + recap[0]['file'],

@@ -19,6 +19,6 @@ for(const set of sets0){const dir=path.join(ROOT,'bron',set);if(!fs.existsSync(p
     await p.goto('file://'+tmp);await p.waitForLoadState('networkidle').catch(()=>{});await p.evaluate(()=>document.fonts.ready);await p.waitForTimeout(200);
     await p.screenshot({path:path.join(OUT,set,f.replace('.dc.html','')+'.jpg'),type:'jpeg',quality:80});fs.unlinkSync(tmp);n++}}
 // pitchbeelden (siteschermen en mockups) zijn al groot genoeg: ongewijzigd kopiëren
-const PS=path.join(ROOT,'overzicht/ov/pitch');for(const sub of ['','site']){const d=path.join(PS,sub);fs.mkdirSync(path.join(OUT,'pitch',sub),{recursive:true});
+const PS=path.join(ROOT,'overzicht/ov/pitch');for(const sub of ['','site','proto']){const d=path.join(PS,sub);fs.mkdirSync(path.join(OUT,'pitch',sub),{recursive:true});
   for(const f of fs.readdirSync(d))if(/\.jpg$/.test(f)&&!/-lang\.jpg$/.test(f)){fs.copyFileSync(path.join(d,f),path.join(OUT,'pitch',sub,f));n++}}
 await b.close();console.log('hd',n)})();

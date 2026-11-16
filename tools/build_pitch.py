@@ -8,15 +8,7 @@ tpl_over = open(os.path.join(ROOT, 'tools/overzicht.template.html')).read()
 CSS = tpl_over[tpl_over.index('<style>') + 7: tpl_over.index('</style>')]
 def clean(t):
     t = re.sub(r'^(B?\d+[a-z]?\s+)+', '', t); return re.sub(r'^M\d+[a-z]?\s+', '', t)
-# Aangeleverde siteschermen (ontwerpoverzicht 16 november 2026). pdp-premium staat er bewust niet in: blauwe achtergrond achter Klop Premium Service.
-SITE = [('home', 'home-hero', 'Homepage: opening, Vaar je vrijheid.'), ('home', 'home-zoeker', 'Wat voor vaarder ben je? Drie keuzes en een teller'),
- ('home', 'home-vrij', 'Vrijheid is geen boot'), ('home', 'home-premium', 'Wij regelen het gedoe. Jij vaart.'),
- ('home', 'home-showroom', '4.000 m² aan het water'), ('home', 'home-voorraad', 'Op voorraad bij Klop'), ('home', 'home-tijdlijn', 'Sinds 1966 aan de Rivierdijk'),
- ('home', 'm-home', 'Homepage op de telefoon'),
- ('aanbod', 'megamenu', 'Megamenu Boten'), ('aanbod', 'collectie', 'Alle boten'), ('aanbod', 'collectie-lijst', 'Filters en horizontale bootkaarten'),
- ('aanbod', 'soort', 'Soortpagina'), ('aanbod', 'pdp', 'Bootpagina: galerij en koopkolom'), ('aanbod', 'pdp-prijsinzicht', 'Prijsinzicht: zo verhoudt deze boot zich'),
- ('aanbod', 'm-collectie', 'Bootkaart op de telefoon'), ('aanbod', 'm-pdp', 'Bootpagina op de telefoon'),
- ('pag', 'showroom', 'Showroom: een boot koop je niet van een foto'), ('pag', 'premium-service', 'Klop Premium Service™: na de aankoop begint het pas'), ('pag', 'over-klop', 'Over Klop')]
+SCHERMEN = json.load(open(os.path.join(ROOT, 'tools/schermen.json')))['schermen']
 def hd_list():
     """Relatieve paden van de scherpe (2x) beelden in overzicht/hd (gemaakt met tools/render_hd.js)."""
     base = os.path.join(ROOT, 'overzicht/hd'); out = []
@@ -31,14 +23,14 @@ def build(pfx, hdp='hd/'):
     strip = '<div class="strip">' + ''.join(th('recap', i, x) for i, x in enumerate(recap)) + '</div>'
     bb = '<div class="grid">' + ''.join(th('brandbook', i, x) for i, x in enumerate(M['brandbook'])) + '</div>'
     mu = '<div class="grid">' + ''.join(th('merk', i, x) for i, x in enumerate(M['merkuitingen'])) + '</div>'
-    site = [dict(file='pitch/site/%s.jpg' % f, title=t, g=g) for g, f, t in SITE]
+    site = SCHERMEN
     def sg(g): return '<div class="grid sitegrid">' + ''.join(th('site', i, x) for i, x in enumerate(site) if x['g'] == g) + '</div>'
     code = open(os.path.join(ROOT, 'tools/code_sectie.html')).read()
     code = code[code.index('<div class="cx">'): code.rindex('</div></section>')]
     data = {k: [{'f': pfx + x['file'], 't': clean(x['title'])} for x in v] for k, v in {'recap': recap, 'brandbook': M['brandbook'], 'merk': M['merkuitingen'], 'site': site}.items()}
     page = open(os.path.join(ROOT, 'tools/pitch.template.html')).read()
     for k, v in {'{{CSS}}': CSS, '{{RECAP_STRIP}}': strip, '{{BB_GRID}}': bb, '{{MU_GRID}}': mu, '{{CODE_BODY}}': code,
-                 '{{DATA}}': json.dumps(data, ensure_ascii=False), '{{HD}}': json.dumps(hd_list()), '{{HDP}}': hdp, '{{N_BB}}': str(len(M['brandbook'])), '{{N_MU}}': str(len(M['merkuitingen'])), '{{SITE_HOME}}': sg('home'), '{{SITE_AANBOD}}': sg('aanbod'), '{{SITE_PAG}}': sg('pag')}.items():
+                 '{{DATA}}': json.dumps(data, ensure_ascii=False), '{{HD}}': json.dumps(hd_list()), '{{HDP}}': hdp, '{{N_BB}}': str(len(M['brandbook'])), '{{N_MU}}': str(len(M['merkuitingen'])), '{{SITE_HOME}}': sg('home'), '{{SITE_AANBOD}}': sg('aanbod'), '{{SITE_PAG}}': sg('pag'), '{{PROTO}}': sg('proto')}.items():
         page = page.replace(k, v)
     page = page.replace('{{PFX}}', pfx)
     assert '{{' not in page, re.findall(r'\{\{\w+\}\}', page)
@@ -55,7 +47,7 @@ if '--dist' in sys.argv:
     for rel in used:
         p = os.path.join(ROOT, 'overzicht/ov', rel)
         if rel.endswith('.png'): OV['ov/' + rel] = 'data:image/png;base64,' + base64.b64encode(open(p, 'rb').read()).decode(); continue
-        im = Image.open(p).convert('RGB'); w = 1200 if '-lang' in rel else (1600 if ('pitch/mock' in rel or 'pitch/site/' in rel) else 1280)
+        im = Image.open(p).convert('RGB'); w = 1200 if '-lang' in rel else (1600 if ('pitch/mock' in rel or 'pitch/site/' in rel or 'pitch/proto/' in rel) else 1280)
         if im.width > w: im = im.resize((w, round(im.height * w / im.width)), Image.LANCZOS)
         b = io.BytesIO(); im.save(b, 'JPEG', quality=70, optimize=True, progressive=True)
         OV['ov/' + rel] = 'data:image/jpeg;base64,' + base64.b64encode(b.getvalue()).decode()
