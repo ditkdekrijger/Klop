@@ -55,7 +55,7 @@ if '--dist' in sys.argv:
     for rel in used:
         p = os.path.join(ROOT, 'overzicht/ov', rel)
         if rel.endswith('.png'): OV['ov/' + rel] = 'data:image/png;base64,' + base64.b64encode(open(p, 'rb').read()).decode(); continue
-        im = Image.open(p).convert('RGB'); w = 1200 if '-lang' in rel else (1600 if ('pitch/mock' in rel or 'pitch/site/' in rel or 'pitch/proto/' in rel) else 1280)
+        im = Image.open(p).convert('RGB'); w = 2400 if rel == 'opening.jpg' else 1200 if '-lang' in rel else (1600 if ('pitch/mock' in rel or 'pitch/site/' in rel or 'pitch/proto/' in rel) else 1280)
         if im.width > w: im = im.resize((w, round(im.height * w / im.width)), Image.LANCZOS)
         b = io.BytesIO(); im.save(b, 'JPEG', quality=70, optimize=True, progressive=True)
         OV['ov/' + rel] = 'data:image/jpeg;base64,' + base64.b64encode(b.getvalue()).decode()

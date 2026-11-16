@@ -9,8 +9,8 @@
 /* ===== pitch ===== */
 body{overflow-x:hidden}
 .pt-hero{background:var(--nacht);color:#fff;position:relative;overflow:hidden}
-.pt-hero .bgimg{position:absolute;inset:0;background-size:cover;background-position:60% 50%;opacity:.5}
-.pt-hero .bgimg:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--nacht) 0%,rgba(11,25,48,.8) 45%,rgba(11,25,48,.25) 100%)}
+.pt-hero .bgimg{position:absolute;inset:0;background-size:cover;background-position:75% 40%;opacity:1}
+.pt-hero .bgimg:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,25,48,.9) 0%,rgba(11,25,48,.55) 42%,rgba(11,25,48,0) 75%),linear-gradient(0deg,rgba(11,25,48,.7) 0%,rgba(11,25,48,0) 40%)}
 .pt-hero .wrap{position:relative;padding-top:clamp(48px,8vh,96px);padding-bottom:clamp(40px,6vh,72px)}
 .pt-hero .kick{color:var(--chroom)}
 .pt-hero h1{font-size:clamp(46px,7.4vw,112px);letter-spacing:-.045em;line-height:.95;margin:20px 0 20px}
@@ -92,11 +92,12 @@ article.blk{display:none}article.blk.on{display:block}
 .sitegrid{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
 .sitegrid .th img{aspect-ratio:16/10;object-fit:cover;object-position:top}
 img{cursor:zoom-in}#lb img,.bar img,header img,nav img,.th img,.logos img,.lg img{cursor:default}.th img{cursor:pointer}
+@media(max-width:700px){.pt-hero .bgimg{background-position:70% 30%}.pt-hero .bgimg:after{background:linear-gradient(180deg,rgba(11,25,48,.78) 0%,rgba(11,25,48,.7) 55%,rgba(11,25,48,.9) 100%)}}
 </style></head><body>
 
-<section class="pt-hero"><div class="bgimg" style="background-image:url('{{PFX}}cover-showroom.jpg')"></div><div class="wrap">
+<section class="pt-hero"><div class="bgimg" style="background-image:url('{{PFX}}opening.jpg')"></div><div class="wrap">
 <span class="kick">Klop Watersport · pitch voor Leendert Klop · versie 2</span>
-<h1>Vaar je<br>vrijheid.</h1>
+<h1>Klop<br>merkstrategie-<br>traject</h1>
 <p class="lead">Alles wat we voor Klop maken, in tien bouwblokken: het verhaal, het merk, de site, de keuzehulp, de configurator, de techniek en de aanpak. Klik een blok open.</p>
 <div class="btnrow" style="margin-top:28px"><button class="btn s pt-start" data-open="1" data-fs="1">Start presentatie ⤢</button><span class="cap" style="color:var(--chroom);align-self:center">Opent schermvullend. Pijltjes om te bladeren, Esc om terug te gaan.</span></div>
 <div class="pt-meta"><span>Merk en brandbook</span><span>Powermarketing</span><span>Site en mockups</span><span>Keuzehulp en configurator</span><span>CODE: WordPress, CRM, koppelingen</span></div>

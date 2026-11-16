@@ -18,7 +18,7 @@ for d, _, ff in os.walk(os.path.join(src, 'ov')):
         if f.endswith('.png'):
             OV[rel] = 'data:image/png;base64,' + base64.b64encode(open(p, 'rb').read()).decode(); continue
         im = Image.open(p).convert('RGB')
-        W = 800 if rel.startswith(('ov/pitch/site/', 'ov/pitch/proto/')) else 1200  # schermen: klein in de galerij, scherp via hd/
+        W = 2400 if rel == 'ov/opening.jpg' else 800 if rel.startswith(('ov/pitch/site/', 'ov/pitch/proto/')) else 1200  # schermen: klein in de galerij, scherp via hd/
         if im.width > W: im = im.resize((W, round(im.height * W / im.width)), Image.LANCZOS)
         b = io.BytesIO(); im.save(b, 'JPEG', quality=72, optimize=True, progressive=True)
         OV[rel] = 'data:image/jpeg;base64,' + base64.b64encode(b.getvalue()).decode()
@@ -26,7 +26,7 @@ open(os.path.join(OUT, 'ov.js'), 'w').write('window.OV=' + json.dumps(OV) + ';')
 # index: beelden pas laden na ov.js
 h = open(os.path.join(OUT, 'index.html')).read()
 h = h.replace(' src="ov/', ' data-ov="ov/')
-h = h.replace("style=\"background-image:url('ov/cover-showroom.jpg')\"", 'data-bg="ov/cover-showroom.jpg"')
+h = h.replace("style=\"background-image:url('ov/opening.jpg')\"", 'data-bg="ov/opening.jpg"')
 assert h.count('deck(0);\n</script>') == 1
 h = h.replace('deck(0);\n</script>', '''</script><script src="ov.js"></script><script>(function(){function R(p){return(window.OV&&OV[p])||p}
 document.querySelectorAll('img[data-ov]').forEach(function(i){i.src=R(i.dataset.ov)});
