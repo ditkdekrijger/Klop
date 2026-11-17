@@ -1,0 +1,126 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8">
+<!-- Merkuiting M26g: voorbeeld digitale campagne. Gerenderd met tools/render_campagne.js. {{B}} = map bron/campagne, {{O}} = overzicht/ov -->
+<link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Funnel+Sans:wght@300..800&display=swap" rel="stylesheet">
+<style>
+:root{--n:#0B1930;--g:#EFA91F;--m:#AAB3BD}
+*{box-sizing:border-box}
+html,body{margin:0;width:1600px;height:900px;overflow:hidden;background:#0B1930;color:#fff;font-family:'Funnel Sans',Arial,sans-serif}
+.top{position:absolute;left:64px;right:64px;top:40px;display:flex;justify-content:space-between;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--m);padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.18)}
+.txt{position:absolute;left:64px;top:118px;width:380px}
+.txt h1{font-family:'Funnel Display',Arial,sans-serif;font-weight:300;font-size:52px;line-height:1.02;letter-spacing:-.025em;margin:0 0 10px}
+.txt .sub{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--m);margin-bottom:22px}
+.txt p{font-size:14.5px;line-height:1.55;color:#DDE3E8;margin:0 0 20px}
+.txt ul{list-style:none;margin:0;padding:0;border-top:1px solid rgba(255,255,255,.18)}
+.txt li{font-size:12.5px;line-height:1.45;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.18);color:#DDE3E8}
+.txt li b{color:#fff}
+.foot{position:absolute;left:64px;bottom:40px;font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--m);line-height:1.8}
+/* advertentie-elementen */
+.ad{position:relative;overflow:hidden;background:#0B1930 center/cover no-repeat}
+.ad:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,25,48,.55) 0%,rgba(11,25,48,0) 38%,rgba(11,25,48,0) 55%,rgba(11,25,48,.7) 100%)}
+.ad .lg{position:absolute;z-index:1}
+.ad .q{position:absolute;z-index:1;font-family:'Funnel Display',Arial,sans-serif;font-weight:400;letter-spacing:-.02em;line-height:1.02;color:#fff}
+.lab{position:absolute;z-index:1;background:var(--g);color:var(--n);font-weight:700;letter-spacing:-.005em;white-space:nowrap;box-shadow:0 6px 18px -8px rgba(0,0,0,.5)}
+.afz{position:absolute;z-index:1;color:rgba(255,255,255,.85);font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+/* telefoons */
+.ph{position:absolute;width:262px;height:540px;border-radius:40px;background:#05080F;padding:10px;box-shadow:0 40px 80px -30px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.08)}
+.ph .s{width:100%;height:100%;border-radius:31px;overflow:hidden;background:#fff;position:relative;color:#111}
+.ph .s:after{content:"";position:absolute;left:50%;top:8px;width:74px;height:20px;margin-left:-37px;border-radius:12px;background:#05080F}
+.ig-h{display:flex;align-items:center;gap:8px;padding:38px 12px 8px;font-size:11px}
+.av{width:26px;height:26px;border-radius:50%;background:#0B1930 url({{O}}/klop-logo-wit.png) center/80% no-repeat;flex:none}
+.ig-h b{font-size:11px}.ig-h small{display:block;font-size:9px;color:#666}
+.ig-cta{display:flex;justify-content:space-between;align-items:center;padding:9px 12px;font-size:11px;font-weight:700;background:#0B1930;color:#fff}
+.ig-a{padding:8px 12px;font-size:10.5px;line-height:1.4;color:#222}.ig-a b{color:#111}
+.ico{display:flex;gap:12px;padding:8px 12px 0;font-size:15px}
+/* story */
+.st .s{background:#000}
+.st .ad{position:absolute;inset:0}
+.bar{position:absolute;z-index:2;left:12px;right:12px;top:36px;height:2px;background:rgba(255,255,255,.35);border-radius:2px}.bar i{display:block;width:45%;height:100%;background:#fff;border-radius:2px}
+.sth{position:absolute;z-index:2;left:12px;top:46px;display:flex;align-items:center;gap:7px;font-size:10.5px;color:#fff}.sth b{font-size:10.5px}.sth small{opacity:.8}
+.swipe{position:absolute;z-index:2;left:50%;bottom:22px;transform:translateX(-50%);background:#fff;color:#0B1930;font-size:10.5px;font-weight:700;padding:8px 14px;border-radius:999px;white-space:nowrap}
+/* kaarten rechts */
+.card{position:absolute;background:#fff;color:#111;border-radius:10px;box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
+.tag{position:absolute;font-size:9.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--m)}
+.srch{padding:14px 16px;font-family:Arial,sans-serif}
+.srch .sp{font-size:10.5px;color:#202124;display:flex;align-items:center;gap:6px}.srch .sp b{font-weight:700}
+.srch .u{font-size:10.5px;color:#4d5156;margin:1px 0 4px}
+.srch h4{margin:0 0 4px;font-size:15px;font-weight:400;color:#1a0dab;line-height:1.25}
+.srch p{margin:0;font-size:11px;color:#4d5156;line-height:1.45}
+.srch .sl{display:flex;gap:14px;margin-top:7px;font-size:11px;color:#1a0dab}
+.li-h{display:flex;align-items:center;gap:8px;padding:10px 12px;font-size:10.5px}.li-h small{display:block;color:#666;font-size:9px}
+.li-t{padding:0 12px 8px;font-size:10.5px;line-height:1.4;color:#222}
+.li-b{display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:#F3F2EF;font-size:10px}.li-b b{font-size:11px}.li-b span{border:1px solid #0A66C2;color:#0A66C2;border-radius:999px;padding:4px 10px;font-weight:700}
+</style></head><body>
+<div class="top"><span>M26g · 06 Communicatie &amp; kanalen · Campagne digitaal</span><span>Klop merkuitingen · voorbeeld</span></div>
+
+<div class="txt">
+<h1>Campagne: digitaal</h1>
+<div class="sub">Eén vraag, één antwoord, één geel label</div>
+<p>Online draait de serie op vijf plekken. Elke uiting stelt een vraag over een stuk gedoe en geeft hetzelfde antwoord: Geregeld. Jij vaart. De foto is rustig en echt, het gele label is het enige geel.</p>
+<ul>
+<li><b>Social:</b> feedpost en story voor bereik, één vraag per beeld</li>
+<li><b>Display:</b> herkenning op nieuwssites en vaarblogs</li>
+<li><b>LinkedIn:</b> voor ondernemers met een boot</li>
+<li><b>Zoeken:</b> de service in de kop, het bewijs in de tekst</li>
+<li><b>Retargeting:</b> wie een boot bekeek, ziet die boot met het label</li>
+</ul>
+</div>
+<div class="foot">Klantreis: oriënteren en kijken<br>Kernwaarde: vrijheid</div>
+
+<!-- Instagram-feedpost -->
+<div class="tag" style="left:500px;top:110px">Instagram · feed 4:5</div>
+<div class="ph" style="left:500px;top:132px"><div class="s">
+ <div class="ig-h"><span class="av"></span><span><b>klopwatersport</b><small>Gesponsord</small></span></div>
+ <div class="ad" style="height:262px;background-image:url({{B}}/e0147ac5e9debb7ebf3c7ba0a32f9a42.jpg);background-position:center 60%">
+  <div class="q" style="left:14px;top:14px;font-size:25px">De winter&shy;stalling?</div>
+  <div class="lab" style="left:14px;top:84px;font-size:12px;padding:6px 9px">Geregeld. Jij vaart.</div>
+  <div class="afz" style="left:14px;bottom:12px;font-size:7.5px">Klop Premium Service™</div>
+ </div>
+ <div class="ig-cta"><span>Meer informatie</span><span>›</span></div>
+ <div class="ico">♡ <span>◯</span> <span>➤</span></div>
+ <div class="ig-a"><b>klopwatersport</b> Droog, op een vaste plek en in het voorjaar klaar om te varen. Zo gaat dat bij elke boot van Klop.</div>
+</div></div>
+
+<!-- Instagram-story -->
+<div class="tag" style="left:790px;top:110px">Instagram · story 9:16</div>
+<div class="ph st" style="left:790px;top:132px"><div class="s">
+ <div class="ad" style="background-image:url({{B}}/8aabb19b0d73f3c3b184ca7f9f878534.jpg);background-position:62% center">
+  <div class="q" style="left:18px;top:96px;font-size:34px">Het onder&shy;houd?</div>
+  <div class="lab" style="left:18px;top:178px;font-size:14px;padding:7px 10px">Geregeld. Jij vaart.</div>
+  <div class="afz" style="left:18px;bottom:70px;font-size:8px">Klop Premium Service™ · sinds 1966</div>
+ </div>
+ <div class="bar"><i></i></div>
+ <div class="sth"><span class="av" style="width:22px;height:22px"></span><b>klopwatersport</b><small>Gesponsord</small></div>
+ <div class="swipe">Zo werkt het ›</div>
+</div></div>
+
+<!-- Display 300x250 -->
+<div class="tag" style="left:1086px;top:110px">Display · 300×250</div>
+<div class="card" style="left:1086px;top:132px;width:300px;height:250px;overflow:hidden;border-radius:4px">
+ <div class="ad" style="position:absolute;inset:0;background-image:url({{B}}/9e6b71a8a9036ccd73a39ab12bf23025.jpg);background-position:center 55%">
+  <div class="q" style="left:16px;top:16px;font-size:26px">Halen en<br>brengen?</div>
+  <div class="lab" style="left:16px;top:84px;font-size:12px;padding:6px 9px">Geregeld. Jij vaart.</div>
+  <img class="lg" src="{{O}}/klop-logo-wit.png" style="right:12px;bottom:10px;height:30px" alt="">
+  <div class="afz" style="left:16px;bottom:16px;font-size:7.5px">Klop Premium Service™</div>
+ </div>
+</div>
+
+<!-- LinkedIn -->
+<div class="tag" style="left:1086px;top:404px">LinkedIn · 1,91:1</div>
+<div class="card" style="left:1086px;top:426px;width:450px;overflow:hidden">
+ <div class="li-h"><span class="av"></span><span><b>Klop Watersport</b><small>Gepromoot</small></span></div>
+ <div class="li-t">Je hebt al genoeg te regelen. Je boot niet: onderhoud, stalling en halen en brengen, met één aanspreekpunt.</div>
+ <div class="ad" style="height:188px;background-image:url({{B}}/2582682309115e935f1ed28ab5828a09.jpg);background-position:center 62%">
+  <div class="q" style="left:16px;top:16px;font-size:26px">Weer een<br>agenda vol?</div>
+  <div class="lab" style="left:16px;top:84px;font-size:12px;padding:6px 9px">Geregeld. Jij vaart.</div>
+ </div>
+ <div class="li-b"><b>Klop Premium Service™</b><span>Meer informatie</span></div>
+</div>
+
+<!-- Google zoekadvertentie -->
+<div class="tag" style="left:1086px;top:752px">Google · zoekadvertentie</div>
+<div class="card srch" style="left:1086px;top:772px;width:450px">
+ <div class="sp"><b>Gesponsord</b> · klopwatersport.nl</div>
+ <h4>Sloep kopen? | Onderhoud, stalling en service geregeld</h4>
+ <p>212 boten in de showroom aan de Rivierdijk. Bij elke boot Klop Premium Service™: één aanspreekpunt, sinds 1966.</p>
+</div>
+</body></html>

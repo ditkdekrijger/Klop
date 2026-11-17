@@ -9,14 +9,16 @@ CSS = tpl_over[tpl_over.index('<style>') + 7: tpl_over.index('</style>')]
 def clean(t):
     t = re.sub(r'^(B?\d+[a-z]?\s+)+', '', t); return re.sub(r'^M\d+[a-z]?\s+', '', t)
 SCHERMEN = json.load(open(os.path.join(ROOT, 'tools/schermen.json')))['schermen']
+MU_CAMP = ('merkuitingen/m26g-campagne-digitaal.jpg', 'Campagne: digitaal, voorbeeld')
 MU_TOP = ['merkuitingen/m08-het-gele-label.jpg', 'merkuitingen/m18-overdracht.jpg', 'merkuitingen/m16-oliegoed.jpg', 'merkuitingen/m13-servicehaven.jpg', 'merkuitingen/m26-campagne.jpg']
 def mu_overzicht(pfx):
     t = {x['file']: x['title'] for x in M['merkuitingen']}
     top = '<div class="mutop">' + ''.join('<button class="th" data-set="mutop" data-i="%d"><img loading="lazy" src="%s%s" alt=""><span>%s</span></button>' % (i, pfx, f, html.escape(clean(t[f]))) for i, f in enumerate(MU_TOP)) + '</div>'
-    return open(os.path.join(ROOT, 'tools/mu_overzicht.html')).read().replace('{{MU_TOP}}', top)
+    camp = '<div class="mucamp"><button class="th" data-set="mutop" data-i="%d"><img loading="lazy" src="%s%s" alt="Voorbeeld digitale campagne"><span>%s</span></button></div>' % (len(MU_TOP), pfx, MU_CAMP[0], MU_CAMP[1])
+    return open(os.path.join(ROOT, 'tools/mu_overzicht.html')).read().replace('{{MU_TOP}}', top).replace('{{MU_CAMP}}', camp)
 def mu_data(pfx):
     t = {x['file']: x['title'] for x in M['merkuitingen']}
-    return [{'f': pfx + f, 't': clean(t[f])} for f in MU_TOP]
+    return [{'f': pfx + f, 't': clean(t[f])} for f in MU_TOP] + [{'f': pfx + MU_CAMP[0], 't': MU_CAMP[1]}]
 def hd_list():
     """Relatieve paden van de scherpe (2x) beelden in overzicht/hd (gemaakt met tools/render_hd.js)."""
     base = os.path.join(ROOT, 'overzicht/hd'); out = []
@@ -35,7 +37,7 @@ def build(pfx, hdp='hd/'):
     def sg(g): return '<div class="grid sitegrid">' + ''.join(th('site', i, x) for i, x in enumerate(site) if x['g'] == g) + '</div>'
     code = open(os.path.join(ROOT, 'tools/code_sectie.html')).read()
     code = code[code.index('<div class="cx">'): code.rindex('</div></section>')]
-    data = {k: [{'f': pfx + x['file'], 't': clean(x['title'])} for x in v] for k, v in {'recap': recap, 'brandbook': M['brandbook'], 'site': site, 'mutop': [next(x for x in M['merkuitingen'] if x['file'] == f) for f in MU_TOP]}.items()}
+    data = {k: [{'f': pfx + x['file'], 't': clean(x['title'])} for x in v] for k, v in {'recap': recap, 'brandbook': M['brandbook'], 'site': site, 'mutop': [next(x for x in M['merkuitingen'] if x['file'] == f) for f in MU_TOP] + [{'file': MU_CAMP[0], 'title': MU_CAMP[1]}]}.items()}
     page = open(os.path.join(ROOT, 'tools/pitch.template.html')).read()
     for k, v in {'{{CSS}}': CSS, '{{RECAP_STRIP}}': strip, '{{BB_GRID}}': bb, '{{MU_GRID}}': mu, '{{CODE_BODY}}': code,
                  '{{DATA}}': json.dumps(data, ensure_ascii=False), '{{HD}}': json.dumps(hd_list()), '{{HDP}}': hdp, '{{N_BB}}': str(len(M['brandbook'])), '{{N_MU}}': str(len(M['merkuitingen'])), '{{MU_OVERZICHT}}': mu_overzicht(pfx), '{{SITE_HOME}}': sg('home'), '{{SITE_AANBOD}}': sg('aanbod'), '{{SITE_PAG}}': sg('pag'), '{{PROTO}}': sg('proto')}.items():

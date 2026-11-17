@@ -90,14 +90,16 @@ def hd_list():
         out += [os.path.relpath(os.path.join(d, f), base) for f in ff if f.endswith('.jpg')]
     return sorted(out)
 
+MU_CAMP = ('merkuitingen/m26g-campagne-digitaal.jpg', 'Campagne: digitaal, voorbeeld')
 MU_TOP = ['merkuitingen/m08-het-gele-label.jpg', 'merkuitingen/m18-overdracht.jpg', 'merkuitingen/m16-oliegoed.jpg', 'merkuitingen/m13-servicehaven.jpg', 'merkuitingen/m26-campagne.jpg']
 def mu_overzicht(pfx):
     t = {x['file']: x['title'] for x in M['merkuitingen']}
     top = '<div class="mutop">' + ''.join('<button class="th" data-set="mutop" data-i="%d"><img loading="lazy" src="%s%s" alt=""><span>%s</span></button>' % (i, pfx, f, html.escape(clean(t[f]))) for i, f in enumerate(MU_TOP)) + '</div>'
-    return open(os.path.join(ROOT, 'tools/mu_overzicht.html')).read().replace('{{MU_TOP}}', top)
+    camp = '<div class="mucamp"><button class="th" data-set="mutop" data-i="%d"><img loading="lazy" src="%s%s" alt="Voorbeeld digitale campagne"><span>%s</span></button></div>' % (len(MU_TOP), pfx, MU_CAMP[0], MU_CAMP[1])
+    return open(os.path.join(ROOT, 'tools/mu_overzicht.html')).read().replace('{{MU_TOP}}', top).replace('{{MU_CAMP}}', camp)
 def mu_data(pfx):
     t = {x['file']: x['title'] for x in M['merkuitingen']}
-    return [{'f': pfx + f, 't': clean(t[f])} for f in MU_TOP]
+    return [{'f': pfx + f, 't': clean(t[f])} for f in MU_TOP] + [{'f': pfx + MU_CAMP[0], 't': MU_CAMP[1]}]
 DATA = {k: [{'f': PFX + x['file'], 't': clean(x['title'])} for x in v] for k, v in {'recap': recap, 'old': recap_old, 'brandbook': M['brandbook'], 'ds': M['ds']}.items()}
 N = {'bb': len(M['brandbook']), 'mu': len(M['merkuitingen']), 'ds': len(M['ds']), 'rc': len(recap)}
 
