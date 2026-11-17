@@ -344,6 +344,18 @@ img{cursor:zoom-in}#lb img,.bar img,header img,nav img,.th img,.logos img,.lg im
 .pm-t td:nth-child(2) i{background:#EFA91F}.pm-t tr.tot td span{font-size:15px;color:var(--nacht);font-weight:700}.pm-t tr.tot th{color:var(--mut)}
 .plan col.c0{width:160px}
 .plan td:nth-child(2){font-family:inherit;font-size:13.5px;white-space:normal}
+.pgrid{display:grid;grid-template-columns:64px repeat(4,minmax(0,1fr));gap:6px;width:100%}
+.pgc{position:relative;min-height:74px;border-radius:12px;background:#fff;box-shadow:inset 0 0 0 1px var(--line);padding:9px 10px;font-size:11.5px;line-height:1.3;color:var(--mut)}
+.pgc.pgh{min-height:0;background:var(--nacht);color:#fff;box-shadow:none;font-size:11px;font-weight:600;padding:9px 10px}.pgc.pgh:first-child{background:none}
+.pgc.pgp{background:none;box-shadow:none;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--nacht);padding:9px 0;writing-mode:horizontal-tb}
+.pgc.on{background:#FFF1CF;box-shadow:inset 0 0 0 1.5px #EFA91F;color:var(--nacht)}
+.pgc i,.pg-leg i,.plan2 tbody th i{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--nacht);color:#fff;font-style:normal;font-size:11px;font-weight:700;margin:6px 4px 0 0}
+.pgc span{display:block}
+.pg-leg{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:6px}.pg-leg li{display:flex;align-items:center;gap:8px;font-size:15px;color:var(--nacht)}.pg-leg i{margin:0}
+.plan2 col.c0{width:210px}.plan2 tbody th{font-size:15px}.plan2 tbody th i{margin:0 6px 0 0;vertical-align:-3px}
+.plan2 .chips{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px}.plan2 .chips span{font-size:10px;font-weight:600;letter-spacing:.04em;background:#FFF1CF;color:var(--nacht);border-radius:999px;padding:3px 7px}
+.plan2 td{font-size:13.5px;color:var(--nacht)}
+@media(max-width:700px){.pgrid{grid-template-columns:48px repeat(4,minmax(0,1fr));gap:4px}.pgc{min-height:58px;font-size:9.5px;padding:6px}.pgc.pgh{font-size:9px;padding:6px}}
 </style></head><body>
 
 <section class="pt-hero"><div class="bgimg" style="background-image:url('../overzicht/ov/opening.jpg')"></div><div class="wrap">
@@ -365,7 +377,7 @@ img{cursor:zoom-in}#lb img,.bar img,header img,nav img,.th img,.logos img,.lg im
 <button class="pt-card w8 y" data-open="8"><span class="op">⤢</span><span class="im" style="background-image:url('../overzicht/ov/pitch/mock-proto.jpg')"></span><span class="tx"><small>08 · Samenstellen</small><b>Configurator</b><p>Alle Maxima-modellen en de andere merken. Met app-prototype in 3D.</p></span></button>
 <button class="pt-card w6" data-open="9"><span class="op">⤢</span><span class="im" style="background-image:url('../overzicht/ov/pitch/arch.jpg');background-size:contain;background-repeat:no-repeat;background-position:center;background-color:#fff"></span><span class="tx"><small>09 · De techniek</small><b>CODE</b><p>WordPress, SEO en GEO, CRM en de koppelingen.</p></span></button>
 <button class="pt-card w6" data-open="10"><span class="op">⤢</span><span class="im" style="background-image:url('../overzicht/ov/merkuitingen/m13-servicehaven.jpg')"></span><span class="tx"><small>10 · Zo verder</small><b>De aanpak</b><p>Vier fases, en wat we van Klop nodig hebben.</p></span></button>
-<button class="pt-card w12 y" data-open="11"><span class="op">⤢</span><span class="im" style="background-image:url('../overzicht/ov/opening.jpg')"></span><span class="tx"><small>11 · Aanbieding</small><b>Extra inzet in 2027</b><p>Merk, site, SEO en GEO, CRM en Maxima: de planning vanaf december, in dagen per kwartaal.</p></span></button>
+<button class="pt-card w12 y" data-open="11"><span class="op">⤢</span><span class="im" style="background-image:url('../overzicht/ov/opening.jpg')"></span><span class="tx"><small>11 · Aanbieding</small><b>Extra inzet in 2027</b><p>Merk, site, SEO en GEO, CRM en Maxima: de planning vanaf december, geplot op de Powermarketing-grid.</p></span></button>
 </div></main>
 
 <div class="pv" id="pv" role="dialog" aria-modal="true" aria-label="Bouwblok">
@@ -574,52 +586,22 @@ img{cursor:zoom-in}#lb img,.bar img,header img,nav img,.th img,.logos img,.lg im
 <div class="pts" style="margin-top:28px"><div><small>Nodig van Klop</small><b>Eén set feiten</b><p>Brandbook: 5.000 m² en 15 merken. Site: 4.000 m² en 13 merken. Welke klopt?</p></div><div><small>Nodig van Klop</small><b>Een fotodag</b><p>Gevel, showroom, haven, werkplaats en Vrijheidsvaarders, met toestemming.</p></div><div><small>Nodig van Klop</small><b>Adres en postcode</b><p>Rivierdijk 27a: 3372 BG of BE? Overal gelijk voor vindbaarheid.</p></div><div><small>Nodig van Klop</small><b>Toegang</b><p>Huidige site, voorraadbron en het systeem waarin nu offertes staan.</p></div></div>
 </div></article>
 
-<article class="blk" data-n="11" data-t="Aanbieding 2027"><div class="sl"><div class="sl-t"><span class="kick">11 · Aanbieding</span><h2>Extra inzet in 2027, met een start in december.</h2><p class="lead">Vijf gebieden, één planning. We beginnen deze maand met de voorbereiding, zodat de nieuwe site en de campagne er staan als het vaarseizoen begint.</p><p class="cap">Inzet in dagen, indicatief. Per kwartaal sturen we samen bij.</p></div><div class="sl-v"><div class="plan-mini"><table class="pm-t"><tr><th></th><th>Dec</th><th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th></tr><tr><th>Merk Klop</th><td><i style="--v:0.13"></i><span>4</span></td><td><i style="--v:0.47"></i><span>14</span></td><td><i style="--v:0.40"></i><span>12</span></td><td><i style="--v:0.27"></i><span>8</span></td><td><i style="--v:0.33"></i><span>10</span></td></tr><tr><th>Nieuwe site</th><td><i style="--v:0.27"></i><span>8</span></td><td><i style="--v:1.00"></i><span>30</span></td><td><i style="--v:0.60"></i><span>18</span></td><td><i style="--v:0.27"></i><span>8</span></td><td><i style="--v:0.20"></i><span>6</span></td></tr><tr><th>SEO en GEO</th><td><i style="--v:0.10"></i><span>3</span></td><td><i style="--v:0.40"></i><span>12</span></td><td><i style="--v:0.40"></i><span>12</span></td><td><i style="--v:0.30"></i><span>9</span></td><td><i style="--v:0.30"></i><span>9</span></td></tr><tr><th>CRM</th><td><i style="--v:0.13"></i><span>4</span></td><td><i style="--v:0.53"></i><span>16</span></td><td><i style="--v:0.60"></i><span>18</span></td><td><i style="--v:0.40"></i><span>12</span></td><td><i style="--v:0.33"></i><span>10</span></td></tr><tr><th>Maxima</th><td><i style="--v:0.10"></i><span>3</span></td><td><i style="--v:0.33"></i><span>10</span></td><td><i style="--v:0.27"></i><span>8</span></td><td><i style="--v:0.13"></i><span>4</span></td><td><i style="--v:0.13"></i><span>4</span></td></tr><tr class="tot"><th>Dagen</th><td><span>22</span></td><td><span>82</span></td><td><span>68</span></td><td><span>41</span></td><td><span>39</span></td></tr></table></div></div><a class="sl-more" href="#" data-more="1">Verdieping ↓</a></div><div class="det">
+<article class="blk" data-n="11" data-t="Aanbieding 2027"><div class="sl"><div class="sl-t"><span class="kick">11 · Aanbieding</span><h2>Extra inzet in 2027, met een start in december.</h2><p class="lead">Vijf onderwerpen, geplot op de Powermarketing-grid. Zo zie je in één oogopslag welke werkgebieden en fases van JUST.LEAD extra aangaan.</p><ol class="pg-leg"><li><i>1</i>Merk Klop</li><li><i>2</i>Nieuwe site in WordPress</li><li><i>3</i>SEO en GEO</li><li><i>4</i>CRM</li><li><i>5</i>Maxima-identiteit aanscherpen</li></ol></div><div class="sl-v"><div class="pgrid"><div class="pgc pgh"></div><div class="pgc pgh">Marketing &amp; content</div><div class="pgc pgh">Sales</div><div class="pgc pgh">CODE</div><div class="pgc pgh">Change</div><div class="pgc pgp">Bereik</div><div class="pgc on"><span>Displaycampagnes, SEO</span><i>1</i><i>3</i></div><div class="pgc"><span>Direct mail, events</span></div><div class="pgc on"><span>Sites, platforms</span><i>2</i><i>3</i></div><div class="pgc on"><span>Merk- &amp; productpositionering</span><i>1</i><i>5</i></div><div class="pgc pgp">Kliks</div><div class="pgc on"><span>Klikcampagnes, UI/UX</span><i>2</i></div><div class="pgc"><span>Salespitch, lead-inzichten</span></div><div class="pgc on"><span>Landingspages, CRO</span><i>2</i></div><div class="pgc"><span>Processen &amp; structuur</span></div><div class="pgc pgp">Leads</div><div class="pgc on"><span>Leadcampagnes, -magnets</span><i>1</i></div><div class="pgc on"><span>Follow-up, (bel-)scripts</span><i>4</i></div><div class="pgc on"><span>Configurators, pijplijn</span><i>4</i></div><div class="pgc"><span>Leiderschap &amp; management</span></div><div class="pgc pgp">Sales</div><div class="pgc"><span>Retargetingcampagnes, datamanagement</span></div><div class="pgc"><span>Pitch, salestechniek</span></div><div class="pgc on"><span>Dashboards, automations</span><i>4</i></div><div class="pgc on"><span>Businessmodel &amp; waardepropositie</span><i>5</i></div></div></div><a class="sl-more" href="#" data-more="1">Verdieping ↓</a></div><div class="det">
 
-<h3 class="gh">Planning per gebied</h3>
-<div class="plan-wrap"><table class="plan"><colgroup><col class="c0"><col><col><col><col><col></colgroup>
+<h3 class="gh">Planning per onderwerp</h3>
+<div class="plan-wrap"><table class="plan plan2"><colgroup><col class="c0"><col><col><col><col><col></colgroup>
 <thead><tr><th></th><th class="pdec">December 2026<small>start</small></th><th>Q1 2027<small>jan · feb · mrt</small></th><th>Q2 2027<small>apr · mei · jun</small></th><th>Q3 2027<small>jul · aug · sep</small></th><th>Q4 2027<small>okt · nov · dec</small></th></tr></thead>
 <tbody>
-<tr><th><small>Marketing &amp; content</small>Merk Klop</th>
-<td class="pdec"><b>4 dagen</b>Eén set merkfeiten (m², merken, adres). Brandbook definitief. Fotodag plannen.</td>
-<td><b>14 dagen</b>Fotodag aan de Rivierdijk en beeldbank. Servicepas, label en seizoenspost echt opgemaakt. Campagne "Voorjaarsklaar".</td>
-<td><b>12 dagen</b>Campagne online en buiten. Proefvaardagen. Gevel en showroom in de nieuwe stijl.</td>
-<td><b>8 dagen</b>Zomercontent met Vrijheidsvaarders. De overdracht als moment. Tussenmeting.</td>
-<td><b>10 dagen</b>Campagne "Winterklaar" en winterstalling. Merkmeting en plan 2028.</td></tr>
-<tr><th><small>CODE</small>Nieuwe site in WordPress</th>
-<td class="pdec"><b>8 dagen</b>Technisch ontwerp. Thema op het designsysteem opgezet. Redirectkaart van de huidige site.</td>
-<td><b>30 dagen</b>Bouw van home, aanbod, bootpagina, showroom en service. Voorraadkoppeling en keuzehulp. <em>Live eind maart.</em></td>
-<td><b>18 dagen</b>Configurator op de site, elke samenstelling als lead. Eerste versie Mijn Klop.</td>
-<td><b>8 dagen</b>Doorontwikkeling op basis van data. Conversie verbeteren.</td>
-<td><b>6 dagen</b>Beheer, updates en veiligheid. Wensen voor 2028.</td></tr>
-<tr><th><small>CODE + content</small>SEO en GEO</th>
-<td class="pdec"><b>3 dagen</b>Nulmeting: posities, Search Console en zichtbaarheid in AI-antwoorden. Zoekwoorden- en vragenkaart.</td>
-<td><b>12 dagen</b>Techniek in het thema: snelheid, gestructureerde data voor boten en de vestiging. Teksten voor merk- en soortpagina's. Google-bedrijfsprofiel.</td>
-<td><b>12 dagen</b>GEO: vraag-en-antwoordcontent die AI-zoekers citeren. Reviews, vermeldingen en linkbuilding.</td>
-<td><b>9 dagen</b>Vast contentritme, twee stukken per maand. Maandrapport.</td>
-<td><b>9 dagen</b>Wintercontent: stalling en onderhoud. Jaarrapport en doelen 2028.</td></tr>
-<tr><th><small>CODE</small>CRM</th>
-<td class="pdec"><b>4 dagen</b>Inventarisatie: waar staan nu klanten, offertes en servicegegevens? Datamodel voor klant, boot, offerte en service.</td>
-<td><b>16 dagen</b>Alle aanvragen uit site, keuzehulp en configurator in één bak. Klantkaart en offertes.</td>
-<td><b>18 dagen</b>Klop Premium Service™ in het CRM: onderhoud, stalling, halen en brengen, met service-updates naar de klant.</td>
-<td><b>12 dagen</b>Mijn Klop gekoppeld aan het CRM. Dashboards voor verkoop en service. ERP-koppeling verkennen, in overleg.</td>
-<td><b>10 dagen</b>Automatische seizoenspost en winterklaar-berichten. ERP en CAD, in overleg.</td></tr>
-<tr><th><small>Marketing &amp; content</small>Maxima-identiteit aanscherpen</th>
-<td class="pdec"><b>3 dagen</b>Analyse: hoe Maxima nu klinkt en eruitziet, en hoe het naast Klop staat. Aanspreekvorm gelijktrekken (je).</td>
-<td><b>10 dagen</b>Maxima aangescherpt: kern, toon, beeld, kleur en letter, vastgelegd in merkregels. De configurator in die stijl.</td>
-<td><b>8 dagen</b>Modelpagina's, brochure en beursmateriaal in de nieuwe Maxima-stijl.</td>
-<td><b>4 dagen</b>Content en beeld per model voor site en social.</td>
-<td><b>4 dagen</b>Evaluatie en modeljaar 2028.</td></tr>
-</tbody>
-<tfoot><tr><th>Totaal</th><td class="pdec"><b>22 dagen</b></td><td><b>82 dagen</b></td><td><b>68 dagen</b></td><td><b>41 dagen</b></td><td><b>39 dagen</b></td></tr></tfoot>
-</table></div>
-<p class="cap" style="margin-top:10px">Samen 252 dagen van december 2026 tot en met december 2027. Het zwaartepunt ligt voor het vaarseizoen: in Q1 staan de nieuwe site, de fotodag en de basis van het CRM.</p>
-
-<h3 class="gh" style="margin-top:34px">In december al</h3>
-<div class="pts"><div><small>Week 49 en 50</small><b>Startsessie en merkfeiten</b><p>Eén set feiten, de fotodag gepland, toegang tot site, voorraad en offertes.</p></div><div><small>Week 50 en 51</small><b>Fundament site en SEO</b><p>Thema opgezet, redirectkaart en nulmeting klaar.</p></div><div><small>Week 51</small><b>CRM en Maxima</b><p>Datamodel en de analyse van Maxima, zodat we in januari direct bouwen.</p></div><div><small>Eind december</small><b>Plan Q1 vast</b><p>Planning, opleveringen en eerste campagne staan klaar voor januari.</p></div></div>
+<tr><th><i>1</i>Merk Klop<div class="chips"><span title="Change · Bereik">Merk- &amp; productpositionering</span><span title="Marketing &amp; content · Bereik">Displaycampagnes, SEO</span><span title="Marketing &amp; content · Leads">Leadcampagnes, -magnets</span></div></th><td class="pdec">Merkfeiten vast, fotodag gepland</td><td>Fotodag, drukwerk, campagne Voorjaarsklaar</td><td>Campagne online en buiten, proefvaardagen</td><td>Zomercontent, tussenmeting</td><td>Campagne Winterklaar, plan 2028</td></tr>
+<tr><th><i>2</i>Nieuwe site in WordPress<div class="chips"><span title="CODE · Bereik">Sites, platforms</span><span title="CODE · Kliks">Landingspages, CRO</span><span title="Marketing &amp; content · Kliks">Klikcampagnes, UI/UX</span></div></th><td class="pdec">Thema op het designsysteem, redirectkaart</td><td>Bouw en livegang eind maart</td><td>Configurator op de site, Mijn Klop</td><td>Conversie verbeteren</td><td>Beheer en wensen 2028</td></tr>
+<tr><th><i>3</i>SEO en GEO<div class="chips"><span title="Marketing &amp; content · Bereik">Displaycampagnes, SEO</span><span title="CODE · Bereik">Sites, platforms</span></div></th><td class="pdec">Nulmeting en vragenkaart</td><td>Techniek in het thema, soortpagina’s</td><td>Vraag-en-antwoordcontent, reviews, links</td><td>Vast contentritme, maandrapport</td><td>Wintercontent, jaarrapport</td></tr>
+<tr><th><i>4</i>CRM<div class="chips"><span title="CODE · Leads">Configurators, pijplijn</span><span title="Sales · Leads">Follow-up, (bel-)scripts</span><span title="CODE · Sales">Dashboards, automations</span></div></th><td class="pdec">Inventarisatie en datamodel</td><td>Alle leads in één bak, klantkaart, offertes</td><td>Klop Premium Service™ in het CRM</td><td>Mijn Klop gekoppeld, dashboards</td><td>Automations; ERP en CAD in overleg</td></tr>
+<tr><th><i>5</i>Maxima-identiteit aanscherpen<div class="chips"><span title="Change · Bereik">Merk- &amp; productpositionering</span><span title="Change · Sales">Businessmodel &amp; waardepropositie</span></div></th><td class="pdec">Analyse, aanspreekvorm gelijk</td><td>Merkregels Maxima, configurator in stijl</td><td>Modelpagina’s, brochure, beurs</td><td>Content per model</td><td>Evaluatie, modeljaar 2028</td></tr>
+</tbody></table></div>
+<p class="cap" style="margin-top:10px">Het zwaartepunt ligt voor het vaarseizoen: in Q1 staan de nieuwe site, de fotodag en de basis van het CRM. Per kwartaal sturen we samen bij.</p>
 
 <h3 class="gh" style="margin-top:34px">Zo werken we</h3>
-<div class="pts"><div><small>Eén team</small><b>JUST.LEAD</b><p>Marketing &amp; content en CODE werken als één team, met één aanspreekpunt voor Klop.</p></div><div><small>Ritme</small><b>Elke maand een rapport</b><p>Wat er is gedaan, wat het oplevert en wat er volgt. Per kwartaal sturen we de inzet bij.</p></div><div><small>Inzet</small><b>Indicatief in dagen</b><p>Schuift er werk, dan schuiven de dagen mee tussen de gebieden, in overleg.</p></div><div><small>Nodig van Klop</small><b>Tijd en toegang</b><p>Een vast moment per twee weken, de fotodag, en toegang tot de systemen.</p></div></div>
+<div class="pts"><div><small>Eén team</small><b>JUST.LEAD</b><p>Marketing &amp; content, CODE en Change werken als één team, met één aanspreekpunt voor Klop.</p></div><div><small>December</small><b>Meteen beginnen</b><p>Startsessie, merkfeiten, thema, nulmeting en datamodel, zodat we in januari direct bouwen.</p></div><div><small>Ritme</small><b>Elke maand een rapport</b><p>Wat er is gedaan, wat het oplevert en wat er volgt, langs de grid.</p></div><div><small>Nodig van Klop</small><b>Tijd en toegang</b><p>Een vast moment per twee weken, de fotodag, en toegang tot de systemen.</p></div></div>
 </div></article>
 
 </div></div></div>
