@@ -110,8 +110,6 @@ def sg(g): return '<div class="grid sitegrid">' + ''.join('<button class="th" da
 page = open(os.path.join(ROOT, 'tools/overzicht.template.html')).read()
 page = page.replace('{{CFG}}', open(os.path.join(ROOT, 'tools/configurator_sectie.html')).read())
 page = page.replace('{{MU_OVERZICHT}}', mu_overzicht(PFX))
-import subprocess; subprocess.check_call([sys.executable, os.path.join(ROOT, 'tools/aanbieding.py')])
-page = page.replace('{{AANBIEDING}}', open(os.path.join(ROOT, 'tools/aanbieding_sectie.html')).read())
 for k, g in {'{{SITE_HOME}}': 'home', '{{SITE_AANBOD}}': 'aanbod', '{{SITE_PAG}}': 'pag', '{{PROTO}}': 'proto'}.items(): page = page.replace(k, sg(g))
 page = page.replace('{{BEELD}}', open(os.path.join(ROOT, 'tools/beeld_sectie.html')).read())
 for k, v in {

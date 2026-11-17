@@ -241,53 +241,24 @@ img{cursor:zoom-in}#lb img,.bar img,header img,nav img,.th img,.logos img,.lg im
 @media(max-width:700px){.cover .bgimg{background-position:70% 30%}.cover .bgimg:after{background:linear-gradient(180deg,rgba(11,25,48,.78) 0%,rgba(11,25,48,.7) 55%,rgba(11,25,48,.9) 100%)}}
 .cover .parts a{background:rgba(11,25,48,.62);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}.cover .parts a.y{background:rgba(239,169,31,.92)}
 .mucamp .th{display:block;width:100%}.mucamp .th img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:14px}
-.aanb{display:grid;grid-template-columns:minmax(220px,1fr) 3fr;gap:32px;align-items:center}
-.pgrid{display:grid;grid-template-columns:64px repeat(4,minmax(0,1fr));gap:6px;width:100%}
-.pgc{position:relative;min-height:78px;border-radius:12px;background:var(--card);box-shadow:inset 0 0 0 1px var(--line);padding:10px 11px;font-size:12px;line-height:1.3;color:var(--mut)}
-.pgc.pgh{min-height:0;background:var(--nacht);color:#fff;box-shadow:none;font-size:11.5px;font-weight:600}.pgc.pgh:first-child{background:none}
-.pgc.pgp{background:none;box-shadow:none;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--fg);padding:10px 0}
-.pgc.on{background:rgba(239,169,31,.18);box-shadow:inset 0 0 0 1.5px #EFA91F;color:var(--fg)}
-.pgc span{display:block;overflow-wrap:anywhere;hyphens:auto}
-.pgc i,.pg-leg i,.plan2 tbody th i{display:inline-grid;place-items:center;width:21px;height:21px;border-radius:50%;background:#EFA91F;color:#0B1930;font-style:normal;font-size:11px;font-weight:700;margin:6px 4px 0 0}
-.pg-leg{list-style:none;margin:0;padding:0;display:grid;gap:10px}.pg-leg li{display:flex;align-items:center;gap:10px;font-size:17px}.pg-leg i{margin:0}
-.plan-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -4px}
-.plan{table-layout:fixed;border-collapse:separate;border-spacing:6px;min-width:1080px;width:100%;font-size:13.5px;line-height:1.45}
-.plan col.c0{width:220px}
-.plan th,.plan td{vertical-align:top;text-align:left;padding:12px 14px;border-radius:12px;font-family:inherit;white-space:normal}
-.plan td:nth-child(2){font-family:inherit;font-size:13.5px;white-space:normal}
-.plan thead th{background:var(--nacht);color:#fff;font-weight:600;font-size:14px}.plan thead th small{display:block;font-weight:400;font-size:11.5px;color:#AAB3BD;margin-top:2px}
-.plan thead th:first-child{background:none}.plan thead th.pdec{background:#EFA91F;color:#0B1930}.plan thead th.pdec small{color:#0B1930}
-.plan tbody th{background:var(--card);box-shadow:inset 0 0 0 1px var(--line);font-size:15px;font-weight:500;color:var(--fg)}.plan tbody th i{margin:0 6px 0 0;vertical-align:-4px}
-.plan td{background:var(--card);box-shadow:inset 0 0 0 1px var(--line);color:var(--fg)}
-.plan td.pdec{background:rgba(239,169,31,.12);box-shadow:inset 0 0 0 1px rgba(239,169,31,.55)}
-.plan2 .chips{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px}.plan2 .chips span{font-size:10px;font-weight:600;letter-spacing:.03em;background:rgba(239,169,31,.18);color:var(--fg);border-radius:999px;padding:3px 7px}
-#aanbieding .note{font-size:14px;color:var(--mut);margin-top:10px}
-.pts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
-.pts>div{background:var(--card);border-radius:18px;padding:20px;box-shadow:0 0 0 1px var(--line)}
-.pts small{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut)}
-.pts b{display:block;font-family:var(--fd);font-weight:300;font-size:23px;letter-spacing:-.025em;margin:6px 0;line-height:1.1}
-.pts p{font-size:14.5px;color:var(--mut);margin:0}
-@media(max-width:900px){.aanb{grid-template-columns:1fr}.pts{grid-template-columns:1fr 1fr}}
-@media(max-width:600px){.pgrid{grid-template-columns:44px repeat(4,minmax(0,1fr));gap:4px}.pgc{min-height:60px;font-size:9.5px;padding:6px}.pgc.pgh{font-size:9px;padding:6px}.pts{grid-template-columns:1fr}}
 </style></head><body>
 <header class="bar"><a href="#start" aria-label="Naar het begin"><img src="ov/klop-logo-wit.png" alt="Klop Watersport"></a>
-<nav id="nav" aria-label="Onderdelen"><a href="#recap">Recap</a><a href="#brandbook">Brandbook</a><a href="#designsysteem">Designsysteem</a><a href="#merkuitingen">Merkuitingen</a><a href="#powermarketing">Powermarketing</a><a href="#website">Website</a><a href="#configurator">Configurator</a><a href="#code">Code</a><a href="#aanbieding">Aanbieding</a></nav>
+<nav id="nav" aria-label="Onderdelen"><a href="#recap">Recap</a><a href="#brandbook">Brandbook</a><a href="#designsysteem">Designsysteem</a><a href="#merkuitingen">Merkuitingen</a><a href="#powermarketing">Powermarketing</a><a href="#website">Website</a><a href="#configurator">Configurator</a><a href="#code">Code</a></nav>
 <button class="tg" id="tg" aria-label="Wissel licht en donker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="5"/><path d="M12 7v10" /><path d="M12 7a5 5 0 0 1 0 10z" fill="currentColor"/></svg></button></header>
 
 <section class="cover" id="start"><div class="bgimg" style="background-image:url('ov/opening.jpg')"></div><div class="wrap">
 <span class="kick">Vrijheidsvaarders sinds 1966 · november 2026</span>
 <h1>Klop<br>merkstrategie-<br>traject</h1>
-<p class="lead">Het hele traject in één bestand: het verhaal, het merk, de bouwstenen, het merk in de praktijk, het model, de nieuwe website, de techniek eronder en de aanbieding voor 2027. Scroll door, of kies direct een onderdeel.</p>
+<p class="lead">Het hele traject in één bestand: het verhaal, het merk, de bouwstenen, het merk in de praktijk, het model, de nieuwe website en de techniek eronder. Scroll door, of kies direct een onderdeel.</p>
 <div class="parts">
 <a href="#recap"><small>01 · Het verhaal</small><b>Recap</b><p>16 slides: strategie, merkverhaal en de gemaakte keuzes.</p><span>Bekijk →</span></a>
 <a href="#brandbook"><small>02 · Het merk</small><b>Brandbook</b><p>52 pagina's, van merkkern tot spelregels voor beeld en taal.</p><span>Bekijk →</span></a>
 <a href="#designsysteem"><small>03 · De bouwstenen</small><b>Design&shy;systeem</b><p>Kleur, type, ruimte, 26 iconen en 22 componenten.</p><span>Bekijk →</span></a>
 <a href="#merkuitingen"><small>04 · In het wild</small><b>Merk&shy;uitingen</b><p>28 uitingen in zes categorieën, met de top 5 als voorproef.</p><span>Bekijk →</span></a>
 <a href="#powermarketing"><small>05 · Het model</small><b>Power&shy;marketing</b><p>De vier werkgebieden van JUST.LEAD tegen bereik, kliks, leads en sales. Wat gaat er aan?</p><span>Bekijk →</span></a>
-<a href="#website"><small>06 · Het resultaat</small><b>Website</b><p>De schermen van de nieuwe site, op laptop en telefoon.</p><span>Bekijk →</span></a>
+<a href="#website" class="y"><small>06 · Het resultaat</small><b>Website</b><p>De schermen van de nieuwe site, op laptop en telefoon.</p><span>Bekijk →</span></a>
 <a href="#configurator"><small>07 · Het hulpmiddel</small><b>Configu&shy;rator</b><p>Het app-prototype: stap voor stap je Maxima samenstellen, ook in 3D.</p><span>Bekijk →</span></a>
 <a href="#code"><small>08 · De techniek</small><b>Code</b><p>WordPress, SEO en GEO, configurator, CRM en de architectuur met ERP en CAD.</p><span>Bekijk →</span></a>
-<a href="#aanbieding" class="y"><small>09 · Zo verder</small><b>Aanbieding 2027</b><p>Merk, site, SEO en GEO, CRM en Maxima, geplot op de Powermarketing-grid. Start in december.</p><span>Bekijk →</span></a>
 </div></div></section>
 
 <section class="sec" id="recap"><div class="wrap">
@@ -535,25 +506,6 @@ Premium: altijd Olie</p></figcaption></figure><figure class="cp"><button class="
 <li class="io"><small>Fase 4 · in overleg</small><b>ERP en CAD</b><p>Voorraad en orders uit het ERP, maatvoering en beelden uit CAD in de configurator.</p></li>
 </ol>
 </div>
-</div></section>
-
-
-<section class="sec" id="aanbieding"><div class="wrap">
-<div class="sh"><div><span class="kick">09 · Zo verder</span><h2>Aanbieding 2027</h2></div><p class="lead">Extra inzet in 2027, met een start in december. Vijf onderwerpen, geplot op de Powermarketing-grid: zo zie je welke werkgebieden en fases van JUST.LEAD extra aangaan.</p></div>
-<div class="aanb"><ol class="pg-leg"><li><i>1</i>Merk Klop</li><li><i>2</i>Nieuwe site in WordPress</li><li><i>3</i>SEO en GEO</li><li><i>4</i>CRM</li><li><i>5</i>Maxima-identiteit aanscherpen</li></ol><div class="pgrid"><div class="pgc pgh"></div><div class="pgc pgh">Marketing &amp; content</div><div class="pgc pgh">Sales</div><div class="pgc pgh">CODE</div><div class="pgc pgh">Change</div><div class="pgc pgp">Bereik</div><div class="pgc on"><span>Displaycampagnes, SEO</span><i>1</i><i>3</i></div><div class="pgc"><span>Direct mail, events</span></div><div class="pgc on"><span>Sites, platforms</span><i>2</i><i>3</i></div><div class="pgc on"><span>Merk- &amp; productpositionering</span><i>1</i><i>5</i></div><div class="pgc pgp">Kliks</div><div class="pgc on"><span>Klikcampagnes, UI/UX</span><i>2</i></div><div class="pgc"><span>Salespitch, lead-inzichten</span></div><div class="pgc on"><span>Landingspages, CRO</span><i>2</i></div><div class="pgc"><span>Processen &amp; structuur</span></div><div class="pgc pgp">Leads</div><div class="pgc on"><span>Leadcampagnes, -magnets</span><i>1</i></div><div class="pgc on"><span>Follow-up, (bel-)scripts</span><i>4</i></div><div class="pgc on"><span>Configurators, pijplijn</span><i>4</i></div><div class="pgc"><span>Leiderschap &amp; management</span></div><div class="pgc pgp">Sales</div><div class="pgc"><span>Retargetingcampagnes, datamanagement</span></div><div class="pgc"><span>Pitch, salestechniek</span></div><div class="pgc on"><span>Dashboards, automations</span><i>4</i></div><div class="pgc on"><span>Businessmodel &amp; waardepropositie</span><i>5</i></div></div></div>
-<h3 class="gh">Planning per onderwerp</h3>
-<div class="plan-wrap"><table class="plan plan2"><colgroup><col class="c0"><col><col><col><col><col></colgroup>
-<thead><tr><th></th><th class="pdec">December 2026<small>start</small></th><th>Q1 2027<small>jan · feb · mrt</small></th><th>Q2 2027<small>apr · mei · jun</small></th><th>Q3 2027<small>jul · aug · sep</small></th><th>Q4 2027<small>okt · nov · dec</small></th></tr></thead>
-<tbody>
-<tr><th><i>1</i>Merk Klop<div class="chips"><span title="Change · Bereik">Merk- &amp; productpositionering</span><span title="Marketing &amp; content · Bereik">Displaycampagnes, SEO</span><span title="Marketing &amp; content · Leads">Leadcampagnes, -magnets</span></div></th><td class="pdec">Merkfeiten vast, fotodag gepland</td><td>Fotodag, drukwerk, campagne Voorjaarsklaar</td><td>Campagne online en buiten, proefvaardagen</td><td>Zomercontent, tussenmeting</td><td>Campagne Winterklaar, plan 2028</td></tr>
-<tr><th><i>2</i>Nieuwe site in WordPress<div class="chips"><span title="CODE · Bereik">Sites, platforms</span><span title="CODE · Kliks">Landingspages, CRO</span><span title="Marketing &amp; content · Kliks">Klikcampagnes, UI/UX</span></div></th><td class="pdec">Thema op het designsysteem, redirectkaart</td><td>Bouw en livegang eind maart</td><td>Configurator op de site, Mijn Klop</td><td>Conversie verbeteren</td><td>Beheer en wensen 2028</td></tr>
-<tr><th><i>3</i>SEO en GEO<div class="chips"><span title="Marketing &amp; content · Bereik">Displaycampagnes, SEO</span><span title="CODE · Bereik">Sites, platforms</span></div></th><td class="pdec">Nulmeting en vragenkaart</td><td>Techniek in het thema, soortpagina’s</td><td>Vraag-en-antwoordcontent, reviews, links</td><td>Vast contentritme, maandrapport</td><td>Wintercontent, jaarrapport</td></tr>
-<tr><th><i>4</i>CRM<div class="chips"><span title="CODE · Leads">Configurators, pijplijn</span><span title="Sales · Leads">Follow-up, (bel-)scripts</span><span title="CODE · Sales">Dashboards, automations</span></div></th><td class="pdec">Inventarisatie en datamodel</td><td>Alle leads in één bak, klantkaart, offertes</td><td>Klop Premium Service™ in het CRM</td><td>Mijn Klop gekoppeld, dashboards</td><td>Automations; ERP en CAD in overleg</td></tr>
-<tr><th><i>5</i>Maxima-identiteit aanscherpen<div class="chips"><span title="Change · Bereik">Merk- &amp; productpositionering</span><span title="Change · Sales">Businessmodel &amp; waardepropositie</span></div></th><td class="pdec">Analyse, aanspreekvorm gelijk</td><td>Merkregels Maxima, configurator in stijl</td><td>Modelpagina’s, brochure, beurs</td><td>Content per model</td><td>Evaluatie, modeljaar 2028</td></tr>
-</tbody></table></div>
-<p class="note">Het zwaartepunt ligt voor het vaarseizoen: in Q1 staan de nieuwe site, de fotodag en de basis van het CRM. Per kwartaal sturen we samen bij.</p>
-<h3 class="gh">Zo werken we</h3>
-<div class="pts"><div><small>Eén team</small><b>JUST.LEAD</b><p>Marketing &amp; content, CODE en Change werken als één team, met één aanspreekpunt voor Klop.</p></div><div><small>December</small><b>Meteen beginnen</b><p>Startsessie, merkfeiten, thema, nulmeting en datamodel, zodat we in januari direct bouwen.</p></div><div><small>Ritme</small><b>Elke maand een rapport</b><p>Wat er is gedaan, wat het oplevert en wat er volgt, langs de grid.</p></div><div><small>Nodig van Klop</small><b>Tijd en toegang</b><p>Een vast moment per twee weken, de fotodag, en toegang tot de systemen.</p></div></div>
 </div></section>
 
 
