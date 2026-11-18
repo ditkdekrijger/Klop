@@ -241,19 +241,20 @@ img{cursor:zoom-in}#lb img,.bar img,header img,nav img,.th img,.logos img,.lg im
 @media(max-width:700px){.cover .bgimg{background-position:70% 30%}.cover .bgimg:after{background:linear-gradient(180deg,rgba(11,25,48,.78) 0%,rgba(11,25,48,.7) 55%,rgba(11,25,48,.9) 100%)}}
 .cover .parts a{background:rgba(11,25,48,.62);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}.cover .parts a.y{background:rgba(239,169,31,.92)}
 .mucamp .th{display:block;width:100%}.mucamp .th img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:14px}
-.pmx{display:grid;grid-template-columns:1fr auto 1.4fr;gap:14px;align-items:stretch;margin:6px 0 14px}
-.pmx>div{border-radius:20px;padding:22px 24px}.pmx small{font-size:12px;letter-spacing:.1em;text-transform:uppercase}
-.pmx b{display:block;font-family:var(--fd);font-weight:300;font-size:clamp(26px,2.6vw,36px);letter-spacing:-.025em;line-height:1.05;margin:6px 0}
-.pmx p{margin:0;font-size:15px}
-.pmx-a{background:var(--card);box-shadow:0 0 0 1px var(--line)}.pmx-a small,.pmx-a p{color:var(--mut)}
-.pmx-x{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;max-width:210px;background:#EFA91F;color:#0B1930}
-.pmx-x span{font-family:var(--fd);font-weight:300;font-size:64px;line-height:1;letter-spacing:-.04em}.pmx-x p{font-size:13.5px;margin-top:6px}
-.pmx-b{background:var(--nacht);color:#fff}.pmx-b small{color:#EFA91F}.pmx-b p{color:#DDE3E8}
-.pmt{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:26px}
-.pmt>div{border-top:2px solid var(--fg);padding:12px 0 0;background:none!important;box-shadow:none!important;border-radius:0}.pmt small{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut)}
-.pmt b{display:block;font-size:18px;font-weight:600;margin:4px 0}.pmt p{margin:0;font-size:14.5px;color:var(--mut)}.pmt>div.pmt-n{border-top-color:#EFA91F}
-@media(max-width:820px){.pmx{grid-template-columns:1fr}.pmx-x{max-width:none;flex-direction:row;gap:14px;justify-content:flex-start;text-align:left}.pmt{grid-template-columns:1fr}}
-.pmnext{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:-8px 0 26px;font-size:16px}.pmnext span{background:#EFA91F;color:#0B1930;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 10px;border-radius:6px}
+.pmtxt{max-width:860px;margin:30px 0 0}.pmtxt p{font-size:17px;line-height:1.6;margin:0 0 14px;color:var(--fg)}.pmtxt b{font-weight:600}
+.pmtxt .pmnext{margin-top:20px;padding-top:14px;border-top:1px solid var(--line)}
+.pmsub{font-size:15px;color:var(--mut);margin:-6px 0 18px;max-width:760px}
+.gt-w{overflow-x:auto;-webkit-overflow-scrolling:touch}.gt{min-width:980px}
+.gt-r{display:grid;grid-template-columns:230px repeat(13,minmax(0,1fr));align-items:center;border-bottom:1px solid var(--line);min-height:52px}
+.gt-r>*{grid-row:1}.gt-n{grid-column:1;padding:8px 12px 8px 0}.gt-n b{display:block;font-size:15px;font-weight:600}.gt-n small{font-size:12px;color:var(--mut)}
+.gt-h{min-height:0;border-bottom:1px solid var(--fg)}.gt-m{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);padding:8px 0 8px 6px;border-left:1px solid var(--line)}
+.gt-m small{display:block;font-size:10.5px;letter-spacing:.04em;color:var(--fg)}.gt-y{color:var(--fg);font-weight:600}
+.gt-r:not(.gt-h){background:linear-gradient(90deg,transparent 230px,rgba(127,127,127,.04) 230px)}
+.gt-b{display:block;height:16px;border-radius:999px;background:var(--fg);margin:0 3px;align-self:center}
+[data-theme="dark"] .gt-b{background:#DDE3E8}.gt-b.gt-l{background:transparent;box-shadow:inset 0 0 0 1.5px var(--fg)}
+.gt-b.gt-c{border-top-right-radius:0;border-bottom-right-radius:0;margin-right:0}
+.gt-ms{align-self:center;justify-self:end;z-index:1;background:#EFA91F;color:#0B1930;font-size:11px;font-weight:700;padding:3px 8px;border-radius:999px;margin-right:-10px}
+.pmleg{display:flex;flex-wrap:wrap;gap:18px;font-size:13px;color:var(--mut);margin-top:12px}.pmleg span{display:flex;align-items:center;gap:8px}.pmleg .lg{display:inline-block;width:34px;height:10px;border-radius:999px;font-style:normal}.pmleg .lg1{background:var(--fg)}[data-theme="dark"] .pmleg .lg1{background:#DDE3E8}.pmleg .lg2{box-shadow:inset 0 0 0 1.5px var(--fg)}.pmleg .lg3{border-top-right-radius:0;border-bottom-right-radius:0}.pmleg .lgm{width:auto;height:auto;background:#EFA91F;color:#0B1930;font-size:11px;font-weight:700;padding:2px 8px}
 </style></head><body>
 <header class="bar"><a href="#start" aria-label="Naar het begin"><img src="{{PFX}}klop-logo-wit.png" alt="Klop Watersport"></a>
 <nav id="nav" aria-label="Onderdelen"><a href="#recap">Recap</a><a href="#brandbook">Brandbook</a><a href="#designsysteem">Designsysteem</a><a href="#merkuitingen">Merkuitingen</a><a href="#powermarketing">Powermarketing</a><a href="#website">Website</a><a href="#configurator">Configurator</a><a href="#code">Code</a></nav>
@@ -268,7 +269,7 @@ img{cursor:zoom-in}#lb img,.bar img,header img,nav img,.th img,.logos img,.lg im
 <a href="#brandbook"><small>02 · Het merk</small><b>Brandbook</b><p>{{N_BB}} pagina's, van merkkern tot spelregels voor beeld en taal.</p><span>Bekijk →</span></a>
 <a href="#designsysteem"><small>03 · De bouwstenen</small><b>Design&shy;systeem</b><p>Kleur, type, ruimte, {{N_IC}} iconen en {{N_DS}} componenten.</p><span>Bekijk →</span></a>
 <a href="#merkuitingen"><small>04 · In het wild</small><b>Merk&shy;uitingen</b><p>28 uitingen in zes categorieën, met de top 5 als voorproef.</p><span>Bekijk →</span></a>
-<a href="#powermarketing"><small>05 · Het model</small><b>Power&shy;marketing</b><p>Van alleen marketing naar ook CODE en Change: de samenwerking wordt ongeveer twee keer zo intensief.</p><span>Bekijk →</span></a>
+<a href="#powermarketing"><small>05 · Het model</small><b>Power&shy;marketing</b><p>De grid, de stap naar ook CODE en Change, en de planning op hoofdlijnen.</p><span>Bekijk →</span></a>
 <a href="#website" class="y"><small>06 · Het resultaat</small><b>Website</b><p>De schermen van de nieuwe site, op laptop en telefoon.</p><span>Bekijk →</span></a>
 <a href="#configurator"><small>07 · Het hulpmiddel</small><b>Configu&shy;rator</b><p>Het app-prototype: stap voor stap je Maxima samenstellen, ook in 3D.</p><span>Bekijk →</span></a>
 <a href="#code"><small>08 · De techniek</small><b>Code</b><p>WordPress, SEO en GEO, configurator, CRM en de architectuur met ERP en CAD.</p><span>Bekijk →</span></a>
