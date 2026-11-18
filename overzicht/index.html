@@ -241,6 +241,19 @@ img{cursor:zoom-in}#lb img,.bar img,header img,nav img,.th img,.logos img,.lg im
 @media(max-width:700px){.cover .bgimg{background-position:70% 30%}.cover .bgimg:after{background:linear-gradient(180deg,rgba(11,25,48,.78) 0%,rgba(11,25,48,.7) 55%,rgba(11,25,48,.9) 100%)}}
 .cover .parts a{background:rgba(11,25,48,.62);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}.cover .parts a.y{background:rgba(239,169,31,.92)}
 .mucamp .th{display:block;width:100%}.mucamp .th img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:14px}
+.pmx{display:grid;grid-template-columns:1fr auto 1.4fr;gap:14px;align-items:stretch;margin:6px 0 14px}
+.pmx>div{border-radius:20px;padding:22px 24px}.pmx small{font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.pmx b{display:block;font-family:var(--fd);font-weight:300;font-size:clamp(26px,2.6vw,36px);letter-spacing:-.025em;line-height:1.05;margin:6px 0}
+.pmx p{margin:0;font-size:15px}
+.pmx-a{background:var(--card);box-shadow:0 0 0 1px var(--line)}.pmx-a small,.pmx-a p{color:var(--mut)}
+.pmx-x{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;max-width:210px;background:#EFA91F;color:#0B1930}
+.pmx-x span{font-family:var(--fd);font-weight:300;font-size:64px;line-height:1;letter-spacing:-.04em}.pmx-x p{font-size:13.5px;margin-top:6px}
+.pmx-b{background:var(--nacht);color:#fff}.pmx-b small{color:#EFA91F}.pmx-b p{color:#DDE3E8}
+.pmt{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:26px}
+.pmt>div{border-top:2px solid var(--fg);padding:12px 0 0;background:none!important;box-shadow:none!important;border-radius:0}.pmt small{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut)}
+.pmt b{display:block;font-size:18px;font-weight:600;margin:4px 0}.pmt p{margin:0;font-size:14.5px;color:var(--mut)}.pmt>div.pmt-n{border-top-color:#EFA91F}
+@media(max-width:820px){.pmx{grid-template-columns:1fr}.pmx-x{max-width:none;flex-direction:row;gap:14px;justify-content:flex-start;text-align:left}.pmt{grid-template-columns:1fr}}
+.pmnext{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:-8px 0 26px;font-size:16px}.pmnext span{background:#EFA91F;color:#0B1930;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 10px;border-radius:6px}
 </style></head><body>
 <header class="bar"><a href="#start" aria-label="Naar het begin"><img src="ov/klop-logo-wit.png" alt="Klop Watersport"></a>
 <nav id="nav" aria-label="Onderdelen"><a href="#recap">Recap</a><a href="#brandbook">Brandbook</a><a href="#designsysteem">Designsysteem</a><a href="#merkuitingen">Merkuitingen</a><a href="#powermarketing">Powermarketing</a><a href="#website">Website</a><a href="#configurator">Configurator</a><a href="#code">Code</a></nav>
@@ -255,7 +268,7 @@ img{cursor:zoom-in}#lb img,.bar img,header img,nav img,.th img,.logos img,.lg im
 <a href="#brandbook"><small>02 · Het merk</small><b>Brandbook</b><p>52 pagina's, van merkkern tot spelregels voor beeld en taal.</p><span>Bekijk →</span></a>
 <a href="#designsysteem"><small>03 · De bouwstenen</small><b>Design&shy;systeem</b><p>Kleur, type, ruimte, 26 iconen en 22 componenten.</p><span>Bekijk →</span></a>
 <a href="#merkuitingen"><small>04 · In het wild</small><b>Merk&shy;uitingen</b><p>28 uitingen in zes categorieën, met de top 5 als voorproef.</p><span>Bekijk →</span></a>
-<a href="#powermarketing"><small>05 · Het model</small><b>Power&shy;marketing</b><p>De vier werkgebieden van JUST.LEAD tegen bereik, kliks, leads en sales. Wat gaat er aan?</p><span>Bekijk →</span></a>
+<a href="#powermarketing"><small>05 · Het model</small><b>Power&shy;marketing</b><p>Van alleen marketing naar ook CODE en Change: de samenwerking wordt ongeveer twee keer zo intensief.</p><span>Bekijk →</span></a>
 <a href="#website" class="y"><small>06 · Het resultaat</small><b>Website</b><p>De schermen van de nieuwe site, op laptop en telefoon.</p><span>Bekijk →</span></a>
 <a href="#configurator"><small>07 · Het hulpmiddel</small><b>Configu&shy;rator</b><p>Het app-prototype: stap voor stap je Maxima samenstellen, ook in 3D.</p><span>Bekijk →</span></a>
 <a href="#code"><small>08 · De techniek</small><b>Code</b><p>WordPress, SEO en GEO, configurator, CRM en de architectuur met ERP en CAD.</p><span>Bekijk →</span></a>
@@ -334,7 +347,18 @@ Premium: altijd Olie</p></figcaption></figure><figure class="cp"><button class="
 </div></section>
 
 <section class="sec" id="powermarketing"><div class="wrap">
-<div class="sh"><div><span class="kick">05 · Het model</span><h2>Powermarketing</h2></div><p class="lead">De vier werkgebieden van JUST.LEAD (marketing en content, sales, CODE en change) tegen vier fases. Klik blokken aan om een raket te lanceren, sleep Change-blokken naar een andere fase.</p></div>
+<div class="sh"><div><span class="kick">05 · Het model</span><h2>Powermarketing</h2></div><p class="lead">De vier werkgebieden van JUST.LEAD tegen vier fases. Naast marketing komen er voor Klop twee werkgebieden bij: CODE en Change.</p></div>
+<div class="pmx">
+<div class="pmx-a"><small>Tot nu toe</small><b>Marketing</b><p>Merk, content, campagnes en SEO.</p></div>
+<div class="pmx-x"><span>×2</span><p>De samenwerking wordt ongeveer twee keer zo intensief.</p></div>
+<div class="pmx-b"><small>Vanaf 2027 ook</small><b>CODE en Change</b><p>CODE: site, CRM en configurator. Change: merkontwikkeling en procesverbetering.</p></div>
+</div>
+<div class="pmt">
+<div><small>2027 · eerst</small><b>SEO, site, CRM en merkontwikkeling Klop</b><p>Plus een update van het merk Maxima.</p></div>
+<div><small>Eind 2027 · daarna</small><b>Maxima-configurator en ERP</b><p>In combinatie met procesverbetering.</p></div>
+<div class="pmt-n"><small>Zo faseren we</small><b>Via de API van Cross</b><p>Alles in 2027 koppelt aan Cross, dus we bouwen stap voor stap zonder grote overstap.</p></div>
+</div>
+<p class="pmnext"><span>Volgende stap</span>Planning en intensiteit samen bespreken met Leendert.</p>
 <div class="pmframe"><iframe id="pmf" src="powermarketing.html" title="Powermarketing-grid" scrolling="no"></iframe></div>
 </div></section>
 
@@ -470,22 +494,6 @@ Premium: altijd Olie</p></figcaption></figure><figure class="cp"><button class="
 </div>
 
 <div class="cx">
-<h3>Waarom dit beter is</h3>
-<div class="tblw"><table class="cmp">
-<thead><tr><th></th><th>Nu</th><th class="on">Deze aanpak</th><th>Alles maatwerk</th></tr></thead>
-<tbody>
-<tr><td>Vindbaarheid</td><td>Configurator als iframe op de site van Maxima: geen eigen pagina's, geen eigen data</td><td class="on">Elke boot en samenstelling een eigen pagina met gestructureerde data</td><td>Kan goed, maar alle SEO-functies moeten zelf gebouwd worden</td></tr>
-<tr><td>Zelf aanpassen</td><td>Afhankelijk van hoe de huidige site in elkaar zit</td><td class="on">Klop beheert content in WordPress, met vaste blokken</td><td>Elk nieuw paginatype is werk voor een ontwikkelaar</td></tr>
-<tr><td>Leads en opvolging</td><td>Aanvragen komen als losse berichten binnen</td><td class="on">Elke aanvraag direct in het CRM, met samenstelling en bron</td><td>Kan, met een eigen CRM vanaf nul</td></tr>
-<tr><td>Voorraad en prijzen</td><td>Op meerdere plekken bijgehouden</td><td class="on">Eén bron, via de API naar site, feeds en configurator</td><td>Eén bron, maar zelf gebouwd en onderhouden</td></tr>
-<tr><td>Maatwerk waar het telt</td><td>Weinig ruimte</td><td class="on">Configurator en CRM op maat, standaard waar het kan</td><td>Overal maatwerk, ook waar standaard volstaat</td></tr>
-<tr><td>Kosten en snelheid</td><td>Laag, maar groeit niet mee</td><td class="on">Snel live: WordPress en het SEO-ecosysteem zijn er al</td><td>Hoogste bouw- en onderhoudskosten, langste doorlooptijd</td></tr>
-<tr><td>Afhankelijkheid</td><td>Van externe partijen per onderdeel</td><td class="on">Open standaarden; data van Klop, code overdraagbaar</td><td>Sterk afhankelijk van één bouwer</td></tr>
-</tbody></table></div>
-<p class="note">De kolom "Nu" is ons beeld van buitenaf en vullen we aan na een inventarisatie bij Klop.</p>
-</div>
-
-<div class="cx">
 <h3>Basisinrichting</h3>
 <div class="base">
 <div><b>Twee adressen</b><p>klopwatersport.nl draait WordPress. Het platform (configurator, CRM, Mijn Klop) draait apart in Laravel, bijvoorbeeld op een subdomein. Elk kan los worden bijgewerkt.</p></div>
@@ -500,10 +508,10 @@ Premium: altijd Olie</p></figcaption></figure><figure class="cp"><button class="
 <div class="cx">
 <h3>Fasering</h3>
 <ol class="phase">
-<li><small>Fase 1</small><b>Fundament</b><p>WordPress-thema op het designsysteem, SEO- en GEO-techniek, tracking, redirects. Marketing &amp; content start met content en offpage.</p></li>
-<li><small>Fase 2</small><b>Configurator</b><p>Maxima en de andere merken in Laravel. Elke samenstelling en offerte komt binnen als lead.</p></li>
-<li><small>Fase 3</small><b>CRM en Mijn Klop</b><p>Klantkaart, offertes, Klop Premium Service™, serviceplanning en de klantomgeving.</p></li>
-<li class="io"><small>Fase 4 · in overleg</small><b>ERP en CAD</b><p>Voorraad en orders uit het ERP, maatvoering en beelden uit CAD in de configurator.</p></li>
+<li><small>Begin 2027</small><b>Fundament</b><p>WordPress-thema op het designsysteem, SEO- en GEO-techniek, tracking en redirects. Content en offpage starten.</p></li>
+<li><small>2027</small><b>CRM en Mijn Klop</b><p>Klantkaart, offertes en Klop Premium Service™, gekoppeld via de API van Cross.</p></li>
+<li><small>Eind 2027</small><b>Maxima-configurator en ERP</b><p>Samen met procesverbetering, als de basis staat.</p></li>
+<li class="io"><small>In overleg</small><b>CAD</b><p>Maatvoering en beelden uit CAD in de configurator.</p></li>
 </ol>
 </div>
 </div></section>
