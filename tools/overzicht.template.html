@@ -164,7 +164,6 @@ table.cmp .on{background:rgba(239,169,31,.1)}table.cmp th.on{box-shadow:inset 0 
 .pmsw span:after{content:"";position:absolute;left:3px;top:3px;width:16px;height:16px;border-radius:50%;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.3);transition:transform .3s var(--ez)}
 .pmsw input:checked+span{background:var(--olie)}.pmsw input:checked+span:after{transform:translateX(18px)}
 .pmsw input:focus-visible+span{outline:2px solid var(--fg);outline-offset:2px}
-.pmleg{display:inline-flex;align-items:center;gap:8px;color:var(--mut)}.pmleg i{width:14px;height:14px;border-radius:4px;box-shadow:inset 0 0 0 1px var(--line);background:var(--card)}.pmleg i.n{background:rgba(239,169,31,.35);box-shadow:inset 0 0 0 1.5px var(--olie)}
 .pmw{overflow-x:auto;border-radius:22px;box-shadow:0 0 0 1px var(--line);background:var(--card)}
 .pm{display:grid;grid-template-columns:150px repeat(4,minmax(170px,1fr));min-width:860px}
 .pmc{padding:18px 18px;border-top:1px solid var(--line);border-left:1px solid var(--line);transition:background .4s,box-shadow .4s}
@@ -243,18 +242,7 @@ img{cursor:zoom-in}#lb img,.bar img,header img,nav img,.th img,.logos img,.lg im
 .mucamp .th{display:block;width:100%}.mucamp .th img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:14px}
 .pmtxt{max-width:860px;margin:30px 0 0}.pmtxt p{font-size:17px;line-height:1.6;margin:0 0 14px;color:var(--fg)}.pmtxt b{font-weight:600}
 .pmtxt .pmnext{margin-top:20px;padding-top:14px;border-top:1px solid var(--line)}
-.pmsub{font-size:15px;color:var(--mut);margin:-6px 0 18px;max-width:760px}
-.gt-w{overflow-x:auto;-webkit-overflow-scrolling:touch}.gt{min-width:980px}
-.gt-r{display:grid;grid-template-columns:230px repeat(13,minmax(0,1fr));align-items:center;border-bottom:1px solid var(--line);min-height:52px}
-.gt-r>*{grid-row:1}.gt-n{grid-column:1;padding:8px 12px 8px 0}.gt-n b{display:block;font-size:15px;font-weight:600}.gt-n small{font-size:12px;color:var(--mut)}
-.gt-h{min-height:0;border-bottom:1px solid var(--fg)}.gt-m{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);padding:8px 0 8px 6px;border-left:1px solid var(--line)}
-.gt-m small{display:block;font-size:10.5px;letter-spacing:.04em;color:var(--fg)}.gt-y{color:var(--fg);font-weight:600}
-.gt-r:not(.gt-h){background:linear-gradient(90deg,transparent 230px,rgba(127,127,127,.04) 230px)}
-.gt-b{display:block;height:16px;border-radius:999px;background:var(--fg);margin:0 3px;align-self:center}
-[data-theme="dark"] .gt-b{background:#DDE3E8}.gt-b.gt-l{background:transparent;box-shadow:inset 0 0 0 1.5px var(--fg)}
-.gt-b.gt-c{border-top-right-radius:0;border-bottom-right-radius:0;margin-right:0}
-.gt-ms{align-self:center;justify-self:end;z-index:1;background:#EFA91F;color:#0B1930;font-size:11px;font-weight:700;padding:3px 8px;border-radius:999px;margin-right:-10px}
-.pmleg{display:flex;flex-wrap:wrap;gap:18px;font-size:13px;color:var(--mut);margin-top:12px}.pmleg span{display:flex;align-items:center;gap:8px}.pmleg .lg{display:inline-block;width:34px;height:10px;border-radius:999px;font-style:normal}.pmleg .lg1{background:var(--fg)}[data-theme="dark"] .pmleg .lg1{background:#DDE3E8}.pmleg .lg2{box-shadow:inset 0 0 0 1.5px var(--fg)}.pmleg .lg3{border-top-right-radius:0;border-bottom-right-radius:0}.pmleg .lgm{width:auto;height:auto;background:#EFA91F;color:#0B1930;font-size:11px;font-weight:700;padding:2px 8px}
+.pmtxt h3{font-size:clamp(22px,2vw,28px);margin:0 0 14px}.pmtxt ul{margin:0 0 14px;padding-left:20px}.pmtxt li{font-size:17px;line-height:1.6;margin-bottom:6px}
 </style></head><body>
 <header class="bar"><a href="#start" aria-label="Naar het begin"><img src="{{PFX}}klop-logo-wit.png" alt="Klop Watersport"></a>
 <nav id="nav" aria-label="Onderdelen"><a href="#recap">Recap</a><a href="#brandbook">Brandbook</a><a href="#designsysteem">Designsysteem</a><a href="#merkuitingen">Merkuitingen</a><a href="#powermarketing">Powermarketing</a><a href="#website">Website</a><a href="#configurator">Configurator</a><a href="#code">Code</a></nav>
@@ -269,7 +257,7 @@ img{cursor:zoom-in}#lb img,.bar img,header img,nav img,.th img,.logos img,.lg im
 <a href="#brandbook"><small>02 · Het merk</small><b>Brandbook</b><p>{{N_BB}} pagina's, van merkkern tot spelregels voor beeld en taal.</p><span>Bekijk →</span></a>
 <a href="#designsysteem"><small>03 · De bouwstenen</small><b>Design&shy;systeem</b><p>Kleur, type, ruimte, {{N_IC}} iconen en {{N_DS}} componenten.</p><span>Bekijk →</span></a>
 <a href="#merkuitingen"><small>04 · In het wild</small><b>Merk&shy;uitingen</b><p>28 uitingen in zes categorieën, met de top 5 als voorproef.</p><span>Bekijk →</span></a>
-<a href="#powermarketing"><small>05 · Het model</small><b>Power&shy;marketing</b><p>De grid, de stap naar ook CODE en Change, en de planning op hoofdlijnen.</p><span>Bekijk →</span></a>
+<a href="#powermarketing"><small>05 · Het model</small><b>Power&shy;marketing</b><p>De vier werkgebieden van JUST.LEAD, en de scope voor Klop: naast marketing ook Code en Change.</p><span>Bekijk →</span></a>
 <a href="#website" class="y"><small>06 · Het resultaat</small><b>Website</b><p>De schermen van de nieuwe site, op laptop en telefoon.</p><span>Bekijk →</span></a>
 <a href="#configurator"><small>07 · Het hulpmiddel</small><b>Configu&shy;rator</b><p>Het app-prototype: stap voor stap je Maxima samenstellen, ook in 3D.</p><span>Bekijk →</span></a>
 <a href="#code"><small>08 · De techniek</small><b>Code</b><p>WordPress, SEO en GEO, configurator, CRM en de architectuur met ERP en CAD.</p><span>Bekijk →</span></a>
